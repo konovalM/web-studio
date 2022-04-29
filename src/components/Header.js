@@ -13,7 +13,8 @@ const HeaderTag = styled.header`
   height: 63px;
   padding: 6px 0;
   box-shadow: 0px 7px 10px rgba(157, 157, 157, 0.3);
-
+  z-index: 100;
+  position: relative;
   .wrapper {
     display: flex;
     align-items: center;
