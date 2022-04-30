@@ -10,7 +10,6 @@ const QustionsTag = styled.section`
   background-image: url(${bg});
   background-position: center -200px;
   background-repeat: repeat;
-  min-height: 500px;
   .title{
     font-size: 88px;
     line-height: 100%;
