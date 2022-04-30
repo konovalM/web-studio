@@ -9,6 +9,8 @@ const MainTag = styled.section`
   background-position: center -100px;
   background-repeat: repeat;
   padding: 93px 0 65px;
+  z-index: 110;
+  position: relative;
   .wrapper{
     display: flex;
     justify-content: space-between;
