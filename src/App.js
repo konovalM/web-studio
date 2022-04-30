@@ -5,6 +5,7 @@ import Main from "./components/Main";
 import Stages from "./components/Stages";
 import Questions from "./components/Questions";
 import About from "./components/About";
+import Footer from "./components/Footer";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             <Stages />
             <About />
             <Questions />
+            <Footer />
         </Fragment>
     );
 }
