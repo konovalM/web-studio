@@ -7,6 +7,7 @@ import Questions from "./components/Questions";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Reasons from "./components/Reasons";
+import Services from "./components/Services";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
             <Main />
             <Reasons />
             <Stages />
+            <Services />
             <About />
             <Questions />
             <Footer />
