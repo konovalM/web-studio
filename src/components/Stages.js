@@ -61,9 +61,6 @@ const StagesTag = styled.section`
   }
   .subtitle::before{
     content: '#';
-    font-family: 'Russo One';
-    font-style: normal;
-    font-weight: 400;
     font-size: 40px;
     line-height: 48px;
     text-transform: uppercase;
@@ -109,12 +106,9 @@ const StagesTag = styled.section`
   }
   .text::before{
     color: #fff;
-    font-family: 'Roboto';
     font-weight: 900;
     font-size: 40px;
     position: absolute;
-    top: -81px;
-    left: -50%;
     top: -81px;
     left: -21px;
   }
