@@ -21,9 +21,9 @@ function App() {
             {/*<Services />
             <Prices />
             <Faq />
-            <About />
+            <About />*/}
             <Questions />
-            <Footer />*/}
+            {/*<Footer />*/}
         </Fragment>
     );
 }

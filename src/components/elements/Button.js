@@ -4,14 +4,14 @@ import {useEffect} from "react";
 
 
 
-const Button = ({children, clazz1, clazz2, btnClassName, btnStyles}) => {
+const Button = ({children, clazz1, clazz2, btnClassName, btnStyles, parentClass}) => {
     useEffect(() => {
-        console.log(clazz1, clazz2, btnClassName)
         const element1 = document.querySelector(`.${clazz1}`)
         const element2 = document.querySelector(`.${clazz2}`)
+        const parent = document.querySelector(`.${parentClass}`)
         const btn = document.querySelector(`.${btnClassName}`)
         const duration = 700
-        const distance = 56
+        const distance = parent.clientWidth - element1.clientWidth
         let startAnimation = null
         function easeInOut(time) {
             return 0.5 * (1 - Math.cos(Math.PI * time))
@@ -37,10 +37,10 @@ const Button = ({children, clazz1, clazz2, btnClassName, btnStyles}) => {
                 btn.style.color = btnStyles[0].color
                 btn.style.body = btnStyles[0].border
             } else{
-                translate1 = easeInOut(112  - progress) * distance
+                translate1 = easeInOut(distance * 2  - progress) * distance
                 // translate1 = 112  - progress * distance
                 // translate2 = 112  - progress * distance
-                translate2 = easeInOut(112  - progress) * distance
+                translate2 = easeInOut(distance * 2  - progress) * distance
                 btn.style.background = btnStyles[1].background
                 btn.style.color = btnStyles[1].color
                 btn.style.body = btnStyles[1].border
