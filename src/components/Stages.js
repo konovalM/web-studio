@@ -34,7 +34,7 @@ const StagesTag = styled.section`
   }
   .gridWrapper{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(359px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     grid-template-rows: auto;
     grid-auto-rows: auto;
     //grid-template-rows: 170px;
@@ -68,10 +68,22 @@ const StagesTag = styled.section`
     margin: 64px 0 8px;
     position: relative;
   }
+  .subtitle::before{
+    content: '#';
+    font-family: 'Russo One';
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #1A1A1A;
+    position: absolute;
+    left: -37px;
+    top: -7px;
+    z-index: 100;
+    
+  }
   .content::before{
     font-weight: 900;
     color: #fff;
-    content: '#';
     font-size: 40px;
     line-height: 47px;
     text-transform: uppercase;
@@ -113,14 +125,104 @@ const StagesTag = styled.section`
     line-height: 21px;
     color: #1A1A1A;
   }
-  .text::before{
-    color: #fff;
-    font-weight: 900;
-    font-size: 40px;
-    position: absolute;
-    top: -81px;
-    left: -21px;
+  // ADAPTIVE
+  @media (max-width: 1272px){
+    .gridWrapper{
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
   }
+  @media (max-width: 991px){
+    
+    padding: 66px 0 51px;
+    .gridWrapper{
+      column-gap: 22px;
+      row-gap: 49px;
+      grid-template-columns: repeat(auto-fit, minmax(351px, 1fr));
+    }
+    .title{
+      font-size: 80px;
+      line-height: 96px;
+    }
+    .description{
+      font-size: 18px;
+      line-height: 150%;
+      margin-bottom: 70px;
+    }
+    .subtitle{
+      font-size: 22px;
+      line-height: 27px;
+      margin-bottom: 10px;
+    }
+    .text{
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+  @media (max-width: 767px){
+    padding: 52px 0 60px;
+    .gridItem{
+      padding: 0 5px;
+    }
+    .gridWrapper{
+      column-gap: 22px;
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+    .icon{
+      display: none;
+    }
+    .subtitle{
+      margin: 53px 0 6px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+    .subtitle::before{
+      font-size: 30px;
+      line-height: 36px;
+      left: 0;
+      top: -30px;
+      z-index: 100;
+    }
+    .content::before{
+      font-size: 25.2379px;
+      line-height: 30px;
+      left: 24px;
+      top: 10px;
+    }
+    .subtitle::after{
+      width: 35.62px;
+      height: 35.62px;
+      left: 16px;
+      top: -45px;
+    }
+    .title{
+      font-size: 60px;
+      line-height: 100%;
+      margin-bottom: 7px;
+    }
+    .description{
+      font-size: 14px;
+      line-height: 150%;
+      margin-bottom: 41px;
+      max-width: 450px;
+    }
+    .text{
+      font-size: 14px;
+      line-height: 150%;
+    }
+    @media (max-width: 550px){
+      .br{
+        display: block;
+      }
+      .blue{
+        display: none;
+      }
+      .description{
+        max-width: 250px;
+      }
+    }
+  }
+  
 `
 
 const Stages = () => {
@@ -131,7 +233,7 @@ const Stages = () => {
                     Этапы работы <span className='blue'>;<span className='black'>-</span>]</span>
                 </h2>
                 <p className="description">
-                    Поможем составить техзадание и определиться со структурой сайта. От вас потребуется понимание того как будет работать бизнес. Все остальное возьмем на себя.
+                    Поможем составить техзадание и определиться со структурой сайта. От вас потребуется понимание того как будет работать бизнес. <span className="br">Все остальное возьмем на себя.</span>
                 </p>
                 <div className="gridWrapper">
                     <div className="gridItem">
