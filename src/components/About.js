@@ -86,7 +86,7 @@ const AboutTag = styled.section`
   .absolute::before, .absolute::after{
     position: absolute;
     color: #fff;
-    -webkit-text-stroke: 1px rgba(255,255,255,.3);
+    -webkit-text-stroke: 1px rgba(157,157,157,.3);
     -webkit-text-fill-color: transparent;
     z-index: -100;
     font-family: 'Russo One';

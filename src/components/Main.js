@@ -1,6 +1,8 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useEffect} from 'react';
 import styled from 'styled-components'
 import bg from '../images/bg.png'
+import Button from "./elements/Button";
+// import Button from "./elements/Button";
 
 const MainTag = styled.section`
   min-height: 676px;
@@ -37,8 +39,29 @@ const MainTag = styled.section`
     background-color: #1A1A1A;
     line-height: 16px;
   }
-  .consultation{
+  .btnWrapper{
     margin-top: 32px;
+    display: flex;
+    width: 353px;
+    position: relative;
+  }
+  .pointFirst{
+    width: 26px;
+    height: 26px;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 0;
+    right: 56px;
+  }
+  .pointSecond{
+    width: 26px;
+    height: 26px;
+    background-color: #1a1a1a;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .consultation{
     width: 271px;
     height: 52px;
     background: #1E4FCD;
@@ -47,7 +70,9 @@ const MainTag = styled.section`
     font-size: 18px;
     line-height: 21px;
     color: #FFFFFF;
+    position: relative;
   }
+
   .stacks{
     margin-top: 112px;
     max-width: 540px;
@@ -138,9 +163,17 @@ const Main = () => {
                        <h2 className="title">
                            Сайты под ключ и <span className='blue'>[web. <span className='white'>с</span>]</span>
                        </h2>
-                       <button className="consultation">
-                           Получить консультацию
-                       </button>
+                           <Button btnClassName='consultation' clazz1={'pointFirst'} clazz2={'question_2'} btnStyles={[{background: '#1E4FCD', color: '#fff', border: 'none'}, {background: '#fff', color: '#1E4FCD', border: '1px solid #1a1a1a'}]}>
+                               <div className="btnWrapper">
+                                   <button className="consultation">
+                                       Получить консультацию
+                                   </button>
+                                   <div className="points">
+                                       <div className="pointFirst"></div>
+                                       <div className="pointSecond"></div>
+                                   </div>
+                               </div>
+                           </Button>
                        <div className="stacks">
                            <div className="stack programLang">
                                <div className="stackItem">

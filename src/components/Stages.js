@@ -34,9 +34,11 @@ const StagesTag = styled.section`
   }
   .gridWrapper{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 630px));
-    grid-template-rows: 170px;
-    grid-auto-rows: 170px;
+    grid-template-columns: repeat(auto-fit, minmax(359px, 1fr));
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    //grid-template-rows: 170px;
+    //grid-auto-rows: 170px;
     column-gap: 27px;
     row-gap: 46px;
   }
@@ -47,9 +49,16 @@ const StagesTag = styled.section`
   }
   .content{
     max-width: 520px;
+    flex-shrink: 1;
+    position: relative;
   }
   .icon{
-    align-self: flex-end;
+    height: 170px;
+    display: flex;
+    align-items: flex-end;
+    align-self: flex-start;
+    flex-shrink: 0;
+    margin-right: 35px;
   }
   .subtitle{
     font-size: 30px;
@@ -59,33 +68,34 @@ const StagesTag = styled.section`
     margin: 64px 0 8px;
     position: relative;
   }
-  .subtitle::before{
+  .content::before{
+    font-weight: 900;
+    color: #fff;
     content: '#';
     font-size: 40px;
-    line-height: 48px;
+    line-height: 47px;
     text-transform: uppercase;
-    color: #1A1A1A;
     position: absolute;
-    left: -38px;
-    top: -7px;
+    left: -20px;
+    top: 15px;
     z-index: 10;
   }
-  .gridItem:nth-child(1) .text::before{
+  .gridItem:nth-child(1) .content::before{
     content: '1.';
   }
-  .gridItem:nth-child(2) .text::before{
+  .gridItem:nth-child(2) .content::before{
     content: '2.';
   }
-  .gridItem:nth-child(3) .text::before{
+  .gridItem:nth-child(3) .content::before{
     content: '3.';
   }
-  .gridItem:nth-child(4) .text::before{
+  .gridItem:nth-child(4) .content::before{
     content: '4.';
   }
-  .gridItem:nth-child(5) .text::before{
+  .gridItem:nth-child(5) .content::before{
     content: '5.';
   }
-  .gridItem:nth-child(6) .text::before{
+  .gridItem:nth-child(6) .content::before{
     content: '6.';
   }
   .subtitle::after{
@@ -102,7 +112,6 @@ const StagesTag = styled.section`
     font-size: 18px;
     line-height: 21px;
     color: #1A1A1A;
-    position: relative;
   }
   .text::before{
     color: #fff;

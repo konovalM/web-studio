@@ -201,7 +201,7 @@ const ServicesTag = styled.section`
   .seo{
     grid-column: 1/2;
     grid-row: 3/5;
-    background-color: #000;
+    background-color: #1a1a1a;
     position: relative;
   }
   .seo::before{

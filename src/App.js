@@ -14,16 +14,16 @@ import Prices from "./components/prices/Prices";
 function App() {
     return (
         <Fragment>
-            <Header />
+            {/*<Header />
             <Main />
-            <Reasons />
+            <Reasons />*/}
             <Stages />
-            <Services />
+            {/*<Services />
             <Prices />
             <Faq />
             <About />
             <Questions />
-            <Footer />
+            <Footer />*/}
         </Fragment>
     );
 }

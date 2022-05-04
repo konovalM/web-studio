@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import bg from '../images/bg.png'
 import telegram from '../images/telegram.svg'
 import crosses from '../images/crosses.jpg'
+import {useEffect} from "react";
+import Button from "./elements/Button";
 
 const QustionsTag = styled.section`
   padding: 60px 0 120px;
@@ -83,19 +85,16 @@ const QustionsTag = styled.section`
     height: 51px;
   }
   .agreement{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
     font-size: 15px;
     line-height: 18px;
     color: #FFFFFF;
     padding-right: 3px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
   .special{
     text-decoration-line: underline;
   }
-  .submit{
+  .question_consultation{
     background: #1E4FCD;
     width: 271px;
     height: 52px;
@@ -135,6 +134,29 @@ const QustionsTag = styled.section`
   .contactPhone{
     color: #FFFFFF;
   }
+  .btnWrapper{
+    margin-top: 32px;
+    display: flex;
+    width: 353px;
+    position: relative;
+  }
+  .question_1{
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 56px;
+  }
+  .question_2{
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
 `
 
 const Questions = () => {
@@ -185,9 +207,17 @@ const Questions = () => {
                             <div className="agreement">
                                 Нажимая на кнопку "Связаться с нами", вы даете согласие на <span className='special'>обработку персональных данных</span>.
                             </div>
-                            <button type='submit' className="submit">
-                                Получить консультацию
-                            </button>
+                            <Button btnClassName='question_consultation' clazz1={'question_1'} clazz2={'question_2'} btnStyles={[{background: '#1E4FCD', color: '#fff'}, {background: '#fff', color: '#1E4FCD', border: 'none'}]}>
+                            <div className="btnWrapper" >
+                                <button className="question_consultation" type='submit'>
+                                    Получить консультацию
+                                </button>
+                                <div className="points">
+                                    <div className="question_1"></div>
+                                    <div className="question_2"></div>
+                                </div>
+                            </div>
+                            </Button>
                         </div>
                     </form>
                 </div>

@@ -4,7 +4,7 @@ import {useEffect, useState, useRef} from "react";
 
 
 
-const PricesComponent = ({title, margin, price, size}) => {
+const PricesComponent = ({title, margin, price, size, content}) => {
     const ref = useRef(null)
     let defaultTitle = null
     const [settings, setSettings] = useState({width: null, top: null, height: null})
@@ -30,15 +30,13 @@ const PricesComponent = ({title, margin, price, size}) => {
         // let position = {width: widthFrom-15, top: heightFrom - sectionHeightFrom, height: document.querySelector('.product').clientHeight}
         let widthFrom= ref.current.getBoundingClientRect().left
         let heightFrom = ref.current.getBoundingClientRect().top
-        console.log(widthFrom, heightFrom)
-        // console.log(position)
         let position = {width: widthFrom-15, top: heightFrom - sectionHeightFrom, height: document.querySelector('.product').clientHeight}
         setSettings(position)
     }, [width])
 
 
     if (size){
-        defaultTitle = <div style={{fontSize: '59px'}}>многостраничные<div style={{fontSize: '144px'}}>сайты</div></div>
+        defaultTitle = <div><span style={{fontSize: '59px', display: 'block', lineHeight: '59px', marginBottom: '40px'}}>многостраничные</span><span style={{fontSize: '144px', display: 'block'}}>сайты</span></div>
     }
     return (
         <div style={{marginTop: margin ? margin : '0'}}>
@@ -52,14 +50,18 @@ const PricesComponent = ({title, margin, price, size}) => {
                 <h3 className="product" ref={ref}>{defaultTitle ||title}</h3>
                 <div className="flexWrapper">
                     <div className="flexList">
-                        <div className="flexItem">Подключение статистики</div>
-                        <div className="flexItem">Анализ конкурентов</div>
-                        <div className="flexItem">Система управления сайтом</div>
+                        {content.left.map(text => {
+                            return (
+                                <div className="flexItem" key={text}>{text}</div>
+                            )
+                        })}
                     </div>
                     <div className="flexList">
-                        <div className="flexItem">Возможность “мультистраничности”</div>
-                        <div className="flexItem">Индивидуальный дизайн</div>
-                        <div className="flexItem">Адаптивность под планшеты и смартфоны</div>
+                        {content.right.map((text, i) => {
+                            return (
+                                <div className="flexItem" key={text}>{text}</div>
+                            )
+                        })}
                     </div>
                 </div>
             </div>
@@ -74,5 +76,7 @@ const PricesComponent = ({title, margin, price, size}) => {
         </div>
     );
 };
+
+
 
 export default PricesComponent;
