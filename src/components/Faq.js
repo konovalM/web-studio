@@ -39,162 +39,159 @@ const FaqTag = styled.section`
   .gridWrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(0, auto);
-    grid-column-gap: 15px;
+    grid-template-rows: repeat(9, minmax(46px, auto));
+    grid-column-gap: 13px;
     z-index: 100;
     position: relative;
-  }
-  .gridLeft{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
-    padding-right: 23px;
-    .accordionWrapper:nth-child(1){
-      height: 200px;
-    }
-    .accordionWrapper:nth-child(2){
-      height: 92px;
-    }
-    .accordionWrapper:nth-child(3){
-      height: 92px;
-    }
-    .accordionWrapper:nth-child(4){
-      height: 92px;
-    }
   }
   .question{
-    font-weight: 900;
-    font-size: 21px;
-    line-height: 25px;
-    color: #1A1A1A;
-    position: relative;
+    margin-bottom: 5px;
   }
-  .question::before{
-    content: '';
-    position: absolute;
-    width: 13px;
-    height: 13px;
-    background-color: #1E4FCD;
-    border-radius: 100%;
-    right: -38px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 100;
-  }
-  .questionLeft::before{
-    right: -38px;
-  }
-  .questionRight::before{
-    left: -36px;
-  }
-  .question::after{
-    content: '';
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-color: #fff;
-    border-radius: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 50;
-  }
-  .questionLeft::after{
-    right: -40px;
-  }
-  .questionRight::after{
-    left: -38px;
-  }
-  .questionInner{
+  .questionText{
     display: inline-block;
     position: relative;
     cursor: pointer;
   }
-  .questionInner::before{
+  .accordionWrapper{
+    position: relative;
+  }
+  .questionText::before{
     content: '';
-    width: 20px;
-    height: 12px;
-    background: url(${blueBottomArrow});
     position: absolute;
+    width: 24px;
+    height: 1px;
+    background-color: #1A1A1A;
     top: 50%;
     transform: translateY(-50%);
-    transition: transform .3s;
   }
-  .questionInnerLeft::before{
-    left: -30px;
+  .questionText::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 13px;
+    top: 50%;
+    background: url(${blueBottomArrow});
     transform: translateY(-50%);
+    transition: transform 0.3s ease 0s;
   }
-  .questionInnerRight::before{
-    right: -30px;
-    transform: translateY(-50%);
+  .accordionWrapper:nth-child(odd){
+    grid-column: 1 / 2;
+    margin-right: 25px;
+    .question{
+      text-align: right;
+    }
+    .questionText::before{
+
+      right: -31px;
+    }
+    .questionText::after{
+      left: -30px;
+    }
   }
-  .rotate::before{
+  .accordionWrapper::after{
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    background-color: #1E4FCD;
+    z-index: 50;
+  }
+  .accordionWrapper::before{
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    background-color: #fff;
+    z-index: 50;
+  }
+  .rotate::after{
     transform: translateY(-50%) rotate(180deg);
   }
-  .questionInner::after{
+  .accordionWrapper:nth-child(odd)::before{
+    right: -41px;
+    top: 4px;
+  }
+  .accordionWrapper:nth-child(odd)::after{
+    right: -39px;
+    top: 6px;
+  }
+  .accordionWrapper:nth-child(even)::before{
     content: '';
-    width: 24px;
-    height: 2px;
-    background-color: #1A1A1A;
-    position: absolute;
-    right: -31px;
-    top: 50%;
-    transform: translateY(-50%);
-    box-shadow: 1px 0 1px #000;
+    left: -39px;
+    top: 4px;
+    z-index: 50;
   }
-  
-  .questionInnerLeft::after{
-    right: -31px;
+  .accordionWrapper:nth-child(even)::after{
+    left: -37px;
+    top: 6px;
   }
-  .questionInnerRight::after{
-    left: -31px;
+  .accordionWrapper:nth-child(even){
+    grid-column: 2 / 3;
+    margin-left: 25px;
+    .questionText::before{
+      left: -31px;
+    }
+    .questionText::after{
+      right: -30px;
+    }
+  }
+  .accordionWrapper:nth-child(1){
+    grid-row: 1 / 2;
+  }
+  .accordionWrapper:nth-child(2){
+    grid-row: 2 / 3;
+  }
+  .accordionWrapper:nth-child(3){
+    grid-row: 3 / 4;
+  }
+  .accordionWrapper:nth-child(4){
+    grid-row: 4 / 5;
+  }
+  .accordionWrapper:nth-child(5){
+    grid-row: 5 / 6;
+  }
+  .accordionWrapper:nth-child(6){
+    grid-row: 6 / 7;
+  }
+  .accordionWrapper:nth-child(7){
+    grid-row: 7 / 8;
+  }
+  .accordionWrapper:nth-child(8){
+    grid-row: 8 / 9;
+  }
+  .accordionWrapper:nth-child(9){
+    grid-row: 9 / 10;
+  }
+  .questionText{
+    font-weight: 900;
+    font-size: 21px;
+    line-height: 25px;
+    color: #1A1A1A;
   }
   .answer{
     font-size: 18px;
     color: #1A1A1A;
     max-height: 0;
     overflow: hidden;
+    -webkit-transition: all .5s;
     transition: all .5s;
-    transition-timing-function: cubic-bezier(.25, .1, .25, 1);
+    -webkit-transition-timing-function: cubic-bezier(.25,.1,.25,1);
+    transition-timing-function: cubic-bezier(.25,.1,.25,1);
   }
   .answerActive{
     height: auto;
     max-height: none;
     margin-top: 5px;
   }
-  // right part of tree
-  .gridRight{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    padding-left: 23px;
-    margin-top: 47px;
-    .accordionWrapper:nth-child(1){
-      height: 200px;
-    }
-    .accordionWrapper:nth-child(2){
-      height: 92px;
-    }
-    .accordionWrapper:nth-child(3){
-      height: 92px;
-    }
-    .accordionWrapper:nth-child(4){
-      height: 92px;
-    }
-  }
 `
 
 const Faq = () => {
-    const [leftAnswers, setLeftAnswers] = useState([false, false, false, false, false])
-    const [rightAnswers, setRightAnswers] = useState([false, false, false, false])
-    const toggleActiveLeft = (id) => {
-        setLeftAnswers(leftAnswers.map((property, i) => {
-            return id === i ? !property : false
-        }))
-    }
-    const toggleActiveRight = (id) => {
-        setRightAnswers(rightAnswers.map((property, i) => {
+    const [answers, setAnswers] = useState([false, false, false, false, false, false, false, false, false])
+
+    const toggleActive = (id) => {
+        setAnswers(answers.map((property, i) => {
             return id === i ? !property : false
         }))
     }
@@ -208,17 +205,16 @@ const Faq = () => {
                 </div>
                 <div className="wrapper">
                     <div className="gridWrapper">
-                        <div className="gridLeft">
                             {
-                                leftQuestions.map((obj, i) => {
+                                questions.map((obj, i) => {
                                     return (
-                                        <div className="accordionWrapper accordionWrapperLeft" key={i}>
-                                            <div className="question questionLeft">
-                                                <p className={leftAnswers[i] ? 'questionInner questionInnerLeft rotate' : 'questionInner questionInnerLeft'} onClick={() => toggleActiveLeft(i)}>
+                                        <div className="accordionWrapper" key={i}>
+                                            <div className="question">
+                                                <p className={answers[i] ? 'questionText rotate' : 'questionText'} onClick={() => toggleActive(i)}>
                                                     {obj.question}
                                                 </p>
                                             </div>
-                                            <div className={leftAnswers[i] ? 'answer answerLeft answerActive' : 'answer answerLeft'}>{obj.answer}</div>
+                                            <div className={answers[i] ? 'answer answerActive' : 'answer'}>{obj.answer}</div>
                                         </div>
                                     )
                                 })
@@ -264,55 +260,6 @@ const Faq = () => {
                                 </div>
                                 <div className="answer answerLeft">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.</div>
                             </div>*/}
-                        </div>
-                        <div className="gridRight">
-                            {
-                                rightQuestions.map((obj, i) => {
-                                    return(
-                                        <div className="accordionWrapper accordionWrapperRight" key={i}>
-                                            <div className="question questionRight">
-                                                <p className={rightAnswers[i] ? 'questionInner questionInnerRight rotate' : 'questionInner questionInnerRight'} onClick={() => toggleActiveRight(i)}>
-                                                    {obj.question}
-                                                </p>
-                                            </div>
-                                            <div className={rightAnswers[i] ? 'answer answerRight answerActive' : 'answer answerRight'}>{obj.answer}</div>
-                                        </div>
-                                    )
-                                })
-                            }
-                            {/*<div className="accordionWrapper accordionWrapperRight">
-                                <div className="question questionRight">
-                                    <p className="questionInner questionInnerRight">
-                                        Короткий вопрос
-                                    </p>
-                                </div>
-                                <div className="answer answerRight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.</div>
-                            </div>
-                            <div className="accordionWrapper accordionWrapperRight">
-                                <div className="question questionRight">
-                                    <p className="questionInner questionInnerRight">
-                                        Очередной вопрос очень длинный
-                                    </p>
-                                </div>
-                                <div className="answer answerRight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.</div>
-                            </div>
-                            <div className="accordionWrapper accordionWrapperRight">
-                                <div className="question questionRight">
-                                    <p className="questionInner questionInnerRight">
-                                        Очень очень очень длинный вопрос раз два три
-                                    </p>
-                                </div>
-                                <div className="answer answerRight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.</div>
-                            </div>
-                            <div className="accordionWrapper accordionWrapperRight">
-                                <div className="question questionRight">
-                                    <p className="questionInner questionInnerRight">
-                                        Короткий вопрос
-                                    </p>
-                                </div>
-                                <div className="answer answerRight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.</div>
-                            </div>*/}
-                        </div>
                     </div>
                     <div className="tree">
                         <img src={tree} alt="tree of questions" className="treeImg"/>
@@ -323,9 +270,25 @@ const Faq = () => {
     );
 };
 
-const leftQuestions = [
+const questions = [
     {
         question: 'Очень длинное название вопроса',
+        answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.'
+    },
+    {
+        question: 'Короткий вопрос',
+        answer: 'Эта услуга требует максимальной оперативности, поскольку часто хостинги хранят исходники не дольше нескольких дней. Однако, в некоторых случаях информацию можно восстановить даже после полного удаления сайта с хостинга через специализированные...'
+    },
+    {
+        question: 'Очередной вопрос очень длинный',
+        answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.'
+    },
+    {
+        question: 'Очень очень очень длинный вопрос раз два три',
+        answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.'
+    },
+    {
+        question: 'Короткий вопрос',
         answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.'
     },
     {
@@ -346,23 +309,5 @@ const leftQuestions = [
     }
 ]
 
-const rightQuestions = [
-    {
-        question: 'Короткий вопрос',
-        answer: 'Эта услуга требует максимальной оперативности, поскольку часто хостинги хранят исходники не дольше нескольких дней. Однако, в некоторых случаях информацию можно восстановить даже после полного удаления сайта с хостинга через специализированные...'
-    },
-    {
-        question: 'Очередной вопрос очень длинный',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.'
-    },
-    {
-        question: 'Очень очень очень длинный вопрос раз два три',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.'
-    },
-    {
-        question: 'Короткий вопрос',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.'
-    }
-]
 
 export default Faq;
