@@ -202,6 +202,11 @@ const QustionsTag = styled.section`
     }
     .description{
       margin-bottom: 90px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+    .br{
+      display: block;
     }
     .formOutside{
       padding: 0 5px;
@@ -315,7 +320,7 @@ const Questions = () => {
         <QustionsTag>
             <div className="container">
                 <h2 className="title">Остались вопросы?</h2>
-                <p className="description">Пишите или звоните. Отвечаем круглосуточно.</p>
+                <p className="description">Пишите или звоните.<span className="br"> Отвечаем круглосуточно.</span></p>
                 <div className="formOutside">
                     <div className="formWrapper">
                         <form action="#" className="form">

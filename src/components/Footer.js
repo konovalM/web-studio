@@ -51,6 +51,53 @@ const FooterTag = styled.footer`
     justify-content: space-between;
     margin-left: auto;
   }
+  
+  // ADAPTIVE
+  
+  @media(max-width: 900px){
+    padding: 50px 0;
+  .logoWrapper{
+    margin-right: 66px;
+  }
+  .services+.services{
+  margin-left: 43px;
+  }
+}
+  @media(max-width: 767px){
+    .logoWrapper{
+      margin-right: 46px;
+    }
+    .services+.services{
+      margin-left: 33px;
+    }
+  }
+  @media(max-width: 700px){
+    padding: 50px 0 38px;
+    .wrapper{
+      padding: 0 5px;
+      flex-direction: column;
+    }
+    .logoWrapper{
+      margin: 0 0 38px 0;
+    }
+    .services+.services{
+      margin: 0;
+    }
+    .services{
+      margin: 0;
+    }
+    .contacts{
+      margin-left: unset;
+      margin-top: 56px;
+    }
+    .tel, .mail, .socials{
+      margin-left: unset;
+      text-align: left;
+    }
+    .services__first{
+      margin-bottom: 20px;
+    }
+  }
 `
 
 const Footer = () => {
@@ -61,7 +108,7 @@ const Footer = () => {
                     <div className="logoWrapper">
                         <img src={logotype} alt="logotype"/>
                     </div>
-                    <div className="services">
+                    <div className="services services__first">
                         <div className="service">
                             <a href="#" className="serviceLink">Сайты</a>
                         </div>

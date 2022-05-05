@@ -23,7 +23,7 @@ function App() {
             <Faq />
             <About />*/}
             <Questions />
-            {/*<Footer />*/}
+            <Footer />
         </Fragment>
     );
 }
