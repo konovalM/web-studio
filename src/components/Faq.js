@@ -2,8 +2,11 @@ import React, {useState} from 'react';
 import styled from "styled-components";
 import bg from '../images/bg.png'
 import tree from '../images/tree.svg'
+import mobileTree from '../images/treeMobile.svg'
 import blueBottomArrow from '../images/blueBottomArrow.svg'
 import blueTopArrow from '../images/blueTopArrow.svg'
+import crossesMobile from "../images/crossesMobile.jpg";
+import crosses from "../images/crosses.jpg";
 
 const FaqTag = styled.section`
   padding: 84px 0 70px;
@@ -69,19 +72,20 @@ const FaqTag = styled.section`
     position: absolute;
     width: 20px;
     height: 13px;
-    top: 50%;
+    top: 5px;
     background: url(${blueBottomArrow});
-    transform: translateY(-50%);
     transition: transform 0.3s ease 0s;
   }
   .accordionWrapper:nth-child(odd){
     grid-column: 1 / 2;
     margin-right: 25px;
+    .questionText{
+      margin-left: 30px;
+    }
     .question{
       text-align: right;
     }
     .questionText::before{
-
       right: -31px;
     }
     .questionText::after{
@@ -107,7 +111,7 @@ const FaqTag = styled.section`
     z-index: 50;
   }
   .rotate::after{
-    transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-10%) rotate(180deg);
   }
   .accordionWrapper:nth-child(odd)::before{
     right: -41px;
@@ -130,6 +134,9 @@ const FaqTag = styled.section`
   .accordionWrapper:nth-child(even){
     grid-column: 2 / 3;
     margin-left: 25px;
+    .questionText{
+      display: inline-block;
+    }
     .questionText::before{
       left: -31px;
     }
@@ -175,15 +182,140 @@ const FaqTag = styled.section`
     color: #1A1A1A;
     max-height: 0;
     overflow: hidden;
-    -webkit-transition: all .5s;
     transition: all .5s;
-    -webkit-transition-timing-function: cubic-bezier(.25,.1,.25,1);
     transition-timing-function: cubic-bezier(.25,.1,.25,1);
   }
   .answerActive{
     height: auto;
     max-height: none;
     margin-top: 5px;
+  }
+  
+  //ADAPTIVE
+  @media(max-width: 1145px){
+    padding: 74px 0 80px;
+    .title{
+      font-size: 80px;
+      line-height: 96px;
+    }
+    .questionText{
+      font-size: 16px;
+      line-height: 19px;
+    }
+    .answer{
+      font-size: 16px;
+      line-height: 150%;
+    }
+    .description{
+      margin-bottom: 141px;
+    }
+    .questionText::after{
+      top: 5px;
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 10px;
+      background-image: url(${blueBottomArrow});
+      background-size: 16px;
+      background-repeat: no-repeat;
+      transition: transform 0.3s ease 0s;
+    }
+  }
+  @media(max-width: 920px){
+    .accordionWrapper:nth-child(odd){
+    }
+  }
+  @media(max-width: 767px){
+    padding: 54px 0 80px;
+    .title{
+      font-size: 60px;
+      line-height: 72px;
+      margin-bottom: 25px;
+    }
+    .description{
+      font-size: 14px;
+      line-height: 150%;
+    }
+    .tree{
+      left: 55px;
+      top: -115px;
+    }
+    .gridWrapper{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(9, minmax(46px, auto));
+      grid-column-gap: 13px;
+      z-index: 100;
+      position: relative;
+      margin-left: 12px;
+    }
+    .accordionWrapper:nth-child(odd) .question {
+      text-align: left;
+    }
+    .accordionWrapper:nth-child(n){
+      grid-column: 1;
+    }
+    .accordionWrapper:nth-child(odd) {
+      margin-left: 25px;
+    }
+    .accordionWrapper:nth-child(even){
+      .questionText::after{
+        right: -24px;
+        top: 3px;
+      }
+    }
+    .accordionWrapper:nth-child(odd) .questionText {
+      margin-left: 0;
+    }
+    .accordionWrapper:nth-child(odd){
+      
+      .questionText::after{
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 1px;
+        background-color: #1A1A1A;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .questionText::before{
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 10px;
+        background-color: unset;
+        top: 9px;
+        background-image: url(${blueBottomArrow});
+        background-size: 16px;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease 0s;
+      }
+      .questionText::before{
+        right: -23px;
+      }
+      .questionText::after{
+        left: -30px;
+      }
+    }
+    .accordionWrapper:nth-child(odd)::after{
+      left: -37px;
+      top: 6px;
+    }
+    .accordionWrapper:nth-child(odd)::before{
+      left: -39px;
+      top: 4px;
+    }
+    .questionText{
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .rotate::before{
+      transform: translateY(-70%) rotate(180deg);
+    }
+    .answer{
+      font-size: 14px;
+      line-height: 150%;
+    }
   }
 `
 
@@ -262,7 +394,10 @@ const Faq = () => {
                             </div>*/}
                     </div>
                     <div className="tree">
-                        <img src={tree} alt="tree of questions" className="treeImg"/>
+                        <picture>
+                            <source srcSet={mobileTree} media="(max-width: 767px)" />
+                            <img src={tree} alt="tree of questions" className="treeImg"/>
+                        </picture>
                     </div>
                 </div>
             </div>
