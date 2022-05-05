@@ -225,7 +225,8 @@ const FaqTag = styled.section`
     .accordionWrapper:nth-child(odd){
     }
   }
-  @media(max-width: 767px){
+  //@media(max-width: 767px){
+  @media(max-width: 856px){
     padding: 54px 0 80px;
     .title{
       font-size: 60px;
@@ -395,7 +396,8 @@ const Faq = () => {
                     </div>
                     <div className="tree">
                         <picture>
-                            <source srcSet={mobileTree} media="(max-width: 767px)" />
+                            {/*<source srcSet={mobileTree} media="(max-width: 767px)" />*/}
+                            <source srcSet={mobileTree} media="(max-width: 856px)" />
                             <img src={tree} alt="tree of questions" className="treeImg"/>
                         </picture>
                     </div>

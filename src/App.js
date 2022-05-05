@@ -20,8 +20,8 @@ function App() {
             <Stages />
             {/*<Services />
             <Prices />*/}
-            <Faq />
-            {/*<About />*/}
+            {/*<Faq />*/}
+            <About />
             <Questions />
             <Footer />
         </Fragment>

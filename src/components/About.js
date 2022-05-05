@@ -116,6 +116,167 @@ const AboutTag = styled.section`
     color: #fff;
     line-height: 120px;
   }
+  
+  
+  //ADAPTIVE
+  
+  @media(max-width: 1331px){
+    .gridWrapper{
+      grid-template-columns: repeat(auto-fill, 270px);
+      grid-gap: 20px;
+    }
+    .absolute{
+      right: -22px;
+    }
+    .absolute::before{
+      font-size: 220px;
+      top: -5px;
+      left: -124px;
+    }
+    .absolute::after{
+      font-size: 220px;
+      bottom: 21px;
+      left: -105px;
+    }
+    .word{
+      font-size: 120px;
+    }
+  }
+
+  @media(max-width: 1174px){
+    padding: 70px 0 87px;
+    .title{
+      font-size: 80px;
+      line-height: 96px;
+      margin-bottom: 5px;
+    }
+    .absolute{
+      display: none;
+    }
+    .gridElem{
+      background-position: top center;
+    }
+    .gridWrapper{
+      grid-template-columns: repeat(auto-fit, minmax(310px, 356px));
+      justify-content: center;
+    }
+    .gridElem:nth-child(n+3){
+      grid-row-start: unset;
+    }
+    .description{
+      font-size: 18px;
+      line-height: 150%;
+      max-width: 550px;
+      margin-bottom: 39px;
+    }
+  }
+  @media(max-width: 1000px){
+    .description{
+      max-width: 442px;
+    }
+  }
+  @media(max-width: 773px){
+    .gridWrapper{
+      grid-template-columns: 359px 359px;
+    }
+  }
+  @media(max-width: 767px){
+    padding: 52px 0 82px;
+    .title{
+      font-size: 65px;
+      line-height: 100%;
+      margin-bottom: 18px;
+    }
+    .description{
+      margin: 0 0 29px 0;
+      font-size: 16px;
+      line-height: 150%;
+    }
+    .gridWrapper{
+      padding: 0 5px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      justify-content: center;
+    }
+    .gridElem{
+      background: none;
+      display: flex;
+      
+    }
+    .name{
+      margin: 0;
+    }
+    .nameWrapper{
+      background: url(${developerBg})top center/cover no-repeat;
+      height: calc(100% - 40px);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .profile{
+      height: 40px;
+      margin: 0;
+      background-color: #1a1a1a;
+    }
+  }
+  
+  @media(max-width: 555px){
+    .title{
+      font-size: 50px;
+      line-height: 100%;
+    }
+    .description{
+      font-weight: 400;
+      font-size: 14px;
+      max-width: 290px;
+    }
+    .name{
+      height: 32px;
+    }
+    .gridWrapper{
+      padding: 0 5px;
+      
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      justify-content: center;
+    }
+  }
+  @media(max-width: 468px){
+    .gridWrapper{
+      padding: 0 5px;
+      grid-template-rows: 200px;
+      grid-auto-rows: 200px;
+      grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+      justify-content: center;
+    }
+    .profile{
+      font-size: 15px;
+      line-height: 17px;
+      height: 37px;
+      padding-left: 6px;
+    }
+    .name{
+      height: 32px;
+      padding-left: 6px;
+    }
+    .nameText{
+      font-size: 12px;
+      line-height: 14px;
+      max-width: 55px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  @media(max-width: 420px){
+    .profile{
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+  @media(max-width: 330px){
+    .gridWrapper{
+      grid-template-rows: 154px;
+      grid-auto-rows: 154px;
+    }
+  }
 `
 
 const About = () => {
@@ -138,49 +299,73 @@ const About = () => {
                     </div>
                     <div className="gridWrapper">
                         <div className="gridElem">
-                            <p className="name">
-                                Геннадий Васнецов
-                            </p>
+                            <div className="nameWrapper">
+                                <div className="name">
+                                    <p className="nameText">
+                                        Геннадий Васнецов
+                                    </p>
+                                </div>
+                            </div>
                             <p className="profile">
                                 full stack разработчик
                             </p>
                         </div>
                         <div className="gridElem">
-                            <p className="name">
-                                Геннадий Васнецов
-                            </p>
+                            <div className="nameWrapper">
+                                <div className="name">
+                                    <p className="nameText">
+                                        Геннадий Васнецов
+                                    </p>
+                                </div>
+                            </div>
                             <p className="profile">
                                 full stack разработчик
                             </p>
                         </div>
                         <div className="gridElem">
-                            <p className="name">
-                                Геннадий Васнецов
-                            </p>
+                            <div className="nameWrapper">
+                                <div className="name">
+                                    <p className="nameText">
+                                        Геннадий Васнецов
+                                    </p>
+                                </div>
+                            </div>
                             <p className="profile">
                                 full stack разработчик
                             </p>
                         </div>
                         <div className="gridElem">
-                            <p className="name">
-                                Геннадий Васнецов
-                            </p>
+                            <div className="nameWrapper">
+                                <div className="name">
+                                    <p className="nameText">
+                                        Геннадий Васнецов
+                                    </p>
+                                </div>
+                            </div>
                             <p className="profile">
                                 full stack разработчик
                             </p>
                         </div>
                         <div className="gridElem">
-                            <p className="name">
-                                Геннадий Васнецов
-                            </p>
+                            <div className="nameWrapper">
+                                <div className="name">
+                                    <p className="nameText">
+                                        Геннадий Васнецов
+                                    </p>
+                                </div>
+                            </div>
                             <p className="profile">
                                 full stack разработчик
                             </p>
                         </div>
                         <div className="gridElem">
-                            <p className="name">
-                                Геннадий Васнецов
-                            </p>
+                            <div className="nameWrapper">
+                                <div className="name">
+                                    <p className="nameText">
+                                        Геннадий Васнецов
+                                    </p>
+                                </div>
+                            </div>
                             <p className="profile">
                                 full stack разработчик
                             </p>
