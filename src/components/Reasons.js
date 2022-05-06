@@ -104,8 +104,8 @@ const ReasonsTag = styled.section`
   }
   .first{
     transform: rotate(-59.94deg);
-    top: -190px;
-    right: -70px;
+    top: -199px;
+    right: -66px;
   }
   .first::before{
     content: 'лет на рынке';
@@ -119,8 +119,8 @@ const ReasonsTag = styled.section`
   }
   .second{
     transform: rotate(-28.91deg);
-    top: -20px;
-    right: -360px;
+    top: -34px;
+    right: -364px;
   }
   .second::before{
     content: 'проектов';
@@ -139,6 +139,249 @@ const ReasonsTag = styled.section`
   .third::after{
     content: 'project';
   }
+  
+  //ADAPTIVE
+  
+  @media(max-width: 1770px){
+    .circle{
+      width: 400px;
+      height: 400px;
+      left: -39px;
+      bottom: -80px;
+    }
+    .advantage{
+      font-size: 90px;
+    }
+    .first{
+      top: -195px;
+      right: -55px;
+    }
+    .second{
+      top: -72px;
+      right: -339px;
+    }
+    .third{
+      bottom: 168px;
+      right: -368px;
+    }
+  }
+  @media(max-width: 1540px){
+    .circle{
+      width: 370px;
+      height: 370px;
+    }
+    .star{
+      width: 260px;
+    }
+    .advantage{
+      font-size: 80px;
+    }
+    .first{
+      top: -179px;
+      right: -36px;
+    }
+    .second{
+      top: -66px;
+      right: -306px;
+    }
+    .third{
+      bottom: 140px;
+      right: -340px;
+    }
+  }
+  @media(max-width: 1400px){
+    .circle{
+      width: 357px;
+      height: 357px;
+      left: -75px;
+      bottom: -69px;
+    }
+    .star{
+      width: 200px;
+    }
+    .advantage{
+      font-size: 72px;
+      line-height: 55px;
+    }
+    .advantage::before{
+      font-size: 28px;
+      line-height: 21px;
+    }
+    .advantage::after{
+      font-size: 106.474px;
+      line-height: 128px;
+      left: -27px;
+      top: -62px;
+    }
+    .advantage::before{
+      bottom: -21px;
+    }
+    .first{
+      top: -124px;
+      right: -59px;
+    }
+    .first::before{
+      bottom: -45px;
+    }
+    .second{
+      top: -25px;
+      right: -263px;
+    }
+    .third{
+      bottom: 154px;
+      right: -287px;
+    }
+  }
+  @media(max-width: 1265px){
+    padding: 80px 0 520px;
+    .content{
+      margin-left: unset;
+      padding-left: 20px;
+    }
+  }
+  @media(max-width: 850px){
+    .title{
+      font-size: 80px;
+      line-height: 96px;
+      margin-bottom: 23px;
+    }
+  }
+  @media(max-width: 688px){
+    .circle{
+      left: -132px;
+      bottom: -59px;
+    }
+  }
+  @media(max-width: 623px){
+    padding: 80px 0 400px;
+    .circle{
+      left: -95px;
+      bottom: -53px;
+      width: 300px;
+      height: 300px;
+    }
+    .advantage{
+      font-size: 52px;
+      line-height: 40px;
+    }
+    .advantage::after{
+      font-size: 85.474px;
+    }
+    .first{
+      top: -90px;
+      right: -40px;
+    }
+    .second{
+      top: -5px;
+      right: -208px;
+    }
+    .third{
+      bottom: 120px;
+      right: -233px;
+    }
+  }
+  @media(max-width: 570px){
+    .blueSpan{
+      display: none;
+    }
+    .title{
+      font-size: 75px;
+      line-height: 75px;
+      margin-bottom: 40px;
+    }
+    .subtitle{
+      font-size: 20px;
+      line-height: 22px;
+    }
+    .text{
+      font-size: 16px;
+      line-height: 150%;
+    }
+    .circle{
+      width: 250px;
+      height: 250px;
+    }
+    .advantage{
+      font-size: 45.0341px;
+      line-height: 35px;
+    }
+    .advantage::after{
+      font-size: 66.2267px;
+      line-height: 80px;
+      left: -23px;
+      top: -36px;
+    }
+    .advantage::before{
+      font-size: 17.6604px;
+      line-height: 13px;
+      bottom: -13px;
+    }
+    .first::before{
+      width: 100px;
+      bottom: -28px;
+    }
+    .star{
+      width: 160px;
+    }
+    .first{
+      top: -86px;
+      right: -42px;
+    }
+    .second{
+      top: -15px;
+      right: -182px;
+    }
+    .third{
+      bottom: 104px;
+      right: -200px;
+    }
+  }
+  @media(max-width: 424px){
+    padding: 80px 0 348px;
+    .title{
+      font-size: 60px;
+      line-height: 60px;
+    }
+    .subtitle{
+      font-size: 18px;
+      line-height: 22px;
+    }
+    .text{
+      font-size: 14px;
+      line-height: 150%;
+    }
+    .item+.item{
+      margin-top: 30px;
+    }
+    .circle{
+      width: 222px;
+      height: 222px;
+      left: -98px;
+      bottom: -45px;
+    }
+    .star{
+      width: 138px;
+    }
+    .advantage{
+      font-size: 45.0341px;
+      line-height: 35px;
+    }
+    .first{
+      top: -86px;
+      right: -30px;
+    }
+    .second{
+      top: -21px;
+      right: -162px;
+    }
+    .third{
+      bottom: 93px;
+      right: -183px;
+    }
+  }
+  @media(max-width: 372px){
+    overflow: hidden;
+  }
 `
 
 const Reasons = () => {
@@ -146,7 +389,7 @@ const Reasons = () => {
         <ReasonsTag>
             <div className="container">
                 <div className="content">
-                    <h2 className="title">Почему <span className='blue'>{`{`}<span className='white'>мы</span>}</span></h2>
+                    <h2 className="title">Почему <span className='blue blueSpan'>{`{`}</span><span className='white'>мы</span><span className='blue blueSpan'>{`}`}</span></h2>
                     <div className="item">
                         <h4 className="subtitle">Никаких операторов по продажам</h4>
                         <div className="text">Все сотрудники и менеджеры проектов имеют профильное образование в сайтостроении. Вам не придется общаться с “продавцами утюгов”.</div>
@@ -166,7 +409,7 @@ const Reasons = () => {
                 </div>
             </div>
             <div className="circle">
-                <img src={star} alt="star"/>
+                <img src={star} alt="star" className='star'/>
                 <div className="first advantage">
                     <span className='blackW'>5+</span><span className='blue'> [<span className='white'>..</span>]</span>
                 </div>

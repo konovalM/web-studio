@@ -15,8 +15,8 @@ function App() {
     return (
         <Fragment>
             {/*<Header />
-            <Main />
-            <Reasons />*/}
+            <Main />*/}
+            <Reasons />
             <Stages />
             {/*<Services />
             <Prices />*/}
