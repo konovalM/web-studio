@@ -2,6 +2,7 @@ import React, {Fragment} from 'react';
 import Slider from "./Slider";
 import {useEffect, useState, useRef} from "react";
 import Button from "../elements/Button";
+import styles from './PricesComponent.module.css'
 
 
 
@@ -9,6 +10,7 @@ const PricesComponent = ({title, margin, price, size, content}) => {
     const ref = useRef(null)
     let defaultTitle = null
     const [settings, setSettings] = useState({width: null, top: null, height: null})
+    const [topForPrice, setTopForPrice] = useState(null)
     function useWindowSize() {
         const [size, setSize] = useState(window.innerWidth)
         useEffect(() => {
@@ -33,17 +35,27 @@ const PricesComponent = ({title, margin, price, size, content}) => {
         let heightFrom = ref.current.getBoundingClientRect().top
         let position = {width: widthFrom-15, top: heightFrom - sectionHeightFrom, height: document.querySelector('.product').clientHeight}
         setSettings(position)
+        if (width > 1250){
+            setTopForPrice(position.top + 7)
+        } else if (width > 767){
+            setTopForPrice(position.top + 350)
+        } else if (width > 520){
+            setTopForPrice(position.top + 240)
+        }else if (width <= 520){
+            setTopForPrice(position.top + 190)
+        }
+
     }, [width])
 
 
     if (size){
-        defaultTitle = <div><span style={{fontSize: '59px', display: 'block', lineHeight: '59px', marginBottom: '40px'}}>многостраничные</span><span style={{fontSize: '144px', display: 'block'}}>сайты</span></div>
+        defaultTitle = <div><span className={styles.first}>многостраничные</span><span className={styles.second}>сайты</span></div>
     }
     return (
-        <div style={{marginTop: margin ? margin : '0'}}>
-            <div className="price" style={{top: settings.top + 7}}>
+        <div className={margin ? 'pricesComponentWrapper' : ''}>
+            <div className="price" style={{top: topForPrice}}>
                 <div className="priceInner">
-                    <div className="cost">Стоимость от {price} руб.</div>
+                    <div className="cost">Стоимость от <br/><span className='bold'>{price} руб.</span></div>
                     <div className="descr">Срок выполнения от 2 недель</div>
                 </div>
             </div>

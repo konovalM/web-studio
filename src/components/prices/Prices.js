@@ -61,6 +61,7 @@ const PricesTag = styled.section`
     line-height: 41px;
     color: #FFFFFF;
     margin-bottom: 4px;
+    font-weight: 600;
   }
   .descr{
     font-size: 18px;
@@ -165,6 +166,157 @@ const PricesTag = styled.section`
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+  .bold{
+    font-weight: 900;
+  }
+  .pricesComponentWrapper{
+    margin-top: 225px;
+  }
+  
+  // ADAPTIVE
+  
+  @media screen and (max-width: 1850px){
+    .price{
+      width: 500px;
+    }
+  }
+  @media screen and (max-width: 1490px){
+    .price{
+      width: 400px;
+    }
+  }
+  @media screen and (max-width: 1300px){
+    .price{
+      width: 350px;
+    }
+  }
+  @media screen and (max-width: 1250px){
+    padding: 76px 0 32px;
+    .product{
+      margin-bottom: 475px;
+      font-size: 105px;
+    }
+    .price{
+      width: 65%;
+    }
+    .price::before{
+      width: 380px;
+      height: 388px;
+      background-size: cover;
+    }
+    .price::after{
+      width: 320px;
+      height: 320px;
+      left: -110px;
+      background-size: cover;
+    }
+    .priceInner::before{
+      width: 252px;
+      height: 252px;
+      background-size: cover;
+      left: -77px;
+    }
+  }
+  @media screen and (max-width: 1024px){
+    .title{
+      font-size: 80px;
+      line-height: 96px;
+    }
+    .description{
+      font-size: 18px;
+      line-height: 150%;
+      margin-bottom: 50px;
+    }
+    .pricesComponentWrapper{
+      margin-top: 130px;
+    }
+  }
+  
+  @media screen and (max-width: 767px){
+    .pricesComponentWrapper{
+      margin-top: 120px;
+    }
+    .product{
+      font-size: 65px;
+      line-height: 100%;
+      margin-bottom: 337px;
+    }
+    .price{
+      height: 116px;
+    }
+    .priceInner{
+      padding: 20px 0 20px 25px;
+    }
+    .cost{
+      font-weight: 600;
+      font-size: 21.9196px;
+      line-height: 26px;
+    }
+    .price::before{
+      width: 238px;
+      height: 243px;
+      left: -90px;
+    }
+    .price::after{
+      width: 202px;
+      height: 202px;
+      left: -74px;
+    }
+    .priceInner::before{
+      width: 157px;
+      height: 157px;
+      left: -52px;
+    }
+  }
+  @media screen and (max-width: 520px){
+    .title{
+      font-size: 60px;
+      line-height: 100%;
+    }
+    .description{
+      font-size: 14px;
+      line-height: 150%;
+    }
+    .product{
+      font-size: 40px;
+    }
+    .flexWrapper{
+      flex-direction: column;
+    }
+    .flexList + .flexList{
+      margin: 15px 0 0 0;
+    }
+    .flexItem{
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .flexItem + .flexItem{
+      margin-top: 15px;
+    }
+  }
+  @media screen and (max-width: 440px){
+    .priceInner{
+      padding-bottom: 26px;
+    }
+    .descr{
+      font-size: 11.2729px;
+      line-height: 13px;
+    }
+  }
+  @media screen and (max-width: 420px){
+    .product{
+      margin-left: 50px;
+    }
+      .prices_btn{
+      width: 222px;
+      height: 42px;
+      font-size: 14.7875px;
+      line-height: 17px;
+    }
+    .prices_1, .prices_2{
+      width: 21px;
+    }
   }
 `
 

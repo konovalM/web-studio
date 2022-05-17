@@ -20,7 +20,7 @@ function App() {
             <Stages />
             <Services />
             <Prices />
-            {/*<Faq />*/}
+            <Faq />
             <About />
             <Questions />
             <Footer />

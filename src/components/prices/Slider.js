@@ -14,21 +14,78 @@ const SliderTag = styled.div`
     cursor: pointer;
   }
   .sliderWrapper{
-    display: flex;
-  }
-  .slide{
-    margin: 0 5px;
-  }
-  .slideInner{
     display: grid;
-    grid-template-columns: 410px;
+    grid-template-columns: 410px 410px;
     grid-template-rows: 231px 231px;
-    grid-row-gap: 10px;
+    grid-auto-flow: column;
+    grid-auto-columns: 410px;
+    gap: 10px;
+  }
+
+  .slideInner{
+    background: url(${slideImg})center center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .slideImgWrapper{
+    width: 100%;
+  }
+  .sliderInnerText{
+    max-width: 100%;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    background-color: #fff;
+    font-size: 18px;
+    line-height: 21px;
   }
   .sliderContainer{
     max-width: 1920px;
     margin: 0 auto;
     overflow: hidden;
+  }
+  
+  // ADAPTIVE
+  
+  @media screen and (max-width: 1024px){
+    .sliderWrapper{
+      grid-template-rows: 231px 231px 231px;
+      grid-template-columns: 359px;
+      grid-auto-columns: 359px;
+    }
+  }
+  @media screen and (max-width: 650px){
+    .sliderWrapper{
+      max-width: 600px;
+      padding: 0 10px;
+      margin: 0 auto;
+      overflow: hidden;
+      grid-template-rows: 180px 180px 180px;
+      grid-template-columns: 259px;
+      grid-auto-columns: 259px;
+    }
+    .sliderInnerText{
+      height: auto;
+      padding: 2px 0 3px 4px;
+    }
+  }
+  @media screen and (max-width: 520px){
+    .sliderWrapper{
+      max-width: 600px;
+      padding: 0 10px;
+      margin: 0 auto;
+      overflow: hidden;
+      grid-template-rows: 125px 125px 125px;
+      grid-template-columns: 140px;
+      grid-auto-columns: 140px;
+    }
+    .sliderInnerText{
+      font-size: 14px;
+      line-height: 16px;
+
+    }
   }
 `
 
@@ -49,84 +106,64 @@ const Slider = () => {
                     </div>
                 </div>
                 <div className="sliderWrapper">
-                    <div className="slide">
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <img src={slideImg} alt="Slide Image"/>
-                            </div>
-                            <div className="slideImgWrapper">
-                                <img src={slideImg} alt="Slide Image"/>
-                            </div>
+                    <div className="slideInner">
+                        <div className="slideImgWrapper">
+                            <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
                         </div>
                     </div>
-                    <div className="slide">
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <img src={slideImg} alt="Slide Image"/>
-                            </div>
-                            <div className="slideImgWrapper">
-                                <img src={slideImg} alt="Slide Image"/>
-                            </div>
+                    <div className="slideInner">
+                        <div className="slideImgWrapper">
+                            <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
                         </div>
                     </div>
-                    <div className="slide">
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <img src={slideImg} alt="Slide Image"/>
-                            </div>
-                            <div className="slideImgWrapper">
-                                <img src={slideImg} alt="Slide Image"/>
-                            </div>
+                    <div className="slideInner">
+                        <div className="slideImgWrapper">
+                            <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
                         </div>
                     </div>
-                    <div className="slide">
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <img src={slideImg} alt="Slide Image"/>
-                            </div>
-                            <div className="slideImgWrapper">
-                                <img src={slideImg} alt="Slide Image"/>
-                            </div>
+                    <div className="slideInner">
+                        <div className="slideImgWrapper">
+                            <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
                         </div>
                     </div>
-                    <div className="slide">
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <img src={slideImg} alt="Slide Image"/>
-                            </div>
-                            <div className="slideImgWrapper">
-                                <img src={slideImg} alt="Slide Image"/>
-                            </div>
+                    <div className="slideInner">
+                        <div className="slideImgWrapper">
+                            <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
                         </div>
                     </div>
-                    <div className="slide">
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <img src={slideImg} alt="Slide Image"/>
-                            </div>
-                            <div className="slideImgWrapper">
-                                <img src={slideImg} alt="Slide Image"/>
-                            </div>
+                    <div className="slideInner">
+                        <div className="slideImgWrapper">
+                            <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
                         </div>
                     </div>
-                    <div className="slide">
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <img src={slideImg} alt="Slide Image"/>
-                            </div>
-                            <div className="slideImgWrapper">
-                                <img src={slideImg} alt="Slide Image"/>
-                            </div>
+                    <div className="slideInner">
+                        <div className="slideImgWrapper">
+                            <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
                         </div>
                     </div>
-                    <div className="slide">
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <img src={slideImg} alt="Slide Image"/>
-                            </div>
-                            <div className="slideImgWrapper">
-                                <img src={slideImg} alt="Slide Image"/>
-                            </div>
+                    <div className="slideInner">
+                        <div className="slideImgWrapper">
+                            <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
+                        </div>
+                    </div>
+                    <div className="slideInner">
+                        <div className="slideImgWrapper">
+                            <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
+                        </div>
+                    </div>
+                    <div className="slideInner">
+                        <div className="slideImgWrapper">
+                            <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
+                        </div>
+                    </div>
+                    <div className="slideInner">
+                        <div className="slideImgWrapper">
+                            <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
+                        </div>
+                    </div>
+                    <div className="slideInner">
+                        <div className="slideImgWrapper">
+                            <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
                         </div>
                     </div>
                 </div>

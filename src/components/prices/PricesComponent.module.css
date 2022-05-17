@@ -1,0 +1,44 @@
+.first{
+    font-size: 59px;
+    line-height: 59px;
+    display: block;
+    margin-bottom: 40px;
+}
+.second{
+    font-size: 144px;
+    display: block;
+}
+@media screen and (max-width: 1024px){
+    .first{
+        font-size: 55px;
+        line-height: 59px;
+        margin-bottom: 30px;
+    }
+    .second{
+        font-size: 133px;
+    }
+}
+@media screen and (max-width: 767px){
+    .first{
+        font-size: 31px;
+        line-height: 21px;
+        padding-top: 10px;
+        margin-bottom: 15px;
+    }
+    .second{
+        font-size: 84px;
+        line-height: 100%;
+    }
+}
+@media screen and (max-width: 520px){
+    .first{
+        font-size: 21px;
+        line-height: 21px;
+        padding-top: 5px;
+        margin-bottom: 5px;
+    }
+    .second{
+        font-size: 54px;
+        line-height: 100%;
+    }
+}
