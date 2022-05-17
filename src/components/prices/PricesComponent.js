@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 import Slider from "./Slider";
 import {useEffect, useState, useRef} from "react";
+import Button from "../elements/Button";
 
 
 
@@ -68,9 +69,16 @@ const PricesComponent = ({title, margin, price, size, content}) => {
 
             <Slider/>
             <div className="container">
-                <div className="btnWrapper">
-                    <button className="btn">Получить консультацию</button>
-                </div>
+                <Button btnClassName='prices_btn' clazz1={'prices_1'} clazz2={'prices_2'} parentClass={'points_prices'} btnStyles={[{background: '#1E4FCD', color: '#fff'}, {background: '#fff', color: '#1E4FCD', border: 'none'}]}>
+                    <div className="btnWrapper">
+                        <button className="prices_btn">Получить консультацию</button>
+                        <div className="points_prices">
+                            <div className="prices_1"></div>
+                            <div className="prices_2"></div>
+                        </div>
+                    </div>
+                </Button>
+
             </div>
             <div className="whiteLine" style={{width: settings.width, height: settings.height, top: settings.top, left: 0 }}></div>
         </div>

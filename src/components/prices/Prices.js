@@ -132,8 +132,10 @@ const PricesTag = styled.section`
   .btnWrapper{
     display: flex;
     justify-content: center;
+    margin-top: 36px;
+
   }
-  .btn{
+  .prices_btn{
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
@@ -143,7 +145,26 @@ const PricesTag = styled.section`
     width: 271px;
     background: #1E4FCD;
     border: none;
-    margin-top: 36px;
+  }
+  .points_prices{
+    width: 82px;
+    position: relative;
+  }
+  .prices_1{
+    width: 26px;
+    height: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .prices_2{
+    width: 26px;
+    height: 50%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 `
 

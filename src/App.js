@@ -19,8 +19,8 @@ function App() {
             <Reasons />
             <Stages />
             <Services />
-            {/*<Prices />
-            <Faq />*/}
+            <Prices />
+            {/*<Faq />*/}
             <About />
             <Questions />
             <Footer />
