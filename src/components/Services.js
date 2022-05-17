@@ -6,6 +6,7 @@ import bublik from '../images/bublik.jpg'
 import seo from '../images/seoAnimation.png'
 import polyhedron from '../images/polyhedron.jpg'
 import qrCode from '../images/qr.svg'
+import qrCodeMobile from '../images/qrMobile.svg'
 
 const ServicesTag = styled.section`
   padding: 80px 0;
@@ -63,7 +64,7 @@ const ServicesTag = styled.section`
   .landing::before{
     content: '';
     position: absolute;
-    height: 100%;
+    height: 101%;
     width: 30px;
     background-color: #fff;
     left: 80px;
@@ -207,7 +208,7 @@ const ServicesTag = styled.section`
   .seo::before{
     content: '';
     position: absolute;
-    height: 100%;
+    height: 101%;
     width: 30px;
     left: 80px;
     background-color: #fff;
@@ -381,6 +382,240 @@ const ServicesTag = styled.section`
     right: 5px;
     bottom: 65px;
   }
+  
+  @media screen and (max-width: 1348px){
+    .gridWrapper{
+      grid-template-columns: 300px 190px 190px;
+      grid-template-rows: 307px 190px 190px 87px 190px 190px 300px 190px;
+      justify-content: center;
+    }
+    .ad{
+      grid-column: 1/2;
+      grid-row: 3/6;
+    }
+    .marketing{
+      grid-column: 2/3;
+      grid-row: 3/6;
+    }
+    .online{
+      grid-column: 3/4;
+      grid-row: 3/4;
+    }
+    .smm{
+      grid-column: 3/4;
+      grid-row: 4/6;
+    }
+    .apps{
+      grid-row: 6/7;
+      grid-column: 1/4;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      &Wrapper{
+        margin: 0 0 50px 38px;
+        position: static;
+        transform: unset;
+      }
+    }
+    .seo{
+      grid-row: 7/8;
+      grid-column: 1/2;
+    }
+    .sites{
+      grid-row: 8/9;
+      grid-column: 1/2;
+    }
+    .branding{
+      grid-row: 7/9;
+      grid-column: 2/4;
+    }
+  }
+  @media screen and (max-width: 1174px){
+    .title{
+      font-size: 80px;
+      line-height: 96px;
+    }
+    .description{
+      font-size: 18px;
+      line-height: 150%;
+      max-width: 750px;
+      margin-bottom: 39px;
+    }
+  }
+  @media screen and (max-width: 767px){
+    .gridWrapper{
+      gap: 10px;
+    }
+    .landing::before{
+      width: 10px;
+    }
+    .seo::before{
+      width: 10px;
+    }
+  }
+  @media screen and (max-width: 720px){
+    .title{
+      font-size: 60px;
+      line-height: 72px;
+    }
+    .blue{
+      display: none;
+    }
+    .description{
+      font-size: 14px;
+      line-height: 150%;
+    }
+    .gridWrapper{
+      grid-template-columns: 144px 144px;
+      grid-template-rows: 190px 462px 191px 462px 191px 334px 190px 179px 462px;
+      gap: 2px;
+    }
+    .landing{
+      grid-column: 1/3;
+      grid-row: 1/2;
+      &Inner{
+        transform: none;
+        position: static;
+      }
+    }
+    .landing::before{
+      display: none;
+    }
+    .systems{
+      grid-column: 1/3;
+      grid-row: 2/3;
+      &Text{
+        font-size: 35px;
+        line-height: 42px;
+      }
+    }
+    .parsing{
+      grid-column: 1/2;
+      grid-row: 3/4;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background-color: #1E4FCD;
+    }
+    .parsingWrapper{
+      padding: 0;
+      display: block;
+      width: auto;
+      height: auto;
+      margin: 0 0 39px 16px;
+    }
+    .parsingText{
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 5px;
+    }
+    .online{
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+    .onlineWrapper{
+      margin: 0 0 39px 16px;
+    }
+    .onlineText{
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .ad{
+      grid-column: 1/3;
+      grid-row: 4/5;
+    }
+    .bublik img{
+      width: 288px;
+      height: 246px;
+    }
+    .bublikText{
+      font-size: 35px;
+      line-height: 42px;
+    }
+    .marketing{
+      grid-column: 1/2;
+      grid-row: 5/7;
+      &Wrapper{
+        left: -85px;
+      }
+    }
+    .sites{
+      grid-column: 2/3;
+      grid-row: 5/6;
+      background-color: #1E4FCD;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      &Wrapper{
+        padding-left: 16px;
+      }
+      &Text{
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 39px;
+      }
+    }
+    .sitesWrapper{
+      width: auto;
+      height: auto;
+      background-color: unset;
+    }
+    .smm{
+      grid-column: 2/3;
+      grid-row: 6/7;
+      padding: 3px;
+      &Wrapper{
+        right: -15px;
+      }
+    }
+    .apps{
+      grid-column: 1/3;
+      grid-row: 7/8;
+      &Wrapper{
+        margin: 0 0 39px 16px;
+      }
+      &Text{
+        font-size: 35px;
+        line-height: 42px;
+      }
+    }
+    .seo{
+      grid-column: 1/3;
+      grid-row: 8/9;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .seoImg{
+      width: 111px;
+      order: 1;
+    }
+    .seoImg img{
+      height: 100%;
+      object-fit: cover;
+    }
+    .seoWrapper{
+      position: static;
+      transform: unset;
+      align-self: flex-end;
+      margin: 0 0 25px 16px;
+    }
+    .seo::before{
+      display: none;
+    }
+    .branding{
+      grid-column: 1/3;
+      grid-row: 9/10;
+      &Img img{
+        height: 288px;
+        object-fit: cover;
+      }
+      &Text{
+        font-size: 35px;
+        line-height: 42px;
+      }
+    }
+  }
 `
 
 const Services = () => {
@@ -464,7 +699,10 @@ const Services = () => {
                     </div>
                     <div className="smm">
                         <div className="smmImg">
-                            <img src={qrCode} alt="QR Code"/>
+                            <picture>
+                                <source srcSet={qrCodeMobile} media="(max-width: 720px)" />
+                                <img src={qrCode} alt="QR Code"/>
+                            </picture>
                         </div>
                         <div className="smmWrapper">
                             <div className="er er18">er-9817</div>

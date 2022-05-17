@@ -1,10 +1,20 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState, useEffect} from 'react';
 import styled from 'styled-components'
-import {useEffect} from "react";
 
 
 
 const Button = ({children, clazz1, clazz2, btnClassName, btnStyles, parentClass}) => {
+    function useWindowSize() {
+        const [size, setSize] = useState(window.innerWidth)
+        useEffect(() => {
+            const handleResize = () => {
+                setSize(window.innerWidth)
+            }
+            window.addEventListener('resize', handleResize)
+        }, [])
+        return size
+    }
+    const size = useWindowSize()
     useEffect(() => {
         const element1 = document.querySelector(`.${clazz1}`)
         const element2 = document.querySelector(`.${clazz2}`)
@@ -60,7 +70,7 @@ const Button = ({children, clazz1, clazz2, btnClassName, btnStyles, parentClass}
             console.log('end')
             cancelAnimationFrame(requestId)
         }
-    }, [])
+    }, [size])
     return (
         <Fragment>
             {children}

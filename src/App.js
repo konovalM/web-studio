@@ -18,9 +18,9 @@ function App() {
             <Main />*/}
             <Reasons />
             <Stages />
-            {/*<Services />
-            <Prices />*/}
-            {/*<Faq />*/}
+            <Services />
+            {/*<Prices />
+            <Faq />*/}
             <About />
             <Questions />
             <Footer />

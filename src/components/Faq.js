@@ -77,10 +77,14 @@ const FaqTag = styled.section`
     transition: transform 0.3s ease 0s;
   }
   .accordionWrapper:nth-child(odd){
+    
     grid-column: 1 / 2;
     margin-right: 25px;
+    .answer{
+      text-align: right;
+    }
     .questionText{
-      margin-left: 30px;
+      padding-left: 30px;
     }
     .question{
       text-align: right;
@@ -89,7 +93,7 @@ const FaqTag = styled.section`
       right: -31px;
     }
     .questionText::after{
-      left: -30px;
+      left: 0;
     }
   }
   .accordionWrapper::after{
@@ -136,12 +140,13 @@ const FaqTag = styled.section`
     margin-left: 25px;
     .questionText{
       display: inline-block;
+      padding-right: 30px;
     }
     .questionText::before{
       left: -31px;
     }
     .questionText::after{
-      right: -30px;
+      right: 0;
     }
   }
   .accordionWrapper:nth-child(1){
