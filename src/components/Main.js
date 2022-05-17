@@ -47,19 +47,23 @@ const MainTag = styled.section`
   }
   .pointFirst{
     width: 26px;
-    height: 26px;
+    height: 50%;
     background-color: #1a1a1a;
     position: absolute;
     top: 0;
-    right: 56px;
+    left: 0;
   }
   .pointSecond{
     width: 26px;
-    height: 26px;
+    height: 50%;
     background-color: #1a1a1a;
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+  .points{
+    width: 82px;
+    position: relative;
   }
   .consultation{
     width: 271px;
@@ -149,6 +153,148 @@ const MainTag = styled.section`
     line-height: 42px;
     font-size: 60px;
   }
+  
+  // ADAPTIVE
+  
+  @media screen and (max-width: 1100px){
+    .title{
+      max-width: 405px;
+    }
+    .stack+.stack{
+      margin-left: 20px;
+    }
+    .rightInner{
+      margin: 35px 0 0 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .wrapper{
+      position: relative;
+    }
+    .websites{
+      font-size: 70px;
+      line-height: 68px;
+      margin-bottom: 0;
+    }
+    .applications{
+      font-size: 44px;
+      line-height: 41px;
+      margin-bottom: 0;
+    }
+    .marketing{
+      font-size: 49px;
+      line-height: 48px;
+      margin-bottom: 0;
+    }
+    .smm{
+      font-size: 66px;
+      line-height: 55px;
+      margin-bottom: 0;
+    }
+    .webDevelopment{
+      font-size: 35px;
+      line-height: 31px;
+      margin-bottom: 0;
+    }
+    .seo{
+      font-size: 44px;
+      line-height: 41px;
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (max-width: 900px){
+    .rightInner{
+      position: absolute;
+      right: 0;
+      top: 30px;
+    }
+    .websites{
+      font-size: 56px;
+      line-height: 55px;
+    }
+    .applications{
+      font-size: 34px;
+      line-height: 34px;
+      margin-right: 13px;
+    }
+    .marketing{
+      font-size: 39px;
+      line-height: 39px;
+      margin-right: 81px;
+    }
+    .smm{
+      font-size: 56px;
+      line-height: 55px;
+      margin-right: 99px;
+    }
+    .webDevelopment{
+      font-size: 25px;
+      line-height: 25px;
+      margin-right: 26px;
+    }
+    .seo{
+      font-size: 34px;
+      line-height: 34px;
+      margin-right: 133px;
+    }
+  }
+  @media screen and (max-width: 680px){
+    .right{
+      display: none;
+    }
+  }
+  @media screen and (max-width: 500px){
+    padding: 71px 0 116px;
+    .title{
+      font-size: 30px;
+      line-height: 36px;
+      max-width: 300px;
+    }
+    .subtitle{
+      margin-top: 0;
+    }
+    .consultation{
+      width: 209px;
+      height: 40px;
+      font-size: 13.92px;
+      line-height: 16px;
+    }
+    .pointFirst, .pointSecond{
+      width: 20px;
+    }
+    .points{
+      width: 63px;
+    }
+    .stack+.stack{
+      margin: 0;
+    }
+    .stacks{
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      row-gap: 28px;
+      .frameworks{
+        order: 1;
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+    }
+    .programLang{
+      order: 2;
+    }
+    
+  }
+  @media screen and (max-width: 380px){
+    .btnWrapper{
+      width: 300px;
+    }
+    .stacks{
+      .frameworks{
+        margin-left: 20px;
+        margin-right: 0;
+      }
+    }
+  }
 `
 
 const Main = () => {
@@ -163,7 +309,7 @@ const Main = () => {
                        <h2 className="title">
                            Сайты под ключ и <span className='blue'>[web. <span className='white'>с</span>]</span>
                        </h2>
-                           <Button btnClassName='consultation' clazz1={'pointFirst'} clazz2={'question_2'} btnStyles={[{background: '#1E4FCD', color: '#fff', border: 'none'}, {background: '#fff', color: '#1E4FCD', border: '1px solid #1a1a1a'}]}>
+                           <Button btnClassName='consultation' clazz1={'pointFirst'} clazz2={'pointSecond'} parentClass={'points'} btnStyles={[{background: '#1E4FCD', color: '#fff', border: 'none'}, {background: '#fff', color: '#1a1a1a', border: '1px solid #1a1a1a'}]}>
                                <div className="btnWrapper">
                                    <button className="consultation">
                                        Получить консультацию

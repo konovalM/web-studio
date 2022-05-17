@@ -233,6 +233,19 @@ const FaqTag = styled.section`
   //@media(max-width: 767px){
   @media(max-width: 856px){
     padding: 54px 0 80px;
+    .accordionWrapper:nth-child(odd) {
+      .questionText {
+        padding: 0 0 0 0;
+      }
+      .answer{
+        text-align: left;
+      }
+    }
+    .accordionWrapper:nth-child(even) {
+      .questionText {
+        padding: 0 0 0 0;
+      }
+    }
     .title{
       font-size: 60px;
       line-height: 72px;

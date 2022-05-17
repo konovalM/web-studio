@@ -118,6 +118,41 @@ const HeaderTag = styled.header`
   .contacts{
     margin-left: auto;
   }
+  .burger{
+    display: none;
+  }
+  
+  // ADAPTIVE
+  
+  @media (max-width: 1310px){
+    .language{
+      margin-left: 25px;
+    }
+    .contacts{
+      margin-left: 25px;
+    }
+    .listItem + .listItem{
+      margin-left: 20px;
+    }
+    .listItem:nth-child(2){
+      margin-left: 33px;
+    }
+    .burger{
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .burgerElement{
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: #1E4FCD;
+      border-radius: 2px;
+    }
+    .burgerElement+.burgerElement{
+      margin-top: 7px;
+    }
+  }
 `
 
 
@@ -190,6 +225,11 @@ const Header = () => {
                             <div className="contact">
                                 test_mail@gmail.com
                             </div>
+                        </div>
+                        <div className="burger">
+                            <span className='burgerElement'></span>
+                            <span className='burgerElement'></span>
+                            <span className='burgerElement'></span>
                         </div>
                     </div>
                 </div>

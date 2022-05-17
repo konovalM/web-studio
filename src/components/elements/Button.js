@@ -47,7 +47,7 @@ const Button = ({children, clazz1, clazz2, btnClassName, btnStyles, parentClass}
                 btn.forEach((elem) => {
                     elem.style.background = btnStyles[0].background
                     elem.style.color = btnStyles[0].color
-                    elem.style.body = btnStyles[0].border
+                    elem.style.border = btnStyles[0].border
                 })
 
             } else{
@@ -58,7 +58,7 @@ const Button = ({children, clazz1, clazz2, btnClassName, btnStyles, parentClass}
                 btn.forEach((elem) => {
                     elem.style.background = btnStyles[1].background
                     elem.style.color = btnStyles[1].color
-                    elem.style.body = btnStyles[1].border
+                    elem.style.border = btnStyles[1].border
                 })
 
                 /*btn.style.cssText =

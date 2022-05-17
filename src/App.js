@@ -14,13 +14,13 @@ import Prices from "./components/prices/Prices";
 function App() {
     return (
         <Fragment>
-            {/*<Header />
-            <Main />*/}
+            <Header />
+            <Main />
             <Reasons />
             <Stages />
             <Services />
             <Prices />
-            <Faq />
+            {/*{/*<Faq />*/}
             <About />
             <Questions />
             <Footer />
