@@ -153,6 +153,66 @@ const MainTag = styled.section`
     line-height: 42px;
     font-size: 60px;
   }
+    .scroll{
+        position: absolute;
+        height: 60px;
+        width: 21px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left: 50%;
+        bottom: 120px;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+    .scrollOutside{
+        height: 60px;
+        width: 21px;
+        border: 2px solid #1E4FCD;
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 5;
+    }
+    .scroll:hover .scrollInner{
+        transform: translateY(40px);
+        
+    }
+    .scrollInner{
+        position: absolute;
+        left: 0px;
+        top: -40px;
+        height: 60px;
+        width: 21px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        border-radius: 10px;
+        padding-bottom: 5px;
+        z-index: 1;
+        transition: .3s all;
+    }
+    
+    .scrollCircle{
+        width: 9px;
+        height: 9px;
+        background-color: #1E4FCD;
+        border-radius: 100%;
+    }
+    .scrollText{
+        position: absolute;
+        right: -6px;
+        bottom: 16px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #1A1A1A;
+        transform: rotate(-90deg);
+        z-index: -1;
+    }
   
   // ADAPTIVE
   
@@ -298,8 +358,19 @@ const MainTag = styled.section`
 `
 
 const Main = () => {
+    const test = () => {
+        console.log(123)
+    }
     return (
         <MainTag>
+            <div className="scroll">
+                <div className="scrollOutside">
+                </div>
+                <div className="scrollInner">
+                    <div className="scrollCircle"></div>
+                </div>
+                <p className="scrollText">scroll</p>
+            </div>
             <div className="container">
                <div className="wrapper">
                    <div className="left">
