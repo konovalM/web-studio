@@ -23,7 +23,6 @@ const Button = ({children, clazz1, clazz2, btnClassName, btnStyles, parentClass}
         const duration = 700
         const distance = parent.clientWidth - element1[0].clientWidth
         let startAnimation = null
-        console.log(element1)
         function easeInOut(time) {
             return 0.5 * (1 - Math.cos(Math.PI * time))
         }
@@ -80,7 +79,6 @@ const Button = ({children, clazz1, clazz2, btnClassName, btnStyles, parentClass}
             requestAnimationFrame((animation))
         })
         return function cleanUp() {
-            console.log('end')
             cancelAnimationFrame(requestId)
         }
     }, [size])

@@ -1,17 +1,21 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useEffect, useState} from 'react';
 import styled from 'styled-components'
-import telegram from '../images/telegram.svg'
-import vk from '../images/vk.svg'
-import whatsup from '../images/whatsup.svg'
-import messages from '../images/messages.svg'
-import logotype from '../images/logotype.svg'
-import topLine from '../images/topLine.svg'
-import bottomLine from '../images/bottomLine.svg'
-import arrowRight from '../images/arrowRight.svg'
+import telegram from '../../images/telegram.svg'
+import vk from '../../images/vk.svg'
+import whatsup from '../../images/whatsup.svg'
+import messages from '../../images/messages.svg'
+import logotype from '../../images/logoDesktop.svg'
+import logoMobile from '../../images/logotype.svg'
+import topLine from '../../images/topLine.svg'
+import bottomLine from '../../images/bottomLine.svg'
+import arrowRight from '../../images/arrowRight.svg'
+import useWindowSize from "../../hooks/useWindowSize";
+import styles from './Header.module.css'
+import { Link } from "react-router-dom";
 
 const HeaderTag = styled.header`
   height: 63px;
-  padding: 6px 0;
+  padding: 2px 0;
   box-shadow: 0px 7px 10px rgba(157, 157, 157, 0.3);
   z-index: 200;
   position: relative;
@@ -142,30 +146,21 @@ const HeaderTag = styled.header`
       flex-direction: column;
       
     }
-    .burgerElement{
-      display: block;
-      width: 30px;
-      height: 2px;
-      background: #1E4FCD;
-      border-radius: 2px;
-    }
-    .burgerElement+.burgerElement{
-      margin-top: 7px;
-    }
   }
+
 `
 
 
-const Header = () => {
+const HeaderDesktop = () => {
     return (
         <Fragment>
             <HeaderTag className="header">
                 <div className="container">
                     <div className="wrapper">
                         <div className="logo">
-                            <a href="#">
+                            <Link to="/">
                                 <img src={logotype} alt="logotype"/>
-                            </a>
+                            </Link>
                         </div>
                         <nav className="nav">
                             <ul className="list">
@@ -179,7 +174,7 @@ const Header = () => {
                                     </div>
                                 </li>
                                 <li className="listItem">
-                                    <a href="#" className='itemLink'>Контекст</a>
+                                    <Link to="/context" className='itemLink'>Контекст</Link>
                                 </li>
                                 <li className="listItem">
                                     <a href="#" className='itemLink'>SEO</a>
@@ -226,11 +221,7 @@ const Header = () => {
                                 test_mail@gmail.com
                             </div>
                         </div>
-                        <div className="burger">
-                            <span className='burgerElement'></span>
-                            <span className='burgerElement'></span>
-                            <span className='burgerElement'></span>
-                        </div>
+
                     </div>
                 </div>
             </HeaderTag>
@@ -238,4 +229,91 @@ const Header = () => {
     );
 };
 
+
+
+const HeaderMobile = () => {
+    const [active, setActive] = useState(false)
+    const toggleActiveClass = () => {
+        setActive(!active)
+        if (!active){
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'auto'
+        }
+    }
+    return (
+        <header className={styles.header}>
+            <div className={!active ? styles.menu : styles.menu + ' ' + styles.menuActive}>
+                <div className="container">
+                    <div className={styles.menuWrapper}>
+                        <div className={styles.language}>Ru</div>
+
+                    </div>
+                </div>
+            </div>
+            <div className="container">
+                <div className={!active ? styles.wrapper : styles.wrapper + ' ' + styles.wrapperActive}>
+                    <a href="#" className="">
+                        <img src={logoMobile} alt="" className={styles.logoImg}/>
+                    </a>
+                    <div className={styles.list}>
+                        <div className={styles.listItem + ' ' + styles.main}>
+                            <a href="#" className={styles.itemLink}>Сайты</a>
+                        </div>
+                        <div className={styles.listItem}>
+                            <div className={styles.second}>
+                                <a href="#" className={styles.itemLink}>Кейсы и цены</a>
+                                <a href="#" className={styles.itemLink}>Услуги</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.socials}>
+                        <div className={styles.social}>
+                            <a href="#">
+                                <img src={telegram} alt="telegram"/>
+                            </a>
+                        </div>
+                        <div className={styles.social}>
+                            <a href="#">
+                                <img src={vk} alt="vk"/>
+                            </a>
+                        </div>
+                        <div className={styles.social}>
+                            <a href="#">
+                                <img src={whatsup} alt="whatsup"/>
+                            </a>
+                        </div>
+                        <div className={styles.social}>
+                            <a href="#">
+                                <img src={messages} alt="messages"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div className={styles.contact}>
+                        <a href="#" className={styles.contactNumber}>+ 7 981 103 65 38</a>
+                    </div>
+                    <div className={styles.burger} onClick={() => toggleActiveClass()}>
+                        <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                        <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                        <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+    );
+};
+
+
+const Header = () => {
+
+
+    const sizeWidth = useWindowSize();
+    return (
+        <Fragment>
+            {sizeWidth < 1100 ? <HeaderMobile/> : <HeaderDesktop/>}
+        </Fragment>
+    );
+};
+
 export default Header;
+

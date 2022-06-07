@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from "../components/Header";
-import Main from "../components/Main";
-import Reasons from "../components/Reasons";
-import Stages from "../components/Stages";
-import Services from "../components/Services";
+import Header from "../components/Header/Header";
+import Main from "../components/Main/Main";
+import Reasons from "../components/Main/Reasons";
+import Stages from "../components/Main/Stages";
+import Services from "../components/Main/Services";
 import Prices from "../components/prices/Prices";
-import About from "../components/About";
-import Questions from "../components/Questions";
+import About from "../components/Main/About";
+import Questions from "../components/Main/Questions";
 import Footer from "../components/Footer";
 
 const MainPage = () => {

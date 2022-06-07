@@ -1,7 +1,7 @@
 import React, {Fragment, useEffect} from 'react';
 import styled from 'styled-components'
-import bg from '../images/bg.png'
-import Button from "./elements/Button";
+import bg from '../../images/bg.png'
+import Button from "../../elements/Button";
 // import Button from "./elements/Button";
 
 const MainTag = styled.section`
@@ -85,8 +85,10 @@ const MainTag = styled.section`
   }
   .stack{
     width: 140px;
-    
   }
+    .bold{
+        font-weight: 900;
+    }
   .stackItem{
     display: flex;
     font-size: 18px;
@@ -217,6 +219,9 @@ const MainTag = styled.section`
   // ADAPTIVE
   
   @media screen and (max-width: 1100px){
+    .scroll{
+        display: none;
+    }
     .title{
       max-width: 405px;
     }
@@ -358,9 +363,6 @@ const MainTag = styled.section`
 `
 
 const Main = () => {
-    const test = () => {
-        console.log(123)
-    }
     return (
         <MainTag>
             <div className="scroll">
@@ -397,7 +399,7 @@ const Main = () => {
                                    <div className="stackText">Python</div>
                                </div>
                                <div className="stackItem stackItemActive">
-                                   <div className="stackText">JavaScript</div>
+                                   <div className="stackText bold">JavaScript</div>
                                </div>
                                <div className="stackItem">
                                    <div className="stackText">Node</div>
@@ -405,7 +407,7 @@ const Main = () => {
                            </div>
                            <div className="stack frameworks">
                                <div className="stackItem stackItemActive">
-                                   <div className="stackText">Django</div>
+                                   <div className="stackText bold">Django</div>
                                </div>
                                <div className="stackItem">
                                    <div className="stackText">React</div>
@@ -422,7 +424,7 @@ const Main = () => {
                                    <div className="stackText">Wordpress</div>
                                </div>
                                <div className="stackItem stackItemActive">
-                                   <div className="stackText">Tilda</div>
+                                   <div className="stackText bold">Tilda</div>
                                </div>
                                <div className="stackItem">
                                    <div className="stackText">Ghost</div>

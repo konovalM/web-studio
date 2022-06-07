@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components'
-import bg from '../images/bg.png'
-import manVector from '../images/manVector.svg'
-import bublik from '../images/bublik.jpg'
-import seo from '../images/seoAnimation.png'
-import polyhedron from '../images/polyhedron.jpg'
-import qrCode from '../images/qr.svg'
-import qrCodeMobile from '../images/qrMobile.svg'
+import bg from '../../images/bg.png'
+import manVector from '../../images/manVector.svg'
+import bublik from '../../images/bublik.jpg'
+import seo from '../../images/seoAnimation.png'
+import polyhedron from '../../images/polyhedron.jpg'
+import qrCode from '../../images/qr.svg'
+import qrCodeMobile from '../../images/qrMobile.svg'
 
 const ServicesTag = styled.section`
   padding: 80px 0;

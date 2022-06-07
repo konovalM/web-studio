@@ -1,0 +1,138 @@
+.main{
+    padding: 113px 0 260px;
+    position: relative;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #1A1A1A;
+    margin-bottom: 29px;
+}
+.subtitle{
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 46px;
+    color: #1A1A1A;
+    margin-bottom: 10px;
+}
+.descr{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #1A1A1A;
+    max-width: 481px;
+}
+.bold{
+    font-weight: 900;
+}
+.btnWrapper{
+    margin-top: 32px;
+    display: flex;
+    width: 353px;
+    position: relative;
+}
+.pointFirst{
+    width: 26px;
+    height: 50%;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pointSecond{
+    width: 26px;
+    height: 50%;
+    background-color: #1a1a1a;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.points{
+    width: 82px;
+    position: relative;
+}
+.consultation{
+    width: 271px;
+    height: 52px;
+    background: #1E4FCD;
+    border: none;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    position: relative;
+}
+.image{
+    margin-top: -15px;
+}
+
+
+.scroll{
+    position: absolute;
+    height: 60px;
+    width: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 50%;
+    bottom: 120px;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+.scrollOutside{
+    height: 60px;
+    width: 21px;
+    border: 2px solid #1E4FCD;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+.scroll:hover .scrollInner{
+    transform: translateY(40px);
+
+}
+.scrollInner{
+    position: absolute;
+    left: 0px;
+    top: -40px;
+    height: 60px;
+    width: 21px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    z-index: 1;
+    transition: .3s all;
+}
+
+.scrollCircle{
+    width: 9px;
+    height: 9px;
+    background-color: #1E4FCD;
+    border-radius: 100%;
+}
+.scrollText{
+    position: absolute;
+    right: -6px;
+    bottom: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #1A1A1A;
+    transform: rotate(-90deg);
+    z-index: -1;
+}

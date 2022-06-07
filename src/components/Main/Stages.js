@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components'
-import bg from '../images/bg.png'
-import first from '../images/stagesGrid/first.svg'
-import second from '../images/stagesGrid/second.svg'
-import third from '../images/stagesGrid/third.svg'
-import fourth from '../images/stagesGrid/fourth.svg'
-import fifth from '../images/stagesGrid/fifth.svg'
-import sixth from '../images/stagesGrid/sixth.svg'
+import bg from '../../images/bg.png'
+import first from '../../images/stagesGrid/first.svg'
+import second from '../../images/stagesGrid/second.svg'
+import third from '../../images/stagesGrid/third.svg'
+import fourth from '../../images/stagesGrid/fourth.svg'
+import fifth from '../../images/stagesGrid/fifth.svg'
+import sixth from '../../images/stagesGrid/sixth.svg'
 
 const StagesTag = styled.section`
   padding: 80px 0;

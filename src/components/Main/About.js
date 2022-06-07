@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import bg from '../images/bg.png'
-import developerBg from '../images/developer.jpg'
+import bg from '../../images/bg.png'
+import developerBg from '../../images/developer.jpg'
 
 const AboutTag = styled.section`
   padding: 85px 0 40px;

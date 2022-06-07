@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
-import bg from '../images/bg.png'
-import star from '../images/star.svg'
+import bg from '../../images/bg.png'
+import star from '../../images/star.svg'
 
 const ReasonsTag = styled.section`
   padding: 84px 0 46px;

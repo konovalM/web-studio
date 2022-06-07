@@ -1,0 +1,143 @@
+.header{
+    height: 63px;
+    padding: 2px 0;
+    box-shadow: 0px 7px 10px rgba(157, 157, 157, 0.3);
+    z-index: 200;
+    position: relative;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+}
+.wrapperActive .itemLink, .wrapperActive .contactNumber{
+    color: #fff;
+}
+.logoImg{
+    width: 90px;
+    margin-right: 46px;
+    position: relative;
+    z-index: 15;
+}
+.list{
+    margin-right: 59px;
+    display: flex;
+    align-items: center;
+}
+.second{
+    display: flex;
+    flex-direction: column;
+}
+.listItem:first-child{
+    padding-right: 32px;
+}
+.main{
+    position: relative;
+}
+.main::before, .main::after{
+    content: '';
+    width: 25px;
+    height: 11px;
+    position: absolute;
+}
+.main::before{
+    background: url("../../images/topLine.svg")center center/cover no-repeat;
+    right: 3px;
+    top: 0;
+}
+.main::after{
+    background: url("../../images/bottomLine.svg")center center/cover no-repeat;
+    right: 3px;
+    bottom: 0;
+}
+.itemLink{
+    color: #1A1A1A;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    position: relative;
+    display: block;
+    z-index: 15;
+}
+.itemLink::before{
+    content: '';
+    position: absolute;
+    width: 23px;
+    height: 3px;
+    background-color: #1E4FCD;
+    left: 0;
+    bottom: 1px;
+}
+.socials{
+    display: flex;
+    margin-right: 38px;
+    column-gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 15;
+}
+.contact{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    z-index: 15;
+}
+.contactNumber{
+    color: #1A1A1A;
+}
+.burger{
+    height: 21px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+    z-index: 10;
+    position: relative;
+}
+.burgerElement{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #1E4FCD;
+    border-radius: 2px;
+    transition: .3s all;
+}
+.burgerElementActive{
+    background-color: #fff;
+    position: absolute;
+}
+.burgerElementActive:nth-child(2){
+    display: none;
+}
+.burgerElementActive:nth-child(1){
+    transform: rotate(45deg);
+    top: 7px;
+}
+.burgerElementActive:nth-child(3){
+    transform: rotate(-45deg);
+    top: 7px;
+}
+.menu{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1E4FCD;
+    left: 0;
+    top: -100%;
+    z-index: 10;
+    transition: .3s top;
+    padding: 90px 0;
+}
+.menuActive{
+    top: 0;
+    overflow: hidden;
+}
+.menuWrapper{
+    display: flex;
+    flex-direction: column;
+}
+.language{
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
