@@ -37,6 +37,7 @@
 .gridItem{
     padding: 14px 0 0 33px;
     overflow: hidden;
+    position: relative;
 }
 .subtitle{
     font-family: 'Russo One';
@@ -63,4 +64,29 @@
 }
 .gridDescrBlack{
     color: #1a1a1a;
+}
+
+.arrows{
+    display: block;
+    position: absolute;
+    right: -41px;
+    top: -46px;
+}
+.arrows2{
+    display: block;
+    position: absolute;
+    right: 70px;
+    top: -30px;
+}
+.dollar{
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: -42px;
+}
+.eye{
+    display: block;
+    position: absolute;
+    right: -65px;
+    bottom: -33px;
 }
