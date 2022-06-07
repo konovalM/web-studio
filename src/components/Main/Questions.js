@@ -10,7 +10,7 @@ import Button from "../../elements/Button";
 const QustionsTag = styled.section`
   padding: 60px 0 120px;
   background-color: #fff;
-  background-image: url(${bg});
+  background-image: ${props => props.bg ? '' : `url(${bg})`};
   background-position: center -200px;
   background-repeat: repeat;
   .title{
@@ -315,9 +315,9 @@ const QustionsTag = styled.section`
   
 `
 
-const Questions = () => {
+const Questions = ({bg}) => {
     return (
-        <QustionsTag>
+        <QustionsTag bg={bg}>
             <div className="container">
                 <h2 className="title">Остались вопросы?</h2>
                 <p className="description">Пишите или звоните.<span className="br"> Отвечаем круглосуточно.</span></p>

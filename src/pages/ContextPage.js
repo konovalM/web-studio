@@ -4,6 +4,8 @@ import Main from "../components/Context/Main/Main";
 import Includes from "../components/Context/Includes/Includes";
 import Stages from "../components/Context/Stages/Stages";
 import Cases from "../components/Context/Cases/Cases";
+import Questions from "../components/Main/Questions";
+import Footer from "../components/Footer";
 
 const ContextPage = () => {
     return (
@@ -13,6 +15,8 @@ const ContextPage = () => {
             <Includes/>
             <Stages/>
             <Cases/>
+            <Questions bg={true}/>
+            <Footer/>
         </div>
     );
 };
