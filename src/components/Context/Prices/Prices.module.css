@@ -1,0 +1,87 @@
+.prices{
+    padding: 85px 0;
+}
+.title{
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 88px;
+    line-height: 106px;
+    color: #1A1A1A;
+}
+.gridWrapper{
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: minmax(600px, 630px) minmax(600px, 630px);
+    grid-template-rows: minmax(445px, auto);
+    grid-gap: 30px;
+}
+.gridElement{
+    padding: 38px 0 33px 33px;
+    position: relative;
+    overflow: hidden;
+}
+.black{
+    background-color: #1A1A1A;
+}
+.blue{
+    background-color: #1E4FCD;
+}
+.subtitle{
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 84px;
+    text-transform: uppercase;
+    color: #1E4FCD;
+    margin-bottom: 3px;
+}
+.blue .subtitle{
+    color: #fff;
+}
+.price{
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 53px;
+    color: #FFFFFF;
+    margin-bottom: 73px;
+}
+.blue .price{
+    color: #1A1A1A;
+}
+.flexWrapper{
+    display: flex;
+}
+.option{
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    position: relative;
+    padding-left: 23px;
+}
+.option::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 6px;
+}
+.option+.option{
+    margin-top: 20px;
+}
+.google{
+    position: absolute;
+    right: -50px;
+    top: -24px;
+}
+.yandex{
+    position: absolute;
+    right: 76px;
+    top: -58px;
+}
+.rightOptions{
+    margin-left: 44px;
+}

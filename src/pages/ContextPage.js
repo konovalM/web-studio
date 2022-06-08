@@ -6,6 +6,7 @@ import Stages from "../components/Context/Stages/Stages";
 import Cases from "../components/Context/Cases/Cases";
 import Questions from "../components/Main/Questions";
 import Footer from "../components/Footer";
+import Prices from "../components/Context/Prices/Prices";
 
 const ContextPage = () => {
     return (
@@ -15,6 +16,7 @@ const ContextPage = () => {
             <Includes/>
             <Stages/>
             <Cases/>
+            <Prices/>
             <Questions bg={true}/>
             <Footer/>
         </div>
