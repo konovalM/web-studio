@@ -8,6 +8,7 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
+import SeoPage from "./pages/SeoPage";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Routes>
                     <Route path='/' element={<MainPage/>}/>
                     <Route path='/context' element={<ContextPage/>}/>
+                    <Route path='/seo' element={<SeoPage/>}/>
                 </Routes>
             </Fragment>
         </BrowserRouter>

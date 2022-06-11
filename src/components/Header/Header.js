@@ -177,7 +177,7 @@ const HeaderDesktop = () => {
                                     <Link to="/context" className='itemLink'>Контекст</Link>
                                 </li>
                                 <li className="listItem">
-                                    <a href="#" className='itemLink'>SEO</a>
+                                    <Link to="/seo" className='itemLink'>SEO</Link>
                                 </li>
                                 <li className="listItem">
                                     <a href="#" className='itemLink'>SMM</a>

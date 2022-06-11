@@ -1,0 +1,99 @@
+.includes{
+    background-color: #1A1A1A;
+    padding: 65px 0 80px;
+}
+.title{
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 88px;
+    line-height: 106px;
+    color: #FFFFFF;
+}
+.descr{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    max-width: 678px;
+    margin-bottom: 46px;
+}
+.gridWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 113px 113px 113px;
+    grid-gap: 30px;
+}
+.gridItem:nth-child(1){
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+.gridItem:last-child{
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+.white{
+    background: #fff;
+}
+.blue{
+    background-color: #1E4FCD;
+}
+.gridItem{
+    padding: 14px 0 0 33px;
+    overflow: hidden;
+    position: relative;
+}
+.subtitle{
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+.subtitleWhite{
+    color: #FFFFFF;
+}
+.subtitleBlack{
+    color: #1A1A1A;
+}
+.gridDescr{
+    font-size: 18px;
+    line-height: 21px;
+    color: #1A1A1A;
+    max-width: 428px;
+}
+.gridDescrLong{
+    max-width: 560px;
+}
+.gridDescrWhite{
+    color: #fff;
+}
+.gridDescrBlack{
+    color: #1a1a1a;
+}
+
+.search{
+    display: block;
+    position: absolute;
+    right: -13px;
+    top: 24px;
+}
+.percent{
+    display: block;
+    position: absolute;
+    right: -3px;
+    bottom: -7px;
+}
+.arrow{
+    display: block;
+    position: absolute;
+    right: 69px;
+    bottom: -71px;
+}
+.crowd{
+    display: block;
+    position: absolute;
+    right: 23px;
+    bottom: -9px;
+}
