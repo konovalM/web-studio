@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Prices.module.css'
 
+
 const Prices = () => {
     return (
         <section className={styles.prices}>
