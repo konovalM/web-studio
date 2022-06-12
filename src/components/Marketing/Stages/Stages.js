@@ -9,13 +9,14 @@ const Stages = () => {
                     Этапы работы <span className={styles.blue}>;<span className={styles.black}>-</span>]</span>
                 </h2>
                 <p className={styles.descr}>
-                    Выберем ключевые запросы для вашего продвижения и конкурентность ниши. Работаем только с “белым” SEO.                </p>
+                    Определяем путь вашего развития на ближайшие годы и закладываем точки роста.
+                </p>
                 <div className={styles.gridWrapper}>
                     <div className={styles.gridItem}>
                         <div className={styles.flexWrapper}>
                             <div className={styles.content}>
                                 <h3 className={styles.subtitle}>Бесплатная консультация</h3>
-                                <p className={styles.text}>Изучаем вашу нишу и разрабатываем стратегию. Просчитываем сроки продвижения.</p>
+                                <p className={styles.text}>Изучим вашу нишу, определим состояние репутации, либо необходимость ребрендинга.</p>
                             </div>
                         </div>
                     </div>
@@ -30,16 +31,16 @@ const Stages = () => {
                     <div className={styles.gridItem}>
                         <div className={styles.flexWrapper}>
                             <div className={styles.content}>
-                                <h3 className={styles.subtitle}>Сбор семантики</h3>
-                                <p className={styles.text}>Подбираем ключевые запросы для вашего продвижения, оптимизируем сайт и закупаем “белые” ссылки.</p>
+                                <h3 className={styles.subtitle}>Составление плана работ</h3>
+                                <p className={styles.text}>Глубокий анализ рынка и работы по ребрендингу, исправлению репутации, продвижению.</p>
                             </div>
                         </div>
                     </div>
                     <div className={styles.gridItem}>
                         <div className={styles.flexWrapper}>
                             <div className={styles.content}>
-                                <h3 className={styles.subtitle}>запуск и прогноз</h3>
-                                <p className={styles.text}>Изучаем динамику повышения позиций сайта, корректируем семантику и оптимизацию.</p>
+                                <h3 className={styles.subtitle}>сопровождение и отчеты</h3>
+                                <p className={styles.text}>Регулярные отчеты о результатах формирования имиджа и бренда компании.</p>
                             </div>
                         </div>
                     </div>
