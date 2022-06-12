@@ -183,7 +183,7 @@ const HeaderDesktop = () => {
                                     <a href="#" className='itemLink'>SMM</a>
                                 </li>
                                 <li className="listItem">
-                                    <a href="#" className='itemLink'>Маркетинг</a>
+                                    <Link to="/marketing" className='itemLink'>Маркетинг</Link>
                                 </li>
                                 <li className="listItem">
                                     <a href="#" className='itemLink'>Другие услуги</a>
