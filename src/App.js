@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import SeoPage from "./pages/SeoPage";
 import MarketingPage from "./pages/MarketingPage";
+import SmmPage from "./pages/SmmPage";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                     <Route path='/' element={<MainPage/>}/>
                     <Route path='/context' element={<ContextPage/>}/>
                     <Route path='/seo' element={<SeoPage/>}/>
+                    <Route path='/smm' element={<SmmPage/>}/>
                     <Route path='/marketing' element={<MarketingPage/>}/>
                 </Routes>
             </Fragment>

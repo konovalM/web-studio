@@ -180,7 +180,7 @@ const HeaderDesktop = () => {
                                     <Link to="/seo" className='itemLink'>SEO</Link>
                                 </li>
                                 <li className="listItem">
-                                    <a href="#" className='itemLink'>SMM</a>
+                                    <Link to="/smm" className='itemLink'>SMM</Link>
                                 </li>
                                 <li className="listItem">
                                     <Link to="/marketing" className='itemLink'>Маркетинг</Link>

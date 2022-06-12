@@ -11,81 +11,73 @@ const Prices = () => {
                 <div className={styles.gridWrapper}>
                     <div className={styles.gridElement + ' ' + styles.black}>
                         <h3 className={styles.subtitle}>
-                            facebook
+                            фирменный стиль
                         </h3>
                         <div className={styles.price}>
-                            от 20 000 руб.
+                            от 50 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
-                                <p className={styles.option}>Изучение ниши</p>
-                                <p className={styles.option}>Составление объявлений</p>
-                                <p className={styles.option}>Настройка аккаунта</p>
+                                <p className={styles.option}>Создание логотипа</p>
+                                <p className={styles.option}>Дизайн продукции</p>
                             </div>
                             <div className={styles.rightOptions}>
-                                <p className={styles.option}>Коррекция ставок рекламы</p>
-                                <p className={styles.option}>Ведение аккаунта</p>
-                                <p className={styles.option}>Отчет и прогноз продаж</p>
+                                <p className={styles.option}>Корпоративная айдентика</p>
+                                <p className={styles.option}>Дизайн рекламных носителей </p>
                             </div>
                         </div>
                     </div>
                     <div className={styles.gridElement + ' ' + styles.blue}>
                         <h3 className={styles.subtitle}>
-                            instagram
+                            исправление репутации
                         </h3>
                         <div className={styles.price}>
-                            от 20 000 руб.
+                            от 70 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
-                                <p className={styles.option}>Изучение ниши</p>
-                                <p className={styles.option}>Составление объявлений</p>
-                                <p className={styles.option}>Настройка аккаунта</p>
+                                <p className={styles.option}>Работа с отзывами</p>
+                                <p className={styles.option}>Работа со СМИ</p>
                             </div>
                             <div className={styles.rightOptions}>
-                                <p className={styles.option}>Коррекция ставок рекламы</p>
-                                <p className={styles.option}>Ведение аккаунта</p>
-                                <p className={styles.option}>Отчет и прогноз продаж</p>
+                                <p className={styles.option}>Внешнее SEO</p>
+                                <p className={styles.option}>Коррекция сайта</p>
                             </div>
                         </div>
                     </div>
                     <div className={styles.gridElement + ' ' + styles.blue}>
                         <h3 className={styles.subtitle}>
-                            VK
+                            маркетинг под ключ
                         </h3>
                         <div className={styles.price}>
-                            от 20 000 руб.
+                            от 120 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
-                                <p className={styles.option}>Изучение ниши</p>
-                                <p className={styles.option}>Составление объявлений</p>
-                                <p className={styles.option}>Настройка аккаунта</p>
+                                <p className={styles.option}>Глубокий анализ ниши</p>
+                                <p className={styles.option}>Брендинг</p>
                             </div>
                             <div className={styles.rightOptions}>
-                                <p className={styles.option}>Коррекция ставок рекламы</p>
-                                <p className={styles.option}>Ведение аккаунта</p>
-                                <p className={styles.option}>Отчет и прогноз продаж</p>
+                                <p className={styles.option}>Составление точек роста</p>
+                                <p className={styles.option}>Работа с репутацией</p>
                             </div>
                         </div>
                     </div>
                     <div className={styles.gridElement + ' ' + styles.black}>
                         <h3 className={styles.subtitle}>
-                            tik tok
+                            маркетинг соцсетей
                         </h3>
                         <div className={styles.price}>
-                            от 20 000 руб.
+                            от 80 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
-                                <p className={styles.option}>Изучение ниши</p>
-                                <p className={styles.option}>Составление объявлений</p>
-                                <p className={styles.option}>Настройка аккаунта</p>
+                                <p className={styles.option}>Ведение аккаунтов</p>
+                                <p className={styles.option}>Отрисовка дизайна</p>
                             </div>
                             <div className={styles.rightOptions}>
-                                <p className={styles.option}>Коррекция ставок рекламы</p>
-                                <p className={styles.option}>Ведение аккаунта</p>
-                                <p className={styles.option}>Отчет и прогноз продаж</p>
+                                <p className={styles.option}>Работа с обратной связью</p>
+                                <p className={styles.option}>Рекламные кампании</p>
                             </div>
                         </div>
                     </div>
