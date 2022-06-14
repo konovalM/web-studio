@@ -1,14 +1,14 @@
 import React from 'react';
 import Header from "../components/Header/Header";
-import Main from "../components/Context/Main/Main";
-import Includes from "../components/Context/Includes/Includes";
-import Stages from "../components/Context/Stages/Stages";
-import Cases from "../components/Context/Cases/Cases";
+import Main from "../components/Applications/Main/Main";
+import Includes from "../components/Applications/Includes/Includes";
+import Stages from "../components/Applications/Stages/Stages";
+import Cases from "../components/Applications/Cases/Cases";
+import Prices from "../components/Applications/Prices/Prices";
 import Questions from "../components/Main/Questions";
 import Footer from "../components/Footer";
-import Prices from "../components/Context/Prices/Prices";
 
-const ContextPage = () => {
+const ApplicationsPage = () => {
     return (
         <div>
             <Header/>
@@ -23,4 +23,4 @@ const ContextPage = () => {
     );
 };
 
-export default ContextPage;
+export default ApplicationsPage;

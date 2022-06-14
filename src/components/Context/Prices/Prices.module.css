@@ -1,5 +1,8 @@
 .prices{
     padding: 85px 0;
+    background-image: url('../../../images/bg.png');
+    background-position: center -100px;
+    background-repeat: repeat;
 }
 .title{
     font-family: 'Russo One';

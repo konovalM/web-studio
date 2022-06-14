@@ -17,7 +17,7 @@ const SeoPage = () => {
             <Stages/>
             <Cases/>
             <Prices/>
-            <Questions bg={true}/>
+            <Questions/>
             <Footer/>
         </div>
     );

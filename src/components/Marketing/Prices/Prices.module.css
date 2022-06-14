@@ -1,5 +1,8 @@
 .prices{
     padding: 85px 0;
+    background-image: url('../../../images/bg.png');
+    background-position: center -100px;
+    background-repeat: repeat;
 }
 .title{
     font-family: 'Russo One';
@@ -37,6 +40,7 @@
     color: #1E4FCD;
     margin-bottom: 3px;
     max-width: 530px;
+
 }
 .blue .subtitle{
     color: #fff;

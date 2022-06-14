@@ -11,6 +11,8 @@ import {
 import SeoPage from "./pages/SeoPage";
 import MarketingPage from "./pages/MarketingPage";
 import SmmPage from "./pages/SmmPage";
+import ApplicationsPage from "./pages/ApplicationsPage";
+import ParserPage from "./pages/ParserPage";
 
 function App() {
     return (
@@ -22,6 +24,8 @@ function App() {
                     <Route path='/seo' element={<SeoPage/>}/>
                     <Route path='/smm' element={<SmmPage/>}/>
                     <Route path='/marketing' element={<MarketingPage/>}/>
+                    <Route path='/apps' element={<ApplicationsPage/>}/>
+                    <Route path='/parser' element={<ParserPage/>}/>
                 </Routes>
             </Fragment>
         </BrowserRouter>

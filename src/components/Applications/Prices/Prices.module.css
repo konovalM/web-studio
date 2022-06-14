@@ -1,5 +1,6 @@
 .prices{
     padding: 85px 0;
+    background-color: #fff;
     background-image: url('../../../images/bg.png');
     background-position: center -100px;
     background-repeat: repeat;
@@ -15,14 +16,26 @@
 .gridWrapper{
     display: grid;
     margin: 0 auto;
-    grid-template-columns: minmax(600px, 630px) minmax(600px, 630px);
-    grid-template-rows: minmax(445px, auto);
+    grid-template-columns: repeat(auto-fill, minmax(630px, 1fr));
+    grid-template-rows: minmax(300px, auto);
     grid-gap: 30px;
+    justify-items: center;
 }
 .gridElement{
+    padding: 25px 10px 33px 33px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.gridElement:last-child{
     padding: 25px 0 33px 33px;
     position: relative;
     overflow: hidden;
+    margin: 0 auto;
+    justify-self: center;
+    grid-column: 1/3;
+    max-width: 630px;
+    margin: 0 auto;
 }
 .black{
     background-color: #1A1A1A;

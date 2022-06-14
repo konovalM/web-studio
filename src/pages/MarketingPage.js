@@ -17,7 +17,7 @@ const MarketingPage = () => {
             <Stages/>
             <Cases/>
             <Prices/>
-            <Questions bg={true}/>
+            <Questions/>
             <Footer/>
         </div>
     );

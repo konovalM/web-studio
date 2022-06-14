@@ -2,6 +2,9 @@
     padding: 84px 0 57px;
     background-color: #1a1a1a;
     overflow: hidden;
+    background-image: url('../../../images/bg.png');
+    background-position: center -100px;
+    background-repeat: repeat;
 }
 .title{
     font-family: 'Russo One';

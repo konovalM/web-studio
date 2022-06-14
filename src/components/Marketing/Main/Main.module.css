@@ -1,6 +1,9 @@
 .main{
     padding: 113px 0 130px;
     position: relative;
+    background-image: url('../../../images/bg.png');
+    background-position: center -100px;
+    background-repeat: repeat;
 }
 .wrapper{
     display: flex;
