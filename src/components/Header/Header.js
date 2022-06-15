@@ -30,20 +30,29 @@ const HeaderTag = styled.header`
   .list {
     display: flex;
     align-items: center;
-    .listItem:last-child{
-      position: relative;
-    }
-    .listItem:last-child::before{
-      content: '';
-      position: absolute;
-      width: 5px;
-      height: 9px;
-      left: -10px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: url(${arrowRight})center center/cover no-repeat;
-    }
   }
+    .listItem:last-child::before{
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 9px;
+        left: 3px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url(${arrowRight})center center/cover no-repeat;
+        transition: .1s all;
+    }
+    .rotate:last-child::before{
+        transform: rotate(90deg) translateX(-50%);
+        top: 42%;
+    }
+    .listItem:last-child{
+        moz-user-select: none;
+        -khtml-user-select: none;
+        user-select: none;
+        position: relative;
+        cursor: pointer;
+    }
   .itemLink {
     color: #1A1A1A;
     font-family: 'Roboto';
@@ -67,7 +76,10 @@ const HeaderTag = styled.header`
   .listItem + .listItem {
     margin-left: 33px;
   }
-
+    .listItem:last-child{
+        padding-left: 15px;
+        margin-left: 18px;
+    }
   .second {
     display: flex;
     flex-direction: column;
@@ -125,6 +137,43 @@ const HeaderTag = styled.header`
   .burger{
     display: none;
   }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 29px;
+        background-color: #1A1A1A;
+        width: 186px;
+        height: 167px;
+        z-index: 1;
+        padding: 9px 0 18px 18px;
+        left: -12px;
+    }
+    .dropdown {
+        position: relative;
+    }
+    .otherLink{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+        display: block;
+        position: relative;
+    }
+    .otherLink::before{
+        content: '';
+        width: 23px;
+        height: 3px;
+        background-color: #1E4FCD;
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+    }
+    .otherLink+.otherLink{
+        margin-top: 15px;
+    }
+    .dropdown-content-active {display: block;}
+
   
   // ADAPTIVE
   
@@ -152,6 +201,11 @@ const HeaderTag = styled.header`
 
 
 const HeaderDesktop = () => {
+    const [menuActive, setMenuActive] = useState(false)
+
+    const changeMenuActive = () => {
+        setMenuActive(!menuActive)
+    }
     return (
         <Fragment>
             <HeaderTag className="header">
@@ -185,8 +239,17 @@ const HeaderDesktop = () => {
                                 <li className="listItem">
                                     <Link to="/marketing" className='itemLink'>Маркетинг</Link>
                                 </li>
-                                <li className="listItem">
-                                    <a href="#" className='itemLink'>Другие услуги</a>
+                                <li className={menuActive ? 'rotate listItem other' :'listItem other'} onClick={() => changeMenuActive()}>
+                                    <div className="dropdown">
+                                        <div className='itemLink itemLinkMenu'>Другие услуги</div>
+                                        <div className={menuActive? 'dropdown-content dropdown-content-active' : 'dropdown-content'}>
+                                            <Link to="/apps" className='otherLink'>Приложения</Link>
+                                            <Link to="/systems" className='otherLink'>Самописные системы</Link>
+                                            <Link to="/parser" className='otherLink'>Парсинг</Link>
+                                            <Link to="/apps" className='otherLink'>Работа с репутацией</Link>
+                                            <Link to="/marketing" className='otherLink'>Брендинг</Link>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </nav>

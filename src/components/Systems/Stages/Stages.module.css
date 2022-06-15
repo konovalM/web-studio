@@ -1,0 +1,118 @@
+.stages{
+    padding: 80px 0;
+    background-image: url('../../../images/bg.png');
+    background-position: center -100px;
+    background-repeat: repeat;
+}
+.title{
+    font-size: 88px;
+    line-height: 106px;
+    color: #1A1A1A;
+}
+.blue{
+    color: #1E4FCD;
+}
+.black{
+    color: #1A1A1A;
+}
+.descr{
+    font-size: 18px;
+    line-height: 21px;
+    color: #1A1A1A;
+    margin-bottom: 44px;
+    max-width: 490px;
+}
+.gridWrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    column-gap: 27px;
+    row-gap: 46px;
+}
+.flexWrapper{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.content{
+    max-width: 520px;
+    flex-shrink: 1;
+    position: relative;
+}
+.icon{
+    height: 170px;
+    display: flex;
+    align-items: flex-end;
+    align-self: flex-start;
+    flex-shrink: 0;
+    margin-right: 35px;
+}
+.subtitle{
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #1A1A1A;
+    margin: 64px 0 8px;
+    position: relative;
+}
+.subtitle::before{
+    content: '#';
+    font-family: 'Russo One';
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #1A1A1A;
+    position: absolute;
+    left: -37px;
+    top: -7px;
+    z-index: 100;
+
+}
+.content::before{
+    font-weight: 900;
+    color: #fff;
+    font-size: 40px;
+    line-height: 47px;
+    text-transform: uppercase;
+    position: absolute;
+    left: -20px;
+    top: 15px;
+    z-index: 10;
+}
+.gridItem{
+    margin-left: 43px;
+}
+.gridItem:nth-child(1) .content::before{
+    content: '1.';
+}
+.gridItem:nth-child(2) .content::before{
+    content: '2.';
+}
+.gridItem:nth-child(3) .content::before{
+    content: '3.';
+}
+.gridItem:nth-child(4) .content::before{
+    content: '4.';
+}
+.gridItem:nth-child(5) .content::before{
+    content: '5.';
+}
+.gridItem:nth-child(6) .content::before{
+    content: '6.';
+}
+.subtitle::after{
+    content: '';
+    width: 56px;
+    height: 56px;
+    background: #1E4FCD;
+    position: absolute;
+    transform: rotate(-34.84deg);
+    left: -33px;
+    top: -51px;
+}
+.text{
+    font-size: 18px;
+    line-height: 21px;
+    color: #1A1A1A;
+}

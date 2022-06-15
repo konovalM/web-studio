@@ -13,6 +13,7 @@ import MarketingPage from "./pages/MarketingPage";
 import SmmPage from "./pages/SmmPage";
 import ApplicationsPage from "./pages/ApplicationsPage";
 import ParserPage from "./pages/ParserPage";
+import SystemsPage from "./pages/SystemsPage";
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
                     <Route path='/marketing' element={<MarketingPage/>}/>
                     <Route path='/apps' element={<ApplicationsPage/>}/>
                     <Route path='/parser' element={<ParserPage/>}/>
+                    <Route path='/systems' element={<SystemsPage/>}/>
                 </Routes>
             </Fragment>
         </BrowserRouter>
