@@ -24,7 +24,7 @@ const MainPage = () => {
             <About />
             <Questions />
             <Footer />
-            <Test/>
+            {/*<Test/>*/}
         </div>
     );
 };

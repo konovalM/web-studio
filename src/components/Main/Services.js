@@ -7,6 +7,7 @@ import seo from '../../images/seoAnimation.png'
 import polyhedron from '../../images/polyhedron.jpg'
 import qrCode from '../../images/qr.svg'
 import qrCodeMobile from '../../images/qrMobile.svg'
+import PolygonAnimation from "../../animations/PolygonAnimation/PolygonAnimation";
 
 const ServicesTag = styled.section`
   padding: 80px 0;
@@ -306,13 +307,34 @@ const ServicesTag = styled.section`
     grid-row: 3/6;
     background-color: #1a1a1a;
     padding: 4px;
+      overflow: hidden;
+  } 
+  .brandingAnimationWrapper{
+      //height: 330px;
+      position: absolute;
+      top: 0;
+      width: 400px;
+      height: 331px;
+      overflow: hidden;
   }
+    .animationInnerPolygon{
+        height: 100%;
+    }
+    .brandingImg{
+        position: relative;
+        display: flex;
+        height: 100%;
+        justify-content: flex-end;
+        flex-direction: column;
+        overflow: hidden;
+    }
   .brandingText{
     font-family: 'Russo One';
     font-size: 45px;
     line-height: 54px;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin-bottom: 27px;
   }
   .brandingWrapper{
     padding: 38px 0 0 33px;
@@ -684,7 +706,11 @@ const Services = () => {
                     </div>
                     <div className="branding">
                         <div className="brandingImg">
-                            <img src={polyhedron} alt="polyhedronAnimation"/>
+                            <div className="brandingAnimationWrapper">
+                                <div className="animationInnerPolygon">
+                                    <PolygonAnimation/>
+                                </div>
+                            </div>
                             <div className="brandingWrapper">
                                 <div className="er er18">er-9817</div>
                                 <div className="brandingText">брендинг и репутация</div>
