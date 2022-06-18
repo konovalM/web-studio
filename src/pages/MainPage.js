@@ -8,6 +8,8 @@ import Prices from "../components/prices/Prices";
 import About from "../components/Main/About";
 import Questions from "../components/Main/Questions";
 import Footer from "../components/Footer";
+import Test from "../components/test/Test";
+import CrossAnimation from "../animations/CrossAnimation/CrossAnimation";
 
 const MainPage = () => {
     return (
@@ -22,6 +24,7 @@ const MainPage = () => {
             <About />
             <Questions />
             <Footer />
+            <Test/>
         </div>
     );
 };

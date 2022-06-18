@@ -6,6 +6,7 @@ import crosses from '../../images/crosses.jpg'
 import crossesMobile from '../../images/crossesMobile.jpg'
 import {useEffect} from "react";
 import Button from "../../elements/Button";
+import CrossAnimation from "../../animations/CrossAnimation/CrossAnimation";
 
 const QustionsTag = styled.section`
   padding: 60px 0 120px;
@@ -113,6 +114,7 @@ const QustionsTag = styled.section`
     max-width: 750px;
     align-items: center;
     margin: 0 auto;
+    overflow: hidden;  
     background-color: #1E4FCD;
   }
   .animation{
@@ -381,11 +383,11 @@ const Questions = ({bg}) => {
                 </div>
                 <div className="contactsWrapper">
                     <div className="animation">
-
-                        <picture>
+                        <CrossAnimation/>
+                        {/*<picture>
                             <source srcSet={crossesMobile} media="(max-width: 767px)" />
                                 <img src={crosses} alt="crosses" />
-                        </picture>
+                        </picture>*/}
                     </div>
                     <div className="contacts">
                         <div className="contact">
