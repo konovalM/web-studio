@@ -307,9 +307,9 @@ const HeaderLaptop = () => {
     const toggleActiveClass = () => {
         setActive(!active)
         if (!active){
-            document.body.style.overflow = 'hidden'
+            document.getElementById('root').style.position = 'fixed'
         } else {
-            document.body.style.overflow = 'auto'
+            document.getElementById('root').style.position = 'static'
         }
     }
     return (
@@ -399,11 +399,11 @@ const HeaderMobile = () => {
     const [active, setActive] = useState(false)
     const toggleActiveClass = () => {
         setActive(!active)
-        // if (!active){
-        //     document.body.style.overflow = 'hidden'
-        // } else {
-        //     document.body.style.overflow = 'auto'
-        // }
+        if (!active){
+            document.getElementById('root').style.position = 'fixed'
+        } else {
+            document.getElementById('root').style.position = 'static'
+        }
     }
     return (
         <Fragment>
