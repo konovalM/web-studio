@@ -7,18 +7,19 @@ import Includes from "../components/Marketing/Includes/Includes";
 import Stages from "../components/Marketing/Stages/Stages";
 import Cases from "../components/Marketing/Cases/Cases";
 import Prices from "../components/Marketing/Prices/Prices";
+import Layout from "./Layout";
 
 const MarketingPage = () => {
     return (
         <div>
-            <Header/>
-            <Main/>
-            <Includes/>
-            <Stages/>
-            <Cases/>
-            <Prices/>
-            <Questions/>
-            <Footer/>
+            <Layout>
+                <Main/>
+                <Includes/>
+                <Stages/>
+                <Cases/>
+                <Prices/>
+                <Questions/>
+            </Layout>
         </div>
     );
 };

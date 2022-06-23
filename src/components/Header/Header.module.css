@@ -2,8 +2,17 @@
     height: 63px;
     padding: 2px 0;
     box-shadow: 0px 7px 10px rgba(157, 157, 157, 0.3);
-    z-index: 200;
-    position: relative;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+}
+.headerActive{
+    background-color: #1E4FCD;
+    box-shadow: none;
 }
 .wrapper{
     display: flex;
@@ -38,6 +47,7 @@
     width: 25px;
     height: 11px;
     position: absolute;
+    z-index: 100;
 }
 .main::before{
     background: url("../../images/topLine.svg")center center/cover no-repeat;
@@ -48,6 +58,13 @@
     background: url("../../images/bottomLine.svg")center center/cover no-repeat;
     right: 3px;
     bottom: 0;
+
+}
+.mainActive.main::before{
+    background: url("../../images/topLineWhite.svg")center center/cover no-repeat;
+}
+.mainActive.main::after{
+    background: url("../../images/BottomLineWhite.svg")center center/cover no-repeat;
 }
 .itemLink{
     color: #1A1A1A;
@@ -74,6 +91,10 @@
     align-items: center;
     justify-content: space-between;
     z-index: 15;
+}
+.socialsWhite .social svg path{
+    transition: .3s all;
+    fill: #fff;
 }
 .contact{
     font-weight: 400;
@@ -120,17 +141,26 @@
 .menu{
     position: fixed;
     width: 100vw;
-    height: 100vh;
-    background-color: #1E4FCD;
+    min-height: 100vh;
+    background-color: #fff;
     left: 0;
-    top: -100%;
-    z-index: 10;
+    top: -150%;
+    z-index: 500;
     transition: .3s top;
-    padding: 90px 0;
+    overflow-y: auto;
+    height: 400px;
+}
+.menuInner{
+    padding: 78px 0 40px;
+    width: 100vw;
+    background-color: #1E4FCD;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow-y: scroll;
 }
 .menuActive{
     top: 0;
-    overflow: hidden;
 }
 .menuWrapper{
     display: flex;
@@ -140,4 +170,113 @@
     font-size: 16px;
     line-height: 19px;
     color: #FFFFFF;
+    margin-bottom: 37px;
+    position: relative;
+    margin-left: 14px;
+}
+
+.language::before{
+    content: '';
+    width: 9px;
+    height: 10px;
+    background: url("../../images/rightArrowWhite.svg")center center/cover no-repeat;
+    position: absolute;
+    left: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.link{
+    display: block;
+    color: #fff;
+
+
+}
+.sites{
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    column-gap: 59px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.sites::before{
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    top: 50%;
+    left: -14px;
+    transform: translateY(-50%);
+    position: absolute;
+}
+.left .linkSites{
+    position: relative;
+}
+.left .linkSites::before, .linkSites::after{
+    content: '';
+    width: 42px;
+    height: 21px;
+    position: absolute;
+}
+.left .linkSites::before{
+    background: url("../../images/topBigLine.svg")center center/cover no-repeat;
+    right: -50px;
+    top: -13px;
+}
+.left .linkSites::after{
+    background: url("../../images/bottomBigLine.svg")center center/cover no-repeat;
+    right: -50px;
+    bottom: -13px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+.linkSites{
+    color: #ffffff;
+}
+.link+.link{
+    margin-top: 20px;
+}
+
+/* adaptive */
+@media screen and (max-width: 750px){
+    .list{
+        margin-right: 10px;
+    }
+    .logoImg{
+        margin-right: 15px;
+    }
+    .socials{
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: 629px){
+    .header{
+        padding: 10px 0;
+    }
+    .menu{
+        height: 100vh;
+    }
+    .number{
+        color: #FFFFFF;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .mail{
+        color: #FFFFFF;
+        text-align: center;
+    }
+    .socials{
+        margin: 0;
+        max-width: 100%;
+        column-gap: 48px;
+        justify-content: center;
+    }
+    .contacts{
+        margin: 55px 0 30px;
+
+    }
 }

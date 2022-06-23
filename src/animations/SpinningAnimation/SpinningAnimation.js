@@ -16,31 +16,20 @@ const Test = () => {
             function rand(min, max) {
                 return Math.floor(Math.random() * (max - min + 1) + min);
             }
-
-            /********************
-             Change Title
-             ********************/
-
-
-
-            /********************
-             Var
-             ********************/
-
-            var ctx = canvas.getContext('2d');
-            var X = canvas.width = window.innerWidth;
-            var Y = canvas.height = window.innerHeight;
-            var mouseX = null;
-            var mouseY = null;
-            var dist = 200;
-            var diffX = dist / 2;
-            var diffY = dist / 1.5;
-            var shapeXNum = X / dist;
-            var shapeYNum = Y / dist;
-            var shapes = [];
-            var ease = 0.3;
-            var friction = 0.9;
-            var style = {
+            let ctx = canvas.getContext('2d');
+            let X = canvas.width = window.innerWidth;
+            let Y = canvas.height = window.innerHeight;
+            let mouseX = null;
+            let mouseY = null;
+            let dist = 200;
+            let diffX = dist / 2;
+            let diffY = dist / 1.5;
+            let shapeXNum = X / dist;
+            let shapeYNum = Y / dist;
+            let shapes = [];
+            let ease = 0.3;
+            let friction = 0.9;
+            let style = {
                 black: 'black',
                 white: 'white',
                 lineWidth: 3,
@@ -173,8 +162,8 @@ const Test = () => {
              ********************/
 
             function onResize() {
-                X = canvas.width = window.innerWidth;
-                Y = canvas.height = window.innerHeight;
+                X = canvas.width;
+                Y = canvas.height;
                 shapeXNum = X / dist;
                 shapeYNum = Y / dist;
                 shapes = [];
@@ -199,7 +188,7 @@ const Test = () => {
     }, [])
     return (
         <div>
-            <canvas id="canvas" ref={canvass}></canvas>
+            <canvas id="canvas" style={{width: '100%'}} ref={canvass}></canvas>
         </div>
     );
 };

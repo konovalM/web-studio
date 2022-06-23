@@ -12,13 +12,21 @@ import arrowRight from '../../images/arrowRight.svg'
 import useWindowSize from "../../hooks/useWindowSize";
 import styles from './Header.module.css'
 import { Link } from "react-router-dom";
+import TgIcon from "../../images/icons/TgIcon";
+import VkIcon from "../../images/icons/VkIcon";
+import WhatsAppIcon from "../../images/icons/WhatsAppIcon";
+import MessagesIcon from "../../images/icons/MessagesIcon";
 
 const HeaderTag = styled.header`
   height: 63px;
   padding: 2px 0;
   box-shadow: 0px 7px 10px rgba(157, 157, 157, 0.3);
-  z-index: 200;
-  position: relative;
+  z-index: 1000;
+  width: 100vw;
+  background-color: #fff;  
+  position: fixed;
+  left: 0;
+  top: 0;
   .wrapper {
     display: flex;
     align-items: center;
@@ -294,7 +302,7 @@ const HeaderDesktop = () => {
 
 
 
-const HeaderMobile = () => {
+const HeaderLaptop = () => {
     const [active, setActive] = useState(false)
     const toggleActiveClass = () => {
         setActive(!active)
@@ -305,75 +313,191 @@ const HeaderMobile = () => {
         }
     }
     return (
-        <header className={styles.header}>
-            <div className={!active ? styles.menu : styles.menu + ' ' + styles.menuActive}>
+        <Fragment>
+            <header className={!active ? styles.header : `${styles.header} ${styles.headerActive}`}>
                 <div className="container">
-                    <div className={styles.menuWrapper}>
-                        <div className={styles.language}>Ru</div>
-
+                    <div className={!active ? styles.wrapper : styles.wrapper + ' ' + styles.wrapperActive}>
+                        <a href="#" className="">
+                            <img src={logoMobile} alt="" className={styles.logoImg}/>
+                        </a>
+                        <div className={styles.list}>
+                            <div className={!active ? `${styles.listItem} ${styles.main}` : `${styles.listItem} ${styles.main} ${styles.mainActive}`}>
+                                <a href="#" className={styles.itemLink}>Сайты</a>
+                            </div>
+                            <div className={styles.listItem}>
+                                <div className={styles.second}>
+                                    <a href="#" className={styles.itemLink}>Кейсы и цены</a>
+                                    <a href="#" className={styles.itemLink}>Услуги</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={!active ? styles.socials : styles.socials + ' ' + styles.socialsWhite}>
+                            <div className={styles.social}>
+                                <a href="#">
+                                    <TgIcon />
+                                </a>
+                            </div>
+                            <div className={styles.social}>
+                                <a href="#">
+                                    <VkIcon/>
+                                </a>
+                            </div>
+                            <div className={styles.social}>
+                                <a href="#">
+                                    <WhatsAppIcon/>
+                                </a>
+                            </div>
+                            <div className={styles.social}>
+                                <a href="#">
+                                    <MessagesIcon/>
+                                </a>
+                            </div>
+                        </div>
+                        <div className={styles.contact}>
+                            <a href="#" className={styles.contactNumber}>+ 7 981 103 65 38</a>
+                        </div>
+                        <div className={styles.burger} onClick={() => toggleActiveClass()}>
+                            <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                            <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                            <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div className={!active ? styles.menu : styles.menu + ' ' + styles.menuActive}>
+                <div className={!active ? styles.menuInner : styles.menuInner}>
+                    <div className="container">
+                        <div className={styles.menuWrapper}>
+                            <div className={styles.language}>Ru</div>
+                            <div className={styles.sites}>
+                                <div className={styles.left}>
+                                    <a href="#" className={styles.linkSites}>
+                                        Сайты
+                                    </a>
+                                </div>
+                                <div className={styles.right}>
+                                    <a href="#" className={styles.linkSites}>Кейсы и цены</a>
+                                    <a href="#" className={styles.linkSites}>Услуги</a>
+                                </div>
+                            </div>
+                            <a href="#" className={styles.link}>Самописные системы</a>
+                            <a href="#" className={styles.link}>Парсинг</a>
+                            <a href="#" className={styles.link}>Приложения</a>
+                            <a href="#" className={styles.link}>Контекст Google/Yandex</a>
+                            <a href="#" className={styles.link}>SEO</a>
+                            <a href="#" className={styles.link}>SMM</a>
+                            <a href="#" className={styles.link}>Брендинг и репутация</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className="container">
-                <div className={!active ? styles.wrapper : styles.wrapper + ' ' + styles.wrapperActive}>
-                    <a href="#" className="">
-                        <img src={logoMobile} alt="" className={styles.logoImg}/>
-                    </a>
-                    <div className={styles.list}>
-                        <div className={styles.listItem + ' ' + styles.main}>
-                            <a href="#" className={styles.itemLink}>Сайты</a>
+        </Fragment>
+    );
+};
+
+const HeaderMobile = () => {
+    const [active, setActive] = useState(false)
+    const toggleActiveClass = () => {
+        setActive(!active)
+        // if (!active){
+        //     document.body.style.overflow = 'hidden'
+        // } else {
+        //     document.body.style.overflow = 'auto'
+        // }
+    }
+    return (
+        <Fragment>
+            <header className={!active ? styles.header : `${styles.header} ${styles.headerActive}`}>
+                <div className="container">
+                    <div className={!active ? styles.wrapper : styles.wrapper + ' ' + styles.wrapperActive}>
+                        <a href="#" className="">
+                            <img src={logoMobile} alt="" className={styles.logoImg}/>
+                        </a>
+
+                        <div className={styles.contact}>
+                            <a href="#" className={styles.contactNumber}>+ 7 981 103 65 38</a>
                         </div>
-                        <div className={styles.listItem}>
-                            <div className={styles.second}>
-                                <a href="#" className={styles.itemLink}>Кейсы и цены</a>
-                                <a href="#" className={styles.itemLink}>Услуги</a>
+                        <div className={styles.burger} onClick={() => toggleActiveClass()}>
+                            <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                            <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                            <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div className={!active ? styles.menu : styles.menu + ' ' + styles.menuActive}>
+                <div className={!active ? styles.menuInner : styles.menuInner}>
+                    <div className="container">
+                        <div className={styles.menuWrapper}>
+                            <div className={styles.language}>Ru</div>
+                            <div className={styles.sites}>
+                                <div className={styles.left}>
+                                    <a href="#" className={styles.linkSites}>
+                                        Сайты
+                                    </a>
+                                </div>
+                                <div className={styles.right}>
+                                    <a href="#" className={styles.linkSites}>Кейсы и цены</a>
+                                    <a href="#" className={styles.linkSites}>Услуги</a>
+                                </div>
+                            </div>
+                            <a href="#" className={styles.link}>Самописные системы</a>
+                            <a href="#" className={styles.link}>Парсинг</a>
+                            <a href="#" className={styles.link}>Приложения</a>
+                            <a href="#" className={styles.link}>Контекст Google/Yandex</a>
+                            <a href="#" className={styles.link}>SEO</a>
+                            <a href="#" className={styles.link}>SMM</a>
+                            <a href="#" className={styles.link}>Брендинг и репутация</a>
+                            <div className={styles.contacts}>
+                                <div className={styles.number}>+ 7 981 103 65 38</div>
+                                <div className={styles.mail}>test_ mail@gmail.com</div>
+                            </div>
+                            <div className={!active ? styles.socials : styles.socials + ' ' + styles.socialsWhite}>
+                                <div className={styles.social}>
+                                    <a href="#">
+                                        <TgIcon />
+                                    </a>
+                                </div>
+                                <div className={styles.social}>
+                                    <a href="#">
+                                        <VkIcon/>
+                                    </a>
+                                </div>
+                                <div className={styles.social}>
+                                    <a href="#">
+                                        <WhatsAppIcon/>
+                                    </a>
+                                </div>
+                                <div className={styles.social}>
+                                    <a href="#">
+                                        <MessagesIcon/>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className={styles.socials}>
-                        <div className={styles.social}>
-                            <a href="#">
-                                <img src={telegram} alt="telegram"/>
-                            </a>
-                        </div>
-                        <div className={styles.social}>
-                            <a href="#">
-                                <img src={vk} alt="vk"/>
-                            </a>
-                        </div>
-                        <div className={styles.social}>
-                            <a href="#">
-                                <img src={whatsup} alt="whatsup"/>
-                            </a>
-                        </div>
-                        <div className={styles.social}>
-                            <a href="#">
-                                <img src={messages} alt="messages"/>
-                            </a>
-                        </div>
-                    </div>
-                    <div className={styles.contact}>
-                        <a href="#" className={styles.contactNumber}>+ 7 981 103 65 38</a>
-                    </div>
-                    <div className={styles.burger} onClick={() => toggleActiveClass()}>
-                        <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
-                        <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
-                        <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
-                    </div>
                 </div>
             </div>
-        </header>
+        </Fragment>
     );
 };
 
 
 const Header = () => {
-
+    const headers = [<HeaderMobile/>, <HeaderLaptop/>, <HeaderDesktop/>]
+    let header;
 
     const sizeWidth = useWindowSize();
+    if (sizeWidth < 630){
+        header = headers[0]
+    } else if (sizeWidth < 1100){
+        header = headers[1]
+    } else {
+        header = headers[2]
+    }
     return (
         <Fragment>
-            {sizeWidth < 1100 ? <HeaderMobile/> : <HeaderDesktop/>}
+            {header}
         </Fragment>
     );
 };

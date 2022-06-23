@@ -8,6 +8,7 @@ import polyhedron from '../../images/polyhedron.jpg'
 import qrCode from '../../images/qr.svg'
 import qrCodeMobile from '../../images/qrMobile.svg'
 import PolygonAnimation from "../../animations/PolygonAnimation/PolygonAnimation";
+import SpinningAnimation from "../../animations/SpinningAnimation/SpinningAnimation";
 
 const ServicesTag = styled.section`
   padding: 80px 0;
@@ -64,7 +65,6 @@ const ServicesTag = styled.section`
   }
   .landing::before{
     content: '';
-    position: absolute;
     height: 101%;
     width: 30px;
     background-color: #fff;
@@ -205,7 +205,13 @@ const ServicesTag = styled.section`
     grid-row: 3/5;
     background-color: #1a1a1a;
     position: relative;
+    overflow: hidden;  
+    padding: 5px;  
   }
+  .seoImg{
+      max-height: 118px;
+      overflow: hidden;
+  }  
   .seo::before{
     content: '';
     position: absolute;
@@ -685,7 +691,7 @@ const Services = () => {
                     </div>
                     <div className="seo">
                         <div className="seoImg">
-                            <img src={seo} alt=""/>
+                            {/*<SpinningAnimation/>*/}
                         </div>
                         <div className="seoWrapper">
                             <div className="er er18">er-9817</div>
