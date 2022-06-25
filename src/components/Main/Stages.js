@@ -7,6 +7,7 @@ import third from '../../images/stagesGrid/third.svg'
 import fourth from '../../images/stagesGrid/fourth.svg'
 import fifth from '../../images/stagesGrid/fifth.svg'
 import sixth from '../../images/stagesGrid/sixth.svg'
+import Dash from "../common/Dash/Dash";
 
 const StagesTag = styled.section`
   padding: 80px 0;
@@ -229,6 +230,7 @@ const Stages = () => {
     return (
         <StagesTag>
             <div className="container">
+                <Dash color={'#000000'} countBefore={2} countAfter={5} top={'0px'}/>
                 <h2 className="title">
                     Этапы работы <span className='blue'>;<span className='black'>-</span>]</span>
                 </h2>

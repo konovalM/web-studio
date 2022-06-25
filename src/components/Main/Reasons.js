@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import bg from '../../images/bg.png'
 import star from '../../images/star.svg'
+import Dash from "../common/Dash/Dash";
 
 const ReasonsTag = styled.section`
   padding: 84px 0 46px;
@@ -388,6 +389,7 @@ const Reasons = () => {
     return (
         <ReasonsTag>
             <div className="container">
+                <Dash color={'#ffffff'} countBefore={1} countAfter={6} top={'0px'}/>
                 <div className="content">
                     <h2 className="title">Почему <span className='blue blueSpan'>{`{`}</span><span className='white'>мы</span><span className='blue blueSpan'>{`}`}</span></h2>
                     <div className="item">

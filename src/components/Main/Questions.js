@@ -7,6 +7,7 @@ import crossesMobile from '../../images/crossesMobile.jpg'
 import {useEffect} from "react";
 import Button from "../../elements/Button";
 import CrossAnimation from "../../animations/CrossAnimation/CrossAnimation";
+import Dash from "../common/Dash/Dash";
 
 const QustionsTag = styled.section`
   padding: 60px 0 120px;
@@ -321,6 +322,7 @@ const Questions = ({bg}) => {
     return (
         <QustionsTag bg={bg}>
             <div className="container">
+                <Dash color={'#000000'} countBefore={7} countAfter={0} top={'0px'}/>
                 <h2 className="title">Остались вопросы?</h2>
                 <p className="description">Пишите или звоните.<span className="br"> Отвечаем круглосуточно.</span></p>
                 <div className="formOutside">

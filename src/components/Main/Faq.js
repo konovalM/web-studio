@@ -7,6 +7,7 @@ import blueBottomArrow from '../../images/blueBottomArrow.svg'
 import blueTopArrow from '../../images/blueTopArrow.svg'
 import crossesMobile from "../../images/crossesMobile.jpg";
 import crosses from "../../images/crosses.jpg";
+import Dash from "../common/Dash/Dash";
 
 const FaqTag = styled.section`
   padding: 84px 0 70px;
@@ -350,6 +351,7 @@ const Faq = () => {
     return (
         <FaqTag>
             <div className="container">
+                <Dash color={'#000000'} countBefore={5} countAfter={2} top={'0px'}/>
                 <h2 className="title">F<span className='blue'>{`{`}</span>A<span className='blue'>{`}`}</span>Q</h2>
                 <div className="description">
                     Если вы не нашли ответа на свой вопрос, напишите нам и мы ответим в течение 10 минут.

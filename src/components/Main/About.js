@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import bg from '../../images/bg.png'
 import developerBg from '../../images/developer.jpg'
+import Dash from "../common/Dash/Dash";
 
 const AboutTag = styled.section`
   padding: 85px 0 40px;
@@ -283,6 +284,7 @@ const About = () => {
     return (
         <AboutTag>
             <div className="container">
+                <Dash color={'#ffffff'} countBefore={6} countAfter={1} top={'0px'}/>
                 <div className="wrapper">
                     <div className="absolute">
                         <p className="word">modern</p>

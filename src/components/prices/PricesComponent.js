@@ -3,6 +3,7 @@ import Slider from "./Slider";
 import {useEffect, useState, useRef} from "react";
 import Button from "../../elements/Button";
 import styles from './PricesComponent.module.css'
+import Dash from "../common/Dash/Dash";
 
 
 
@@ -60,6 +61,7 @@ const PricesComponent = ({title, margin, price, size, content}) => {
                 </div>
             </div>
             <div className="container">
+                <Dash color={'#ffffff'} countBefore={4} countAfter={3} top={'-200px'}/>
                 <h3 className="product" ref={ref}>{defaultTitle ||title}</h3>
                 <div className="flexWrapper">
                     <div className="flexList">

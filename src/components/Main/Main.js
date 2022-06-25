@@ -2,6 +2,7 @@ import React, {Fragment, useEffect} from 'react';
 import styled from 'styled-components'
 import bg from '../../images/bg.png'
 import Button from "../../elements/Button";
+import Dash from "../common/Dash/Dash";
 // import Button from "./elements/Button";
 
 const MainTag = styled.section`
@@ -374,6 +375,7 @@ const Main = () => {
                 <p className="scrollText">scroll</p>
             </div>
             <div className="container">
+                <Dash color={'#000000'} countBefore={0} countAfter={7} bottom={'0px'}/>
                <div className="wrapper">
                    <div className="left">
                        <h1 className="subtitle">

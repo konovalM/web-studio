@@ -5,6 +5,7 @@ import bigCircle from '../../images/bigCircle.svg'
 import mediumCircle from '../../images/mediumCircle.svg'
 import smallCircle from '../../images/smallCircle.svg'
 import PricesComponent from "./PricesComponent";
+import Dash from "../common/Dash/Dash";
 
 
 const PricesTag = styled.section`
@@ -327,6 +328,7 @@ const Prices = () => {
         <PricesTag>
             <div className="wrapperPrices">
                 <div className="container">
+
                     <h2 className="title">Кейсы и цены</h2>
                     <div className="description">Создаем магазины, лендинги, корпоративные сайты, криптосервисы, сайты мероприятий, а также сайты под нестандартные задачи.</div>
                 </div>

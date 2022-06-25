@@ -9,6 +9,7 @@ import Questions from "../components/Main/Questions";
 import Test from "../components/test/Test";
 import CrossAnimation from "../animations/CrossAnimation/CrossAnimation";
 import Layout from "./Layout";
+import Faq from "../components/Main/Faq";
 
 const MainPage = () => {
     return (
@@ -19,7 +20,7 @@ const MainPage = () => {
                 <Stages />
                 <Services />
                 <Prices />
-                {/*{/*<Faq />*/}
+                <Faq />
                 <About />
                 <Questions />
                 {/*<Test/>*/}

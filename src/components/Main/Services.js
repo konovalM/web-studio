@@ -9,6 +9,7 @@ import qrCode from '../../images/qr.svg'
 import qrCodeMobile from '../../images/qrMobile.svg'
 import PolygonAnimation from "../../animations/PolygonAnimation/PolygonAnimation";
 import SpinningAnimation from "../../animations/SpinningAnimation/SpinningAnimation";
+import Dash from "../common/Dash/Dash";
 
 const ServicesTag = styled.section`
   padding: 80px 0;
@@ -650,6 +651,7 @@ const Services = () => {
     return (
         <ServicesTag>
             <div className="container">
+                <Dash color={'#000000'} countBefore={3} countAfter={4} top={'0px'}/>
                 <h2 className="title">Услуги <span className='blue'>><span className="black">/...</span>{`<`}</span></h2>
                 <p className="description">Предоставим вашему бизнесу комплекс услуг по развитию и продвижению. Создадим техническую часть вашего бизнеса, займемся брендингом и рекламой.</p>
                 <div className="gridWrapper">
