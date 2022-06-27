@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components'
+import useWindowSize from "../../../hooks/useWindowSize";
 
 const DashTag = styled.div`
     position: absolute;
-    right: 0;
     display: flex;
     flex-direction: column;
     row-gap: 7px;
     top: ${props => props.top ? props.top : 'none'};
     bottom: ${props => props.bottom ? props.bottom : 'none'};
+    right: 10px;
     align-items: center;
 `
 
@@ -35,14 +36,16 @@ const Dash = ({color, bottom, top, countBefore,countAfter}) => {
         }
         return arr
     }
-
-    return (
-        <DashTag bottom={bottom} top={top}>
-            {countStart()}
-            <div style={{height: '44px', width: '2px', backgroundColor: color}}></div>
-            {countEnd()}
-        </DashTag>
-    );
+    const width = useWindowSize()
+    if (width > 700){
+        return (
+            <DashTag bottom={bottom} top={top}>
+                {countStart()}
+                <div style={{height: '44px', width: '2px', backgroundColor: color}}></div>
+                {countEnd()}
+            </DashTag>
+        )
+    } else return <></>
 };
 
 export default Dash;

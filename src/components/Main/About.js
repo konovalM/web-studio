@@ -3,6 +3,7 @@ import styled from "styled-components";
 import bg from '../../images/bg.png'
 import developerBg from '../../images/developer.jpg'
 import Dash from "../common/Dash/Dash";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const AboutTag = styled.section`
   padding: 85px 0 40px;
@@ -46,6 +47,9 @@ const AboutTag = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+  }
+  .flexWrapper{
+      display: flex;
   }
   .gridElem:nth-child(n+3){
     grid-row-start: 2;
@@ -219,7 +223,12 @@ const AboutTag = styled.section`
       background-color: #1a1a1a;
     }
   }
-  
+  @media (max-width: 580px){
+      .name{
+          font-size: 16px;
+          line-height: 16px;
+      }
+  }
   @media(max-width: 555px){
     .title{
       font-size: 50px;
@@ -240,6 +249,12 @@ const AboutTag = styled.section`
       justify-content: center;
     }
   }
+    @media (max-width: 510px){
+        .name{
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
   @media(max-width: 468px){
     .gridWrapper{
       padding: 0 5px;
@@ -281,6 +296,11 @@ const AboutTag = styled.section`
 `
 
 const About = () => {
+    const width = useWindowSize()
+    let design;
+    if (width <= 450){
+        design = <DesignSquaresMobile/>
+    } else design = <DesignSquares/>
     return (
         <AboutTag>
             <div className="container">
@@ -302,10 +322,13 @@ const About = () => {
                     <div className="gridWrapper">
                         <div className="gridElem">
                             <div className="nameWrapper">
-                                <div className="name">
-                                    <p className="nameText">
-                                        Геннадий Васнецов
-                                    </p>
+                                <div className="flexWrapper">
+                                    <div className="name">
+                                        <p className="nameText">
+                                            Геннадий Васнецов
+                                        </p>
+                                    </div>
+                                    {design}
                                 </div>
                             </div>
                             <p className="profile">
@@ -314,10 +337,13 @@ const About = () => {
                         </div>
                         <div className="gridElem">
                             <div className="nameWrapper">
-                                <div className="name">
-                                    <p className="nameText">
-                                        Геннадий Васнецов
-                                    </p>
+                                <div className="flexWrapper">
+                                    <div className="name">
+                                        <p className="nameText">
+                                            Геннадий Васнецов
+                                        </p>
+                                    </div>
+                                    {design}
                                 </div>
                             </div>
                             <p className="profile">
@@ -326,10 +352,13 @@ const About = () => {
                         </div>
                         <div className="gridElem">
                             <div className="nameWrapper">
-                                <div className="name">
-                                    <p className="nameText">
-                                        Геннадий Васнецов
-                                    </p>
+                                <div className="flexWrapper">
+                                    <div className="name">
+                                        <p className="nameText">
+                                            Геннадий Васнецов
+                                        </p>
+                                    </div>
+                                    {design}
                                 </div>
                             </div>
                             <p className="profile">
@@ -338,10 +367,13 @@ const About = () => {
                         </div>
                         <div className="gridElem">
                             <div className="nameWrapper">
-                                <div className="name">
-                                    <p className="nameText">
-                                        Геннадий Васнецов
-                                    </p>
+                                <div className="flexWrapper">
+                                    <div className="name">
+                                        <p className="nameText">
+                                            Геннадий Васнецов
+                                        </p>
+                                    </div>
+                                    {design}
                                 </div>
                             </div>
                             <p className="profile">
@@ -350,10 +382,13 @@ const About = () => {
                         </div>
                         <div className="gridElem">
                             <div className="nameWrapper">
-                                <div className="name">
-                                    <p className="nameText">
-                                        Геннадий Васнецов
-                                    </p>
+                                <div className="flexWrapper">
+                                    <div className="name">
+                                        <p className="nameText">
+                                            Геннадий Васнецов
+                                        </p>
+                                    </div>
+                                    {design}
                                 </div>
                             </div>
                             <p className="profile">
@@ -362,10 +397,13 @@ const About = () => {
                         </div>
                         <div className="gridElem">
                             <div className="nameWrapper">
-                                <div className="name">
-                                    <p className="nameText">
-                                        Геннадий Васнецов
-                                    </p>
+                                <div className="flexWrapper">
+                                    <div className="name">
+                                        <p className="nameText">
+                                            Геннадий Васнецов
+                                        </p>
+                                    </div>
+                                    {design}
                                 </div>
                             </div>
                             <p className="profile">
@@ -379,5 +417,75 @@ const About = () => {
         </AboutTag>
     );
 };
+
+const DesignSquaresTag = styled.div`
+    display: flex;
+    flex: 0 0 auto;
+    margin-left: 7px;
+    height: 31px;
+    width: 53px;
+    flex-wrap: wrap;
+    column-gap: 7px;
+    row-gap: 5px;
+    .blue{
+        background-color: #1E4FCD;
+        width: 13px;
+        height: 13px;
+    }
+    .white{
+        background-color: #FFFFFF;
+        width: 13px;
+        height: 13px;
+    }
+    .long{
+        width: 33px;
+    }
+`
+
+const DesignSquares = () => {
+    return (
+        <DesignSquaresTag>
+            <div className="blue"></div>
+            <div className="white long"></div>
+            <div className="white"></div>
+            <div className="blue long"></div>
+        </DesignSquaresTag>
+    )
+}
+
+const DesignSquaresMobileTag = styled.div`
+    display: flex;
+    flex: 0 0 auto;
+    margin-left: 3px;
+    height: 32px;
+    width: 19px;
+    flex-wrap: wrap;
+    column-gap: 3px;
+    row-gap: 4px;
+    .blue{
+        background-color: #1E4FCD;
+        width: 8px;
+        height: 8px;
+    }
+    .white{
+        background-color: #FFFFFF;
+        width: 8px;
+        height: 8px;
+    }
+    .long{
+        height: 20px;
+    }
+`
+
+const DesignSquaresMobile = () => {
+    return (
+        <DesignSquaresMobileTag>
+            <div className="white"></div>
+            <div className="blue"></div>
+            <div className="blue long"></div>
+            <div className="white long"></div>
+        </DesignSquaresMobileTag>
+    )
+}
 
 export default About;

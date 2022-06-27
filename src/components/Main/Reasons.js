@@ -11,6 +11,7 @@ const ReasonsTag = styled.section`
   background-repeat: repeat;
   background-position: center -100px;
   position: relative;
+    overflow: hidden;
   .content{
     max-width: 645px;
     margin-left: auto;
@@ -75,7 +76,7 @@ const ReasonsTag = styled.section`
   .advantage{
     position: absolute;
     font-family: 'Russo One';
-    font-size: 102px;
+    font-size: 107px;
     line-height: 80px;
     text-transform: uppercase;
     color: #1A1A1A;
@@ -83,7 +84,7 @@ const ReasonsTag = styled.section`
   }
   .blackW{
     display: inline-block;
-    color: #000;
+    color: #1A1A1A;
     background-color: #fff;
   }
   .advantage::before{
@@ -234,11 +235,19 @@ const ReasonsTag = styled.section`
     }
   }
   @media(max-width: 1265px){
-    padding: 80px 0 520px;
+    padding: 80px 0 490px;
     .content{
       margin-left: unset;
       padding-left: 20px;
+      max-width: unset;
     }
+      .circle{
+          width: 357px;
+          height: 357px;
+          left: 50%;
+          transform: translateX(-100%);
+          bottom: -69px;
+      }
   }
   @media(max-width: 850px){
     .title{
@@ -249,14 +258,12 @@ const ReasonsTag = styled.section`
   }
   @media(max-width: 688px){
     .circle{
-      left: -132px;
       bottom: -59px;
     }
   }
   @media(max-width: 623px){
-    padding: 80px 0 400px;
+    padding: 80px 0 350px;
     .circle{
-      left: -95px;
       bottom: -53px;
       width: 300px;
       height: 300px;
@@ -338,7 +345,7 @@ const ReasonsTag = styled.section`
     }
   }
   @media(max-width: 424px){
-    padding: 80px 0 348px;
+    padding: 80px 0 318px;
     .title{
       font-size: 60px;
       line-height: 60px;
@@ -355,9 +362,9 @@ const ReasonsTag = styled.section`
       margin-top: 30px;
     }
     .circle{
+      left: 130px;  
       width: 222px;
       height: 222px;
-      left: -98px;
       bottom: -45px;
     }
     .star{

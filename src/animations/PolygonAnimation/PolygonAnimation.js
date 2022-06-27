@@ -3,6 +3,7 @@ import {gsap} from "gsap";
 import {TweenLite} from 'gsap'
 import _ from 'underscore'
 import {bindAll} from "underscore";
+import useWindowSize from "../../hooks/useWindowSize";
 
 
 
@@ -153,9 +154,19 @@ const Test = () => {
             requestAnimationFrame(loop);
         }
     }, [])
+    const width = useWindowSize()
+    let scale = 1.8
+    let w, h = '100%'
+    if (width <= 767){
+        scale = 1.3
+    }
+    if ( width <= 720){
+        w = '85%';
+        h = '85%';
+    }
     return (
-        <div style={{width: '100%', height: '100%'}}>
-            <canvas ref={canvass} id="c" style={{width: '100%', height: '100%', transform: 'scale(1.8) translate(30px, -60px)'}}></canvas>
+        <div style={{width: `${w}`, height: `${h}`}}>
+            <canvas ref={canvass} id="c" style={{width: '100%', height: '100%', transform: `scale(${scale}) translate(30px, -60px)`}}></canvas>
         </div>
     );
 };

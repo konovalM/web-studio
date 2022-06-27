@@ -322,7 +322,6 @@ const Questions = ({bg}) => {
     return (
         <QustionsTag bg={bg}>
             <div className="container">
-                <Dash color={'#000000'} countBefore={7} countAfter={0} top={'0px'}/>
                 <h2 className="title">Остались вопросы?</h2>
                 <p className="description">Пишите или звоните.<span className="br"> Отвечаем круглосуточно.</span></p>
                 <div className="formOutside">
@@ -386,10 +385,6 @@ const Questions = ({bg}) => {
                 <div className="contactsWrapper">
                     <div className="animation">
                         <CrossAnimation/>
-                        {/*<picture>
-                            <source srcSet={crossesMobile} media="(max-width: 767px)" />
-                                <img src={crosses} alt="crosses" />
-                        </picture>*/}
                     </div>
                     <div className="contacts">
                         <div className="contact">

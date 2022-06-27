@@ -199,7 +199,7 @@ const PricesTag = styled.section`
       font-size: 105px;
     }
     .price{
-      width: 65%;
+      width: 58%;
     }
     .price::before{
       width: 380px;
@@ -233,7 +233,11 @@ const PricesTag = styled.section`
       margin-top: 130px;
     }
   }
-  
+  @media screen and (max-width: 800px){
+      .flexList+.flexList{
+          margin-left: 40px;
+      }
+  }
   @media screen and (max-width: 767px){
     .pricesComponentWrapper{
       margin-top: 120px;

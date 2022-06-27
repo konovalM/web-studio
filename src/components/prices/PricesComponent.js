@@ -24,14 +24,9 @@ const PricesComponent = ({title, margin, price, size, content}) => {
     }
     let width = useWindowSize()
     useEffect(() => {
-        // let coordinates = document.querySelectorAll('.product')
-        // let needed = coordinates[nkey].getBoundingClientRect()
         let coordinatesSection = document.querySelector('.wrapperPrices').getBoundingClientRect()
         let sectionHeightFrom = coordinatesSection.top
-        // let widthFrom = needed.left
-        // let heightFrom = needed.top
 
-        // let position = {width: widthFrom-15, top: heightFrom - sectionHeightFrom, height: document.querySelector('.product').clientHeight}
         let widthFrom= ref.current.getBoundingClientRect().left
         let heightFrom = ref.current.getBoundingClientRect().top
         let position = {width: widthFrom-15, top: heightFrom - sectionHeightFrom, height: document.querySelector('.product').clientHeight}

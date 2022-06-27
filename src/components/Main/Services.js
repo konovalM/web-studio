@@ -10,6 +10,7 @@ import qrCodeMobile from '../../images/qrMobile.svg'
 import PolygonAnimation from "../../animations/PolygonAnimation/PolygonAnimation";
 import SpinningAnimation from "../../animations/SpinningAnimation/SpinningAnimation";
 import Dash from "../common/Dash/Dash";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const ServicesTag = styled.section`
   padding: 80px 0;
@@ -69,6 +70,7 @@ const ServicesTag = styled.section`
     height: 101%;
     width: 30px;
     background-color: #fff;
+    position: absolute;
     left: 80px;
     top: 0;
   }
@@ -116,7 +118,7 @@ const ServicesTag = styled.section`
     width: 190px;
     height: 190px;
     background-color: #1E4FCD;
-    padding: 0 25px 38px;
+    padding: 0 25px 28px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -126,6 +128,7 @@ const ServicesTag = styled.section`
     font-size: 25px;
     text-transform: uppercase;
     color: #FFFFFF;
+    line-height: 30px;
   }
   // gridItem - 3
   .systems{
@@ -134,7 +137,7 @@ const ServicesTag = styled.section`
     background-color: #1A1A1A;
   }
   .systemsWrapper{
-    margin-top: 16px;
+    margin-top: 12px;
     padding-left: 33px;
   }
   .systemsText{
@@ -152,7 +155,7 @@ const ServicesTag = styled.section`
   }
   .bublikWrapper{
     padding-left: 33px;
-    margin-top: 15px;
+    margin-top: 24px;
   }
   .bublikText{
     font-family: 'Russo One';
@@ -197,7 +200,7 @@ const ServicesTag = styled.section`
   .marketingWrapper{
     position: absolute;
     transform: rotate(-90deg);
-    bottom: 170px;
+    bottom: 155px;
     left: -50px;
   }
   // gridItem - 6
@@ -207,7 +210,6 @@ const ServicesTag = styled.section`
     background-color: #1a1a1a;
     position: relative;
     overflow: hidden;  
-    padding: 5px;  
   }
   .seoImg{
       max-height: 118px;
@@ -364,7 +366,7 @@ const ServicesTag = styled.section`
     margin-top: 5px;
   }
   .onlineWrapper{
-    margin-bottom: 38px;
+    margin-bottom: 30px;
     margin-left: 24px;
   }
   // gridItem - 11
@@ -430,6 +432,9 @@ const ServicesTag = styled.section`
       grid-column: 3/4;
       grid-row: 3/4;
     }
+      .smmWrapper{
+          bottom: 58px;
+      }
     .smm{
       grid-column: 3/4;
       grid-row: 4/6;
@@ -481,6 +486,20 @@ const ServicesTag = styled.section`
     .seo::before{
       width: 10px;
     }
+      .bublikText{
+          font-size: 35px;
+          line-height: 42px;
+      }
+      .systemsText{
+          font-size: 35px;
+          line-height: 42px;
+      }
+      .systemsWrapper{
+          margin-top: 23px;
+      }
+      .bublikWrapper{
+          margin-top: 16px;
+      }
   }
   @media screen and (max-width: 720px){
     .title{
@@ -505,6 +524,7 @@ const ServicesTag = styled.section`
       &Inner{
         transform: none;
         position: static;
+        padding-left: 16px;
       }
     }
     .landing::before{
@@ -517,6 +537,9 @@ const ServicesTag = styled.section`
         font-size: 35px;
         line-height: 42px;
       }
+    }
+    .systemsWrapper{
+        padding-left: 11px;
     }
     .parsing{
       grid-column: 1/2;
@@ -560,6 +583,9 @@ const ServicesTag = styled.section`
     .bublikText{
       font-size: 35px;
       line-height: 42px;
+    }
+    .bublikWrapper{
+        padding-left: 11px;
     }
     .marketing{
       grid-column: 1/2;
@@ -643,11 +669,18 @@ const ServicesTag = styled.section`
         font-size: 35px;
         line-height: 42px;
       }
+      &Wrapper{
+          padding-left: 11px;
+      }
     }
   }
+  .systems, .ad, .branding, .smm{
+      padding: 5px;
+  }  
 `
 
 const Services = () => {
+    let width = useWindowSize()
     return (
         <ServicesTag>
             <div className="container">
@@ -663,6 +696,7 @@ const Services = () => {
                     </div>
                     <div className="parsing">
                         <div className="parsingWrapper">
+                            <DesignSquare cn={'black'}/>
                             <div className="er er14">er-9817</div>
                             <div className="parsingText">парсинг данных</div>
                         </div>
@@ -702,6 +736,7 @@ const Services = () => {
                     </div>
                     <div className="sites">
                         <div className="sitesWrapper">
+                            <DesignSquare cn={width <= 720 ? 'black' : 'blue'}/>
                             <div className="er er14">er-9817</div>
                             <div className="sitesText">сайты компаний</div>
                         </div>
@@ -727,6 +762,7 @@ const Services = () => {
                     </div>
                     <div className="online">
                         <div className="onlineWrapper">
+                            <DesignSquare cn={'black'}/>
                             <div className="er er14">er-9817</div>
                             <div className="onlineText">online<br/>магазины</div>
                         </div>
@@ -748,5 +784,40 @@ const Services = () => {
         </ServicesTag>
     );
 };
+
+const DesignSquareTag = styled.div`
+    width: 21px;
+    height: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 4px;
+    margin-bottom: 24px;
+    .blue{
+        width: 8px;
+        height: 8px;
+        background-color: #1E4FCD;
+    }
+    .white{
+        width: 8px;
+        height: 8px;
+        background-color: #FFFFFF;
+    }
+    .black{
+        width: 8px;
+        height: 8px;
+        background-color: #1A1A1A;
+    }
+`
+const DesignSquare = ({cn}) => {
+    return (
+        <DesignSquareTag>
+            <div className={cn}></div>
+            <div className='white'></div>
+            <div className='white'></div>
+            <div className={cn}></div>
+        </DesignSquareTag>
+    )
+}
 
 export default Services;
