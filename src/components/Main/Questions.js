@@ -315,6 +315,20 @@ const QustionsTag = styled.section`
       margin-left: 18px;
     }
   }
+  @media(max-width: 425px){
+      .formWrapper{
+          margin: 0 auto 90px;
+          max-width: unset;
+          width: 100%;
+          padding: 30px 10px;
+          ::before{
+              width: 91%;
+          }
+          ::after{
+              width: 91%;
+          }
+      }
+  }
   
 `
 
