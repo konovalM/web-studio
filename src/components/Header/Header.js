@@ -16,6 +16,7 @@ import TgIcon from "../../images/icons/TgIcon";
 import VkIcon from "../../images/icons/VkIcon";
 import WhatsAppIcon from "../../images/icons/WhatsAppIcon";
 import MessagesIcon from "../../images/icons/MessagesIcon";
+import cn from "classnames";
 
 const HeaderTag = styled.header`
   height: 63px;
@@ -117,13 +118,15 @@ const HeaderTag = styled.header`
   .language{
     margin-left: 95px;
     position: relative;
+    cursor: pointer;  
+    padding-left: 11px;
   }
   .language::before{
     content: '';
     position: absolute;
     width: 5px;
     height: 9px;
-    left: -10px;
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
     background: url(${arrowRight})center center/cover no-repeat;
@@ -153,6 +156,17 @@ const HeaderTag = styled.header`
         background-color: #1A1A1A;
         width: 186px;
         height: 167px;
+        z-index: 1;
+        padding: 9px 0 18px 18px;
+        left: -12px;
+    }
+    .dropdown-lang{
+        display: none;
+        position: absolute;
+        top: 29px;
+        background-color: #1A1A1A;
+        width: 62px;
+        height: 74px;
         z-index: 1;
         padding: 9px 0 18px 18px;
         left: -12px;
@@ -210,9 +224,12 @@ const HeaderTag = styled.header`
 
 const HeaderDesktop = () => {
     const [menuActive, setMenuActive] = useState(false)
-
+    const [langActive, setLangActive] = useState(false)
     const changeMenuActive = () => {
         setMenuActive(!menuActive)
+    }
+    const changeLangActive = () => {
+        setLangActive(!langActive)
     }
     return (
         <Fragment>
@@ -261,7 +278,15 @@ const HeaderDesktop = () => {
                                 </li>
                             </ul>
                         </nav>
-                        <div className="language">Ru</div>
+                        <div className="language" onClick={() => changeLangActive()}>
+                            <div className="dropdown">
+                                <div className='itemLink itemLinkMenu'>Ru</div>
+                                <div className={langActive? 'dropdown-lang dropdown-content-active' : 'dropdown-lang'}>
+                                    <p className='otherLink'>En</p>
+                                    <p className='otherLink'>中文</p>
+                                </div>
+                            </div>
+                        </div>
                         <div className="socials">
                             <div className="social">
                                 <a href="#">
@@ -304,6 +329,10 @@ const HeaderDesktop = () => {
 
 const HeaderLaptop = () => {
     const [active, setActive] = useState(false)
+    const [langActive, setLangActive] = useState(false)
+    const changeLangActive = () => {
+        setLangActive(!langActive)
+    }
     const toggleActiveClass = () => {
         setActive(!active)
         if (!active){
@@ -368,7 +397,15 @@ const HeaderLaptop = () => {
                 <div className={!active ? styles.menuInner : styles.menuInner}>
                     <div className="container">
                         <div className={styles.menuWrapper}>
-                            <div className={styles.language}>Ru</div>
+                            <div className={styles.language} onClick={() => changeLangActive()}>
+                                <div className={styles.dropdown}>
+                                    <div className={`${styles.itemLink} ${styles.whiteColor}`}>Ru</div>
+                                    <div className={langActive ? `${styles.dropdownLang} ${styles.dropdownContentActive}` : styles.dropdownLang}>
+                                        <p className={styles.otherLink}>En</p>
+                                        <p className={styles.otherLink}>中文</p>
+                                    </div>
+                                </div>
+                            </div>
                             <div className={styles.sites}>
                                 <div className={styles.left}>
                                     <a href="#" className={styles.linkSites}>
@@ -397,6 +434,10 @@ const HeaderLaptop = () => {
 
 const HeaderMobile = () => {
     const [active, setActive] = useState(false)
+    const [langActive, setLangActive] = useState(false)
+    const changeLangActive = () => {
+        setLangActive(!langActive)
+    }
     const toggleActiveClass = () => {
         setActive(!active)
         if (!active){
@@ -429,7 +470,15 @@ const HeaderMobile = () => {
                 <div className={!active ? styles.menuInner : styles.menuInner}>
                     <div className="container">
                         <div className={styles.menuWrapper}>
-                            <div className={styles.language}>Ru</div>
+                            <div className={styles.language} onClick={() => changeLangActive()}>
+                                <div className={styles.dropdown}>
+                                    <div className={`${styles.itemLink} ${styles.whiteColor}`}>Ru</div>
+                                    <div className={langActive ? `${styles.dropdownLang} ${styles.dropdownContentActive}` : styles.dropdownLang}>
+                                        <p className={styles.otherLink}>En</p>
+                                        <p className={styles.otherLink}>中文</p>
+                                    </div>
+                                </div>
+                            </div>
                             <div className={styles.sites}>
                                 <div className={styles.left}>
                                     <a href="#" className={styles.linkSites}>

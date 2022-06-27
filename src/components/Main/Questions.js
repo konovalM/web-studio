@@ -234,9 +234,7 @@ const QustionsTag = styled.section`
       left: 50%;
       transform: translateX(-50%);
     }
-    .form{
-      flex-direction: column;
-    }
+    
     .inputs{
       flex: 0 1 auto;
       max-width: 100%;

@@ -75,6 +75,9 @@
     display: block;
     z-index: 15;
 }
+.whiteColor{
+    color: #fff;
+}
 .itemLink::before{
     content: '';
     position: absolute;
@@ -172,9 +175,26 @@
     color: #FFFFFF;
     margin-bottom: 37px;
     position: relative;
+    cursor: pointer;
     margin-left: 14px;
 }
-
+.dropdown{
+    position: relative;
+}
+.dropdownLang{
+    display: none;
+    position: absolute;
+    top: 29px;
+    background-color: #1A1A1A;
+    width: 62px;
+    height: 74px;
+    z-index: 1;
+    padding: 9px 0 18px 18px;
+    left: -12px;
+}
+.dropdownContentActive{
+    display: block;
+}
 .language::before{
     content: '';
     width: 9px;
@@ -184,6 +204,26 @@
     left: -14px;
     top: 50%;
     transform: translateY(-50%);
+}
+.otherLink{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    display: block;
+    position: relative;
+}
+.otherLink+.otherLink{
+    margin-top: 15px;
+}
+.otherLink::before{
+    content: '';
+    width: 23px;
+    height: 3px;
+    background-color: #1E4FCD;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
 }
 .link{
     display: block;
