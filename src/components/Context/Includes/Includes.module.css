@@ -93,3 +93,30 @@
     right: -65px;
     bottom: -33px;
 }
+
+/*ADAPTIVE*/
+
+@media (max-width: 1347px){
+    .gridWrapper{
+        grid-template-columns: 770px 300px;
+        grid-template-rows: 113px 113px 113px;
+        grid-gap: 10px;
+    }
+    .gridItem{
+        padding: 14px 14px 14px 33px;
+    }
+}
+@media (max-width: 1125px){
+    .gridWrapper{
+        grid-template-columns: 740px 300px;
+    }
+    .arrows{
+        right: -96px;
+    }
+    .arrows2{
+        right: 20px;
+    }
+    .dollar{
+        right: -20px;
+    }
+}
