@@ -152,12 +152,11 @@
 @media (max-width: 991px){
     .main{
         height: 585px;
+        padding-top: 88px;
+
     }
     .scroll{
         display: none;
-    }
-    .main{
-        padding-top: 88px;
     }
     .image{
         width: 358px;
