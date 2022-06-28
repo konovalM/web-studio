@@ -11,10 +11,10 @@ const SeoPage = () => {
     return (
         <div>
             <Layout>
-                <Main/>
+                {/*<Main/>
                 <Includes/>
                 <Stages/>
-                <Cases/>
+                <Cases/>*/}
                 <Prices/>
                 <Questions/>
             </Layout>

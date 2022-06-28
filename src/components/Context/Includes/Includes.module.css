@@ -101,6 +101,7 @@
         grid-template-columns: 770px 300px;
         grid-template-rows: 113px 113px 113px;
         grid-gap: 10px;
+        justify-content: center;
     }
     .gridItem{
         padding: 14px 14px 14px 33px;
@@ -118,5 +119,111 @@
     }
     .dollar{
         right: -20px;
+    }
+}
+@media (max-width: 1085px){
+    .gridWrapper{
+        grid-template-columns: 1fr;
+        grid-template-rows: 113px 113px 113px 113px;
+        grid-gap: 30px;
+    }
+    .gridItem:last-child{
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .arrows{
+        right: 0;
+    }
+    .arrows2{
+        right: 90px;
+    }
+    .dollar{
+        right: 65px;
+    }
+    .eye{
+        right: -5px;
+        bottom: -47px;
+    }
+}
+
+@media (max-width: 992px){
+    .title{
+        font-size: 80px;
+        line-height: 96px;
+    }
+    .arrows{
+        width: 321px;
+        top: unset;
+        bottom: -52px;
+        right: -32px;
+    }
+    .arrows2{
+        width: 230px;
+        right: 5px;
+        top: -24px;
+    }
+    .dollar{
+        width: 244px;
+        right: 12px;
+        top: -27px;
+    }
+    .eye{
+        width: 221px;
+        top: 8px;
+        right: 13px;
+    }
+}
+
+@media (max-width: 715px){
+    .subtitle{
+        font-size: 22px;
+        line-height: 26px;
+    }
+    .gridDescr{
+        font-size: 14px;
+        line-height: 21px;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 580px){
+    .title{
+        font-size: 60px;
+        line-height: 60px;
+        margin-bottom: 17px;
+    }
+    .descr{
+        font-size: 14px;
+        line-height: 150%;
+        max-width: none;
+    }
+    .gridItem{
+        padding: 12px;
+    }
+    .gridWrapper{
+        grid-template-rows: 165px 165px 165px 165px;
+    }
+    .arrows{
+        width: 207px;
+        right: -19px;
+        bottom: -39px;
+    }
+    .arrows2{
+        width: 120px;
+        right: 36px;
+        top: unset;
+        bottom: -27px;
+    }
+    .dollar{
+        width: 153px;
+        right: 17px;
+        top: unset;
+        bottom: -30px;
+    }
+    .eye{
+        width: 140px;
+        right: 34px;
+        top: unset;
+        bottom: -20px;
     }
 }

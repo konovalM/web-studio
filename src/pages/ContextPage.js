@@ -11,12 +11,12 @@ const ContextPage = () => {
     return (
         <div>
             <Layout>
-                {/*<Main/>*/}
+                <Main/>
                 <Includes/>
                 <Stages/>
                 {/*<Cases/>*/}
                 <Prices/>
-                {/*<Questions/>*/}
+                <Questions/>
             </Layout>
         </div>
     );
