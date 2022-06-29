@@ -17,6 +17,7 @@ import VkIcon from "../../images/icons/VkIcon";
 import WhatsAppIcon from "../../images/icons/WhatsAppIcon";
 import MessagesIcon from "../../images/icons/MessagesIcon";
 import cn from "classnames";
+import LinkTo from "../Navigation/LinkTo";
 
 const HeaderTag = styled.header`
   height: 63px;
@@ -237,9 +238,9 @@ const HeaderDesktop = () => {
                 <div className="container">
                     <div className="wrapper">
                         <div className="logo">
-                            <Link to="/">
+                            <LinkTo src="/">
                                 <img src={logotype} alt="logotype"/>
-                            </Link>
+                            </LinkTo>
                         </div>
                         <nav className="nav">
                             <ul className="list">
@@ -268,11 +269,11 @@ const HeaderDesktop = () => {
                                     <div className="dropdown">
                                         <div className='itemLink itemLinkMenu'>Другие услуги</div>
                                         <div className={menuActive? 'dropdown-content dropdown-content-active' : 'dropdown-content'}>
-                                            <Link to="/apps" className='otherLink'>Приложения</Link>
-                                            <Link to="/systems" className='otherLink'>Самописные системы</Link>
-                                            <Link to="/parser" className='otherLink'>Парсинг</Link>
-                                            <Link to="/apps" className='otherLink'>Работа с репутацией</Link>
-                                            <Link to="/marketing" className='otherLink'>Брендинг</Link>
+                                            <LinkTo src="/apps" className='otherLink'>Приложения</LinkTo>
+                                            <LinkTo src="/systems" className='otherLink'>Самописные системы</LinkTo>
+                                            <LinkTo src="/parser" className='otherLink'>Парсинг</LinkTo>
+                                            <LinkTo src="/apps" className='otherLink'>Работа с репутацией</LinkTo>
+                                            <LinkTo src="/marketing" className='otherLink'>Брендинг</LinkTo>
                                         </div>
                                     </div>
                                 </li>
@@ -346,9 +347,9 @@ const HeaderLaptop = () => {
             <header className={!active ? styles.header : `${styles.header} ${styles.headerActive}`}>
                 <div className="container">
                     <div className={!active ? styles.wrapper : styles.wrapper + ' ' + styles.wrapperActive}>
-                        <a href="#" className="">
+                        <LinkTo src="/">
                             <img src={logoMobile} alt="" className={styles.logoImg}/>
-                        </a>
+                        </LinkTo>
                         <div className={styles.list}>
                             <div className={!active ? `${styles.listItem} ${styles.main}` : `${styles.listItem} ${styles.main} ${styles.mainActive}`}>
                                 <a href="#" className={styles.itemLink}>Сайты</a>
@@ -417,13 +418,13 @@ const HeaderLaptop = () => {
                                     <a href="#" className={styles.linkSites}>Услуги</a>
                                 </div>
                             </div>
-                            <a href="#" className={styles.link}>Самописные системы</a>
-                            <a href="#" className={styles.link}>Парсинг</a>
-                            <a href="#" className={styles.link}>Приложения</a>
-                            <a href="#" className={styles.link}>Контекст Google/Yandex</a>
-                            <a href="#" className={styles.link}>SEO</a>
-                            <a href="#" className={styles.link}>SMM</a>
-                            <a href="#" className={styles.link}>Брендинг и репутация</a>
+                            <LinkTo src="/systems" className={styles.link}>Самописные системы</LinkTo>
+                            <LinkTo src='/parser' className={styles.link}>Парсинг</LinkTo>
+                            <LinkTo src="/apps" className={styles.link}>Приложения</LinkTo>
+                            <LinkTo src="/context" className={styles.link}>Контекст Google/Yandex</LinkTo>
+                            <LinkTo src="/seo" className={styles.link}>SEO</LinkTo>
+                            <LinkTo src="/smm" className={styles.link}>SMM</LinkTo>
+                            <LinkTo src="/branding" className={styles.link}>Брендинг и репутация</LinkTo>
                         </div>
                     </div>
                 </div>
@@ -451,9 +452,9 @@ const HeaderMobile = () => {
             <header className={!active ? styles.header : `${styles.header} ${styles.headerActive}`}>
                 <div className="container">
                     <div className={!active ? styles.wrapper : styles.wrapper + ' ' + styles.wrapperActive}>
-                        <a href="#" className="">
+                        <LinkTo src="/">
                             <img src={logoMobile} alt="" className={styles.logoImg}/>
-                        </a>
+                        </LinkTo>
 
                         <div className={styles.contact}>
                             <a href="#" className={styles.contactNumber}>+ 7 981 103 65 38</a>
@@ -490,13 +491,13 @@ const HeaderMobile = () => {
                                     <a href="#" className={styles.linkSites}>Услуги</a>
                                 </div>
                             </div>
-                            <a href="#" className={styles.link}>Самописные системы</a>
-                            <a href="#" className={styles.link}>Парсинг</a>
-                            <a href="#" className={styles.link}>Приложения</a>
-                            <a href="#" className={styles.link}>Контекст Google/Yandex</a>
-                            <a href="#" className={styles.link}>SEO</a>
-                            <a href="#" className={styles.link}>SMM</a>
-                            <a href="#" className={styles.link}>Брендинг и репутация</a>
+                            <LinkTo src="/systems" className={styles.link}>Самописные системы</LinkTo>
+                            <LinkTo src='/parser' className={styles.link}>Парсинг</LinkTo>
+                            <LinkTo src="/apps" className={styles.link}>Приложения</LinkTo>
+                            <LinkTo src="/context" className={styles.link}>Контекст Google/Yandex</LinkTo>
+                            <LinkTo src="/seo" className={styles.link}>SEO</LinkTo>
+                            <LinkTo src="/smm" className={styles.link}>SMM</LinkTo>
+                            <LinkTo src="/branding" className={styles.link}>Брендинг и репутация</LinkTo>
                             <div className={styles.contacts}>
                                 <div className={styles.number}>+ 7 981 103 65 38</div>
                                 <div className={styles.mail}>test_ mail@gmail.com</div>

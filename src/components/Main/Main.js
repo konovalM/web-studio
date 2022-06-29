@@ -167,6 +167,7 @@ const MainTag = styled.section`
         bottom: 120px;
         transform: translateX(-50%);
         overflow: hidden;
+        z-index: 100;
     }
     .scrollOutside{
         height: 60px;

@@ -87,6 +87,7 @@
     bottom: 64px;
     transform: translateX(-50%);
     overflow: hidden;
+
 }
 .scrollOutside{
     height: 60px;
