@@ -14,7 +14,7 @@ const SmmPage = () => {
                 <Main/>
                 <Includes/>
                 <Stages/>
-                <Cases/>
+                {/*<Cases/>*/}
                 <Prices/>
                 <Questions/>
             </Layout>
