@@ -100,3 +100,117 @@
     right: 24px;
     bottom: 17px;
 }
+
+/*ADAPTIVE*/
+
+@media (max-width: 1235px) {
+    .title{
+        font-size: 80px;
+        line-height: 96px;
+        margin-bottom: 8px;
+    }
+    .descr{
+        font-size: 18px;
+        line-height: 150%;
+    }
+    .gridDescr{
+        max-width: 496px;
+    }
+    .gridWrapper{
+        grid-template-columns: 1fr;
+        grid-template-rows: 113px;
+        grid-auto-rows: 113px;
+    }
+    .gridItem:nth-child(1){
+        grid-column: unset;
+        grid-row: unset;
+    }
+    .gridItem:last-child{
+        grid-column: unset;
+        grid-row: unset;
+    }
+    .art{
+        width: 120px;
+        right: 38px;
+        bottom: -16px;
+    }
+    .smile{
+        width: 115px;
+        right: 47px;
+        bottom: -17px;
+    }
+    .like{
+        width: 117px;
+        right: 44px;
+        bottom: -4px;
+    }
+    .pazzles{
+        width: 113px;
+        right: 49px;
+        bottom: -14px;
+    }
+}
+
+@media (max-width: 720px) {
+    .gridWrapper{
+        grid-template-columns: 1fr;
+        grid-template-rows: 165px;
+        grid-auto-rows: 165px;
+    }
+}
+
+@media (max-width: 650px) {
+    .includes{
+        padding: 62px 0 80px;
+    }
+    .title{
+        font-size: 60px;
+        line-height: 60px;
+        margin-bottom: 17px;
+    }
+    .descr{
+        font-size: 14px;
+        line-height: 150%;
+        max-width: none;
+        margin-bottom: 30px;
+    }
+    .subtitle{
+        font-size: 22px;
+        line-height: 27px;
+    }
+    .gridDescr{
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 550px) {
+    .gridDescr{
+        font-size: 14px;
+        line-height: 150%;
+    }
+    .gridItem{
+        padding: 12px;
+        max-width: none;
+    }
+    .art{
+        width: 82px;
+        right: 12px;
+        bottom: -6px;
+    }
+    .smile{
+        width: 67px;
+        right: 12px;
+        bottom: -13px;
+    }
+    .like{
+        width: 64px;
+        right: 14px;
+        bottom: 4px;
+    }
+    .pazzles{
+        width: 62px;
+        right: 18px;
+        bottom: -6px;
+    }
+}
+
