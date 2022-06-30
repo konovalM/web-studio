@@ -16,6 +16,12 @@ const ButtonWrapperTag= styled.div`
         color: #FFFFFF;
         position: relative;
     }
+    .btnWrapper{
+        margin-top: 32px;
+        display: flex;
+        width: 353px;
+        position: relative;
+    }
     .pointFirst{
         width: 26px;
         height: 50%;
@@ -83,7 +89,7 @@ const Main = () => {
                         </p>
                         <ButtonWrapperTag>
                             <Button btnClassName='consultation' clazz1='pointFirst' clazz2='pointSecond' parentClass='points' btnStyles={[{background: '#1E4FCD', color: '#fff', border: 'none'}, {background: '#fff', color: '#1a1a1a', border: '1px solid #1a1a1a'}]}>
-                                <div className={styles.btnWrapper}>
+                                <div className={'btnWrapper'}>
                                     <button className='consultation'>
                                         Получить консультацию
                                     </button>
