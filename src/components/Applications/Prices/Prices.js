@@ -31,7 +31,7 @@ const Prices = () => {
                     </div>
                     <div className={styles.gridElement + ' ' + styles.blue}>
                         <h3 className={styles.subtitle}>
-                            исправление репутации
+                            IOS приложения
                         </h3>
                         <div className={styles.price}>
                             от 70 000 руб.
@@ -51,7 +51,7 @@ const Prices = () => {
                     </div>
                     <div className={styles.gridElement + ' ' + styles.blue}>
                         <h3 className={styles.subtitle}>
-                            маркетинг под ключ
+                            windows приложения
                         </h3>
                         <div className={styles.price}>
                             от 120 000 руб.
