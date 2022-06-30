@@ -263,7 +263,7 @@ const HeaderDesktop = () => {
                                     <Link to="/smm" className='itemLink'>SMM</Link>
                                 </li>
                                 <li className="listItem">
-                                    <Link to="/marketing" className='itemLink'>Маркетинг</Link>
+                                    <Link to="/branding" className='itemLink'>Маркетинг</Link>
                                 </li>
                                 <li className={menuActive ? 'rotate listItem other' :'listItem other'} onClick={() => changeMenuActive()}>
                                     <div className="dropdown">
@@ -273,7 +273,7 @@ const HeaderDesktop = () => {
                                             <LinkTo src="/systems" className='otherLink'>Самописные системы</LinkTo>
                                             <LinkTo src="/parser" className='otherLink'>Парсинг</LinkTo>
                                             <LinkTo src="/apps" className='otherLink'>Работа с репутацией</LinkTo>
-                                            <LinkTo src="/marketing" className='otherLink'>Брендинг</LinkTo>
+                                            <LinkTo src="/branding" className='otherLink'>Брендинг</LinkTo>
                                         </div>
                                     </div>
                                 </li>

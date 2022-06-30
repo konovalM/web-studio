@@ -24,7 +24,7 @@ function App() {
                     <Route path='/context' element={<ContextPage/>}/>
                     <Route path='/seo' element={<SeoPage/>}/>
                     <Route path='/smm' element={<SmmPage/>}/>
-                    <Route path='/marketing' element={<MarketingPage/>}/>
+                    <Route path='/branding' element={<MarketingPage/>}/>
                     <Route path='/apps' element={<ApplicationsPage/>}/>
                     <Route path='/parser' element={<ParserPage/>}/>
                     <Route path='/systems' element={<SystemsPage/>}/>
