@@ -74,14 +74,14 @@ const HeaderTag = styled.header`
   .listItem:first-child{
     position: relative;
   }
-  .listItem:first-child::before{
+  .active::before{
     content: '';
     width: 23px;
     height: 3px;
     background-color: #1E4FCD;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -2px;
   }
   .listItem + .listItem {
     margin-left: 33px;
@@ -90,12 +90,13 @@ const HeaderTag = styled.header`
         padding-left: 15px;
         margin-left: 18px;
     }
+    .itemLink{
+        position: relative;
+    }
   .second {
     display: flex;
     flex-direction: column;
-    .itemLink{
-      position: relative;
-    }
+    
     .itemLink::before{
       content: '';
       position: absolute;
@@ -183,15 +184,6 @@ const HeaderTag = styled.header`
         display: block;
         position: relative;
     }
-    .otherLink::before{
-        content: '';
-        width: 23px;
-        height: 3px;
-        background-color: #1E4FCD;
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-    }
     .otherLink+.otherLink{
         margin-top: 15px;
     }
@@ -238,14 +230,14 @@ const HeaderDesktop = () => {
                 <div className="container">
                     <div className="wrapper">
                         <div className="logo">
-                            <LinkTo src="/">
+                            <Link to="/">
                                 <img src={logotype} alt="logotype"/>
-                            </LinkTo>
+                            </Link>
                         </div>
                         <nav className="nav">
                             <ul className="list">
                                 <li className="listItem">
-                                    <a href="#" className='itemLink'>Сайты</a>
+                                    <LinkTo src="/" className='itemLink'>Сайты</LinkTo>
                                 </li>
                                 <li className="listItem">
                                     <div className="second">
@@ -254,16 +246,16 @@ const HeaderDesktop = () => {
                                     </div>
                                 </li>
                                 <li className="listItem">
-                                    <NavLink to="/context" className='itemLink'>Контекст</NavLink>
+                                    <LinkTo src="/context" className='itemLink'>Контекст</LinkTo>
                                 </li>
                                 <li className="listItem">
-                                    <NavLink to="/seo" className='itemLink'>SEO</NavLink>
+                                    <LinkTo src="/seo" className='itemLink'>SEO</LinkTo>
                                 </li>
                                 <li className="listItem">
-                                    <NavLink to="/smm" className='itemLink'>SMM</NavLink>
+                                    <LinkTo src="/smm" className='itemLink'>SMM</LinkTo>
                                 </li>
                                 <li className="listItem">
-                                    <Link to="/branding" className='itemLink'>Маркетинг</Link>
+                                    <LinkTo src="/branding" className='itemLink'>Маркетинг</LinkTo>
                                 </li>
                                 <li className={menuActive ? 'rotate listItem other' :'listItem other'} onClick={() => changeMenuActive()}>
                                     <div className="dropdown">
@@ -347,12 +339,12 @@ const HeaderLaptop = () => {
             <header className={!active ? styles.header : `${styles.header} ${styles.headerActive}`}>
                 <div className="container">
                     <div className={!active ? styles.wrapper : styles.wrapper + ' ' + styles.wrapperActive}>
-                        <LinkTo src="/">
+                        <Link to="/">
                             <img src={logoMobile} alt="" className={styles.logoImg}/>
-                        </LinkTo>
+                        </Link>
                         <div className={styles.list}>
                             <div className={!active ? `${styles.listItem} ${styles.main}` : `${styles.listItem} ${styles.main} ${styles.mainActive}`}>
-                                <a href="#" className={styles.itemLink}>Сайты</a>
+                                <Link to="/" className={styles.itemLink}>Сайты</Link>
                             </div>
                             <div className={styles.listItem}>
                                 <div className={styles.second}>
@@ -409,9 +401,9 @@ const HeaderLaptop = () => {
                             </div>
                             <div className={styles.sites}>
                                 <div className={styles.left}>
-                                    <a href="#" className={styles.linkSites}>
+                                    <LinkTo src="/" className={styles.linkSites}>
                                         Сайты
-                                    </a>
+                                    </LinkTo>
                                 </div>
                                 <div className={styles.right}>
                                     <a href="#" className={styles.linkSites}>Кейсы и цены</a>
@@ -452,9 +444,9 @@ const HeaderMobile = () => {
             <header className={!active ? styles.header : `${styles.header} ${styles.headerActive}`}>
                 <div className="container">
                     <div className={!active ? styles.wrapper : styles.wrapper + ' ' + styles.wrapperActive}>
-                        <LinkTo src="/">
+                        <Link to="/">
                             <img src={logoMobile} alt="" className={styles.logoImg}/>
-                        </LinkTo>
+                        </Link>
 
                         <div className={styles.contact}>
                             <a href="#" className={styles.contactNumber}>+ 7 981 103 65 38</a>
@@ -482,9 +474,9 @@ const HeaderMobile = () => {
                             </div>
                             <div className={styles.sites}>
                                 <div className={styles.left}>
-                                    <a href="#" className={styles.linkSites}>
+                                    <LinkTo src="/" className={styles.linkSites}>
                                         Сайты
-                                    </a>
+                                    </LinkTo>
                                 </div>
                                 <div className={styles.right}>
                                     <a href="#" className={styles.linkSites}>Кейсы и цены</a>

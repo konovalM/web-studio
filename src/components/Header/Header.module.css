@@ -78,7 +78,7 @@
 .whiteColor{
     color: #fff;
 }
-.itemLink::before{
+.active::before{
     content: '';
     position: absolute;
     width: 23px;
@@ -216,7 +216,7 @@
 .otherLink+.otherLink{
     margin-top: 15px;
 }
-.otherLink::before{
+.active::before{
     content: '';
     width: 23px;
     height: 3px;
@@ -230,38 +230,41 @@
     color: #fff;
 }
 .sites{
-    margin-left: 15px;
     display: flex;
     align-items: center;
     column-gap: 59px;
     margin-bottom: 20px;
     position: relative;
 }
-.sites::before{
+.active{
+    position: relative;
+    padding-left: 14px;
+}
+.active::before{
     content: '';
     width: 6px;
     height: 6px;
     background-color: #fff;
     top: 50%;
-    left: -14px;
+    left: 0;
     transform: translateY(-50%);
     position: absolute;
 }
-.left .linkSites{
+.left{
     position: relative;
 }
-.left .linkSites::before, .linkSites::after{
+.left::before, .left::after{
     content: '';
     width: 42px;
     height: 21px;
     position: absolute;
 }
-.left .linkSites::before{
+.left::before{
     background: url("../../images/topBigLine.svg")center center/cover no-repeat;
     right: -50px;
     top: -13px;
 }
-.left .linkSites::after{
+.left::after{
     background: url("../../images/bottomBigLine.svg")center center/cover no-repeat;
     right: -50px;
     bottom: -13px;
