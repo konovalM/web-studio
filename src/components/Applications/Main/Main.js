@@ -3,6 +3,7 @@ import styles from './Main.module.css'
 import Button from "../../../elements/Button";
 import image from '../../../images/applicationsPage/main.png'
 import styled from 'styled-components'
+import BallAnimation from "../../../animations/BallAnimation/BallAnimation";
 
 const ButtonWrapperTag= styled.div`
     .consultation{
@@ -14,6 +15,12 @@ const ButtonWrapperTag= styled.div`
         font-size: 18px;
         line-height: 21px;
         color: #FFFFFF;
+        position: relative;
+    }
+    .btnWrapper{
+        margin-top: 32px;
+        display: flex;
+        width: 353px;
         position: relative;
     }
     .pointFirst{
@@ -35,6 +42,26 @@ const ButtonWrapperTag= styled.div`
     .points{
         width: 82px;
         position: relative;
+    }
+    @media (max-width: 750px){
+        .consultation{
+            width: 209px;
+            height: 40px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+        .btnWrapper{
+            width: auto;
+        }
+        .pointFirst{
+            width: 20px;
+        }
+        .pointSecond{
+            width: 20px;
+        }
+        .points{
+            width: 63px;
+        }
     }
 `
 
@@ -63,7 +90,7 @@ const Main = () => {
                         </p>
                         <ButtonWrapperTag>
                             <Button btnClassName='consultation' clazz1='pointFirst' clazz2='pointSecond' parentClass='points' btnStyles={[{background: '#1E4FCD', color: '#fff', border: 'none'}, {background: '#fff', color: '#1a1a1a', border: '1px solid #1a1a1a'}]}>
-                                <div className={styles.btnWrapper}>
+                                <div className='btnWrapper'>
                                     <button className='consultation'>
                                         Получить консультацию
                                     </button>
@@ -76,7 +103,7 @@ const Main = () => {
                         </ButtonWrapperTag>
                     </div>
                     <div className={styles.right}>
-                        <img src={image} alt="animation" className={styles.image}/>
+                        <BallAnimation/>
                     </div>
                 </div>
             </div>

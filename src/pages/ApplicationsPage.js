@@ -11,7 +11,7 @@ const ApplicationsPage = () => {
     return (
         <div>
             <Layout>
-                {/*<Main/>*/}
+                <Main/>
                 <Includes/>
                 <Stages/>
                 {/*<Cases/>*/}
