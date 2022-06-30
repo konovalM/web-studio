@@ -13,7 +13,6 @@ const Ball = styled.div`
     @media (max-width: 450px){
         width: 220px;
         height: 220px;
-        margin: 0;
         margin: -20px 0 10px;
     }
 `
