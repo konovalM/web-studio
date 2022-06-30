@@ -3,6 +3,7 @@ import styles from './Main.module.css'
 import Button from "../../../elements/Button";
 import image from '../../../images/applicationsPage/main.png'
 import styled from 'styled-components'
+import LoaderAnimation from "../../../animations/LoaderAnimation/LoaderAnimation";
 
 const ButtonWrapperTag= styled.div`
     .consultation{
@@ -35,6 +36,26 @@ const ButtonWrapperTag= styled.div`
     .points{
         width: 82px;
         position: relative;
+    }
+    @media (max-width: 650px){
+        .consultation{
+            width: 209px;
+            height: 40px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+        .btnWrapper{
+            width: auto;
+        }
+        .pointFirst{
+            width: 20px;
+        }
+        .pointSecond{
+            width: 20px;
+        }
+        .points{
+            width: 63px;
+        }
     }
 `
 
@@ -76,7 +97,7 @@ const Main = () => {
                         </ButtonWrapperTag>
                     </div>
                     <div className={styles.right}>
-                        <img src={image} alt="animation" className={styles.image}/>
+                        <LoaderAnimation />
                     </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 .main{
-    padding: 113px 0 90px;
+    padding: 113px 0 0;
+    height: 677px;
     position: relative;
     background-image: url('../../../images/bg.png');
     background-position: center -100px;
@@ -78,6 +79,9 @@
     margin-top: -63px;
     margin-right: 30px;
 }
+.right{
+    position: relative;
+}
 
 
 .scroll{
@@ -139,4 +143,65 @@
     color: #1A1A1A;
     transform: rotate(-90deg);
     z-index: -1;
+}
+
+/*ADAPTIVE*/
+
+@media (max-width: 991px){
+    .main{
+        height: 585px;
+        padding-top: 88px;
+
+    }
+    .scroll{
+        display: none;
+    }
+    .title{
+        font-size: 18px;
+        line-height: 27px;
+        max-width: 204px;
+        margin-bottom: 13px;
+    }
+    .subtitle{
+        max-width: 438px;
+    }
+    .descr{
+        max-width: 359px;
+        line-height: 27px;
+    }
+    .right{
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 650px){
+    .main{
+        padding-top: 46px;
+        height: 600px;
+        overflow: hidden;
+    }
+    .wrapper{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .image{
+        margin: 0 0 30px;
+    }
+    .subtitle{
+        font-size: 38px;
+        line-height: 100%;
+    }
+    .descr{
+        font-size: 14px;
+        line-height: 150%;
+        max-width: 262px;
+    }
+    .left{
+        align-self: baseline;
+        margin-top: -50px;
+
+    }
+
 }
