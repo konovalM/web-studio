@@ -36,6 +36,26 @@ const ButtonWrapperTag= styled.div`
         width: 82px;
         position: relative;
     }
+    @media (max-width: 760px){
+        .consultation{
+            width: 209px;
+            height: 40px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+        .btnWrapper{
+            width: auto;
+        }
+        .pointFirst{
+            width: 20px;
+        }
+        .pointSecond{
+            width: 20px;
+        }
+        .points{
+            width: 63px;
+        }
+    }
 `
 
 const Main = () => {

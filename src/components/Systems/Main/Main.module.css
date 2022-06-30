@@ -1,5 +1,6 @@
 .main{
-    padding: 113px 0 250px;
+    padding: 113px 0 0;
+    height: 677px;
     position: relative;
     background-image: url('../../../images/bg.png');
     background-position: center -100px;
@@ -33,46 +34,10 @@
     line-height: 21px;
     color: #1A1A1A;
     max-width: 481px;
+    margin-bottom: 32px;
 }
 .bold{
     font-weight: 900;
-}
-.btnWrapper{
-    margin-top: 32px;
-    display: flex;
-    width: 353px;
-    position: relative;
-}
-.pointFirst{
-    width: 26px;
-    height: 50%;
-    background-color: #1a1a1a;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.pointSecond{
-    width: 26px;
-    height: 50%;
-    background-color: #1a1a1a;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-.points{
-    width: 82px;
-    position: relative;
-}
-.consultation{
-    width: 271px;
-    height: 52px;
-    background: #1E4FCD;
-    border: none;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 21px;
-    color: #FFFFFF;
-    position: relative;
 }
 
 
@@ -84,7 +49,7 @@
     flex-direction: column;
     align-items: center;
     left: 50%;
-    bottom: 64px;
+    bottom: 120px;
     transform: translateX(-50%);
     overflow: hidden;
 
@@ -136,4 +101,82 @@
     color: #1A1A1A;
     transform: rotate(-90deg);
     z-index: -1;
+}
+
+@media (max-width: 1170px) {
+    .image{
+        width: 550px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .image{
+        width: 450px;
+    }
+}
+
+@media (max-width: 991px) {
+    .main{
+        height: 585px;
+        padding-top: 88px;
+    }
+    .scroll{
+        display: none;
+    }
+    .title{
+        margin-bottom: 13px;
+        max-width: 204px;
+        font-size: 18px;
+        line-height: 27px;
+    }
+    .descr{
+        line-height: 27px;
+        max-width: 359px;
+        margin-bottom: 60px;
+    }
+    .right{
+        flex: 0 0 auto;
+    }
+}
+
+@media (max-width: 760px) {
+    .subtitle{
+        font-size: 38px;
+        line-height: 100%;
+        margin-bottom: 15px;
+    }
+    .descr{
+        font-size: 14px;
+        line-height: 150%;
+        max-width: 262px;
+    }
+    .image{
+        width: 330px;
+    }
+}
+
+@media (max-width: 700px) {
+    .main{
+        padding-top: 41px;
+        height: 600px;
+    }
+    .wrapper{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .right{
+        margin-bottom: 26px;
+    }
+    .left{
+        align-self: baseline;
+    }
+}
+
+@media (max-width: 550px) {
+    .image{
+        width: 290px;
+    }
+    .descr{
+        margin-bottom: 30px;
+    }
 }

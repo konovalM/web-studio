@@ -14,7 +14,7 @@ const SystemsPage = () => {
                 <Main/>
                 <Includes/>
                 <Stages/>
-                <Cases/>
+                {/*<Cases/>*/}
                 <Prices/>
                 <Questions/>
             </Layout>

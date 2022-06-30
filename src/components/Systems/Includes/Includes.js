@@ -4,6 +4,7 @@ import cn from "classnames";
 import speed from "../../../images/systemsPage/speed.svg";
 import columns from "../../../images/systemsPage/columns.svg";
 import noLimits from "../../../images/systemsPage/noLimits.svg";
+import noLimitsTablet from "../../../images/systemsPage/noLimitsTablet.svg";
 
 
 
@@ -24,7 +25,12 @@ const Includes = () => {
                             <p className={cn(styles.gridDescr, styles.gridDescrLong,styles.gridDescrBlack)}>
                                 Стандартные системы управления ограничены своим функционалом. Самописные ограничений не имеют.
                             </p>
-                            <img src={noLimits} alt="noLimits" className={styles.noLimits}/>
+                            <picture>
+                                <source srcSet={noLimits} media="(max-width: 725px)"/>
+                                <source srcSet={noLimitsTablet} media="(max-width: 991px)"/>
+                                    <img src={noLimits} alt="noLimits" className={styles.noLimits}/>
+                            </picture>
+
                         </div>
                         <div className={cn(styles.gridItem, styles.white)}>
                             <h3 className={cn(styles.subtitle, styles.subtitleBlack)}>скорость работы</h3>
