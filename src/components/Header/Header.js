@@ -11,7 +11,7 @@ import bottomLine from '../../images/bottomLine.svg'
 import arrowRight from '../../images/arrowRight.svg'
 import useWindowSize from "../../hooks/useWindowSize";
 import styles from './Header.module.css'
-import { Link } from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import TgIcon from "../../images/icons/TgIcon";
 import VkIcon from "../../images/icons/VkIcon";
 import WhatsAppIcon from "../../images/icons/WhatsAppIcon";
@@ -254,13 +254,13 @@ const HeaderDesktop = () => {
                                     </div>
                                 </li>
                                 <li className="listItem">
-                                    <Link to="/context" className='itemLink'>Контекст</Link>
+                                    <NavLink to="/context" className='itemLink'>Контекст</NavLink>
                                 </li>
                                 <li className="listItem">
-                                    <Link to="/seo" className='itemLink'>SEO</Link>
+                                    <NavLink to="/seo" className='itemLink'>SEO</NavLink>
                                 </li>
                                 <li className="listItem">
-                                    <Link to="/smm" className='itemLink'>SMM</Link>
+                                    <NavLink to="/smm" className='itemLink'>SMM</NavLink>
                                 </li>
                                 <li className="listItem">
                                     <Link to="/branding" className='itemLink'>Маркетинг</Link>

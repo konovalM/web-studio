@@ -14,23 +14,20 @@ import SmmPage from "./pages/SmmPage";
 import ApplicationsPage from "./pages/ApplicationsPage";
 import ParserPage from "./pages/ParserPage";
 import SystemsPage from "./pages/SystemsPage";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
     return (
-        <BrowserRouter>
-            <Fragment>
-                <Routes>
-                    <Route path='/' element={<MainPage/>}/>
-                    <Route path='/context' element={<ContextPage/>}/>
-                    <Route path='/seo' element={<SeoPage/>}/>
-                    <Route path='/smm' element={<SmmPage/>}/>
-                    <Route path='/branding' element={<MarketingPage/>}/>
-                    <Route path='/apps' element={<ApplicationsPage/>}/>
-                    <Route path='/parser' element={<ParserPage/>}/>
-                    <Route path='/systems' element={<SystemsPage/>}/>
-                </Routes>
-            </Fragment>
-        </BrowserRouter>
+        <Routes>
+            <Route path='/' element={<MainPage/>}/>
+            <Route path='context' element={<ContextPage/>}/>
+            <Route path='seo' element={<SeoPage/>}/>
+            <Route path='smm' element={<SmmPage/>}/>
+            <Route path='branding' element={<MarketingPage/>}/>
+            <Route path='apps' element={<ApplicationsPage/>}/>
+            <Route path='parser' element={<ParserPage/>}/>
+            <Route path='systems' element={<SystemsPage/>}/>
+        </Routes>
     );
 }
 
