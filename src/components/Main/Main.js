@@ -321,18 +321,7 @@ const MainTag = styled.section`
     .subtitle{
       margin-top: 0;
     }
-    .consultation{
-      width: 209px;
-      height: 40px;
-      font-size: 13.92px;
-      line-height: 16px;
-    }
-    .pointFirst, .pointSecond{
-      width: 20px;
-    }
-    .points{
-      width: 63px;
-    }
+    
     .stack+.stack{
       margin: 0;
     }
@@ -385,17 +374,9 @@ const Main = () => {
                        <h2 className="title">
                            Сайты под ключ и <span className='blue'>[web. <span className='white'>с</span>]</span>
                        </h2>
-                           <Button btnClassName='consultation' clazz1={'pointFirst'} clazz2={'pointSecond'} parentClass={'points'} btnStyles={[{background: '#1E4FCD', color: '#fff', border: 'none'}, {background: '#fff', color: '#1a1a1a', border: '1px solid #1a1a1a'}]}>
-                               <div className="btnWrapper">
-                                   <button className="consultation">
-                                       Получить консультацию
-                                   </button>
-                                   <div className="points">
-                                       <div className="pointFirst"></div>
-                                       <div className="pointSecond"></div>
-                                   </div>
-                               </div>
-                           </Button>
+                       <div className="btnWrapper">
+                           <Button btnColor='#000000' btnStyles={[{background: '#1E4FCD', color: '#fff', border: 'none'}, {background: '#fff', color: '#1a1a1a', border: '1px solid #1a1a1a'}]}/>
+                       </div>
                        <div className="stacks">
                            <div className="stack programLang">
                                <div className="stackItem">

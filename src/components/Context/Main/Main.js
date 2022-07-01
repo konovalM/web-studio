@@ -26,17 +26,9 @@ const Main = () => {
                         <p className={styles.descr}>
                             Настроим контекстную рекламу в Google или Yandex. Две недели ведения бесплатно.
                         </p>
-                        <Button btnClassName={styles.consultation} clazz1={styles.pointFirst} clazz2={styles.pointSecond} parentClass={styles.points} btnStyles={[{background: '#1E4FCD', color: '#fff', border: 'none'}, {background: '#fff', color: '#1a1a1a', border: '1px solid #1a1a1a'}]}>
-                            <div className={styles.btnWrapper}>
-                                <button className={styles.consultation}>
-                                    Получить консультацию
-                                </button>
-                                <div className={styles.points}>
-                                    <div className={styles.pointFirst}></div>
-                                    <div className={styles.pointSecond}></div>
-                                </div>
-                            </div>
-                        </Button>
+                        <div className={styles.btnWrapper}>
+                            <Button btnColor='#000000' btnStyles={[{background: '#1E4FCD', color: '#fff', border: 'none'}, {background: '#fff', color: '#1a1a1a', border: '1px solid #1a1a1a'}]}/>
+                        </div>
                     </div>
                     <div className={styles.right}>
                         <img src={image} alt="Google & Yandex" className={styles.image}/>

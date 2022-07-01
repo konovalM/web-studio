@@ -379,17 +379,9 @@ const Questions = ({bg}) => {
                                 <div className="agreement">
                                     Нажимая на кнопку "Связаться с нами", вы даете согласие на <span className='special'>обработку персональных данных</span>.
                                 </div>
-                                <Button btnClassName='question_consultation' clazz1={'question_1'} clazz2={'question_2'} parentClass={'points-questions'} btnStyles={[{background: '#1E4FCD', color: '#fff'}, {background: '#fff', color: '#1E4FCD', border: 'none'}]}>
                                     <div className="btnWrapper" >
-                                        <button className="question_consultation" type='submit'>
-                                            Получить консультацию
-                                        </button>
-                                        <div className="points-questions">
-                                            <div className="question_1"></div>
-                                            <div className="question_2"></div>
-                                        </div>
+                                        <Button btnColor='#ffffff' btnStyles={[{background: '#1E4FCD', color: '#fff'}, {background: '#fff', color: '#1E4FCD', border: 'none'}]}/>
                                     </div>
-                                </Button>
                             </div>
                         </form>
                     </div>

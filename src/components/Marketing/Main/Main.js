@@ -4,59 +4,6 @@ import Button from "../../../elements/Button";
 import image from '../../../images/marketing/xy.svg'
 import styled from 'styled-components'
 
-const ButtonWrapperTag= styled.div`
-    .consultation{
-        width: 271px;
-        height: 52px;
-        background: #1E4FCD;
-        border: none;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 21px;
-        color: #FFFFFF;
-        position: relative;
-    }
-    .pointFirst{
-        width: 26px;
-        height: 50%;
-        background-color: #1a1a1a;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    .pointSecond{
-        width: 26px;
-        height: 50%;
-        background-color: #1a1a1a;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-    }
-    .points{
-        width: 82px;
-        position: relative;
-    }
-    @media (max-width: 550px){
-        .consultation{
-            width: 209px;
-            height: 40px;
-            font-size: 14px;
-            line-height: 16px;
-        }
-        .btnWrapper{
-            width: auto;
-        }
-        .pointFirst{
-            width: 20px;
-        }
-        .pointSecond{
-            width: 20px;
-        }
-        .points{
-            width: 63px;
-        }
-    }
-`
 
 const Main = () => {
     return (
@@ -81,19 +28,9 @@ const Main = () => {
                         <p className={styles.descr}>
                             Разработаем стратегию развития компании, создадим фирменный стиль, либо исправим репутацию.
                         </p>
-                        <ButtonWrapperTag>
-                            <Button btnClassName='consultation' clazz1='pointFirst' clazz2='pointSecond' parentClass='points' btnStyles={[{background: '#1E4FCD', color: '#fff', border: 'none'}, {background: '#fff', color: '#1a1a1a', border: '1px solid #1a1a1a'}]}>
-                                <div className={styles.btnWrapper}>
-                                    <button className='consultation'>
-                                        Получить консультацию
-                                    </button>
-                                    <div className='points'>
-                                        <div className='pointFirst'></div>
-                                        <div className='pointSecond'></div>
-                                    </div>
-                                </div>
-                            </Button>
-                        </ButtonWrapperTag>
+                        <div className={styles.btnWrapper}>
+                            <Button btnColor='#000000' btnStyles={[{background: '#1E4FCD', color: '#fff', border: 'none'}, {background: '#fff', color: '#1a1a1a', border: '1px solid #1a1a1a'}]}/>
+                        </div>
                     </div>
                     <div className={styles.right}>
                         <img src={image} alt="xy" className={styles.image}/>

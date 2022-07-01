@@ -6,41 +6,10 @@ import styled from 'styled-components'
 import BallAnimation from "../../../animations/BallAnimation/BallAnimation";
 
 const ButtonWrapperTag= styled.div`
-    .consultation{
-        width: 271px;
-        height: 52px;
-        background: #1E4FCD;
-        border: none;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 21px;
-        color: #FFFFFF;
-        position: relative;
-    }
     .btnWrapper{
         margin-top: 32px;
         display: flex;
         width: 353px;
-        position: relative;
-    }
-    .pointFirst{
-        width: 26px;
-        height: 50%;
-        background-color: #1a1a1a;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    .pointSecond{
-        width: 26px;
-        height: 50%;
-        background-color: #1a1a1a;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-    }
-    .points{
-        width: 82px;
         position: relative;
     }
     @media (max-width: 750px){
@@ -89,17 +58,9 @@ const Main = () => {
                             Создание приложений под IOS, Android, дублирование функционала сайта.
                         </p>
                         <ButtonWrapperTag>
-                            <Button btnClassName='consultation' clazz1='pointFirst' clazz2='pointSecond' parentClass='points' btnStyles={[{background: '#1E4FCD', color: '#fff', border: 'none'}, {background: '#fff', color: '#1a1a1a', border: '1px solid #1a1a1a'}]}>
-                                <div className='btnWrapper'>
-                                    <button className='consultation'>
-                                        Получить консультацию
-                                    </button>
-                                    <div className='points'>
-                                        <div className='pointFirst'></div>
-                                        <div className='pointSecond'></div>
-                                    </div>
-                                </div>
-                            </Button>
+                            <div className='btnWrapper'>
+                                <Button btnColor='#000000' btnStyles={[{background: '#1E4FCD', color: '#fff', border: 'none'}, {background: '#fff', color: '#1a1a1a', border: '1px solid #1a1a1a'}]}/>
+                            </div>
                         </ButtonWrapperTag>
                     </div>
                     <div className={styles.right}>
