@@ -20,28 +20,31 @@ import cn from "classnames";
 import LinkTo from "../Navigation/LinkTo";
 
 const HeaderTag = styled.header`
-  height: 63px;
-  padding: 2px 0;
-  box-shadow: 0px 7px 10px rgba(157, 157, 157, 0.3);
-  z-index: 1000;
-  width: 100vw;
-  background-color: #fff;  
-  position: fixed;
-  left: 0;
-  top: 0;
-  .wrapper {
-    display: flex;
-    align-items: center;
-  }
+    height: 63px;
+    padding: 2px 0;
+    box-shadow: 0px 7px 10px rgba(157, 157, 157, 0.3);
+    z-index: 1000;
+    width: 100vw;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
 
-  .logo {
-    margin-right: 59px;
-  }
-  .list {
-    display: flex;
-    align-items: center;
-  }
-    .listItem:last-child::before{
+    .wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        margin-right: 59px;
+    }
+
+    .list {
+        display: flex;
+        align-items: center;
+    }
+
+    .listItem:last-child::before {
         content: '';
         position: absolute;
         width: 5px;
@@ -49,134 +52,191 @@ const HeaderTag = styled.header`
         left: 3px;
         top: 50%;
         transform: translateY(-50%);
-        background: url(${arrowRight})center center/cover no-repeat;
-        transition: .1s all;
+        background: url(${arrowRight}) center center/cover no-repeat;
+        transition: .3s all;
     }
-    .rotate:last-child::before{
+
+    .rotate:last-child::before {
+        transition: .3s all;
         transform: rotate(90deg) translateX(-50%);
         top: 42%;
     }
-    .listItem:last-child{
+
+    .listItem:last-child {
         moz-user-select: none;
         -khtml-user-select: none;
         user-select: none;
         position: relative;
         cursor: pointer;
     }
-  .itemLink {
-    color: #1A1A1A;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-  }
-  .listItem:first-child{
-    position: relative;
-  }
-  .active::before{
-    content: '';
-    width: 23px;
-    height: 3px;
-    background-color: #1E4FCD;
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-  }
-  .listItem + .listItem {
-    margin-left: 33px;
-  }
-    .listItem:last-child{
+
+    .itemLink {
+        color: #1A1A1A;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .listItem:first-child {
+        position: relative;
+    }
+
+    .active::before {
+        content: '';
+        width: 23px;
+        height: 3px;
+        background-color: #1E4FCD;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+    }
+
+    .listItem + .listItem {
+        margin-left: 33px;
+    }
+
+    .listItem:last-child {
         padding-left: 15px;
         margin-left: 18px;
     }
-    .itemLink{
+
+    .itemLink {
         position: relative;
     }
-  .second {
-    display: flex;
-    flex-direction: column;
-    
-    .itemLink::before{
-      content: '';
-      position: absolute;
-      width: 24px;
-      height: 9px;
+
+    .second {
+        display: flex;
+        flex-direction: column;
+
+        .itemLink::before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 9px;
+        }
+
+        .itemLink:first-child::before {
+            left: -28px;
+            bottom: 0px;
+            background: url(${topLine}) center center/cover no-repeat;
+        }
+
+        .itemLink:last-child::before {
+            left: -28px;
+            top: 2px;
+            background: url(${bottomLine}) center center/cover no-repeat;
+        }
+
+        .itemLink + .listItem {
+            margin-top: 2px;
+        }
     }
-    .itemLink:first-child::before{
-      left: -28px;
-      bottom: 0px;
-      background: url(${topLine})center center/cover no-repeat;
+
+    .language {
+        margin-left: 95px;
+        position: relative;
+        cursor: pointer;
+        padding-left: 11px;
     }
-    .itemLink:last-child::before{
-      left: -28px;
-      top: 2px;
-      background: url(${bottomLine})center center/cover no-repeat;
+
+    .language::before {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 9px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url(${arrowRight}) center center/cover no-repeat;
+        transition: .3s transform;
     }
-    .itemLink + .listItem {
-      margin-top: 2px;
+    .language.rotate::before{
+        transform: translateY(-50%) rotate(90deg);
     }
-  }
-  .language{
-    margin-left: 95px;
-    position: relative;
-    cursor: pointer;  
-    padding-left: 11px;
-  }
-  .language::before{
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 9px;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background: url(${arrowRight})center center/cover no-repeat;
-  }
-  .socials{
-    margin-left: 42px;
-    display: flex;
-  }
-  .social+.social{
-    margin-left: 20px;
-  }
-  .social:nth-child(2){
-    display: flex;
-    align-items: center;
-  }
-  .contacts{
-    margin-left: auto;
-  }
-  .burger{
-    display: none;
-  }
+
+    .socials {
+        margin-left: 42px;
+        display: flex;
+    }
+
+    .social + .social {
+        margin-left: 20px;
+    }
+
+    .social:nth-child(2) {
+        display: flex;
+        align-items: center;
+    }
+
+    .contacts {
+        margin-left: auto;
+    }
+    .contact{
+        color: #1A1A1A;
+    }
+
+    .burger {
+        display: none;
+    }
 
     .dropdown-content {
-        display: none;
-        position: absolute;
-        top: 29px;
         background-color: #1A1A1A;
         width: 186px;
-        height: 167px;
         z-index: 1;
         padding: 9px 0 18px 18px;
-        left: -12px;
     }
-    .dropdown-lang{
-        display: none;
-        position: absolute;
-        top: 29px;
+
+    .dropdown-lang {
         background-color: #1A1A1A;
         width: 62px;
         height: 74px;
         z-index: 1;
         padding: 9px 0 18px 18px;
-        left: -12px;
     }
+    .dropdown-lang .otherLink{
+        cursor: pointer;
+    }
+
     .dropdown {
         position: relative;
     }
-    .otherLink{
+    .dropdown-wrapper-lang{
+        visibility: hidden;
+        position: absolute;
+        top: 100%;
+        left: -12px;
+        padding-top: 20px;
+        transition: .3s all;
+        cursor: default;
+        opacity: 0;
+    }
+    .language:hover .dropdown-wrapper-lang,
+    .language .dropdown-wrapper-lang:hover{
+        visibility: visible;
+        opacity: 1;
+    }
+    .dropdown-wrapper{
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        left: -50%;
+        top: 100%;
+        padding-top: 20px;
+        transition: .3s all;
+        cursor: default;
+    }
+    .other{
+        cursor: unset;
+    }
+    .other:hover .dropdown-wrapper,
+    .other .dropdown-wrapper:hover{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .otherLink {
         font-weight: 400;
         font-size: 14px;
         line-height: 16px;
@@ -184,46 +244,44 @@ const HeaderTag = styled.header`
         display: block;
         position: relative;
     }
-    .otherLink+.otherLink{
+
+    .otherLink + .otherLink {
         margin-top: 15px;
     }
-    .dropdown-content-active {display: block;}
 
-  
-  // ADAPTIVE
-  
-  @media (max-width: 1310px){
-    .language{
-      margin-left: 25px;
+
+    // ADAPTIVE
+
+    @media (max-width: 1310px) {
+        .language {
+            margin-left: 25px;
+        }
+
+        .contacts {
+            margin-left: 25px;
+        }
+
+        .listItem + .listItem {
+            margin-left: 20px;
+        }
+
+        .listItem:nth-child(2) {
+            margin-left: 33px;
+        }
+
+        .burger {
+            display: flex;
+            flex-direction: column;
+
+        }
     }
-    .contacts{
-      margin-left: 25px;
-    }
-    .listItem + .listItem{
-      margin-left: 20px;
-    }
-    .listItem:nth-child(2){
-      margin-left: 33px;
-    }
-    .burger{
-      display: flex;
-      flex-direction: column;
-      
-    }
-  }
 
 `
 
 
 const HeaderDesktop = () => {
-    const [menuActive, setMenuActive] = useState(false)
-    const [langActive, setLangActive] = useState(false)
-    const changeMenuActive = () => {
-        setMenuActive(!menuActive)
-    }
-    const changeLangActive = () => {
-        setLangActive(!langActive)
-    }
+    const [isHoverLang, handleIsHoverLang] = useState(false)
+    const [isHover, handleIsHover] = useState(false)
     return (
         <Fragment>
             <HeaderTag className="header">
@@ -257,24 +315,25 @@ const HeaderDesktop = () => {
                                 <li className="listItem">
                                     <LinkTo src="/branding" className='itemLink'>Маркетинг</LinkTo>
                                 </li>
-                                <li className={menuActive ? 'rotate listItem other' :'listItem other'} onClick={() => changeMenuActive()}>
+                                <li className={isHover ? 'listItem other rotate' : 'listItem other'}>
                                     <div className="dropdown">
-                                        <div className='itemLink itemLinkMenu'>Другие услуги</div>
-                                        <div className={menuActive? 'dropdown-content dropdown-content-active' : 'dropdown-content'}>
-                                            <LinkTo src="/apps" className='otherLink'>Приложения</LinkTo>
-                                            <LinkTo src="/systems" className='otherLink'>Самописные системы</LinkTo>
-                                            <LinkTo src="/parser" className='otherLink'>Парсинг</LinkTo>
-                                            <LinkTo src="/apps" className='otherLink'>Работа с репутацией</LinkTo>
-                                            <LinkTo src="/branding" className='otherLink'>Брендинг</LinkTo>
+                                        <div className='itemLink itemLinkMenu' onMouseEnter={() => handleIsHover(true)} onMouseLeave={() => handleIsHover(false)}>Другие услуги</div>
+                                        <div className="dropdown-wrapper"  onMouseEnter={() => handleIsHover(true)} onMouseLeave={() => handleIsHover(false)}>
+                                            <div className='dropdown-content'>
+                                                <LinkTo src="/apps" className='otherLink'>Приложения</LinkTo>
+                                                <LinkTo src="/systems" className='otherLink'>Самописные системы</LinkTo>
+                                                <LinkTo src="/parser" className='otherLink'>Парсинг</LinkTo>
+                                                <LinkTo src="/branding" className='otherLink'>Брендинг и репутация</LinkTo>
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
                             </ul>
                         </nav>
-                        <div className="language" onClick={() => changeLangActive()}>
-                            <div className="dropdown">
-                                <div className='itemLink itemLinkMenu'>Ru</div>
-                                <div className={langActive? 'dropdown-lang dropdown-content-active' : 'dropdown-lang'}>
+                        <div className={isHoverLang ? "language rotate" : "language"} onMouseEnter={() => handleIsHoverLang(true)} onMouseLeave={() => handleIsHoverLang(false)}>
+                            <div className='itemLink itemLinkMenu'>Ru</div>
+                            <div className="dropdown-wrapper-lang" onMouseEnter={() => handleIsHoverLang(true)} onMouseLeave={() => handleIsHoverLang(false)}>
+                                <div className='dropdown-lang'>
                                     <p className='otherLink'>En</p>
                                     <p className='otherLink'>中文</p>
                                 </div>
@@ -319,7 +378,6 @@ const HeaderDesktop = () => {
 };
 
 
-
 const HeaderLaptop = () => {
     const [active, setActive] = useState(false)
     const [langActive, setLangActive] = useState(false)
@@ -328,7 +386,7 @@ const HeaderLaptop = () => {
     }
     const toggleActiveClass = () => {
         setActive(!active)
-        if (!active){
+        if (!active) {
             document.getElementById('root').style.position = 'fixed'
         } else {
             document.getElementById('root').style.position = 'static'
@@ -343,7 +401,8 @@ const HeaderLaptop = () => {
                             <img src={logoMobile} alt="" className={styles.logoImg}/>
                         </Link>
                         <div className={styles.list}>
-                            <div className={!active ? `${styles.listItem} ${styles.main}` : `${styles.listItem} ${styles.main} ${styles.mainActive}`}>
+                            <div
+                                className={!active ? `${styles.listItem} ${styles.main}` : `${styles.listItem} ${styles.main} ${styles.mainActive}`}>
                                 <Link to="/" className={styles.itemLink}>Сайты</Link>
                             </div>
                             <div className={styles.listItem}>
@@ -356,7 +415,7 @@ const HeaderLaptop = () => {
                         <div className={!active ? styles.socials : styles.socials + ' ' + styles.socialsWhite}>
                             <div className={styles.social}>
                                 <a href="#">
-                                    <TgIcon />
+                                    <TgIcon/>
                                 </a>
                             </div>
                             <div className={styles.social}>
@@ -379,9 +438,12 @@ const HeaderLaptop = () => {
                             <a href="#" className={styles.contactNumber}>+ 7 981 103 65 38</a>
                         </div>
                         <div className={styles.burger} onClick={() => toggleActiveClass()}>
-                            <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
-                            <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
-                            <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                            <span
+                                className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                            <span
+                                className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                            <span
+                                className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
                         </div>
                     </div>
                 </div>
@@ -390,12 +452,15 @@ const HeaderLaptop = () => {
                 <div className={!active ? styles.menuInner : styles.menuInner}>
                     <div className="container">
                         <div className={styles.menuWrapper}>
-                            <div className={styles.language} onClick={() => changeLangActive()}>
-                                <div className={styles.dropdown}>
-                                    <div className={`${styles.itemLink} ${styles.whiteColor}`}>Ru</div>
-                                    <div className={langActive ? `${styles.dropdownLang} ${styles.dropdownContentActive}` : styles.dropdownLang}>
-                                        <p className={styles.otherLink}>En</p>
-                                        <p className={styles.otherLink}>中文</p>
+                            <div>
+                                <div className={styles.language} onClick={() => changeLangActive()}>
+                                    <div className={styles.dropdown}>
+                                        <div className={`${styles.itemLink} ${styles.whiteColor}`}>Ru</div>
+                                        <div
+                                            className={langActive ? `${styles.dropdownLang} ${styles.dropdownContentActive}` : styles.dropdownLang}>
+                                            <p className={styles.otherLink}>En</p>
+                                            <p className={styles.otherLink}>中文</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -433,7 +498,7 @@ const HeaderMobile = () => {
     }
     const toggleActiveClass = () => {
         setActive(!active)
-        if (!active){
+        if (!active) {
             document.getElementById('root').style.position = 'fixed'
         } else {
             document.getElementById('root').style.position = 'static'
@@ -452,9 +517,12 @@ const HeaderMobile = () => {
                             <a href="#" className={styles.contactNumber}>+ 7 981 103 65 38</a>
                         </div>
                         <div className={styles.burger} onClick={() => toggleActiveClass()}>
-                            <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
-                            <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
-                            <span className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                            <span
+                                className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                            <span
+                                className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                            <span
+                                className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
                         </div>
                     </div>
                 </div>
@@ -463,12 +531,15 @@ const HeaderMobile = () => {
                 <div className={!active ? styles.menuInner : styles.menuInner}>
                     <div className="container">
                         <div className={styles.menuWrapper}>
-                            <div className={styles.language} onClick={() => changeLangActive()}>
-                                <div className={styles.dropdown}>
-                                    <div className={`${styles.itemLink} ${styles.whiteColor}`}>Ru</div>
-                                    <div className={langActive ? `${styles.dropdownLang} ${styles.dropdownContentActive}` : styles.dropdownLang}>
-                                        <p className={styles.otherLink}>En</p>
-                                        <p className={styles.otherLink}>中文</p>
+                            <div>
+                                <div className={styles.language} onClick={() => changeLangActive()}>
+                                    <div className={styles.dropdown}>
+                                        <div className={`${styles.itemLink} ${styles.whiteColor}`}>Ru</div>
+                                        <div
+                                            className={langActive ? `${styles.dropdownLang} ${styles.dropdownContentActive}` : styles.dropdownLang}>
+                                            <p className={styles.otherLink}>En</p>
+                                            <p className={styles.otherLink}>中文</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -497,7 +568,7 @@ const HeaderMobile = () => {
                             <div className={!active ? styles.socials : styles.socials + ' ' + styles.socialsWhite}>
                                 <div className={styles.social}>
                                     <a href="#">
-                                        <TgIcon />
+                                        <TgIcon/>
                                     </a>
                                 </div>
                                 <div className={styles.social}>
@@ -526,20 +597,18 @@ const HeaderMobile = () => {
 
 
 const Header = () => {
-    const headers = [<HeaderMobile/>, <HeaderLaptop/>, <HeaderDesktop/>]
-    let header;
-
     const sizeWidth = useWindowSize();
-    if (sizeWidth < 630){
-        header = headers[0]
-    } else if (sizeWidth < 1100){
-        header = headers[1]
-    } else {
-        header = headers[2]
-    }
     return (
         <Fragment>
-            {header}
+            {
+                sizeWidth < 630 ?
+                    <HeaderMobile />
+                    :
+                    sizeWidth < 1100 ?
+                        <HeaderLaptop />
+                        :
+                        <HeaderDesktop />
+            }
         </Fragment>
     );
 };
