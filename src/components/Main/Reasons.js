@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import bg from '../../images/bg.png'
 import star from '../../images/star.svg'
 import Dash from "../common/Dash/Dash";
+import {AnimateWrapper} from "../../animations/AnimateWrapper";
 
 const ReasonsTag = styled.section`
   padding: 84px 0 46px;
@@ -399,10 +400,12 @@ const Reasons = () => {
                 <Dash color={'#ffffff'} countBefore={1} countAfter={6} top={'0px'}/>
                 <div className="content">
                     <h2 className="title">Почему <span className='blue blueSpan'>{`{`}</span><span className='white'>мы</span><span className='blue blueSpan'>{`}`}</span></h2>
-                    <div className="item">
-                        <h4 className="subtitle">Никаких операторов по продажам</h4>
-                        <div className="text">Все сотрудники и менеджеры проектов имеют профильное образование в сайтостроении. Вам не придется общаться с “продавцами утюгов”.</div>
-                    </div>
+                        <div className="item">
+                            <AnimateWrapper animate='fade-left'>
+                                <h4 className="subtitle">Никаких операторов по продажам</h4>
+                                <div className="text">Все сотрудники и менеджеры проектов имеют профильное образование в сайтостроении. Вам не придется общаться с “продавцами утюгов”.</div>
+                            </AnimateWrapper>
+                        </div>
                     <div className="item">
                         <h4 className="subtitle">Надежнее фриланса</h4>
                         <div className="text">Больше половины клиентов фрилансеров получают неработающие сайты, либо платят мошенникам. С нами вы забудете про эти проблемы.</div>

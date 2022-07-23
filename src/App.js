@@ -1,10 +1,8 @@
 import './App.css';
-import {Fragment} from "react";
 import MainPage from "./pages/MainPage";
 import ContextPage from "./pages/ContextPage";
-import React from "react";
+import React, {useEffect} from "react";
 import {
-    BrowserRouter,
     Routes,
     Route,
 } from "react-router-dom";
@@ -14,9 +12,18 @@ import SmmPage from "./pages/SmmPage";
 import ApplicationsPage from "./pages/ApplicationsPage";
 import ParserPage from "./pages/ParserPage";
 import SystemsPage from "./pages/SystemsPage";
-import ScrollToTop from "./utils/ScrollToTop";
+import AOS from "aos";
 
 function App() {
+    useEffect(() => {
+        AOS.init({
+            offset: 200,
+            duration: 1000,
+            easing: "linear",
+            delay: 100,
+            once: false,
+        });
+    }, [])
     return (
         <Routes>
             <Route path='/' element={<MainPage/>}/>

@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
 import ScrollToTop from "./utils/ScrollToTop";
+import 'aos/dist/aos.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

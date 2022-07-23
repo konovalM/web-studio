@@ -1,9 +1,8 @@
-import React, {Fragment, useEffect} from 'react';
+import React from 'react';
 import styled from 'styled-components'
 import bg from '../../images/bg.png'
 import Button from "../../elements/Button";
 import Dash from "../common/Dash/Dash";
-// import Button from "./elements/Button";
 
 const MainTag = styled.section`
   min-height: 676px;
