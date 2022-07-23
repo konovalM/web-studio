@@ -231,76 +231,76 @@ const Stages = () => {
         <StagesTag>
             <div className="container">
                 <Dash color={'#000000'} countBefore={2} countAfter={5} top={'0px'}/>
-                <h2 className="title">
+                <h2 className="title" data-aos='fade-down'>
                     Этапы работы <span className='blue'>;<span className='black'>-</span>]</span>
                 </h2>
-                <p className="description">
+                <p className="description" data-aos='fade-right'>
                     Поможем составить техзадание и определиться со структурой сайта. От вас потребуется понимание того как будет работать бизнес. <span className="br">Все остальное возьмем на себя.</span>
                 </p>
                 <div className="gridWrapper">
                     <div className="gridItem">
                         <div className="flexWrapper">
-                            <div className="icon">
+                            <div className="icon" data-aos='fade-right'>
                                 <img src={first} alt=""/>
                             </div>
                             <div className="content">
-                                <h3 className="subtitle">Бесплатная консультация</h3>
-                                <div className="text">Выбор типа сайта, определение методов продвижения. Базовый маркетинговый анализ ниши и конкурентов.</div>
+                                <h3 className="subtitle" data-aos='fade-up'>Бесплатная консультация</h3>
+                                <div className="text" data-aos='fade-down'>Выбор типа сайта, определение методов продвижения. Базовый маркетинговый анализ ниши и конкурентов.</div>
                             </div>
                         </div>
                     </div>
                     <div className="gridItem">
                         <div className="flexWrapper">
-                            <div className="icon">
+                            <div className="icon" data-aos='fade-right'>
                                 <img src={second} alt=""/>
                             </div>
                             <div className="content">
-                                <h3 className="subtitle">техзадание и предоплата</h3>
-                                <div className="text">Составление техзадания, набросок структуры сайта. Договоренность об условиях оплаты.</div>
+                                <h3 className="subtitle" data-aos='fade-up'>техзадание и предоплата</h3>
+                                <div className="text" data-aos='fade-down'>Составление техзадания, набросок структуры сайта. Договоренность об условиях оплаты.</div>
                             </div>
                         </div>
                     </div>
                     <div className="gridItem">
                         <div className="flexWrapper">
-                            <div className="icon">
+                            <div className="icon" data-aos='fade-right'>
                                 <img src={third} alt=""/>
                             </div>
                             <div className="content">
-                                <h3 className="subtitle">маркетинговый анализ</h3>
-                                <div className="text">Выявление страхов заказчиков и методов их закрытия. Составление портрета аудитории. Анализ конкурентов.</div>
+                                <h3 className="subtitle" data-aos='fade-up'>маркетинговый анализ</h3>
+                                <div className="text" data-aos='fade-down'>Выявление страхов заказчиков и методов их закрытия. Составление портрета аудитории. Анализ конкурентов.</div>
                             </div>
                         </div>
                     </div>
                     <div className="gridItem">
                         <div className="flexWrapper">
-                            <div className="icon">
+                            <div className="icon" data-aos='fade-right'>
                                 <img src={fourth} alt=""/>
                             </div>
                             <div className="content">
-                                <h3 className="subtitle">отрисовка дизайна</h3>
-                                <div className="text">Создание прототипа сайта и его отрисовка. Проработка мобильной и планшетной версий.</div>
+                                <h3 className="subtitle" data-aos='fade-up'>отрисовка дизайна</h3>
+                                <div className="text" data-aos='fade-down'>Создание прототипа сайта и его отрисовка. Проработка мобильной и планшетной версий.</div>
                             </div>
                         </div>
                     </div>
                     <div className="gridItem">
                         <div className="flexWrapper">
-                            <div className="icon">
+                            <div className="icon" data-aos='fade-right'>
                                 <img src={fifth} alt=""/>
                             </div>
                             <div className="content">
-                                <h3 className="subtitle">верстка и разработка</h3>
-                                <div className="text">Выбор системы управления сайтом. Адаптивная верстка под различные экраны. Разработка функционала.</div>
+                                <h3 className="subtitle" data-aos='fade-up'>верстка и разработка</h3>
+                                <div className="text" data-aos='fade-down'>Выбор системы управления сайтом. Адаптивная верстка под различные экраны. Разработка функционала.</div>
                             </div>
                         </div>
                     </div>
                     <div className="gridItem">
                         <div className="flexWrapper">
-                            <div className="icon">
+                            <div className="icon" data-aos='fade-right'>
                                 <img src={sixth} alt=""/>
                             </div>
                             <div className="content">
-                                <h3 className="subtitle">тесты и запуск сайта</h3>
-                                <div className="text">Загрузка сайта на хостинг, подключение домена, почты, счетчика посещений. Внесение остатка оплаты.</div>
+                                <h3 className="subtitle" data-aos='fade-up'>тесты и запуск сайта</h3>
+                                <div className="text" data-aos='fade-down'>Загрузка сайта на хостинг, подключение домена, почты, счетчика посещений. Внесение остатка оплаты.</div>
                             </div>
                         </div>
                     </div>

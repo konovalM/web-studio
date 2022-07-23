@@ -18,10 +18,10 @@ function App() {
     useEffect(() => {
         AOS.init({
             offset: 200,
-            duration: 1000,
+            duration: 500,
             easing: "linear",
             delay: 100,
-            once: false,
+            once: true,
         });
     }, [])
     return (
