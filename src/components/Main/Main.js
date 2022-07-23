@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components'
 import bg from '../../images/bg.png'
 import Button from "../../elements/Button";
 import Dash from "../common/Dash/Dash";
+import Typed from "typed.js";
 
 const MainTag = styled.section`
     min-height: 676px;
@@ -30,6 +31,9 @@ const MainTag = styled.section`
 
     .title {
         margin-top: 29px;
+        
+    }
+    .titleSpan{
         font-size: 38px;
         line-height: 46px;
         color: #1A1A1A;
@@ -89,7 +93,8 @@ const MainTag = styled.section`
 
     .stacks {
         margin-top: 112px;
-        max-width: 540px;
+        max-width: 530px;
+        column-gap: 55px;
         display: flex;
         justify-content: space-between;
     }
@@ -268,7 +273,11 @@ const MainTag = styled.section`
     }
 
     // ADAPTIVE
-
+    @media screen and (max-width: 1130px){
+        .stacks{
+            column-gap: 20px;
+        }
+    }
     @media screen and (max-width: 1100px) {
         .scroll {
             display: none;
@@ -278,9 +287,7 @@ const MainTag = styled.section`
             max-width: 405px;
         }
 
-        .stack + .stack {
-            margin-left: 20px;
-        }
+        
 
         .rightInner {
             margin: 35px 0 0 0;
@@ -401,6 +408,7 @@ const MainTag = styled.section`
         }
 
         .stacks {
+            column-gap: unset;
             flex-wrap: wrap;
             justify-content: flex-start;
             row-gap: 28px;
@@ -432,6 +440,30 @@ const MainTag = styled.section`
 `
 
 const Main = () => {
+    const el = React.useRef(null);
+    // Create reference to store the Typed instance itself
+    const typed = React.useRef(null);
+
+    useEffect(() => {
+        const options = {
+            strings: [
+                'Сайты под ключ и <span style="color: #1E4FCD">[web.сервисы]</span>',
+                'Сайты под ключ и <span style="color: #1E4FCD">[web.сайты]</span>'
+
+            ],
+            typeSpeed: 90,
+            backSpeed: 90,
+        };
+
+        // elRef refers to the <span> rendered below
+        typed.current = new Typed(el.current, options);
+
+        return () => {
+            // Make sure to destroy Typed instance during cleanup
+            // to prevent memory leaks
+            typed.current.destroy();
+        }
+    }, [])
     return (
         <MainTag>
             <div className="scroll">
@@ -450,7 +482,7 @@ const Main = () => {
                             DIGITAL-агентство полного цикла STUDIO NAME
                         </h1>
                         <h2 className="title">
-                            Сайты под ключ и <span className='blue'>[web. <span className='white'>с</span>]</span>
+                            <span className="titleSpan" ref={el}></span>
                         </h2>
                         <div className="btnWrapper">
                             <Button btnColor='#000000' btnStyles={[{

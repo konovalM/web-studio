@@ -17,7 +17,15 @@ button{
   margin: 0 auto;
   position: relative;
 }
-
+.typed-cursor{
+  font-family: Roboto;
+  font-weight: 100;
+  font-size: 40px;
+  line-height: 0px;
+}
+.typed-cursor--blink{
+  display: none;
+}
 @media (max-width: 767px){
   .container{
     padding: 0 10px;
