@@ -3,6 +3,7 @@ import styles from './Main.module.css'
 import Button from "../../../elements/Button";
 import image from '../../../images/systemsPage/main.svg'
 import styled from 'styled-components'
+import {scrollToElement} from "../../../utils/scrollToElement";
 
 const ButtonWrapperTag= styled.div`
     .btnWrapper{
@@ -21,7 +22,7 @@ const ButtonWrapperTag= styled.div`
 const Main = () => {
     return (
         <section className={styles.main}>
-            <div className={styles.scroll}>
+            <div className={styles.scroll} onClick={() => scrollToElement('systems-second')}>
                 <div className={styles.scrollOutside}>
                 </div>
                 <div className={styles.scrollInner}>

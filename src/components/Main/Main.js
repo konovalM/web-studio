@@ -4,6 +4,9 @@ import bg from '../../images/bg.png'
 import Button from "../../elements/Button";
 import Dash from "../common/Dash/Dash";
 import Typed from "typed.js";
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import {scrollToElement} from "../../utils/scrollToElement";
+
 
 const MainTag = styled.section`
     min-height: 676px;
@@ -464,9 +467,10 @@ const Main = () => {
             typed.current.destroy();
         }
     }, [])
+
     return (
         <MainTag>
-            <div className="scroll">
+            <div className="scroll" onClick={() => scrollToElement('main-second')}>
                 <div className="scrollOutside">
                 </div>
                 <div className="scrollInner">

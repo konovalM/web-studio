@@ -4,11 +4,12 @@ import Button from "../../../elements/Button";
 import image from '../../../images/applicationsPage/main.png'
 import styled from 'styled-components'
 import LoaderAnimation from "../../../animations/LoaderAnimation/LoaderAnimation";
+import {scrollToElement} from "../../../utils/scrollToElement";
 
 const Main = () => {
     return (
         <section className={styles.main}>
-            <div className={styles.scroll}>
+            <div className={styles.scroll} onClick={() => scrollToElement('parser-second')}>
                 <div className={styles.scrollOutside}>
                 </div>
                 <div className={styles.scrollInner}>

@@ -2,11 +2,12 @@ import React from 'react';
 import styles from './Main.module.css'
 import Button from "../../../elements/Button";
 import image from '../../../images/contextPage/googleYandex.svg'
+import {scrollToElement} from "../../../utils/scrollToElement";
 
 const Main = () => {
     return (
         <section className={styles.main}>
-            <div className={styles.scroll}>
+            <div className={styles.scroll} onClick={() => scrollToElement('context-second')}>
                 <div className={styles.scrollOutside}>
                 </div>
                 <div className={styles.scrollInner}>
