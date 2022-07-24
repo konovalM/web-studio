@@ -23,8 +23,7 @@ const WrapperTag = styled.div`
         position: absolute;
         left: 0;
         top: 0;
-        background: rgba(135, 0, 0, .6);
-        background: linear-gradient(to right, #141562, #486fbc, #eab5a1, #8dd6ff, #4973c9, #d07ca7, #f4915e, #f5919e, #b46f89, #141562, #486fbc);
+        background: #1E4FCD;
         background-position: 0% 50%;
         background-size: 1000% 1000%;
         visibility: hidden;

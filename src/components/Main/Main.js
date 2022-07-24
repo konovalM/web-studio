@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components'
 import bg from '../../images/bg.png'
 import Button from "../../elements/Button";
@@ -444,9 +444,8 @@ const MainTag = styled.section`
 
 const Main = () => {
     const el = React.useRef(null);
-    // Create reference to store the Typed instance itself
     const typed = React.useRef(null);
-
+    const [infinityAnim, setInfinityAnim] = useState(true)
     useEffect(() => {
         const options = {
             strings: [
@@ -456,17 +455,19 @@ const Main = () => {
             ],
             typeSpeed: 90,
             backSpeed: 90,
+            onComplete: () => {
+                setTimeout(() => {
+                    setInfinityAnim(!infinityAnim)
+                }, 3000)
+            }
         };
 
-        // elRef refers to the <span> rendered below
         typed.current = new Typed(el.current, options);
 
         return () => {
-            // Make sure to destroy Typed instance during cleanup
-            // to prevent memory leaks
             typed.current.destroy();
         }
-    }, [])
+    }, [infinityAnim])
 
     return (
         <MainTag>

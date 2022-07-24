@@ -8,7 +8,7 @@ import About from "../components/Main/About";
 import Questions from "../components/Main/Questions";
 import Test from "../components/test/Test";
 import Layout from "./Layout";
-import Faq from "../components/Main/Faq";
+import Faq from "../components/Main/Faq/Faq";
 
 const MainPage = () => {
     return (
