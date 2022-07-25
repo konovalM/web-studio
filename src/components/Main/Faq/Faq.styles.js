@@ -21,9 +21,10 @@ export const FaqTag = styled.section`
     }
     .svg{
         transition: .2s transform;
+        transform: translateY(5px);
     }
     .rotate{
-        transform: rotate(180deg);
+        transform: translateY(5px) rotate(180deg);
     }
     .blue {
         color: #1E4FCD;

@@ -2,7 +2,7 @@ import React from 'react';
 import Main from "../components/Main/Main";
 import Reasons from "../components/Main/Reasons";
 import Stages from "../components/Main/Stages";
-import Services from "../components/Main/Services";
+import Services from "../components/Main/Services/Services";
 import Prices from "../components/prices/Prices";
 import About from "../components/Main/About";
 import Questions from "../components/Main/Questions";
