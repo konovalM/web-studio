@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components'
 import manVector from '../../../images/manVector.svg'
-import bublik from '../../../images/bublik.jpg'
+import lines from '../../../images/lines.svg'
 import qrCode from '../../../images/qr.svg'
 import qrCodeMobile from '../../../images/qrMobile.svg'
-import PolygonAnimation from "../../../animations/PolygonAnimation/PolygonAnimation";
 import Dash from "../../common/Dash/Dash";
 import useWindowSize from "../../../hooks/useWindowSize";
 import {ServicesTag} from "./Services.styles";
+import trianleEye from '../../../images/triangleEye.svg'
+import seoImg from '../../../images/seoImg.svg'
+import seoImgMobile from '../../../images/seoImgMobile.svg'
 
 
 const Services = () => {
@@ -43,7 +45,7 @@ const Services = () => {
                     </div>
                     <div className="ad">
                         <div className="bublik">
-                            <img src={bublik} alt="bublik"/>
+                            <img src={lines} alt="lines" className='lines'/>
                         </div>
                         <div className="bublikWrapper">
                             <div className="er er18">er-9817</div>
@@ -58,7 +60,10 @@ const Services = () => {
                     </div>
                     <div className="seo">
                         <div className="seoImg">
-                            {/*<SpinningAnimation/>*/}
+                            <picture>
+                                <source srcSet={seoImgMobile} media="(max-width: 720px)" />
+                                <img src={seoImg} alt="letters"/>
+                            </picture>
                         </div>
                         <div className="seoWrapper">
                             <div className="er er18">er-9817</div>
@@ -82,7 +87,7 @@ const Services = () => {
                         <div className="brandingImg">
                             <div className="brandingAnimationWrapper">
                                 <div className="animationInnerPolygon">
-                                    <PolygonAnimation/>
+                                    <img src={trianleEye} alt="eye" className="eye"/>
                                 </div>
                             </div>
                             <div className="brandingWrapper">

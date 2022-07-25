@@ -164,13 +164,29 @@ export const ServicesTag = styled.section`
         grid-column: 4/6;
         grid-row: 1/3;
         background-color: #1E4FCD;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
     }
 
     .bublikWrapper {
         padding-left: 33px;
+        padding-bottom: 15px;
         margin-top: 24px;
+        flex: 0 0 auto;
     }
-
+    .bublik{
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    .lines{
+        position: absolute;
+        max-width: none;
+        height: 278px;
+        top: 28px;
+        right: -43px;
+    }
     .bublikText {
         font-family: 'Russo One';
         font-size: 45px;
@@ -230,6 +246,7 @@ export const ServicesTag = styled.section`
         background-color: #1a1a1a;
         position: relative;
         overflow: hidden;
+        padding: 5px;
     }
 
     .seoImg {
@@ -242,8 +259,19 @@ export const ServicesTag = styled.section`
         position: absolute;
         height: 101%;
         width: 30px;
+        top: 0;
         left: 80px;
+        z-index: 1;
         background-color: #fff;
+    }
+    .seo::after {
+        content: '';
+        position: absolute;
+        height: 101%;
+        width: 38px;
+        left: 76px;
+        top: 0;
+        background-color: ${BLACK_MAIN};
     }
 
     .seoText {
@@ -352,18 +380,25 @@ export const ServicesTag = styled.section`
         padding: 4px;
         overflow: hidden;
     }
-
+    .eye{
+        width: 466px;
+        max-width: none;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     .brandingAnimationWrapper {
-        //height: 330px;
         position: absolute;
         top: 0;
-        width: 400px;
-        height: 331px;
+        width: 100%;
+        height: 330px;
         overflow: hidden;
     }
 
     .animationInnerPolygon {
         height: 100%;
+        position: relative;
     }
 
     .brandingImg {
@@ -544,10 +579,6 @@ export const ServicesTag = styled.section`
             width: 10px;
         }
 
-        .seo::before {
-            width: 10px;
-        }
-
         .bublikText {
             font-size: 35px;
             line-height: 42px;
@@ -657,11 +688,7 @@ export const ServicesTag = styled.section`
             grid-column: 1/3;
             grid-row: 4/5;
         }
-
-        .bublik img {
-            width: 288px;
-            height: 246px;
-        }
+        
 
         .bublikText {
             font-size: 35px;
@@ -740,6 +767,7 @@ export const ServicesTag = styled.section`
 
         .seoImg {
             width: 111px;
+            max-height: none;
             order: 1;
         }
 
@@ -755,19 +783,23 @@ export const ServicesTag = styled.section`
             margin: 0 0 25px 16px;
         }
 
-        .seo::before {
+        .seo::before, .seo::after {
             display: none;
         }
-
+        .brandingAnimationWrapper {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+        }
+        .eye {
+            width: 400px;
+            
+        }
         .branding {
             grid-column: 1/3;
             grid-row: 9/10;
-
-            &Img img {
-                height: 288px;
-                object-fit: cover;
-            }
-
             &Text {
                 font-size: 35px;
                 line-height: 42px;
