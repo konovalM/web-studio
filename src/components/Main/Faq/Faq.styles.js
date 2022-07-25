@@ -16,7 +16,10 @@ export const FaqTag = styled.section`
     }
     .arrow{
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+        
+    }
+    .svg{
         transition: .2s transform;
     }
     .rotate{

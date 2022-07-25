@@ -40,8 +40,8 @@ const Faq = () => {
                                                 <p className={'questionText'} onClick={() => toggleActive(i)}>
                                                     {obj.question}
                                                 </p>
-                                                <div className={answers[i] ? "arrow rotate" : 'arrow'} onClick={() => toggleActive(i)}>
-                                                    <BlueBottomArrow />
+                                                <div className={'arrow'} onClick={() => toggleActive(i)}>
+                                                    <BlueBottomArrow className={answers[i] ? "svg rotate" : 'svg'}/>
                                                 </div>
                                             </div>
                                             <div className={answers[i] ? 'answer answerActive' : 'answer'}>{obj.answer}</div>
@@ -52,7 +52,6 @@ const Faq = () => {
                     </div>
                     <div className="tree">
                         <picture>
-                            {/*<source srcSet={mobileTree} media="(max-width: 767px)" />*/}
                             <source srcSet={mobileTree} media="(max-width: 700px)" />
                             <img src={tree} alt="tree of questions" className="treeImg"/>
                         </picture>
