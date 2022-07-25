@@ -14,9 +14,19 @@ export const FaqTag = styled.section`
         color: #1A1A1A;
         margin-bottom: 8px;
     }
-
+    .arrow{
+        display: flex;
+        align-items: center;
+        transition: .2s transform;
+    }
+    .rotate{
+        transform: rotate(180deg);
+    }
     .blue {
         color: #1E4FCD;
+    }
+    .questionText {
+        text-align: justify;
     }
 
     .description {
@@ -81,8 +91,10 @@ export const FaqTag = styled.section`
 
         grid-column: 1 / 2;
         margin-right: 25px;
-
-
+        
+        .answer{
+            text-align: right;
+        }
 
         .questionText {
             padding-left: 10px;
@@ -262,6 +274,9 @@ export const FaqTag = styled.section`
             .questionText {
                 padding: 0 0 0 0;
             }
+            .answer{
+                text-align: left;
+            }
             .questionText::before{
                 content: none;
             }
@@ -362,10 +377,6 @@ export const FaqTag = styled.section`
         .questionText {
             font-size: 14px;
             line-height: 16px;
-        }
-
-        .rotate::before {
-            transform: translateY(-70%) rotate(180deg);
         }
 
         .answer {
