@@ -26,8 +26,8 @@ const Faq = () => {
         <FaqTag>
             <div className="container">
                 <Dash color={'#000000'} countBefore={5} countAfter={2} top={'0px'}/>
-                <h2 className="title">F<span className='blue'>{`{`}</span>A<span className='blue'>{`}`}</span>Q</h2>
-                <div className="description">
+                <h2 className="title" data-aos='fade-down'>F<span className='blue'>{`{`}</span>A<span className='blue'>{`}`}</span>Q</h2>
+                <div className="description" data-aos='fade-down'>
                     Если вы не нашли ответа на свой вопрос, напишите нам и мы ответим в течение 10 минут.
                 </div>
                 <div className="wrapper">
@@ -35,7 +35,7 @@ const Faq = () => {
                             {
                                 questions.map((obj, i) => {
                                     return (
-                                        <div className="accordionWrapper" key={i}>
+                                        <div className="accordionWrapper" key={i} data-aos={i % 2 ? 'fade-right' : 'fade-left'}>
                                             <div className="question">
                                                 <p className={'questionText'} onClick={() => toggleActive(i)}>
                                                     {obj.question}

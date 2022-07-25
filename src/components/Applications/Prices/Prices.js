@@ -34,7 +34,7 @@ const Prices = () => {
                             IOS приложения
                         </h3>
                         <div className={styles.price}>
-                            от 70 000 руб.
+                            от 700 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
@@ -43,7 +43,7 @@ const Prices = () => {
                                 <p className={styles.option}>Бесплатная правка багов</p>
                             </div>
                             <div className={styles.rightOptions}>
-                                <p className={styles.option}>Загрузка в Google play</p>
+                                <p className={styles.option}>Загрузка в App Store</p>
                                 <p className={styles.option}>Аналитика рынка</p>
                                 <p className={styles.option}>Межплатформенная интеграция</p>
                             </div>
@@ -54,7 +54,7 @@ const Prices = () => {
                             windows приложения
                         </h3>
                         <div className={styles.price}>
-                            от 120 000 руб.
+                            от 600 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
@@ -63,7 +63,7 @@ const Prices = () => {
                                 <p className={styles.option}>Бесплатная правка багов</p>
                             </div>
                             <div className={styles.rightOptions}>
-                                <p className={styles.option}>Загрузка в Google play</p>
+                                <p className={styles.option}>Загрузка приложения</p>
                                 <p className={styles.option}>Аналитика рынка</p>
                                 <p className={styles.option}>Межплатформенная интеграция</p>
                             </div>

@@ -58,6 +58,8 @@ export const FaqTag = styled.section`
         grid-column-gap: 13px;
         z-index: 100;
         position: relative;
+        overflow: hidden;
+
     }
 
     .question {
