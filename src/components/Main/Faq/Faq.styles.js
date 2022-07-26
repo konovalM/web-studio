@@ -8,6 +8,7 @@ export const FaqTag = styled.section`
     background-position: center -100px;
     background-repeat: repeat;
     min-height: 950px;
+    overflow: hidden;
     .title {
         font-size: 88px;
         line-height: 106px;

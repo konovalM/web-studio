@@ -19,7 +19,7 @@ const MainPage = () => {
                 <Stages />
                 <Services />
                 <Prices />
-                {/*<Faq />*/}
+                <Faq />
                 <About />
                 <Questions />
             </Layout>
