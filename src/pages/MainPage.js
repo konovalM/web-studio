@@ -19,8 +19,8 @@ const MainPage = () => {
                 <Stages />
                 <Services />
                 <Prices />
-                <Faq />
-                {/*<About />*/}
+                {/*<Faq />*/}
+                <About />
                 <Questions />
             </Layout>
         </div>
