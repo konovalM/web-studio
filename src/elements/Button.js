@@ -1,5 +1,4 @@
 import React, {Fragment, useState, useEffect, useRef} from 'react';
-import styled from 'styled-components'
 import useWindowSize from "../hooks/useWindowSize";
 import styles from './Button.module.css'
 
@@ -47,7 +46,7 @@ const Button = ({ btnStyles, btnColor }) => {
 
             element2.style.transform = `translateX(${-translate2}px)`
 
-            requestAnimationFrame((animation))
+            requestAnimationFrame(animation)
         })
         return function cleanUp() {
             cancelAnimationFrame(requestId)

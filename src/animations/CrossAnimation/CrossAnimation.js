@@ -73,7 +73,6 @@ const Test = () => {
         }
         const canvas = canvass.current
         const ctx = canvas.getContext('2d')
-        console.log(canvas)
         window.addEventListener('resize', (function _self(e) {
             width = canvas.width
             height = canvas.height
