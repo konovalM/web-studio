@@ -449,8 +449,8 @@ const Main = () => {
     useEffect(() => {
         const options = {
             strings: [
-                'Сайты под ключ и <span style="color: #1E4FCD">[web.сервисы]</span>',
-                'Сайты под ключ и <span style="color: #1E4FCD">[web.сайты]</span>'
+                '<span style="color: #1E4FCD">[web.сервисы]</span>',
+                '<span style="color: #1E4FCD">[web.сайты]</span>'
 
             ],
             typeSpeed: 90,
@@ -487,7 +487,7 @@ const Main = () => {
                             DIGITAL-агентство полного цикла STUDIO NAME
                         </h1>
                         <h2 className="title">
-                            <span className="titleSpan" ref={el}></span>
+                            <span className="titleSpan">Сайты под ключ и <br/><span ref={el}></span></span>
                         </h2>
                         <div className="btnWrapper">
                             <Button btnColor='#000000' btnStyles={[{
