@@ -17,10 +17,10 @@ import AOS from "aos";
 function App() {
     useEffect(() => {
         AOS.init({
-            offset: 200,
+            offset: 50,
             duration: 500,
             easing: "linear",
-            delay: 100,
+            delay: 0,
             once: true,
         });
     }, [])

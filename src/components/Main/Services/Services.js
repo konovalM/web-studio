@@ -10,6 +10,7 @@ import {ServicesTag} from "./Services.styles";
 import trianleEye from '../../../images/triangleEye.svg'
 import seoImg from '../../../images/seoImg.svg'
 import seoImgMobile from '../../../images/seoImgMobile.svg'
+import {AnimateWrapper} from "../../../animations/AnimateWrapper";
 
 
 const Services = () => {
@@ -22,13 +23,13 @@ const Services = () => {
                 <p className="description" data-aos='fade-right'>Предоставим вашему бизнесу комплекс услуг по развитию и продвижению. Создадим техническую часть вашего бизнеса, займемся брендингом и рекламой.</p>
                 <div className="gridWrapper">
                     <div className="landing" data-aos='fade-left'>
-                       <div className="landingInner">
-                           <div className="er er18">er-9817</div>
-                           <div className="landingText">лендинги</div>
-                       </div>
+                        <div className="landingInner">
+                            <div className="er er18">er-9817</div>
+                            <div className="landingText">лендинги</div>
+                        </div>
                     </div>
-                    <div className="parsing">
-                        <div className="parsingWrapper" data-aos='fade-down'>
+                    <div className="parsing" data-aos='fade-down'>
+                        <div className="parsingWrapper">
                             <DesignSquare cn={'black'}/>
                             <div className="er er14">er-9817</div>
                             <div className="parsingText">парсинг данных</div>
@@ -52,7 +53,7 @@ const Services = () => {
                             <div className="bublikText">реклама google, yandex</div>
                         </div>
                     </div>
-                    <div className="marketing" data-aos='fade-left'>
+                    <div className="marketing" data-aos='fade-left' data-aos-offset='20'>
                         <div className="marketingWrapper">
                             <div className="er er18">er-9817</div>
                             <div className="marketingText">marketing</div>

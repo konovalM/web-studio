@@ -2,8 +2,10 @@ import React, { Fragment } from 'react';
 
 export const AnimateWrapper = ({animate, children}) => {
     return (
-        <Fragment data-aos={animate} >
-            {children}
+        <Fragment >
+            <div data-aos={animate} data-aos-offset="0">
+                {children}
+            </div>
         </Fragment>
     );
 };
