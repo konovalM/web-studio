@@ -817,7 +817,7 @@ export const ServicesTag = styled.section`
 
 
     // hovers
-    .landing, .systems, parsingWrapper, .ad, .marketing, .seo, .sitesWrapper, .apps, .branding, .online, .smm{
+    .landing, .systems, .parsingWrapper, .ad, .marketing, .seo, .sitesWrapper, .apps, .branding, .online, .smm{
         cursor: pointer
     }
     .landingText, .systemsText, .parsingText, .bublikText, .marketingText, .seoText, .sitesText, .appsText,

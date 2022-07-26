@@ -38,9 +38,16 @@
 [data-aos="turn"] {
   transition-property: transform;
   transition: 1s transform;
-  transform: rotate(0deg)!important;
+  transform: rotate(0deg) !important;
 
   &.aos-animate {
     transform: rotate(360deg) !important;
   }
 }
+
+
+
+
+
+
+

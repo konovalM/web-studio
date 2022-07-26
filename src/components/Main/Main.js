@@ -4,8 +4,9 @@ import bg from '../../images/bg.png'
 import Button from "../../elements/Button";
 import Dash from "../common/Dash/Dash";
 import Typed from "typed.js";
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import {scrollToElement} from "../../utils/scrollToElement";
+import {Link} from "react-router-dom";
+import {Link as AnchorLink} from 'react-scroll'
 
 
 const MainTag = styled.section`
@@ -539,33 +540,44 @@ const Main = () => {
                     <div className="right">
                         <div className="rightInner">
                             <h3 className="websites rightTitle">
-                                <span className='rightTitleSpan'>
+                                <span className='rightTitleSpan' onClick={() => scrollToElement('sites')}>
                                     websites
                                 </span>
                             </h3>
                             <h3 className="applications rightTitle">
                                 <span className='rightTitleSpan'>
-                                    applications
+                                    <Link to='/apps'>
+                                        applications
+                                    </Link>
+
                                 </span>
                             </h3>
                             <h3 className="marketing rightTitle">
                                 <span className='rightTitleSpan'>
-                                    marketing
+                                    <Link to='/branding'>
+                                        marketing
+                                    </Link>
                                 </span>
                             </h3>
                             <h3 className="smm rightTitle">
                                 <span className='rightTitleSpan'>
-                                    smm
+                                    <Link to='/smm'>
+                                        smm
+                                    </Link>
                                 </span>
                             </h3>
                             <h3 className="webDevelopment rightTitle">
                                 <span className='rightTitleSpan'>
-                                    webdevelopment
+                                    <Link to='/systems'>
+                                        webdevelopment
+                                    </Link>
                                 </span>
                             </h3>
                             <h3 className="seo rightTitle">
                                 <span className='rightTitleSpan'>
-                                    seo
+                                    <Link to='/seo'>
+                                        seo
+                                    </Link>
                                 </span>
                             </h3>
                         </div>

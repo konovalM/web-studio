@@ -43,7 +43,7 @@ const Reasons = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="circle">
+                    <div className="circle" data-aos='circle' data-aos-anchor=".star">
                         <img src={star} alt="star" className='star' data-aos='turn'/>
                         <div className="first advantage" data-aos='fade-from-circle-first'>
                             <span className='blackW'>5+</span><span className='blue'> [<span

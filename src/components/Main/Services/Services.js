@@ -10,7 +10,7 @@ import {ServicesTag} from "./Services.styles";
 import trianleEye from '../../../images/triangleEye.svg'
 import seoImg from '../../../images/seoImg.svg'
 import seoImgMobile from '../../../images/seoImgMobile.svg'
-import {AnimateWrapper} from "../../../animations/AnimateWrapper";
+import {Link} from "react-router-dom";
 
 
 const Services = () => {
@@ -28,14 +28,14 @@ const Services = () => {
                             <div className="landingText">лендинги</div>
                         </div>
                     </div>
-                    <div className="parsing" data-aos='fade-down'>
+                    <Link to='parser' className="parsing" data-aos='fade-down'>
                         <div className="parsingWrapper">
                             <DesignSquare cn={'black'}/>
                             <div className="er er14">er-9817</div>
                             <div className="parsingText">парсинг данных</div>
                         </div>
-                    </div>
-                    <div className="systems" data-aos='fade-right'>
+                    </Link>
+                    <Link to='systems' className="systems" data-aos='fade-right'>
                         <div className="man">
                             <img src={manVector} alt="vector man"/>
                         </div>
@@ -43,7 +43,7 @@ const Services = () => {
                             <div className="er er18">er-9817</div>
                             <div className="systemsText">самописные системы и сервисы</div>
                         </div>
-                    </div>
+                    </Link>
                     <div className="ad" data-aos='fade-right'>
                         <div className="bublik">
                             <img src={lines} alt="lines" className='lines'/>
@@ -53,13 +53,13 @@ const Services = () => {
                             <div className="bublikText">реклама google, yandex</div>
                         </div>
                     </div>
-                    <div className="marketing" data-aos='fade-left' data-aos-offset='20'>
+                    <div className="marketing" data-aos='fade-left'>
                         <div className="marketingWrapper">
                             <div className="er er18">er-9817</div>
                             <div className="marketingText">marketing</div>
                         </div>
                     </div>
-                    <div className="seo">
+                    <div className="seo" data-aos='fade-up'>
                         <div className="seoImg">
                             <picture>
                                 <source srcSet={seoImgMobile} media="(max-width: 720px)" />
@@ -71,20 +71,20 @@ const Services = () => {
                             <div className="seoText">seo</div>
                         </div>
                     </div>
-                    <div className="sites">
+                    <div className="sites" data-aos='fade-down'>
                         <div className="sitesWrapper">
                             <DesignSquare cn={width <= 720 ? 'black' : 'blue'}/>
                             <div className="er er14">er-9817</div>
                             <div className="sitesText">сайты компаний</div>
                         </div>
                     </div>
-                    <div className="apps">
+                    <div className="apps" data-aos='fade-left'>
                         <div className="appsWrapper">
                             <div className="er er18">er-9817</div>
                             <div className="appsText">приложения</div>
                         </div>
                     </div>
-                    <div className="branding">
+                    <div className="branding" data-aos='fade-right'>
                         <div className="brandingImg">
                             <div className="brandingAnimationWrapper">
                                 <div className="animationInnerPolygon">
@@ -97,14 +97,14 @@ const Services = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="online">
+                    <div className="online" data-aos='fade-up'>
                         <div className="onlineWrapper">
                             <DesignSquare cn={'black'}/>
                             <div className="er er14">er-9817</div>
                             <div className="onlineText">online<br/>магазины</div>
                         </div>
                     </div>
-                    <div className="smm">
+                    <div className="smm" data-aos='fade-down'>
                         <div className="smmImg">
                             <picture>
                                 <source srcSet={qrCodeMobile} media="(max-width: 720px)" />
