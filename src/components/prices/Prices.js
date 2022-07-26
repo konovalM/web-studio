@@ -11,11 +11,15 @@ const Prices = () => {
                     <h2 className="title">Кейсы и цены</h2>
                     <div className="description">Создаем магазины, лендинги, корпоративные сайты, криптосервисы, сайты мероприятий, а также сайты под нестандартные задачи.</div>
                 </div>
-                <Element name='sites'>
+                <Element name='landings'>
                     <PricesComponent title='лендинги визитки' price='60 000' content={landing} />
                 </Element>
-                <PricesComponent title='online магазины' margin='225px' price='130 000' content={shops}/>
-                <PricesComponent title='многостраничные сайты' size={true} margin='225px' price='180 000' content={sites}/>
+                <Element name='shops'>
+                    <PricesComponent title='online магазины' margin='225px' price='130 000' content={shops}/>
+                </Element>
+                <Element name='sites'>
+                    <PricesComponent title='многостраничные сайты' size={true} margin='225px' price='180 000' content={sites}/>
+                </Element>
             </div>
         </PricesTag>
     );

@@ -540,7 +540,7 @@ const Main = () => {
                     <div className="right">
                         <div className="rightInner">
                             <h3 className="websites rightTitle">
-                                <span className='rightTitleSpan' onClick={() => scrollToElement('sites')}>
+                                <span className='rightTitleSpan' onClick={() => scrollToElement('landings')}>
                                     websites
                                 </span>
                             </h3>
@@ -549,7 +549,6 @@ const Main = () => {
                                     <Link to='/apps'>
                                         applications
                                     </Link>
-
                                 </span>
                             </h3>
                             <h3 className="marketing rightTitle">

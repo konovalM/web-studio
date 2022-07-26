@@ -11,6 +11,7 @@ import trianleEye from '../../../images/triangleEye.svg'
 import seoImg from '../../../images/seoImg.svg'
 import seoImgMobile from '../../../images/seoImgMobile.svg'
 import {Link} from "react-router-dom";
+import {scrollToElement} from "../../../utils/scrollToElement";
 
 
 const Services = () => {
@@ -22,7 +23,7 @@ const Services = () => {
                 <h2 className="title" data-aos='fade-down'>Услуги <span className='blue'>><span className="black">/...</span>{`<`}</span></h2>
                 <p className="description" data-aos='fade-right'>Предоставим вашему бизнесу комплекс услуг по развитию и продвижению. Создадим техническую часть вашего бизнеса, займемся брендингом и рекламой.</p>
                 <div className="gridWrapper">
-                    <div className="landing" data-aos='fade-left'>
+                    <div className="landing" data-aos='fade-left' onClick={() => scrollToElement('landings')}>
                         <div className="landingInner">
                             <div className="er er18">er-9817</div>
                             <div className="landingText">лендинги</div>
@@ -44,7 +45,7 @@ const Services = () => {
                             <div className="systemsText">самописные системы и сервисы</div>
                         </div>
                     </Link>
-                    <div className="ad" data-aos='fade-right'>
+                    <Link to='context' className="ad" data-aos='fade-right'>
                         <div className="bublik">
                             <img src={lines} alt="lines" className='lines'/>
                         </div>
@@ -52,14 +53,14 @@ const Services = () => {
                             <div className="er er18">er-9817</div>
                             <div className="bublikText">реклама google, yandex</div>
                         </div>
-                    </div>
-                    <div className="marketing" data-aos='fade-left'>
+                    </Link>
+                    <Link to='branding' className="marketing" data-aos='fade-left'>
                         <div className="marketingWrapper">
                             <div className="er er18">er-9817</div>
                             <div className="marketingText">marketing</div>
                         </div>
-                    </div>
-                    <div className="seo" data-aos='fade-up'>
+                    </Link>
+                    <Link to='seo' className="seo" data-aos='fade-up'>
                         <div className="seoImg">
                             <picture>
                                 <source srcSet={seoImgMobile} media="(max-width: 720px)" />
@@ -70,21 +71,21 @@ const Services = () => {
                             <div className="er er18">er-9817</div>
                             <div className="seoText">seo</div>
                         </div>
-                    </div>
-                    <div className="sites" data-aos='fade-down'>
+                    </Link>
+                    <div className="sites" data-aos='fade-down' onClick={() => scrollToElement('sites')}>
                         <div className="sitesWrapper">
                             <DesignSquare cn={width <= 720 ? 'black' : 'blue'}/>
                             <div className="er er14">er-9817</div>
                             <div className="sitesText">сайты компаний</div>
                         </div>
                     </div>
-                    <div className="apps" data-aos='fade-left'>
+                    <Link to='apps' className="apps" data-aos='fade-left'>
                         <div className="appsWrapper">
                             <div className="er er18">er-9817</div>
                             <div className="appsText">приложения</div>
                         </div>
-                    </div>
-                    <div className="branding" data-aos='fade-right'>
+                    </Link>
+                    <Link to='branding' className="branding" data-aos='fade-right'>
                         <div className="brandingImg">
                             <div className="brandingAnimationWrapper">
                                 <div className="animationInnerPolygon">
@@ -96,15 +97,15 @@ const Services = () => {
                                 <div className="brandingText">брендинг и репутация</div>
                             </div>
                         </div>
-                    </div>
-                    <div className="online" data-aos='fade-up'>
+                    </Link>
+                    <div className="online" data-aos='fade-up' onClick={() => scrollToElement('shops')}>
                         <div className="onlineWrapper">
                             <DesignSquare cn={'black'}/>
                             <div className="er er14">er-9817</div>
                             <div className="onlineText">online<br/>магазины</div>
                         </div>
                     </div>
-                    <div className="smm" data-aos='fade-down'>
+                    <Link to='smm' className="smm" data-aos='fade-down'>
                         <div className="smmImg">
                             <picture>
                                 <source srcSet={qrCodeMobile} media="(max-width: 720px)" />
@@ -115,7 +116,7 @@ const Services = () => {
                             <div className="er er18">er-9817</div>
                             <div className="smmText">smm</div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </ServicesTag>
