@@ -18,23 +18,23 @@ const Services = () => {
         <ServicesTag>
             <div className="container">
                 <Dash color={'#000000'} countBefore={3} countAfter={4} top={'0px'}/>
-                <h2 className="title">Услуги <span className='blue'>><span className="black">/...</span>{`<`}</span></h2>
-                <p className="description">Предоставим вашему бизнесу комплекс услуг по развитию и продвижению. Создадим техническую часть вашего бизнеса, займемся брендингом и рекламой.</p>
+                <h2 className="title" data-aos='fade-down'>Услуги <span className='blue'>><span className="black">/...</span>{`<`}</span></h2>
+                <p className="description" data-aos='fade-right'>Предоставим вашему бизнесу комплекс услуг по развитию и продвижению. Создадим техническую часть вашего бизнеса, займемся брендингом и рекламой.</p>
                 <div className="gridWrapper">
-                    <div className="landing">
+                    <div className="landing" data-aos='fade-left'>
                        <div className="landingInner">
                            <div className="er er18">er-9817</div>
                            <div className="landingText">лендинги</div>
                        </div>
                     </div>
                     <div className="parsing">
-                        <div className="parsingWrapper">
+                        <div className="parsingWrapper" data-aos='fade-down'>
                             <DesignSquare cn={'black'}/>
                             <div className="er er14">er-9817</div>
                             <div className="parsingText">парсинг данных</div>
                         </div>
                     </div>
-                    <div className="systems">
+                    <div className="systems" data-aos='fade-right'>
                         <div className="man">
                             <img src={manVector} alt="vector man"/>
                         </div>
@@ -43,7 +43,7 @@ const Services = () => {
                             <div className="systemsText">самописные системы и сервисы</div>
                         </div>
                     </div>
-                    <div className="ad">
+                    <div className="ad" data-aos='fade-right'>
                         <div className="bublik">
                             <img src={lines} alt="lines" className='lines'/>
                         </div>
@@ -52,7 +52,7 @@ const Services = () => {
                             <div className="bublikText">реклама google, yandex</div>
                         </div>
                     </div>
-                    <div className="marketing">
+                    <div className="marketing" data-aos='fade-left'>
                         <div className="marketingWrapper">
                             <div className="er er18">er-9817</div>
                             <div className="marketingText">marketing</div>

@@ -14,46 +14,46 @@ const Reasons = () => {
                 <div className="container">
                     <Dash color={'#ffffff'} countBefore={1} countAfter={6} top={'0px'}/>
                     <div className="content">
-                        <h2 className="title">Почему <span className='blue blueSpan'>{`{`}</span><span
+                        <h2 className="title" data-aos='fade-down'>Почему <span className='blue blueSpan'>{`{`}</span><span
                             className='white'>мы</span><span className='blue blueSpan'>{`}`}</span></h2>
                         <div className="item">
                             <AnimateWrapper animate='fade-left'>
-                                <h4 className="subtitle">Никаких операторов по продажам</h4>
-                                <div className="text">Все сотрудники и менеджеры проектов имеют профильное образование в
+                                <h4 className="subtitle" data-aos='fade-up'>Никаких операторов по продажам</h4>
+                                <div className="text" data-aos='fade-down'>Все сотрудники и менеджеры проектов имеют профильное образование в
                                     сайтостроении. Вам не придется общаться с “продавцами утюгов”.
                                 </div>
                             </AnimateWrapper>
                         </div>
                         <div className="item">
-                            <h4 className="subtitle">Надежнее фриланса</h4>
-                            <div className="text">Больше половины клиентов фрилансеров получают неработающие сайты, либо
+                            <h4 className="subtitle" data-aos='fade-up'>Надежнее фриланса</h4>
+                            <div className="text" data-aos='fade-down'>Больше половины клиентов фрилансеров получают неработающие сайты, либо
                                 платят мошенникам. С нами вы забудете про эти проблемы.
                             </div>
                         </div>
                         <div className="item">
-                            <h4 className="subtitle">Приведем клиентов</h4>
-                            <div className="text">Если сайт не приносит прибыли - цена ему “ноль”. Настраиваем рекламу и
+                            <h4 className="subtitle" data-aos='fade-up'>Приведем клиентов</h4>
+                            <div className="text" data-aos='fade-down'>Если сайт не приносит прибыли - цена ему “ноль”. Настраиваем рекламу и
                                 приводим реальных заказчиков с деньгами.
                             </div>
                         </div>
                         <div className="item">
-                            <h4 className="subtitle">Анализируем конкурентов</h4>
-                            <div className="text">Разработчики-любители сдают вместо сайтов красивые картинки. Мы сперва
+                            <h4 className="subtitle" data-aos='fade-up'>Анализируем конкурентов</h4>
+                            <div className="text" data-aos='fade-down'>Разработчики-любители сдают вместо сайтов красивые картинки. Мы сперва
                                 изучаем вашу нишу и делаем по-настоящему продающий сайт.
                             </div>
                         </div>
                     </div>
                     <div className="circle">
-                        <img src={star} alt="star" className='star'/>
-                        <div className="first advantage">
+                        <img src={star} alt="star" className='star' data-aos='turn'/>
+                        <div className="first advantage" data-aos='fade-from-circle-first'>
                             <span className='blackW'>5+</span><span className='blue'> [<span
                             className='white'>..</span>]</span>
                         </div>
-                        <div className="second advantage">
+                        <div className="second advantage" data-aos='fade-from-circle-second'>
                             <span className='blackW'>200+</span><span className="blue"> ></span><span
                             className="white">></span>
                         </div>
-                        <div className="third advantage">
+                        <div className="third advantage" data-aos='fade-from-circle-third'>
                             <span className='blackW'>12+</span><span className="blue"> //</span><span
                             className="white">#</span>
                         </div>

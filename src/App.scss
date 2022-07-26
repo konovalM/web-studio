@@ -1,3 +1,5 @@
+@use "aos-animations";
+
 body{
   font-family: Roboto;
 }
@@ -39,3 +41,7 @@ html body:not(.no-js) [data-aos=fade-up] {
   -webkit-transform:translate3d(0,50px,0);
   transform:translate3d(0,50px,0);
 }
+
+
+
+

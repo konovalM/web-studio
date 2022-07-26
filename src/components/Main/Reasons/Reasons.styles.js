@@ -211,13 +211,13 @@ export const ReasonsTag = styled.section`
         }
 
         .second {
-            top: -66px;
-            right: -306px;
+            top: -50px;
+            right: -295px;
         }
 
         .third {
-            bottom: 140px;
-            right: -340px;
+            bottom: 111px;
+            right: -325px;
         }
     }
     @media (max-width: 1770px) {

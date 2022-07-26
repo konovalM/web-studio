@@ -1,0 +1,46 @@
+[data-aos="fade-from-circle-first"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition: .5s all;
+  transform: rotate(-59.94deg) translateX(-150px) !important;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: rotate(-59.94deg) !important;
+  }
+
+}
+
+[data-aos="fade-from-circle-second"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition: .5s all;
+  transform: rotate(-28.91deg) translateX(-150px) !important;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: rotate(-28.91deg) !important;
+  }
+}
+
+[data-aos="fade-from-circle-third"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition: .5s all;
+  transform: rotate(-5.16deg) translateX(-150px) !important;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: rotate(-5.16deg) !important;
+  }
+}
+
+[data-aos="turn"] {
+  transition-property: transform;
+  transition: 1s transform;
+  transform: rotate(0deg)!important;
+
+  &.aos-animate {
+    transform: rotate(360deg) !important;
+  }
+}

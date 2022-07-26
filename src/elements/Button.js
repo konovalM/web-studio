@@ -4,7 +4,7 @@ import styles from './Button.module.css'
 
 
 const Button = ({ btnStyles, btnColor }) => {
-    let element1 = useRef()
+    /*let element1 = useRef()
     let element2 = useRef()
     let btn = useRef()
     let parent = useRef()
@@ -51,16 +51,16 @@ const Button = ({ btnStyles, btnColor }) => {
         return function cleanUp() {
             cancelAnimationFrame(requestId)
         }
-    }, [width])
+    }, [width])*/
     return (
         <Fragment>
-            <button className={styles.consultation} ref={btn}>
+            {/*<button className={styles.consultation} ref={btn}>
                 Получить консультацию
             </button>
             <div className={styles.points} ref={parent}>
                 <div className={styles.pointFirst} ref={element1} style={{background: btnColor}}></div>
                 <div className={styles.pointSecond} ref={element2} style={{background: btnColor}}></div>
-            </div>
+            </div>*/}
         </Fragment>
     );
 };
