@@ -220,7 +220,12 @@ export const PricesTag = styled.section`
     }
 
     // ADAPTIVE
-
+    
+    @media screen and (min-width: 2150px){
+        .price {
+            width: 36%;
+        }
+    }
     @media screen and (max-width: 1850px) {
         .price {
             width: 500px;

@@ -95,7 +95,7 @@
     bottom: 120px;
     transform: translateX(-50%);
     overflow: hidden;
-    z-index: 1000;
+    z-index: 10;
 }
 .scrollOutside{
     height: 60px;

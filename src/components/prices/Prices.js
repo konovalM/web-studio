@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import PricesComponent from "./PricesComponent";
-import {PricesTag} from "./pricesStyled";
+import {PricesTag} from "./Prices.styles";
 import { Element } from 'react-scroll'
 
 const Prices = () => {
