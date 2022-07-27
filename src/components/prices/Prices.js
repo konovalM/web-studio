@@ -12,13 +12,13 @@ const Prices = () => {
                     <div className="description" data-aos='fade-down'>Создаем магазины, лендинги, корпоративные сайты, криптосервисы, сайты мероприятий, а также сайты под нестандартные задачи.</div>
                 </div>
                 <Element name='landings'>
-                    <PricesComponent title='лендинги визитки' price='60 000' content={landing} />
+                    <PricesComponent title='лендинги визитки' price='60 000' content={landing} id={1}/>
                 </Element>
                 <Element name='shops'>
-                    <PricesComponent title='online магазины' margin='225px' price='130 000' content={shops}/>
+                    <PricesComponent title='online магазины' margin='225px' price='130 000' content={shops} id={2}/>
                 </Element>
                 <Element name='sites'>
-                    <PricesComponent title='многостраничные сайты' size={true} margin='225px' price='180 000' content={sites}/>
+                    <PricesComponent title='многостраничные сайты' size={true} margin='225px' price='180 000' content={sites} id={3}/>
                 </Element>
             </div>
         </PricesTag>
