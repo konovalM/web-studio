@@ -118,8 +118,6 @@ export const MainTag = styled.section`
         animation-timing-function: linear;
         animation-iteration-count: 1;
     }
-    .programLang .stackItemActive{
-    }
     .frameworks .stackItemActive{
         animation-delay: .4s;
     }
