@@ -3,9 +3,13 @@ import {useEffect, useRef} from "react";
 import styled from 'styled-components'
 
 const Ball = styled.div`
-    width: 350px;
-    height: 350px;
+    width: 420px;
+    height: 420px;
     margin-top: -40px;
+    @media (max-width: 1024px){
+        width: 350px;
+        height: 350px;
+    }
     @media (max-width: 750px){
         width: 250px;
         height: 250px;
