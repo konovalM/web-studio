@@ -17,19 +17,24 @@ const PricesComponent = ({title, margin, price, size, content, id}) => {
 
 
     useEffect(() => {
+        let coordinatesSection = document.querySelector('.wrapperPrices').getBoundingClientRect()
+        let sectionHeightFrom = coordinatesSection.top
+        let heightFrom = ref.current.getBoundingClientRect().top
+        const top = heightFrom - sectionHeightFrom
         let widthFrom= ref.current.getBoundingClientRect().left
         let position = {width: widthFrom-15, left: ref.current.offsetLeft, height: ref.current.clientHeight}
         setSettings(position)
         if (width > 1250){
-            setTopForPrice(position.top + 7)
+            setTopForPrice(top + 7)
         } else if (width > 767){
-            setTopForPrice(position.top + 350)
+            setTopForPrice(top + 350)
         } else if (width > 520){
-            setTopForPrice(position.top + 240)
+            setTopForPrice(top + 240)
         }else if (width <= 520){
-            setTopForPrice(position.top + 190)
+            setTopForPrice(top + 190)
         }
     }, [width])
+
 
     if (size){
         defaultTitle = <div><span className={styles.first}>многостраничные</span><span className={styles.second}>сайты</span></div>
