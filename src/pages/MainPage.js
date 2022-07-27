@@ -1,5 +1,5 @@
 import React from 'react';
-import Main from "../components/Main/Main";
+import Main from "../components/Main/Main/Main";
 import Reasons from "../components/Main/Reasons/Reasons";
 import Stages from "../components/Main/Stages";
 import Services from "../components/Main/Services/Services";
