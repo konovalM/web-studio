@@ -598,7 +598,6 @@ const HeaderMobile = () => {
 
 const Header = () => {
     const sizeWidth = useWindowSize();
-    console.log(sizeWidth)
     return (
         <Fragment>
             {

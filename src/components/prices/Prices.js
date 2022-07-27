@@ -8,8 +8,8 @@ const Prices = () => {
         <PricesTag>
             <div className="wrapperPrices">
                 <div className="container">
-                    <h2 className="title">Кейсы и цены</h2>
-                    <div className="description">Создаем магазины, лендинги, корпоративные сайты, криптосервисы, сайты мероприятий, а также сайты под нестандартные задачи.</div>
+                    <h2 className="title" data-aos='fade-down'>Кейсы и цены</h2>
+                    <div className="description" data-aos='fade-down'>Создаем магазины, лендинги, корпоративные сайты, криптосервисы, сайты мероприятий, а также сайты под нестандартные задачи.</div>
                 </div>
                 <Element name='landings'>
                     <PricesComponent title='лендинги визитки' price='60 000' content={landing} />
