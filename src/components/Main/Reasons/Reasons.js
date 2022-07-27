@@ -43,17 +43,17 @@ const Reasons = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="circle" data-aos='circle' data-aos-anchor=".star">
-                        <img src={star} alt="star" className='star' data-aos='turn'/>
-                        <div className="first advantage" data-aos='fade-from-circle-first'>
+                    <div className="circle" data-aos='circle' >
+                        <img src={star} alt="star" className='star'/>
+                        <div className="first advantage">
                             <span className='blackW'>5+</span><span className='blue'> [<span
                             className='white'>..</span>]</span>
                         </div>
-                        <div className="second advantage" data-aos='fade-from-circle-second'>
+                        <div className="second advantage">
                             <span className='blackW'>200+</span><span className="blue"> ></span><span
                             className="white">></span>
                         </div>
-                        <div className="third advantage" data-aos='fade-from-circle-third'>
+                        <div className="third advantage">
                             <span className='blackW'>12+</span><span className="blue"> //</span><span
                             className="white">#</span>
                         </div>

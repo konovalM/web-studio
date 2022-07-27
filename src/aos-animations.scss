@@ -44,6 +44,48 @@
     transform: rotate(360deg) !important;
   }
 }
+[data-aos="circle"] {
+  .first{
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition: .7s all;
+    transform: rotate(-59.94deg) translateX(-150px) !important;
+  }
+  .second{
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition: .7s all;
+    transform: rotate(-28.91deg) translateX(-150px) !important;
+  }
+  .third{
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition: .7s all;
+    transform: rotate(-5.16deg) translateX(-150px) !important;
+  }
+  .star{
+    transition-property: transform;
+    transition: 1s transform;
+    transform: rotate(0deg) !important;
+  }
+  &.aos-animate {
+    .star{
+      transform: rotate(360deg) !important;
+    }
+    .first{
+      opacity: 1;
+      transform: rotate(-59.94deg) !important;
+    }
+    .second{
+      opacity: 1;
+      transform: rotate(-28.91deg) !important;
+    }
+    .third{
+      opacity: 1;
+      transform: rotate(-5.16deg) !important;
+    }
+  }
+}
 
 
 
