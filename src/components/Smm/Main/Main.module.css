@@ -149,7 +149,11 @@
         margin-top: 30px;
     }
 }
-
+@media (max-width: 1024px){
+    .main{
+        height: 585px;
+    }
+}
 @media (max-width: 1022px) {
     .image{
         width: 379px;

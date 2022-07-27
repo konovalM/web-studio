@@ -149,11 +149,15 @@
     }
 }
 
-@media (max-width: 991px){
+@media (max-width: 1024px){
     .main{
         height: 585px;
-        padding-top: 88px;
+    }
+}
 
+@media (max-width: 991px){
+    .main{
+        padding-top: 88px;
     }
     .scroll{
         display: none;
