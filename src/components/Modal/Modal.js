@@ -6,11 +6,6 @@ import case1 from '../../images/cases/case.jpg'
 export const Modal = () => {
     const isModal = useSelector((state) => state.modal.isModal)
     const dispatch = useDispatch()
-    useEffect(() => {
-        if (isModal){
-            document.querySelector('body').style.position = 'fixed'
-        } else document.querySelector('body').style.position = 'static'
-    })
     return (
         <>
             {
