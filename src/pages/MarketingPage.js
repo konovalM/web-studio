@@ -6,10 +6,12 @@ import Stages from "../components/Marketing/Stages/Stages";
 import Cases from "../components/Marketing/Cases/Cases";
 import Prices from "../components/Marketing/Prices/Prices";
 import Layout from "./Layout";
+import Header from "../components/Header/Header";
 
 const MarketingPage = () => {
     return (
         <>
+            <Header/>
             <Main/>
             <Includes/>
             <Stages/>

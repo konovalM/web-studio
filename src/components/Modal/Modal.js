@@ -9,7 +9,7 @@ export const Modal = () => {
     useEffect(() => {
         if (isModal){
             document.querySelector('body').style.overflow = 'hidden'
-        } else document.querySelector('body').style.overflow = 'visible'
+        } else document.querySelector('body').style.overflow = 'none'
     })
     return (
         <>

@@ -6,10 +6,12 @@ import Stages from "../components/Systems/Stages/Stages";
 import Cases from "../components/Systems/Cases/Cases";
 import Prices from "../components/Systems/Prices/Prices";
 import Layout from "./Layout";
+import Header from "../components/Header/Header";
 
 const SystemsPage = () => {
     return (
         <>
+            <Header/>
             <Main/>
             <Includes/>
             <Stages/>

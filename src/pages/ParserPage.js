@@ -5,10 +5,12 @@ import Stages from "../components/Parser/Stages/Stages";
 import Prices from "../components/Parser/Prices/Prices";
 import Questions from "../components/Main/Questions";
 import Layout from "./Layout";
+import Header from "../components/Header/Header";
 
 const ParserPage = () => {
     return (
         <>
+            <Header/>
             <Main/>
             <Includes/>
             <Stages/>

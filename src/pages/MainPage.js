@@ -8,10 +8,12 @@ import About from "../components/Main/About/About";
 import Questions from "../components/Main/Questions";
 import Layout from "./Layout";
 import Faq from "../components/Main/Faq/Faq";
+import Header from "../components/Header/Header";
 
 const MainPage = () => {
     return (
         <>
+            <Header/>
             <Main/>
             <Reasons />
             <Stages />

@@ -6,10 +6,12 @@ import Cases from "../components/Smm/Cases/Cases";
 import Prices from "../components/Smm/Prices/Prices";
 import Questions from "../components/Main/Questions";
 import Layout from "./Layout";
+import Header from "../components/Header/Header";
 
 const SmmPage = () => {
     return (
         <>
+            <Header/>
             <Main/>
             <Includes/>
             <Stages/>

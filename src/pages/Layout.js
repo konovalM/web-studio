@@ -7,7 +7,6 @@ const Layout = ({children}) => {
     return (
         <>
             <Modal />
-            <Header/>
             <div style={{height: '63px'}}></div>
             {children}
             <Footer/>
