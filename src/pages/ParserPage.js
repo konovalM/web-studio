@@ -8,15 +8,13 @@ import Layout from "./Layout";
 
 const ParserPage = () => {
     return (
-        <div>
-            <Layout>
-                <Main/>
-                <Includes/>
-                <Stages/>
-                <Prices/>
-                <Questions/>
-            </Layout>
-        </div>
+        <>
+            <Main/>
+            <Includes/>
+            <Stages/>
+            <Prices/>
+            <Questions/>
+        </>
     );
 };
 

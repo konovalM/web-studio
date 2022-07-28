@@ -36,7 +36,7 @@ const Faq = () => {
                                 questions.map((obj, i) => {
                                     return (
                                         <div className="accordionWrapper" key={i} data-aos={i % 2 ? 'fade-right' : 'fade-left'}>
-                                            <div className="question">
+                                            <div className="question" >
                                                 <p className={'questionText'} onClick={() => toggleActive(i)}>
                                                     {obj.question}
                                                 </p>

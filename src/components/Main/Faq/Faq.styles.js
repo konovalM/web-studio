@@ -9,29 +9,38 @@ export const FaqTag = styled.section`
     background-repeat: repeat;
     min-height: 950px;
     overflow: hidden;
+
     .title {
         font-size: 88px;
         line-height: 106px;
         color: #1A1A1A;
         margin-bottom: 8px;
     }
-    .arrow{
+
+    .arrow {
         display: flex;
         align-items: flex-start;
-        
+
     }
-    .svg{
+
+    .svg {
         transition: .2s transform;
         transform: translateY(5px);
     }
-    .rotate{
+
+    .rotate {
         transform: translateY(5px) rotate(180deg);
     }
+
     .blue {
         color: #1E4FCD;
     }
+
     .questionText {
         text-align: justify;
+        moz-user-select: none;
+        -khtml-user-select: none;
+        user-select: none;
     }
 
     .description {
@@ -59,16 +68,16 @@ export const FaqTag = styled.section`
         grid-column-gap: 13px;
         z-index: 100;
         position: relative;
-
     }
 
     .question {
         margin-bottom: 5px;
         display: flex;
-        
     }
-    .arrow{
+
+    .arrow {
         flex: 0 0 auto;
+        cursor: pointer;
     }
 
     .questionText {
@@ -76,7 +85,7 @@ export const FaqTag = styled.section`
         align-items: center;
         position: relative;
         cursor: pointer;
-        
+
     }
 
     .accordionWrapper {
@@ -97,8 +106,8 @@ export const FaqTag = styled.section`
 
         grid-column: 1 / 2;
         margin-right: 25px;
-        
-        .answer{
+
+        .answer {
             text-align: right;
         }
 
@@ -253,7 +262,6 @@ export const FaqTag = styled.section`
             line-height: 96px;
         }
 
-        
 
         .answer {
             font-size: 16px;
@@ -267,6 +275,7 @@ export const FaqTag = styled.section`
     @media (max-width: 920px) {
         .accordionWrapper:nth-child(odd) {
         }
+
         .questionText {
             font-size: 16px;
             line-height: 19px;
@@ -275,33 +284,40 @@ export const FaqTag = styled.section`
     //@media(max-width: 767px){
     @media (max-width: 700px) {
         padding: 54px 0 80px;
-        
+
         .accordionWrapper:nth-child(odd) {
             .questionText {
                 padding: 0 0 0 0;
             }
-            .answer{
+
+            .answer {
                 text-align: left;
             }
-            .questionText::before{
+
+            .questionText::before {
                 content: none;
             }
         }
-        .questionText{
+
+        .questionText {
             padding-right: 10px !important;
         }
-        .answerActive{
+
+        .answerActive {
             margin-bottom: 10px;
         }
+
         .accordionWrapper:nth-child(even) {
             .questionText {
                 padding: 0 0 0 0;
             }
         }
-        .question{
+
+        .question {
             flex-direction: row !important;
             justify-content: flex-start !important;
         }
+
         .title {
             font-size: 60px;
             line-height: 72px;
@@ -327,7 +343,6 @@ export const FaqTag = styled.section`
             position: relative;
             margin-left: 12px;
         }
-
 
 
         .accordionWrapper:nth-child(n) {

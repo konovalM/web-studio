@@ -5,11 +5,16 @@ import App from './App';
 import {BrowserRouter} from "react-router-dom";
 import ScrollToTop from "./utils/ScrollToTop";
 import 'aos/dist/aos.css'
+import {Provider} from "react-redux";
+import {store} from "./store";
+// import Modal from "./components/Modal/Modal";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
-        <ScrollToTop/>
-        <App />
-    </BrowserRouter>
+    <Provider store={store}>
+        <BrowserRouter>
+            <ScrollToTop/>
+            <App/>
+        </BrowserRouter>
+    </Provider>
 );

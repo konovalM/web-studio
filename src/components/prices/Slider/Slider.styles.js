@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import slideImg from "../../../images/slideImg.jpg";
 
 export const SliderTag = styled.div`
     margin-top: 90px;
+
     .navigateButtons {
         display: flex;
         justify-content: center;
@@ -26,47 +26,51 @@ export const SliderTag = styled.div`
         gap: 10px;
     }
 
-    .slideInner {
-        background: url(${slideImg}) center center/cover no-repeat;
-        display: flex;
-        height: 100%;
-        flex-direction: column;
-        justify-content: flex-end;
+    .caseImg {
+        width: 100%;
+        height: 87%;
+        object-fit: cover;
     }
-    .slideInner + .slideInner{
-        margin-top: 10px;
+
+    .slideImgWrapper:nth-child(even) {
         transform: translateX(-40px);
     }
 
     .slideImgWrapper {
+        display: flex;
+        flex-direction: column;
         width: 100%;
+        height: 230px;
+        max-height: 230px;
+        justify-content: space-between;
+
     }
 
     .sliderInnerText {
-        max-width: 100%;
-        height: 33px;
+        padding: 5px 10px;
         display: flex;
         align-items: center;
-        padding-left: 10px;
         background-color: #fff;
         font-size: 18px;
         line-height: 21px;
+        flex: 0 0 auto;
     }
 
     .sliderContainer {
         max-width: 1920px;
         margin: 0 auto;
     }
-    .slideFlexWrapper{
+
+    .slideFlexWrapper {
         display: flex;
         flex-direction: column;
+        row-gap: 10px;
         height: 100%;
     }
-    
+
     // SWIPER
-    
-    .swiper{
-        height: 472px;
+
+    .swiper {
         display: flex;
         flex-direction: column-reverse;
         position: relative;
@@ -97,22 +101,33 @@ export const SliderTag = styled.div`
             height: auto;
             padding: 2px 0 3px 4px;
         }
+
+        .caseImg {
+            height: 89%;
+        }
     }
-    @media screen and (max-width: 520px) {
-        .sliderWrapper {
-            max-width: 600px;
-            padding: 0 10px;
-            margin: 0 auto;
-            overflow: hidden;
-            grid-template-rows: 125px 125px 125px;
-            grid-template-columns: 140px;
-            grid-auto-columns: 140px;
+    @media screen and (max-width: 550px) {
+        .slideImgWrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 180px;
+            transform: none !important;
         }
 
         .sliderInnerText {
             font-size: 14px;
             line-height: 16px;
+        }
 
+        .sliderContainer {
+            padding: 0 10px;
+        }
+
+    }
+    @media screen and (max-width: 400px) {
+        .slideImgWrapper {
+            height: 140px;
         }
     }
 `

@@ -9,16 +9,14 @@ import Layout from "./Layout";
 
 const SeoPage = () => {
     return (
-        <div>
-            <Layout>
-                <Main/>
-                <Includes/>
-                <Stages/>
-                {/*<Cases/>*/}
-                <Prices/>
-                <Questions/>
-            </Layout>
-        </div>
+        <>
+            <Main/>
+            <Includes/>
+            <Stages/>
+            {/*<Cases/>*/}
+            <Prices/>
+            <Questions/>
+        </>
     );
 };
 

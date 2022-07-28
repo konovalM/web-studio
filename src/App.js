@@ -13,6 +13,7 @@ import ApplicationsPage from "./pages/ApplicationsPage";
 import ParserPage from "./pages/ParserPage";
 import SystemsPage from "./pages/SystemsPage";
 import AOS from "aos";
+import Layout from "./pages/Layout";
 
 function App() {
     useEffect(() => {
@@ -25,16 +26,18 @@ function App() {
         });
     }, [])
     return (
-        <Routes>
-            <Route path='/' element={<MainPage/>}/>
-            <Route path='context' element={<ContextPage/>}/>
-            <Route path='seo' element={<SeoPage/>}/>
-            <Route path='smm' element={<SmmPage/>}/>
-            <Route path='branding' element={<MarketingPage/>}/>
-            <Route path='apps' element={<ApplicationsPage/>}/>
-            <Route path='parser' element={<ParserPage/>}/>
-            <Route path='systems' element={<SystemsPage/>}/>
-        </Routes>
+        <Layout>
+            <Routes>
+                <Route path='/' element={<MainPage/>}/>
+                <Route path='context' element={<ContextPage/>}/>
+                <Route path='seo' element={<SeoPage/>}/>
+                <Route path='smm' element={<SmmPage/>}/>
+                <Route path='branding' element={<MarketingPage/>}/>
+                <Route path='apps' element={<ApplicationsPage/>}/>
+                <Route path='parser' element={<ParserPage/>}/>
+                <Route path='systems' element={<SystemsPage/>}/>
+            </Routes>
+        </Layout>
     );
 }
 

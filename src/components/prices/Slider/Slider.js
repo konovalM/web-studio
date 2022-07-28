@@ -1,25 +1,36 @@
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {SliderTag} from "./Slider.styles";
-import {SwiperSlide, Swiper, useSwiper} from "swiper/react";
-// Import Swiper styles
+import {SwiperSlide, Swiper} from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-// import required modules
-import { Pagination, Navigation } from "swiper";
 import SwiperButtonPrev from "./SwiperButtonPrev";
 import SwiperButtonNext from "./SwiperButtonNext";
+import {SliderMockData} from "./Slider.mock";
+import convertToSlide from "../../../utils/ConvertToSlide";
+import useWindowSize from "../../../hooks/useWindowSize";
+import {useDispatch} from "react-redux";
 
 
 const Slider = () => {
-    const swiper = useSwiper()
-    // console.log(swiper)
+    const dispatch = useDispatch()
+    const width = useWindowSize()
+    const [slidesPerView, setSlidesPerView] = useState(4)
+    useEffect(() => {
+        if (width >= 1100){
+            setSlidesPerView(4)
+        }
+        if (width < 1100){
+            setSlidesPerView(3)
+        }
+        if (width < 900){
+            setSlidesPerView(2)
+        }
+    }, [width])
     return (
         <SliderTag>
             <div className="sliderContainer">
 
                 <Swiper
-                    slidesPerView={4}
+                    slidesPerView={slidesPerView}
                     spaceBetween={10}
                     slidesPerGroup={1}
                     loop={true}
@@ -30,255 +41,50 @@ const Slider = () => {
                         <SwiperButtonPrev />
                         <SwiperButtonNext />
                     </div>
-                    <SwiperSlide>
-                        <div className='slideFlexWrapper'>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='slideFlexWrapper'>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='slideFlexWrapper'>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='slideFlexWrapper'>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='slideFlexWrapper'>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='slideFlexWrapper'>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='slideFlexWrapper'>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='slideFlexWrapper'>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='slideFlexWrapper'>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='slideFlexWrapper'>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='slideFlexWrapper'>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                            <div className="slideInner">
-                                <div className="slideImgWrapper">
-                                    <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                </Swiper>
-                {/*<div className="sliderWrapper">
-                    <Swiper
-                        slidesPerView={3}
-                        spaceBetween={30}
-                        slidesPerGroup={3}
-                        loop={true}
-                        loopFillGroupWithBlank={true}
-                        pagination={{
-                            clickable: true,
-                        }}
-                        navigation={true}
-                        modules={[Pagination, Navigation]}
-                        className="mySwiper"
-                    >
+                    {
+                        width < 800 ?
 
-                    </Swiper>
-                    <SwiperSlide>
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="slideInner">
-                            <div className="slideImgWrapper">
-                                <div className="sliderInnerText">Интернет-магазин кухонной мебели</div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                </div>*/}
+                        convertToSlide('mobile', SliderMockData)
+                            .map((item, index) => {
+                                return (
+                                    <SwiperSlide key={index}>
+                                        <div className='slideFlexWrapper'>
+                                            <div className="slideImgWrapper">
+                                                <img src={item.case1.img} alt="case" className='caseImg'/>
+                                                <div className="sliderInnerText">{item.case1.title}</div>
+                                            </div>
+                                            <div className="slideImgWrapper">
+                                                <img src={item.case2.img} alt="case" className='caseImg'/>
+                                                <div className="sliderInnerText">{item.case2.title}</div>
+                                            </div>
+                                            <div className="slideImgWrapper">
+                                                <img src={item.case3.img} alt="case" className='caseImg'/>
+                                                <div className="sliderInnerText">{item.case3.title}</div>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                )
+                            })
+                            :
+                        convertToSlide('desktop', SliderMockData)
+                            .map((item, index) => {
+                                return (
+                                    <SwiperSlide key={index}>
+                                        <div className='slideFlexWrapper'>
+                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_MODAL'})}>
+                                                <img src={item.case1.img} alt="case" className='caseImg'/>
+                                                <div className="sliderInnerText">{item.case1.title}</div>
+                                            </div>
+                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_MODAL'})}>
+                                                <img src={item.case2.img} alt="case" className='caseImg'/>
+                                                <div className="sliderInnerText">{item.case2.title}</div>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                )
+                            })
+                    }
+                </Swiper>
             </div>
         </SliderTag>
     );

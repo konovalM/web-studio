@@ -38,6 +38,7 @@ const Main = () => {
 
     return (
         <MainTag>
+
             <div className="scroll" onClick={() => scrollToElement('main-second')}>
                 <div className="scrollOutside">
                 </div>
@@ -61,7 +62,8 @@ const Main = () => {
                                 background: '#1E4FCD',
                                 color: '#fff',
                                 border: 'none'
-                            }, {background: '#fff', color: '#1a1a1a', border: '1px solid #1a1a1a'}]}/>
+                            }, {background: '#fff', color: '#1a1a1a', border: '1px solid #1a1a1a'}]}
+                            />
                         </div>
                         <div className="stacks">
                             <div className="stack programLang" data-aos='fade-down' >
