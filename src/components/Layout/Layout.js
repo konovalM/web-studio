@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from "../Modal/Modal";
-import ScrollLock from "react-scrolllock";
+import ScrollLock, {TouchScrollable} from "react-scrolllock";
 import {useSelector} from "react-redux";
 
 const Layout = ({children}) => {
@@ -8,9 +8,10 @@ const Layout = ({children}) => {
     return (
         <div style={{overflow: 'hidden'}}>
             <Modal />
-            <ScrollLock isActive={isModal}>
+            {/*<ScrollLock isActive={true} />*/}
+            <TouchScrollable>
                 {children}
-            </ScrollLock>
+            </TouchScrollable>
         </div>
     );
 };

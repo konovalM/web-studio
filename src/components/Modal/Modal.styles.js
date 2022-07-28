@@ -9,7 +9,7 @@ export const ModalTag = styled.div`
     min-height: 100vh;
     background-color: rgba(0, 0, 0, .3);
     padding: 40px;
-
+    overflow-y: auto;
     .content{
         position: absolute;
         left: 50%;
@@ -17,6 +17,6 @@ export const ModalTag = styled.div`
         top: 0;
         width: 90vw;
         height: 100vh;
-        overflow-y: auto;
+        
     }
 `
