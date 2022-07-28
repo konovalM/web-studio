@@ -4,10 +4,10 @@ import Modal from "../Modal/Modal";
 const Layout = ({children}) => {
 
     return (
-        <>
+        <div style={{overflow: 'hidden'}}>
             <Modal />
             {children}
-        </>
+        </div>
     );
 };
 
