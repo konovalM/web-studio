@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import Slider from "./Slider";
+import Slider from "./Slider/Slider";
 import {useEffect, useState, useRef} from "react";
 import Button from "../../elements/Button";
 import styles from './PricesComponent.module.css'
