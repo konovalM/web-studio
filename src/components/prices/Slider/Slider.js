@@ -49,15 +49,15 @@ const Slider = () => {
                                 return (
                                     <SwiperSlide key={index}>
                                         <div className='slideFlexWrapper'>
-                                            <div className="slideImgWrapper">
+                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_MODAL'})}>
                                                 <img src={item.case1.img} alt="case" className='caseImg'/>
                                                 <div className="sliderInnerText">{item.case1.title}</div>
                                             </div>
-                                            <div className="slideImgWrapper">
+                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_MODAL'})}>
                                                 <img src={item.case2.img} alt="case" className='caseImg'/>
                                                 <div className="sliderInnerText">{item.case2.title}</div>
                                             </div>
-                                            <div className="slideImgWrapper">
+                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_MODAL'})}>
                                                 <img src={item.case3.img} alt="case" className='caseImg'/>
                                                 <div className="sliderInnerText">{item.case3.title}</div>
                                             </div>
