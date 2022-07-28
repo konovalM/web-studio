@@ -387,9 +387,9 @@ const HeaderLaptop = () => {
     const toggleActiveClass = () => {
         setActive(!active)
         if (!active) {
-            document.getElementById('root').style.overflow = 'hidden'
+            document.querySelector('body').style.overflow = 'hidden'
         } else {
-            document.getElementById('root').style.overflow = 'none'
+            document.querySelector('body').style.overflow = 'none'
         }
     }
     return (
@@ -499,9 +499,9 @@ const HeaderMobile = () => {
     const toggleActiveClass = () => {
         setActive(!active)
         if (!active) {
-            document.getElementById('root').style.overflow = 'hidden'
+            document.querySelector('body').style.overflow = 'hidden'
         } else {
-            document.getElementById('root').style.overflow = 'none'
+            document.querySelector('body').style.overflow = 'none'
         }
     }
     return (
