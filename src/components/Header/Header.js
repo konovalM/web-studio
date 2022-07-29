@@ -389,8 +389,10 @@ const HeaderLaptop = () => {
         setActive(!active)
         if (!active) {
             document.querySelector('body').style.position = 'fixed'
+            document.querySelector('body').style.width = '100vw'
         } else {
             document.querySelector('body').style.position = 'static'
+            document.querySelector('body').style.width = 'auto'
         }
     }
     return (
@@ -501,8 +503,10 @@ const HeaderMobile = () => {
         setActive(!active)
         if (!active) {
             document.querySelector('body').style.position = 'fixed'
+            document.querySelector('body').style.width = '100vw'
         } else {
             document.querySelector('body').style.position = 'static'
+            document.querySelector('body').style.width = 'auto'
         }
     }
     return (
