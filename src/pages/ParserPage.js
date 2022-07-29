@@ -10,7 +10,6 @@ import Header from "../components/Header/Header";
 const ParserPage = () => {
     return (
         <>
-            <Header/>
             <Main/>
             <Includes/>
             <Stages/>

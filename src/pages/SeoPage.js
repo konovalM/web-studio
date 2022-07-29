@@ -11,7 +11,6 @@ import Header from "../components/Header/Header";
 const SeoPage = () => {
     return (
         <>
-            <Header/>
             <Main/>
             <Includes/>
             <Stages/>

@@ -11,7 +11,6 @@ import Header from "../components/Header/Header";
 const ApplicationsPage = () => {
     return (
         <>
-            <Header/>
             <Main/>
             <Includes/>
             <Stages/>

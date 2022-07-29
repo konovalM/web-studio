@@ -14,7 +14,6 @@ import ScrollLock from "react-scrolllock";
 const MainPage = () => {
     return (
         <>
-            <Header/>
             <Main/>
             <Reasons />
             <Stages />

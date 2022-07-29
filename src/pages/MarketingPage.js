@@ -11,7 +11,6 @@ import Header from "../components/Header/Header";
 const MarketingPage = () => {
     return (
         <>
-            <Header/>
             <Main/>
             <Includes/>
             <Stages/>
