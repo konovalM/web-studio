@@ -387,15 +387,14 @@ const HeaderLaptop = () => {
     }
     const toggleActiveClass = () => {
         setActive(!active)
-       /* if (!active) {
+        if (!active) {
             document.querySelector('body').style.position = 'fixed'
         } else {
             document.querySelector('body').style.position = 'static'
-        }*/
+        }
     }
     return (
         <Fragment>
-            <ScrollLock isActive={active}/>
             <header className={!active ? styles.header : `${styles.header} ${styles.headerActive}`}>
                 <div className="container">
                     <div className={!active ? styles.wrapper : styles.wrapper + ' ' + styles.wrapperActive}>
@@ -500,15 +499,14 @@ const HeaderMobile = () => {
     }
     const toggleActiveClass = () => {
         setActive(!active)
-        /*if (!active) {
+        if (!active) {
             document.querySelector('body').style.position = 'fixed'
         } else {
             document.querySelector('body').style.position = 'static'
-        }*/
+        }
     }
     return (
         <Fragment>
-            <ScrollLock isActive={active}/>
             <header className={!active ? styles.header : `${styles.header} ${styles.headerActive}`}>
                 <div className="container">
                     <div className={!active ? styles.wrapper : styles.wrapper + ' ' + styles.wrapperActive}>
