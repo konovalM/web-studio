@@ -16,9 +16,7 @@ import TgIcon from "../../images/icons/TgIcon";
 import VkIcon from "../../images/icons/VkIcon";
 import WhatsAppIcon from "../../images/icons/WhatsAppIcon";
 import MessagesIcon from "../../images/icons/MessagesIcon";
-import cn from "classnames";
 import LinkTo from "../Navigation/LinkTo";
-import ScrollLock from "react-scrolllock";
 import {useDispatch} from "react-redux";
 
 const HeaderTag = styled.header`
@@ -380,15 +378,16 @@ const HeaderDesktop = () => {
 };
 
 
-const HeaderLaptop = () => {
-    const [active, setActive] = useState(false)
+const HeaderLaptop = ({isMenu}) => {
+    // const [active, setActive] = useState(false)
+    const dispatch = useDispatch()
     const [langActive, setLangActive] = useState(false)
     const changeLangActive = () => {
         setLangActive(!langActive)
     }
     const toggleActiveClass = () => {
-        setActive(!active)
-        if (!active) {
+        dispatch({type: 'TOGGLE_MENU', payload: !isMenu})
+        if (!isMenu) {
             document.querySelector('body').style.position = 'fixed'
             document.querySelector('body').style.width = '100vw'
         } else {
@@ -398,15 +397,15 @@ const HeaderLaptop = () => {
     }
     return (
         <Fragment>
-            <header className={!active ? styles.header : `${styles.header} ${styles.headerActive}`}>
+            <header className={!isMenu ? styles.header : `${styles.header} ${styles.headerActive}`}>
                 <div className="container">
-                    <div className={!active ? styles.wrapper : styles.wrapper + ' ' + styles.wrapperActive}>
+                    <div className={!isMenu ? styles.wrapper : styles.wrapper + ' ' + styles.wrapperActive}>
                         <Link to="/">
                             <img src={logoMobile} alt="" className={styles.logoImg}/>
                         </Link>
                         <div className={styles.list}>
                             <div
-                                className={!active ? `${styles.listItem} ${styles.main}` : `${styles.listItem} ${styles.main} ${styles.mainActive}`}>
+                                className={!isMenu ? `${styles.listItem} ${styles.main}` : `${styles.listItem} ${styles.main} ${styles.mainActive}`}>
                                 <Link to="/" className={styles.itemLink}>Сайты</Link>
                             </div>
                             <div className={styles.listItem}>
@@ -416,7 +415,7 @@ const HeaderLaptop = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={!active ? styles.socials : styles.socials + ' ' + styles.socialsWhite}>
+                        <div className={!isMenu ? styles.socials : styles.socials + ' ' + styles.socialsWhite}>
                             <div className={styles.social}>
                                 <a href="#">
                                     <TgIcon/>
@@ -443,17 +442,17 @@ const HeaderLaptop = () => {
                         </div>
                         <div className={styles.burger} onClick={() => toggleActiveClass()}>
                             <span
-                                className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                                className={!isMenu ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
                             <span
-                                className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                                className={!isMenu ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
                             <span
-                                className={!active ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
+                                className={!isMenu ? styles.burgerElement : styles.burgerElement + ' ' + styles.burgerElementActive}></span>
                         </div>
                     </div>
                 </div>
             </header>
-            <div className={!active ? styles.menu : styles.menu + ' ' + styles.menuActive}>
-                <div className={!active ? styles.menuInner : styles.menuInner}>
+            <div className={!isMenu ? styles.menu : styles.menu + ' ' + styles.menuActive}>
+                <div className={!isMenu ? styles.menuInner : styles.menuInner}>
                     <div className="container">
                         <div className={styles.menuWrapper}>
                             <div>
@@ -495,7 +494,6 @@ const HeaderLaptop = () => {
 };
 
 const HeaderMobile = ({isMenu}) => {
-    // const [active, setActive] = useState(false)
     const [langActive, setLangActive] = useState(false)
     const dispatch = useDispatch()
     const changeLangActive = () => {
@@ -503,7 +501,6 @@ const HeaderMobile = ({isMenu}) => {
     }
     const toggleActiveClass = () => {
         dispatch({type: 'TOGGLE_MENU', payload: !isMenu})
-        // setActive(!active)
         if (!isMenu) {
             document.querySelector('body').style.position = 'fixed'
             document.querySelector('body').style.width = '100vw'

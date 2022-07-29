@@ -5,10 +5,14 @@
     background-image: url('../../../images/bg.png');
     background-position: center -100px;
     background-repeat: repeat;
+    overflow: hidden;
 }
 .wrapper{
     display: flex;
     justify-content: flex-start;
+}
+.left{
+    margin-right: 25px;
 }
 .right{
     flex: 0 1 auto;
@@ -79,9 +83,7 @@
     color: #FFFFFF;
     position: relative;
 }
-.image{
-    margin-top: -40px;
-}
+
 
 
 .scroll{
@@ -145,12 +147,55 @@
     z-index: -1;
 }
 
+/* ANIMATION */
+
+@keyframes squareRotate {
+    100%{
+        transform: rotate(180deg);
+    }
+    /*100%{
+        transform: rotate(360deg);
+    }*/
+
+}
+
+.animWrapper{
+    position: relative;
+}
+.seoWrapper > span{
+    font-family: 'Russo One';
+    font-weight: 400;
+    font-size: 172px;
+    line-height: 75%;
+    display: block;
+    color: #1A1A1A;
+}
+.blue{
+    color: #1E4FCD !important;
+}
+.image{
+    position: absolute;
+    left: -20px;
+    top: -70px;
+    z-index: 3;
+    animation: squareRotate 2s ease-in-out infinite;
+}
+.zMore{
+    z-index: 5;
+    position: relative;
+}
+
+
 /* ADAPTIVE */
 @media (max-width: 1110px){
     .image{
         width: 350px;
     }
+    .seoWrapper > span{
+        font-size: 162px;
+    }
 }
+
 @media (max-width: 1024px){
     .main{
         height: 585px;
@@ -165,6 +210,10 @@
     }
     .image{
         width: 261px;
+        top: -105px;
+    }
+    .seoWrapper > span{
+        font-size: 115px;
     }
     .title{
         font-size: 18px;
@@ -193,6 +242,11 @@
     .image{
         width: 150px;
         margin: 0 0 30px;
+        top: -141px;
+        left: -8px;
+    }
+    .seoWrapper > span{
+        font-size: 70px;
     }
     .subtitle{
         font-size: 38px;
@@ -206,6 +260,7 @@
     }
     .left{
         align-self: baseline;
+        margin-top: 26px;
     }
     .consultation{
         width: 209px;
@@ -230,5 +285,10 @@
 @media (max-width: 450px){
     .image{
         width: 116px;
+        top: -153px;
+        left: -3px;
+    }
+    .seoWrapper > span{
+        font-size: 53px;
     }
 }

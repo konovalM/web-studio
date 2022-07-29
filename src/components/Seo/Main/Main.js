@@ -3,6 +3,8 @@ import styles from './Main.module.css'
 import Button from "../../../elements/Button";
 import image from "../../../images/seoPage/seoMain.svg";
 import {scrollToElement} from "../../../utils/scrollToElement";
+import cn from 'classnames'
+import {SeoSvgIcon} from "../../../icons/components/SeoSvgIcon";
 
 const Main = () => {
     return (
@@ -32,7 +34,13 @@ const Main = () => {
                         </div>
                     </div>
                     <div className={styles.right}>
-                        <img src={image} alt="seo" className={styles.image}/>
+                        <div className={styles.animWrapper}>
+                            <div className={styles.seoWrapper}>
+                                <span className={cn(styles.black, styles.zLess)}>SEO</span>
+                                <span className={cn(styles.blue, styles.zLess)}>S<span className={styles.zMore}>EO</span></span>
+                            </div>
+                            <SeoSvgIcon className={styles.image}/>
+                        </div>
                     </div>
                 </div>
             </div>

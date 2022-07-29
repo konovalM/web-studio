@@ -15,11 +15,10 @@ export const ModalTag = styled.div`
         left: 50%;
         transform: translateX(-50%);
         top: 0;
-        width: 90vw;
         height: 100vh;
         img{
             margin: 0 auto;
-
+            max-width: 90vw;
         }
     }
 `
