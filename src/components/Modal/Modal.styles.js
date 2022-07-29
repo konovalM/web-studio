@@ -17,6 +17,9 @@ export const ModalTag = styled.div`
         top: 0;
         width: 90vw;
         height: 100vh;
-        
+        img{
+            margin: 0 auto;
+
+        }
     }
 `

@@ -387,9 +387,9 @@ const HeaderLaptop = () => {
     const toggleActiveClass = () => {
         setActive(!active)
         if (!active) {
-            document.querySelector('body').style.overflow = 'hidden'
+            document.querySelector('body').style.position = 'fixed'
         } else {
-            document.querySelector('body').style.overflow = 'none'
+            document.querySelector('body').style.position = 'static'
         }
     }
     return (
@@ -501,7 +501,7 @@ const HeaderMobile = () => {
         if (!active) {
             document.querySelector('body').style.position = 'fixed'
         } else {
-            document.querySelector('body').style.position = ''
+            document.querySelector('body').style.position = 'static'
         }
     }
     return (
