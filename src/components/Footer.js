@@ -152,7 +152,9 @@ const Footer = () => {
                             </Link>
                         </div>
                         <div className="service">
-                            <a href="#" className="serviceLink">Политика<br/>конфиденциальности</a>
+                            <Link to='/policy' className='serviceLink'>
+                                Политика<br/>конфиденциальности
+                            </Link>
                         </div>
                     </div>
                     <div className="services">
@@ -177,13 +179,8 @@ const Footer = () => {
                             </Link>
                         </div>
                         <div className="service">
-                            <Link to='/' className="serviceLink">
-                                Работа с репутацией
-                            </Link>
-                        </div>
-                        <div className="service">
                             <Link to='/branding' className="serviceLink">
-                                Брендинг
+                                Брендинг и репутация
                             </Link>
                         </div>
                     </div>

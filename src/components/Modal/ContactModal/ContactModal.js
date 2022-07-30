@@ -1,0 +1,35 @@
+import React, {useEffect, useReducer} from 'react';
+import {ModalTag} from "./Modal.styles";
+import {useDispatch, useSelector} from "react-redux";
+import Form from "../../Main/Form/Form";
+
+const ContactModal = () => {
+    const isModal = useSelector((state) => state.contactModal.isModal)
+    const dispatch = useDispatch()
+    useEffect(() => {
+        if (isModal){
+            document.querySelector('body').style.overflow = 'hidden'
+        } else document.querySelector('body').style.overflow = 'visible'
+    })
+    return (
+        <>
+            {
+                isModal &&
+                <ModalTag onClick={(e) => e.currentTarget === e.target && dispatch({type: 'CLOSE_MODAL'})}>
+                    <div className="contentWrapper">
+                        <h3 className="title">
+                            Остались вопросы?
+                        </h3>
+                        <p className="subtitle">
+                            Пишите или звоните. Отвечаем круглосуточно.
+                        </p>
+                        <Form />
+                    </div>
+                </ModalTag>
+            }
+        </>
+
+    );
+};
+
+export default ContactModal;

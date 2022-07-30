@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
 import {ModalTag} from "./Modal.styles";
 import {useDispatch, useSelector} from "react-redux";
-import case1 from '../../images/cases/case.jpg'
+import case1 from '../../../images/cases/case.jpg'
 
-export const Modal = () => {
-    const isModal = useSelector((state) => state.modal.isModal)
+export const CaseModal = () => {
+    const isModal = useSelector((state) => state.caseModal.isModal)
     const dispatch = useDispatch()
     useEffect(() => {
         if (isModal){
@@ -15,7 +15,7 @@ export const Modal = () => {
         <>
             {
                 isModal &&
-                <ModalTag onClick={(e) => e.currentTarget === e.target && dispatch({type: 'CLOSE_MODAL'})}>
+                <ModalTag onClick={(e) => e.currentTarget === e.target && dispatch({type: 'CLOSE_CASE'})}>
                     <div className='content'>
                         <img src={case1} alt="case"/>
                     </div>
@@ -26,4 +26,4 @@ export const Modal = () => {
 };
 
 // dispatch({type: 'CLOSE_MODAL'})
-export default Modal;
+export default CaseModal;

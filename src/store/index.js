@@ -1,10 +1,12 @@
 import {combineReducers, createStore} from "redux";
-import modal from "./modalReducer";
+import caseModal from "./caseModalReducer";
+import contactModal from './contactModalReducer'
 import menu from './menuReducer'
 
 
 const rootReducer = combineReducers({
-    modal,
+    caseModal,
+    contactModal,
     menu
 })
 

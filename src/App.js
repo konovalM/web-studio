@@ -14,6 +14,7 @@ import ParserPage from "./pages/ParserPage";
 import SystemsPage from "./pages/SystemsPage";
 import AOS from "aos";
 import Layout from "./pages/Layout";
+import PolicyPage from "./pages/PolicyPage";
 
 function App() {
     useEffect(() => {
@@ -36,6 +37,7 @@ function App() {
                 <Route path='apps' element={<ApplicationsPage/>}/>
                 <Route path='parser' element={<ParserPage/>}/>
                 <Route path='systems' element={<SystemsPage/>}/>
+                <Route path='policy' element={<PolicyPage/>}/>
             </Routes>
         </Layout>
     );

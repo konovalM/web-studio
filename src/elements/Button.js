@@ -1,9 +1,11 @@
 import React, {Fragment, useState, useEffect, useRef} from 'react';
 import useWindowSize from "../hooks/useWindowSize";
 import styles from './Button.module.css'
+import {useDispatch} from "react-redux";
 
 
 const Button = ({ btnStyles, btnColor }) => {
+    const dispatch = useDispatch()
     let element1 = useRef()
     let element2 = useRef()
     let btn = useRef()
@@ -54,7 +56,7 @@ const Button = ({ btnStyles, btnColor }) => {
     }, [width])
     return (
         <Fragment>
-            <button className={styles.consultation} ref={btn}>
+            <button className={styles.consultation} ref={btn} onClick={() => dispatch({type: 'OPEN_MODAL'})}>
                 Получить консультацию
             </button>
             <div className={styles.points} ref={parent}>

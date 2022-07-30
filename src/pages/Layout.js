@@ -1,7 +1,8 @@
 import React, {useEffect} from 'react';
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer";
-import Modal from "../components/Modal/Modal";
+import CaseModal from "../components/Modal/CaseModal/CaseModal";
+import ContactModal from "../components/Modal/ContactModal/ContactModal";
 import {useDispatch, useSelector} from "react-redux";
 import {useLocation} from "react-router-dom";
 
@@ -19,7 +20,8 @@ const Layout = ({children}) => {
     return (
         <>
             <Header isMenu={isMenu}/>
-            <Modal />
+            <CaseModal />
+            <ContactModal />
             <div style={{height: '63px'}}></div>
             {children}
             <Footer/>

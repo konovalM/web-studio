@@ -3,7 +3,7 @@ const defaultState = {
 }
 
 
-export default function modalReducer(state = defaultState, action) {
+export default function caseModalReducer(state = defaultState, action) {
     switch (action.type) {
         case 'OPEN_MODAL':
             return {...state, isModal: true}
