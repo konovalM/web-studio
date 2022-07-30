@@ -20,7 +20,7 @@ export const ModalTag = styled.div`
         max-width: 1200px;
     }
     .content{
-        text-align: center;
+        position: relative;
         background-color: #FFFFFF;
         padding: 50px 20px;
         flex-basis: 100%;
@@ -33,6 +33,7 @@ export const ModalTag = styled.div`
         text-align: center;
         color: ${BLACK_MAIN};
         margin-bottom: 22px;
+        padding: 0 40px;
     }
     .subtitle{
         font-size: 18px;
@@ -40,6 +41,11 @@ export const ModalTag = styled.div`
         text-align: center;
         color: ${BLACK_MAIN};
         margin-bottom: 65px;
+    }
+    .close{
+        position: absolute;
+        right: 30px;
+        top: 30px;
     }
     @media screen and (max-width: 550px){
         .content{
@@ -52,6 +58,11 @@ export const ModalTag = styled.div`
         .subtitle{
             font-size: 16px;
             line-height: 19px;
+        }
+        .close{
+            width: 20px;
+            right: 15px;
+            top: 15px;
         }
     }
 `
