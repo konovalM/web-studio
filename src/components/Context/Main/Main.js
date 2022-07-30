@@ -3,6 +3,7 @@ import styles from './Main.module.css'
 import Button from "../../../elements/Button";
 import image from '../../../images/contextPage/googleYandex.svg'
 import {scrollToElement} from "../../../utils/scrollToElement";
+import ContextAnimation from "../../../animations/ContextAnimation/ContextAnimation";
 
 const Main = () => {
     return (
@@ -32,7 +33,8 @@ const Main = () => {
                         </div>
                     </div>
                     <div className={styles.right}>
-                        <img src={image} alt="Google & Yandex" className={styles.image}/>
+                        <ContextAnimation />
+                        {/*<img src={image} alt="Google & Yandex" className={styles.image}/>*/}
                     </div>
                 </div>
             </div>

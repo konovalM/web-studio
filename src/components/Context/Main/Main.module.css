@@ -179,7 +179,7 @@
         line-height: 27px;
     }
 }
-@media (max-width: 650px){
+@media (max-width: 700px){
     .main{
         padding-top: 46px;
         height: 600px;
