@@ -17,13 +17,15 @@ const ContactModal = () => {
                 isModal &&
                 <ModalTag onClick={(e) => e.currentTarget === e.target && dispatch({type: 'CLOSE_MODAL'})}>
                     <div className="contentWrapper">
-                        <h3 className="title">
-                            Остались вопросы?
-                        </h3>
-                        <p className="subtitle">
-                            Пишите или звоните. Отвечаем круглосуточно.
-                        </p>
-                        <Form />
+                        <div className="content">
+                            <h3 className="title">
+                                Остались вопросы?
+                            </h3>
+                            <p className="subtitle">
+                                Пишите или звоните. Отвечаем круглосуточно.
+                            </p>
+                            <Form />
+                        </div>
                     </div>
                 </ModalTag>
             }

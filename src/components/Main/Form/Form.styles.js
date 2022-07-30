@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const FormTag = styled.div`
+    padding: 0;
     .formWrapper{
         width: 750px;
         background-color: #1A1A1A;
@@ -142,7 +143,6 @@ export const FormTag = styled.div`
 
     // ADAPTIVE
     @media (max-width: 991px){
-        padding: 80px 0;
         .title{
             font-size: 80px;
             line-height: 100%;
@@ -169,7 +169,6 @@ export const FormTag = styled.div`
         }
     }
     @media (max-width: 767px){
-        padding: 54px 0 80px;
         .title{
             font-size: 45px;
             line-height: 100%;

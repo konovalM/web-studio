@@ -2,20 +2,25 @@ import styled from 'styled-components'
 import {BLACK_MAIN} from "../../../theme/colors/colors.constants";
 
 export const ModalTag = styled.div`
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: 1100000;
     position: fixed;
     left: 0;
     top: 0;
     background-color: rgba(0, 0, 0, .3);
-    overflow-y: auto;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
+    overflow: auto;
+    padding: 10px 20px;
     .contentWrapper{
+        min-height: calc(100% - 3.5rem);
+        margin: 1.75rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         max-width: 1200px;
-        margin: 0 auto;
+    }
+    .content{
+        text-align: center;
         background-color: #FFFFFF;
         padding: 50px 20px;
         flex-basis: 100%;
@@ -35,5 +40,18 @@ export const ModalTag = styled.div`
         text-align: center;
         color: ${BLACK_MAIN};
         margin-bottom: 65px;
+    }
+    @media screen and (max-width: 550px){
+        .content{
+            padding: 36px 20px;
+        }
+        .title{
+            font-size: 45px;
+            line-height: 100%;
+        }
+        .subtitle{
+            font-size: 16px;
+            line-height: 19px;
+        }
     }
 `
