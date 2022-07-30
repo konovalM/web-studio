@@ -46,6 +46,7 @@ export const ModalTag = styled.div`
         position: absolute;
         right: 30px;
         top: 30px;
+        cursor: pointer;
     }
     @media screen and (max-width: 550px){
         .content{

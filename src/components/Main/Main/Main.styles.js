@@ -236,6 +236,7 @@ export const MainTag = styled.section`
         transform: translateX(-50%);
         overflow: hidden;
         z-index: 100;
+        cursor: pointer;
     }
 
     .scrollOutside {

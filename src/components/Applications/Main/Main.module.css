@@ -46,6 +46,7 @@
 
 
 .scroll{
+    cursor: pointer;
     position: absolute;
     height: 60px;
     width: 21px;
