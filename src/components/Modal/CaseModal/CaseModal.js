@@ -21,10 +21,10 @@ export const CaseModal = () => {
                     <div className='content'>
                         <img src={cases[activeCase]} alt="case"/>
                     </div>
-                    <button className="prev btn">
+                    <button className="prev btn" onClick={() => dispatch({type: 'PREV_CASE'})}>
                         <img src={prevArrow} alt="prevCase"/>
                     </button>
-                    <button className="next btn">
+                    <button className="next btn" onClick={() => dispatch({type: 'NEXT_CASE'})}>
                         <img src={nextArrow} alt="nextCase"/>
                     </button>
                     <button className="close" onClick={() => dispatch({type: 'CLOSE_CASE'})}>
