@@ -69,6 +69,7 @@ export const ModalTag = styled.div`
                 width: 80%;
             }
         }
+        
     }
     @media screen and (max-width: 550px){
         .content{
@@ -89,11 +90,16 @@ export const ModalTag = styled.div`
         .btn {
             width: 29px;
             height: 29px;
-            right: 15px;
             padding: 0;
             img{
                 width: 19px;
             }
+        }
+        .prev{
+            left: 15px;
+        }
+        .next{
+            right: 15px;
         }
     }
 `
