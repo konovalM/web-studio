@@ -1,14 +1,12 @@
 import React, {useEffect} from 'react';
 import {ModalTag} from "./Modal.styles";
 import {useDispatch, useSelector} from "react-redux";
-import case1 from '../../../images/cases/case.jpg'
 import prevArrow from '../../../images/modal/prev.svg'
 import nextArrow from '../../../images/modal/next.svg'
-import close from '../../../images/modal/close.svg'
 import {CloseSvgIcon} from "../../../icons/components/CloseSvgIcon";
 
 export const CaseModal = () => {
-    const isModal = useSelector((state) => state.caseModal.isModal)
+    const {isModal, activeCase, cases} = useSelector((state) => state.caseModal)
     const dispatch = useDispatch()
     useEffect(() => {
         if (isModal){
@@ -21,7 +19,7 @@ export const CaseModal = () => {
                 isModal &&
                 <ModalTag onClick={(e) => e.currentTarget === e.target && dispatch({type: 'CLOSE_CASE'})}>
                     <div className='content'>
-                        <img src={case1} alt="case"/>
+                        <img src={cases[activeCase]} alt="case"/>
                     </div>
                     <button className="prev btn">
                         <img src={prevArrow} alt="prevCase"/>

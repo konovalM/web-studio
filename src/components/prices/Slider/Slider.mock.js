@@ -57,5 +57,10 @@ export const SliderMockData = [
         title: 'Интернет-магазин кухонной мебели',
         img: slideImg,
     },
+    {
+        id: 12,
+        title: 'Интернет-магазин кухонной мебели',
+        img: slideImg,
+    },
 
 ]

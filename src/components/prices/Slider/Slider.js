@@ -49,15 +49,15 @@ const Slider = () => {
                                 return (
                                     <SwiperSlide key={index}>
                                         <div className='slideFlexWrapper'>
-                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_CASE'})}>
+                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_CASE', payload: index * 3})}>
                                                 <img src={item.case1.img} alt="case" className='caseImg'/>
                                                 <div className="sliderInnerText">{item.case1.title}</div>
                                             </div>
-                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_CASE'})}>
+                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_CASE', payload: index * 3 + 1})}>
                                                 <img src={item.case2.img} alt="case" className='caseImg'/>
                                                 <div className="sliderInnerText">{item.case2.title}</div>
                                             </div>
-                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_CASE'})}>
+                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_CASE', payload: index * 3 + 2})}>
                                                 <img src={item.case3.img} alt="case" className='caseImg'/>
                                                 <div className="sliderInnerText">{item.case3.title}</div>
                                             </div>
@@ -68,14 +68,15 @@ const Slider = () => {
                             :
                         convertToSlide('desktop', SliderMockData)
                             .map((item, index) => {
+                                console.log(item, index)
                                 return (
                                     <SwiperSlide key={index}>
                                         <div className='slideFlexWrapper'>
-                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_CASE'})}>
+                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_CASE', payload: index * 2})}>
                                                 <img src={item.case1.img} alt="case" className='caseImg'/>
                                                 <div className="sliderInnerText">{item.case1.title}</div>
                                             </div>
-                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_CASE'})}>
+                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_CASE', payload: index * 2 + 1})}>
                                                 <img src={item.case2.img} alt="case" className='caseImg'/>
                                                 <div className="sliderInnerText">{item.case2.title}</div>
                                             </div>

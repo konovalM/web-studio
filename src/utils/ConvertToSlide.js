@@ -3,7 +3,7 @@ export default function convertToSlide(screen = 'desktop', data){
     let key = 1
     switch (screen) {
         case 'desktop':
-            for (let i = 0; i < Math.floor(data.length / 2); i++){
+            for (let i = 0; i < Math.ceil(data.length / 2); i++){
                 casesArray.push(
                     {
                         case1: {
@@ -21,7 +21,7 @@ export default function convertToSlide(screen = 'desktop', data){
                 casesArray
             )
         case 'mobile':
-            for (let i = 0; i < Math.floor(data.length / 3); i++){
+            for (let i = 0; i < Math.ceil(data.length / 3); i++){
                 casesArray.push(
                     {
                         case1: {
