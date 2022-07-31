@@ -90,6 +90,7 @@ export const ModalTag = styled.div`
             width: 29px;
             height: 29px;
             right: 15px;
+            padding: 0;
             img{
                 width: 19px;
             }
