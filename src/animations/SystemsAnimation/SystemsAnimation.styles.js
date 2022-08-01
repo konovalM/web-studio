@@ -76,12 +76,37 @@ const scroll = keyframes`
         top: -245px;
     }
 `
+const scroll1150 = keyframes`
+    from {
+        top: 0px;
+    }
+    to {
+        top: -180px;
+    }
+`
+
+const scroll850 = keyframes`
+    from {
+        top: 0px;
+    }
+    to {
+        top: -126px;
+    }
+`
+
+const scroll430 = keyframes`
+    from {
+        top: 0px;
+    }
+    to {
+        top: -108px;
+    }
+`
 
 export const SystemsAnimationTag = styled.div`
     overflow: hidden;
     width: 620px;
     height: 245px;
-
     .group1, .group2 {
         animation: ${scroll} 2s linear infinite;
         animation-delay: 2s;
@@ -160,12 +185,52 @@ export const SystemsAnimationTag = styled.div`
             
         .fifth {
             animation: ${fifth} 2s linear infinite;
-            animation-delay: 2s;
+            animation-delay: 2.15s;
         }
             
         .sixth {
             animation: ${sixth} 2s linear infinite;
-            animation-delay: 2s;
+            animation-delay: 2.25s;
+        }
+    }
+    
+    @media screen and (max-width: 1150px){
+        width: 441px;
+        height: 180px;
+        .group1, .group2 {
+            animation: ${scroll1150} 2s linear infinite;
+        }
+        .line{
+            font-size: 25px;
+            line-height: 30px;
+        }
+    }
+    @media screen and (max-width: 1000px){
+        margin-top: 30px;
+    }
+    @media screen and (max-width: 850px){
+        width: 335px;
+        height: 126px;
+        .group1, .group2 {
+            animation: ${scroll850} 2s linear infinite;
+        }
+        .line{
+            font-size: 19px;
+            line-height: 21px;
+        }
+    }
+    @media screen and (max-width: 850px){
+        margin: 0;
+    }
+    @media screen and (max-width: 430px){
+        width: 284px;
+        height: 108px;
+        .group1, .group2 {
+            animation: ${scroll430} 2s linear infinite;
+        }
+        .line{
+            font-size: 16px;
+            line-height: 18px;
         }
     }
 `
