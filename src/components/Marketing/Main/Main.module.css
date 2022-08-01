@@ -5,6 +5,7 @@
     background-image: url('../../../images/bg.png');
     background-position: center -100px;
     background-repeat: repeat;
+    overflow: hidden;
 }
 .wrapper{
     display: flex;
@@ -148,6 +149,7 @@
 @media (max-width: 1160px) {
     .image{
         width: 450px;
+        margin-top: -90px;
     }
 }
 @media (max-width: 1024px){
@@ -161,7 +163,7 @@
     }
     .image{
         width: 359px;
-        margin-top: -30px;
+        margin-top: -90px;
     }
     .right{
         flex: 0 0 auto;
@@ -191,6 +193,8 @@
     }
     .image{
         margin: 0;
+        height: 214px;
+        width: auto;
     }
     .left{
         align-self: baseline;
@@ -204,6 +208,7 @@
 @media (max-width: 550px) {
     .image{
         width: 214px;
+        height: 165px;
     }
     .title{
         font-size: 17px;
@@ -218,7 +223,7 @@
     .descr{
         font-size: 18px;
         line-height: 150%;
-        max-width: none;
+        max-width: 290px;
         margin-bottom: 35px;
     }
 

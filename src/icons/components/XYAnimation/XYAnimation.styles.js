@@ -33,6 +33,7 @@ export const rotate2 = keyframes`
 `
 
 export const XYTag = styled.div`
+    overflow: hidden;
     .firstMask {
         animation: ${rotate1} 5s linear infinite;
     }
