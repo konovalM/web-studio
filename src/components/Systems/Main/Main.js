@@ -4,6 +4,7 @@ import Button from "../../../elements/Button";
 import image from '../../../images/systemsPage/main.svg'
 import styled from 'styled-components'
 import {scrollToElement} from "../../../utils/scrollToElement";
+import SystemsAnimation from "../../../animations/SystemsAnimation/SystemsAnimation";
 
 const ButtonWrapperTag= styled.div`
     .btnWrapper{
@@ -49,7 +50,8 @@ const Main = () => {
                         </ButtonWrapperTag>
                     </div>
                     <div className={styles.right}>
-                        <img src={image} alt="animation" className={styles.image}/>
+                        <SystemsAnimation />
+                        {/*<img src={image} alt="animation" className={styles.image}/>*/}
                     </div>
                 </div>
             </div>
