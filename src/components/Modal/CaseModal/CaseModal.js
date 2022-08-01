@@ -15,7 +15,9 @@ export const CaseModal = () => {
         } else document.querySelector('body').style.overflow = 'visible'
     })
     useEffect(() => {
-        ref.current.scrollTop = 0
+        if (isModal){
+            ref.current.scrollTop = 0
+        }
     }, [activeCase])
     return (
         <>
