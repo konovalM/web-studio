@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {ModalTag} from "./Modal.styles";
 import {useDispatch, useSelector} from "react-redux";
 import prevArrow from '../../../images/modal/prev.svg'
@@ -6,6 +6,7 @@ import nextArrow from '../../../images/modal/next.svg'
 import {CloseSvgIcon} from "../../../icons/components/CloseSvgIcon";
 
 export const CaseModal = () => {
+    const ref = useRef()
     const {isModal, activeCase, cases} = useSelector((state) => state.caseModal)
     const dispatch = useDispatch()
     useEffect(() => {
@@ -13,11 +14,14 @@ export const CaseModal = () => {
             document.querySelector('body').style.overflow = 'hidden'
         } else document.querySelector('body').style.overflow = 'visible'
     })
+    useEffect(() => {
+        ref.current.scrollTop = 0
+    }, [activeCase])
     return (
         <>
             {
                 isModal &&
-                <ModalTag onClick={(e) => e.currentTarget === e.target && dispatch({type: 'CLOSE_CASE'})}>
+                <ModalTag ref={ref} onClick={(e) => e.currentTarget === e.target && dispatch({type: 'CLOSE_CASE'})}>
                     <div className='content'>
                         <img src={cases[activeCase]} alt="case"/>
                     </div>

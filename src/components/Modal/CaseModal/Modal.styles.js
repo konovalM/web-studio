@@ -11,22 +11,25 @@ export const ModalTag = styled.div`
     background-color: rgba(0, 0, 0, .6);
     padding: 40px;
     overflow-y: auto;
+
     ::-webkit-scrollbar {
         width: 0;
-        
     }
-    .content{
+
+    .content {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
         top: 0;
         height: 100vh;
-        img{
+
+        img {
             margin: 0 auto;
             max-width: 90vw;
         }
     }
-    .btn{
+
+    .btn {
         width: 76px;
         height: 76px;
         background-color: ${BLUE_MAIN};
@@ -39,66 +42,77 @@ export const ModalTag = styled.div`
         align-items: center;
         justify-content: center;
     }
-    .prev{
+
+    .prev {
         left: 32px;
     }
-    .next{
+
+    .next {
         right: 32px;
     }
-    .close{
+
+    .close {
         position: fixed;
         right: 53px;
         top: 60px;
         border: none;
         background-color: transparent;
     }
-    
-    @media screen and (max-width: 800px){
-        .close{
+
+    @media screen and (max-width: 800px) {
+        .close {
             right: 38px;
             top: 28px;
-            svg{
+
+            svg {
                 width: 28px;
-                height: 28px;  
+                height: 28px;
             }
         }
+
         .btn {
             width: 53px;
             height: 53px;
-            img{
+
+            img {
                 width: 80%;
             }
         }
-        
+
     }
-    @media screen and (max-width: 550px){
-        .content{
-            img{
+    @media screen and (max-width: 550px) {
+        .content {
+            img {
                 max-width: 100vw;
             }
         }
-        .close{
+
+        .close {
             right: 19px;
             top: 21px;
             padding: 0;
 
-            svg{
+            svg {
                 width: 20px;
                 height: 20px;
             }
         }
+
         .btn {
             width: 29px;
             height: 29px;
             padding: 0;
-            img{
+
+            img {
                 width: 19px;
             }
         }
-        .prev{
+
+        .prev {
             left: 15px;
         }
-        .next{
+
+        .next {
             right: 15px;
         }
     }

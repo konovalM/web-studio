@@ -34,20 +34,17 @@ const defaultState = {
 export default function caseModalReducer(state = defaultState, action) {
     switch (action.type) {
         case 'OPEN_CASE':
-            console.log(action.payload)
             return {...state, isModal: true, activeCase: action.payload}
         case 'CLOSE_CASE':
             return {...defaultState}
         case 'NEXT_CASE':
             const nextCount = (state.activeCase + 1) % state.cases.length
-            console.log(nextCount)
             return {...state, activeCase: nextCount}
         case 'PREV_CASE':
             let prevCount
             if (state.activeCase - 1 < 0){
                 prevCount = state.cases.length - 1
             } else prevCount = state.activeCase - 1
-            console.log(prevCount)
             return {...state, activeCase: prevCount}
     }
     return state

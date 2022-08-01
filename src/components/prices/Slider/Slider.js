@@ -68,7 +68,6 @@ const Slider = () => {
                             :
                         convertToSlide('desktop', SliderMockData)
                             .map((item, index) => {
-                                console.log(item, index)
                                 return (
                                     <SwiperSlide key={index}>
                                         <div className='slideFlexWrapper'>
