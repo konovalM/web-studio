@@ -199,6 +199,7 @@ export const SystemsAnimationTag = styled.div`
         height: 180px;
         .group1, .group2 {
             animation: ${scroll1150} 2s linear infinite;
+            animation-delay: 2s;
         }
         .line{
             font-size: 25px;
@@ -213,6 +214,7 @@ export const SystemsAnimationTag = styled.div`
         height: 126px;
         .group1, .group2 {
             animation: ${scroll850} 2s linear infinite;
+            animation-delay: 2s;
         }
         .line{
             font-size: 19px;
@@ -227,6 +229,7 @@ export const SystemsAnimationTag = styled.div`
         height: 108px;
         .group1, .group2 {
             animation: ${scroll430} 2s linear infinite;
+            animation-delay: 2s;
         }
         .line{
             font-size: 16px;
