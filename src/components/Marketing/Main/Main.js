@@ -1,9 +1,8 @@
 import React from 'react';
 import styles from './Main.module.css'
 import Button from "../../../elements/Button";
-import image from '../../../images/marketing/xy.svg'
-import styled from 'styled-components'
 import {scrollToElement} from "../../../utils/scrollToElement";
+import {XYSvgAnimation} from "../../../icons/components/XYAnimation/XYSvgAnimation";
 
 
 const Main = () => {
@@ -34,7 +33,7 @@ const Main = () => {
                         </div>
                     </div>
                     <div className={styles.right}>
-                        <img src={image} alt="xy" className={styles.image}/>
+                        <XYSvgAnimation className={styles.image}/>
                     </div>
                 </div>
             </div>

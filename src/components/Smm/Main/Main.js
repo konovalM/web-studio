@@ -3,6 +3,7 @@ import styles from "./Main.module.css";
 import Button from "../../../elements/Button";
 import image from '../../../images/smmPage/main.svg'
 import {scrollToElement} from "../../../utils/scrollToElement";
+import {SmmAnimation} from "../../../icons/components/SmmAnimation/SmmAnimation";
 
 const Main = () => {
     return (
@@ -32,7 +33,8 @@ const Main = () => {
                         </div>
                     </div>
                     <div className={styles.right}>
-                        <img src={image} alt="seo" className={styles.image}/>
+                        <SmmAnimation className={styles.image}/>
+                        {/*<img src={image} alt="seo" className={styles.image}/>*/}
                     </div>
                 </div>
             </div>
