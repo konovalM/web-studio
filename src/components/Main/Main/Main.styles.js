@@ -112,17 +112,20 @@ export const MainTag = styled.section`
     .bold {
         font-weight: 900;
     }
-    .stackItemActive{
-        animation-name: ${wave};
-        animation-duration: 1s;
-        animation-timing-function: linear;
-        animation-iteration-count: 1;
-    }
-    .frameworks .stackItemActive{
-        animation-delay: .4s;
-    }
-    .cms .stackItemActive{
-        animation-delay: .8s;
+    
+    @media screen and (min-width: 551px){
+        .stackItemActive{
+            animation-name: ${wave};
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+        }
+        .frameworks .stackItemActive{
+            animation-delay: .4s;
+        }
+        .cms .stackItemActive{
+            animation-delay: .8s;
+        }
     }
     .stackItem {
         display: flex;
