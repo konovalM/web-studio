@@ -1,22 +1,22 @@
 export default function convertToSlide(screen = 'desktop', data){
     const casesArray = []
-    let key = 1
     switch (screen) {
         case 'desktop':
             for (let i = 0; i < Math.ceil(data.length / 2); i++){
                 casesArray.push(
                     {
                         case1: {
-                            title: data[key].title,
-                            img: data[key].img
+                            title: data[i * 2].title,
+                            img: data[i * 2].img
                         },
                         case2: {
-                            title: data[key + 1].title,
-                            img: data[key + 1].img
+                            title: data[i * 2 + 1].title,
+                            img: data[i * 2 + 1].img
                         }
                     }
                 )
             }
+            console.log(casesArray)
             return (
                 casesArray
             )
@@ -25,16 +25,16 @@ export default function convertToSlide(screen = 'desktop', data){
                 casesArray.push(
                     {
                         case1: {
-                            title: data[key].title,
-                            img: data[key].img
+                            title: data[i * 3].title,
+                            img: data[i * 3].img
                         },
                         case2: {
-                            title: data[key + 1].title,
-                            img: data[key + 1].img
+                            title: data[i * 3 + 1].title,
+                            img: data[i * 3 + 1].img
                         },
                         case3: {
-                            title: data[key + 2].title,
-                            img: data[key + 2].img
+                            title: data[i * 3 + 2].title,
+                            img: data[i * 3 + 2].img
                         },
                     }
                 )

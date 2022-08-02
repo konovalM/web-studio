@@ -10,21 +10,31 @@ import useWindowSize from "../../../hooks/useWindowSize";
 import {useDispatch} from "react-redux";
 
 
-const Slider = () => {
+const Slider = ({typeOfCase, sliderData}) => {
     const dispatch = useDispatch()
     const width = useWindowSize()
     const [slidesPerView, setSlidesPerView] = useState(4)
     useEffect(() => {
-        if (width >= 1100){
+        if (width >= 1100) {
             setSlidesPerView(4)
         }
-        if (width < 1100){
+        if (width < 1100) {
             setSlidesPerView(3)
         }
-        if (width < 900){
+        if (width < 900) {
             setSlidesPerView(2)
         }
     }, [width])
+    const openModalCase = (activeCase) => {
+        dispatch({
+            type: 'OPEN_CASE',
+            payload: {
+                activeCase,
+                typeOfCase
+            }
+        })
+    }
+    // console.log(convertToSlide('desktop', sliderData))
     return (
         <SliderTag>
             <div className="sliderContainer">
@@ -38,51 +48,52 @@ const Slider = () => {
                     className="mySwiper"
                 >
                     <div className="navigateButtons">
-                        <SwiperButtonPrev />
-                        <SwiperButtonNext />
+                        <SwiperButtonPrev/>
+                        <SwiperButtonNext/>
                     </div>
                     {
                         width < 800 ?
 
-                        convertToSlide('mobile', SliderMockData)
-                            .map((item, index) => {
-                                return (
-                                    <SwiperSlide key={index}>
-                                        <div className='slideFlexWrapper'>
-                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_CASE', payload: index * 3})}>
-                                                <img src={item.case1.img} alt="case" className='caseImg'/>
-                                                <div className="sliderInnerText">{item.case1.title}</div>
+                            convertToSlide('mobile', sliderData)
+                                .map((item, index) => {
+                                    return (
+                                        <SwiperSlide key={index}>
+                                            <div className='slideFlexWrapper'>
+                                                <div className="slideImgWrapper" onClick={() => openModalCase(index * 3)}>
+                                                    <img src={item.case1.img} alt="case" className='caseImg'/>
+                                                    <div className="sliderInnerText">{item.case1.title}</div>
+                                                </div>
+                                                <div className="slideImgWrapper" onClick={() => openModalCase(index * 3 + 1)}>
+                                                    <img src={item.case2.img} alt="case" className='caseImg'/>
+                                                    <div className="sliderInnerText">{item.case2.title}</div>
+                                                </div>
+                                                <div className="slideImgWrapper" onClick={() => openModalCase(index * 3 + 2)}>
+                                                    <img src={item.case3.img} alt="case" className='caseImg'/>
+                                                    <div className="sliderInnerText">{item.case3.title}</div>
+                                                </div>
                                             </div>
-                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_CASE', payload: index * 3 + 1})}>
-                                                <img src={item.case2.img} alt="case" className='caseImg'/>
-                                                <div className="sliderInnerText">{item.case2.title}</div>
-                                            </div>
-                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_CASE', payload: index * 3 + 2})}>
-                                                <img src={item.case3.img} alt="case" className='caseImg'/>
-                                                <div className="sliderInnerText">{item.case3.title}</div>
-                                            </div>
-                                        </div>
-                                    </SwiperSlide>
-                                )
-                            })
+                                        </SwiperSlide>
+                                    )
+                                })
                             :
-                        convertToSlide('desktop', SliderMockData)
-                            .map((item, index) => {
-                                return (
-                                    <SwiperSlide key={index}>
-                                        <div className='slideFlexWrapper'>
-                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_CASE', payload: index * 2})}>
-                                                <img src={item.case1.img} alt="case" className='caseImg'/>
-                                                <div className="sliderInnerText">{item.case1.title}</div>
+                            convertToSlide('desktop', sliderData)
+                                .map((item, index) => {
+                                    return (
+                                        <SwiperSlide key={index}>
+                                            <div className='slideFlexWrapper'>
+                                                <div className="slideImgWrapper"
+                                                     onClick={() => openModalCase(index * 2)}>
+                                                    <img src={item.case1.img} alt="case" className='caseImg'/>
+                                                    <div className="sliderInnerText">{item.case1.title}</div>
+                                                </div>
+                                                <div className="slideImgWrapper" onClick={() => openModalCase(index * 2 + 1)}>
+                                                    <img src={item.case2.img} alt="case" className='caseImg'/>
+                                                    <div className="sliderInnerText">{item.case2.title}</div>
+                                                </div>
                                             </div>
-                                            <div className="slideImgWrapper" onClick={() => dispatch({type: 'OPEN_CASE', payload: index * 2 + 1})}>
-                                                <img src={item.case2.img} alt="case" className='caseImg'/>
-                                                <div className="sliderInnerText">{item.case2.title}</div>
-                                            </div>
-                                        </div>
-                                    </SwiperSlide>
-                                )
-                            })
+                                        </SwiperSlide>
+                                    )
+                                })
                     }
                 </Swiper>
             </div>

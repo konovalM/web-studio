@@ -7,7 +7,7 @@ import {CloseSvgIcon} from "../../../icons/components/CloseSvgIcon";
 
 export const CaseModal = () => {
     const ref = useRef()
-    const {isModal, activeCase, cases} = useSelector((state) => state.caseModal)
+    const {isModal, activeCase, cases, typeOfCase} = useSelector((state) => state.caseModal)
     const dispatch = useDispatch()
     useEffect(() => {
         if (isModal){
@@ -25,7 +25,7 @@ export const CaseModal = () => {
                 isModal &&
                 <ModalTag ref={ref} onClick={(e) => e.currentTarget === e.target && dispatch({type: 'CLOSE_CASE'})}>
                     <div className='content'>
-                        <img src={cases[activeCase]} alt="case"/>
+                        <img src={cases[typeOfCase][activeCase]} alt="case"/>
                     </div>
                     <button className="prev btn" onClick={() => dispatch({type: 'PREV_CASE'})}>
                         <img src={prevArrow} alt="prevCase"/>

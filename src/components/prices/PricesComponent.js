@@ -7,8 +7,7 @@ import Dash from "../common/Dash/Dash";
 import useWindowSize from "../../hooks/useWindowSize";
 
 
-
-const PricesComponent = ({title, margin, price, size, content, id}) => {
+const PricesComponent = ({title, margin, price, size, content, id, typeOfCase, sliderData}) => {
     const ref = useRef(null)
     let defaultTitle = null
     const [settings, setSettings] = useState({width: null, left: null, height: null})
@@ -21,23 +20,24 @@ const PricesComponent = ({title, margin, price, size, content, id}) => {
         let sectionHeightFrom = coordinatesSection.top
         let heightFrom = ref.current.getBoundingClientRect().top
         const top = heightFrom - sectionHeightFrom
-        let widthFrom= ref.current.getBoundingClientRect().left
-        let position = {width: widthFrom-15, left: ref.current.offsetLeft, height: ref.current.clientHeight}
+        let widthFrom = ref.current.getBoundingClientRect().left
+        let position = {width: widthFrom - 15, left: ref.current.offsetLeft, height: ref.current.clientHeight}
         setSettings(position)
-        if (width > 1250){
+        if (width > 1250) {
             setTopForPrice(top + 7)
-        } else if (width > 767){
+        } else if (width > 767) {
             setTopForPrice(top + 350)
-        } else if (width > 520){
+        } else if (width > 520) {
             setTopForPrice(top + 240)
-        }else if (width <= 520){
+        } else if (width <= 520) {
             setTopForPrice(top + 190)
         }
     }, [width])
 
 
-    if (size){
-        defaultTitle = <div><span className={styles.first}>многостраничные</span><span className={styles.second}>сайты</span></div>
+    if (size) {
+        defaultTitle =
+            <div><span className={styles.first}>многостраничные</span><span className={styles.second}>сайты</span></div>
     }
     return (
         <div className={margin ? 'pricesComponentWrapper' : ''}>
@@ -50,8 +50,14 @@ const PricesComponent = ({title, margin, price, size, content, id}) => {
             <div className="container" style={{position: 'static'}}>
                 <Dash color={'#ffffff'} countBefore={4} countAfter={3} top={'-200px'}/>
                 <h3 className="product" style={{position: 'relative'}} ref={ref}>
-                    <div className="whiteLine" style={{width: settings.width, height: settings.height, top: 0, left: -settings.left, display: 'inline-block' }} data-aos='fade-right'></div>
-                    <span style={{display: 'inline-block'}}  data-aos='fade-right'>
+                    <div className="whiteLine" style={{
+                        width: settings.width,
+                        height: settings.height,
+                        top: 0,
+                        left: -settings.left,
+                        display: 'inline-block'
+                    }} data-aos='fade-right'></div>
+                    <span style={{display: 'inline-block'}} data-aos='fade-right'>
                         {defaultTitle || title}
                     </span>
                 </h3>
@@ -73,16 +79,19 @@ const PricesComponent = ({title, margin, price, size, content, id}) => {
                 </div>
             </div>
 
-            <Slider/>
+            <Slider typeOfCase={typeOfCase} sliderData={sliderData}/>
             <div className="container">
                 <div className="btnWrapper" data-aos='fade-right'>
-                    <Button btnColor='#ffffff' btnStyles={[{background: '#1E4FCD', color: '#fff'}, {background: '#fff', color: '#1E4FCD', border: 'none'}]}/>
+                    <Button btnColor='#ffffff' btnStyles={[{background: '#1E4FCD', color: '#fff'}, {
+                        background: '#fff',
+                        color: '#1E4FCD',
+                        border: 'none'
+                    }]}/>
                 </div>
             </div>
         </div>
     );
 };
-
 
 
 export default PricesComponent;

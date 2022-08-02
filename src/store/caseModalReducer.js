@@ -14,36 +14,72 @@ import case12 from '../images/cases/case12.jpg'
 const defaultState = {
     isModal: false,
     activeCase: null,
-    cases: [
-        case1,
-        case2,
-        case3,
-        case4,
-        case5,
-        case6,
-        case7,
-        case8,
-        case9,
-        case10,
-        case11,
-        case12,
-    ]
+    typeOfCase: '',
+    cases: {
+        landings: [
+            case1,
+            case2,
+            case3,
+            case4,
+            case5,
+            case6,
+            case7,
+            case8,
+            case9,
+            case10,
+            case11,
+            case12,
+        ],
+        shops: [
+            case7,
+            case8,
+            case9,
+            case10,
+            case11,
+            case12,
+            case1,
+            case2,
+            case3,
+            case4,
+            case5,
+            case6,
+        ],
+        multipage: [
+            case6,
+            case7,
+            case8,
+            case1,
+            case2,
+            case9,
+            case10,
+            case11,
+            case12,
+            case3,
+            case4,
+            case5,
+        ]
+    }
 }
 
 
 export default function caseModalReducer(state = defaultState, action) {
     switch (action.type) {
         case 'OPEN_CASE':
-            return {...state, isModal: true, activeCase: action.payload}
+            return {
+                ...state,
+                isModal: true,
+                activeCase: action.payload.activeCase,
+                typeOfCase: action.payload.typeOfCase
+            }
         case 'CLOSE_CASE':
             return {...defaultState}
         case 'NEXT_CASE':
-            const nextCount = (state.activeCase + 1) % state.cases.length
+            const nextCount = (state.activeCase + 1) % state.cases[state.typeOfCase].length
             return {...state, activeCase: nextCount}
         case 'PREV_CASE':
             let prevCount
-            if (state.activeCase - 1 < 0){
-                prevCount = state.cases.length - 1
+            if (state.activeCase - 1 < 0) {
+                prevCount = state.cases[state.typeOfCase].length - 1
             } else prevCount = state.activeCase - 1
             return {...state, activeCase: prevCount}
     }
