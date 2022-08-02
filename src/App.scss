@@ -41,6 +41,12 @@ html body:not(.no-js) [data-aos=fade-up] {
   -webkit-transform:translate3d(0,50px,0);
   transform:translate3d(0,50px,0);
 }
+@media screen and (max-width: 550px) {
+  html body:not(.no-js) [data-aos] {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
 
 
 
