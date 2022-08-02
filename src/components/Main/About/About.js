@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Dash from "../../common/Dash/Dash";
 import useWindowSize from "../../../hooks/useWindowSize";
 import {AboutTag} from "./About.styles";
+import {LiquidCircle} from "../../../icons/components/LiquidCircle/LiquidCircle";
 
 
 
@@ -18,9 +19,10 @@ const About = () => {
                 <Dash color={'#ffffff'} countBefore={6} countAfter={1} top={'0px'}/>
                 <div className="wrapper">
                     <div className="absolute" data-aos='fade-left'>
-                        <p className="word">modern</p>
+                        {/*<p className="word">modern</p>
                         <p className="word">digital</p>
-                        <p className="word">solutions</p>
+                        <p className="word">solutions</p>*/}
+                        <LiquidCircle />
                     </div>
                     <div className="mainText">
                         <h2 className="title" data-aos='fade-down'>
