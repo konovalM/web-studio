@@ -75,7 +75,7 @@ const Form = () => {
                                         className="input"
                                     />
                                     {errors.email && touched.email ? (
-                                        <div style={{color: 'red', fontSize: '14px', lineHeight: '20px'}}>{errors.full_name}</div>
+                                        <div style={{color: 'red', fontSize: '14px', lineHeight: '20px'}}>{errors.email}</div>
                                     ) : null}
                                 </div>
                                 <div className="other flexItem">

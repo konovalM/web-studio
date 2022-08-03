@@ -208,8 +208,8 @@ export const FormTag = styled.div`
 
         .inputs{
             flex: 0 1 auto;
-            max-width: 100%;
             margin-bottom: 20px;
+            width: 100%;
         }
         .other{
             flex: 0 1 auto;

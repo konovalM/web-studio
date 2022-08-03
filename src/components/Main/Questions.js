@@ -8,6 +8,7 @@ import {useEffect} from "react";
 import Button from "../../elements/Button";
 import CrossAnimation from "../../animations/CrossAnimation/CrossAnimation";
 import Dash from "../common/Dash/Dash";
+import Form from "./Form/Form";
 
 const QustionsTag = styled.section`
   padding: 60px 0 120px;
@@ -336,7 +337,8 @@ const Questions = ({bg}) => {
             <div className="container">
                 <h2 className="title">Остались вопросы?</h2>
                 <p className="description">Пишите или звоните.<span className="br"> Отвечаем круглосуточно.</span></p>
-                <div className="formOutside">
+                <Form />
+                {/*<div className="formOutside">
                     <div className="formWrapper">
                         <form action="web-studio/src/components/Main/Questions#" className="form">
                             <div className="inputs flexItem">
@@ -431,7 +433,7 @@ const Questions = ({bg}) => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>*/}
             </div>
         </QustionsTag>
     );
