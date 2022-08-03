@@ -69,12 +69,12 @@ export const SliderMockData = {
         {
             id: 1,
             title: 'Интернет-магазин кухонной мебели',
-            img: slideImg,
+            img: testImage,
         },
         {
             id: 2,
             title: 'Интернет-магазин кухонной мебели',
-            img: slideImg,
+            img: testImage,
         },
         {
             id: 3,
@@ -114,7 +114,7 @@ export const SliderMockData = {
         {
             id: 10,
             title: 'Интернет-магазин кухонной мебели',
-            img: slideImg,
+            img: testImage,
         },
         {
             id: 11,
