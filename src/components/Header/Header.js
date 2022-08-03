@@ -567,7 +567,7 @@ const HeaderMobile = ({isMenu}) => {
                             <LinkTo src="/smm" className={styles.link}>SMM</LinkTo>
                             <LinkTo src="/branding" className={styles.link}>Брендинг и репутация</LinkTo>
                             <div className={styles.contacts}>
-                                <div className={styles.number}>+ 7 981 103 65 38</div>
+                                <a href='tel:+79811036538' className={styles.number}>+ 7 981 103 65 38</a>
                                 <div className={styles.mail}>test_ mail@gmail.com</div>
                             </div>
                             <div className={!isMenu ? styles.socials : styles.socials + ' ' + styles.socialsWhite}>

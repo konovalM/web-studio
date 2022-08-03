@@ -305,6 +305,7 @@
     .number{
         color: #FFFFFF;
         text-align: center;
+        display: block;
         margin-bottom: 20px;
     }
     .mail{
