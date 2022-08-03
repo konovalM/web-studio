@@ -1,12 +1,6 @@
 import React, {useState} from 'react';
-import styled from "styled-components";
-import bg from '../../../images/bg.png'
 import tree from '../../../images/tree.svg'
 import mobileTree from '../../../images/treeMobile.svg'
-import blueBottomArrow from '../../../images/blueBottomArrow.svg'
-import blueTopArrow from '../../../images/blueTopArrow.svg'
-import crossesMobile from "../../../images/crossesMobile.jpg";
-import crosses from "../../../images/crosses.jpg";
 import Dash from "../../common/Dash/Dash";
 import {FaqTag} from "./Faq.styles";
 import {BlueBottomArrow} from "../../../icons/components/BlueBottomArrow";

@@ -1,13 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
 import bg from '../../images/bg.png'
-import telegram from '../../images/telegram.svg'
-import crosses from '../../images/crosses.jpg'
-import crossesMobile from '../../images/crossesMobile.jpg'
-import {useEffect} from "react";
-import Button from "../../elements/Button";
-import CrossAnimation from "../../animations/CrossAnimation/CrossAnimation";
-import Dash from "../common/Dash/Dash";
 import Form from "./Form/Form";
 
 const QustionsTag = styled.section`

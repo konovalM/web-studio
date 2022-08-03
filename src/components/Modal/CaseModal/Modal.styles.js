@@ -63,7 +63,7 @@ export const ModalTag = styled.div`
         align-items: center;
         justify-content: center;
         border: none;
-        svg{
+        img{
             width: 36px;
         }
     }
@@ -105,8 +105,7 @@ export const ModalTag = styled.div`
             height: 29px;
             right: 15px;
             top: 16px;
-            background: transparent;
-            svg{
+            img{
                 width: 16px;
             }
         }   
