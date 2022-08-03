@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import prevArrow from '../../../images/modal/prev.svg'
 import nextArrow from '../../../images/modal/next.svg'
 import closeBlack from '../../../images/modal/closeBlack.svg'
+import closeWhiteTest from '../../../images/developer.jpg'
 
 export const CaseModal = () => {
     const ref = useRef()
@@ -36,7 +37,7 @@ export const CaseModal = () => {
                         <img src={nextArrow} alt="nextCase"/>
                     </button>
                     <button className="close" onClick={() => dispatch({type: 'CLOSE_CASE'})}>
-                        <img src={closeBlack} alt="close"/>
+                        <img src={closeWhiteTest} alt="close"/>
                     </button>
                 </ModalTag>
             }
