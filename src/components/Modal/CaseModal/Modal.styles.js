@@ -16,21 +16,16 @@ export const ModalTag = styled.div`
     }
     .contentWrapper{
         min-height: 100%;
-        max-width: 90vw;
+        max-width: 85vw;
         margin: 0 auto;
         display: flex;
         justify-content: center;
     }
     .content {
-        //position: absolute;
-        //left: 50%;
-        //transform: translateX(-50%);
-        //top: 0;
-        //height: 100vh;
         flex-basis: 100%;
         img {
             margin: 0 auto;
-            width: 90vw;
+            width: 85vw;
         }
     }
 
@@ -57,21 +52,30 @@ export const ModalTag = styled.div`
     }
 
     .close {
+        width: 76px;
+        height: 76px;
+        background-color: ${BLUE_MAIN};
         position: fixed;
-        right: 53px;
-        top: 60px;
+        right: 32px;
+        top: 40px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border: none;
-        background-color: transparent;
+        svg{
+            width: 36px;
+        }
     }
 
     @media screen and (max-width: 800px) {
         .close {
-            right: 38px;
-            top: 28px;
-
-            svg {
-                width: 28px;
-                height: 28px;
+            width: 53px;
+            height: 53px;
+            right: 32px;
+            top: 25px;
+            svg{
+                width: 60%;
             }
         }
 
@@ -97,15 +101,14 @@ export const ModalTag = styled.div`
         }
 
         .close {
-            right: 19px;
-            top: 21px;
-            padding: 0;
-
-            svg {
-                width: 20px;
-                height: 20px;
+            width: 29px;
+            height: 29px;
+            right: 15px;
+            top: 16px;
+            svg{
+                width: 15px;
             }
-        }
+        }   
 
         .btn {
             width: 29px;
