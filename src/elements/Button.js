@@ -4,7 +4,7 @@ import styles from './Button.module.css'
 import {useDispatch} from "react-redux";
 
 
-const Button = ({ btnStyles, btnColor }) => {
+const Button = ({ btnStyles, btnColor, ...props }) => {
     const dispatch = useDispatch()
     let element1 = useRef()
     let element2 = useRef()
@@ -54,9 +54,15 @@ const Button = ({ btnStyles, btnColor }) => {
             cancelAnimationFrame(requestId)
         }
     }, [width])
+
+    const openModal = () => {
+        if (!props.type){
+            dispatch({type: 'OPEN_MODAL'})
+        }
+    }
     return (
         <Fragment>
-            <button className={styles.consultation} ref={btn} onClick={() => dispatch({type: 'OPEN_MODAL'})}>
+            <button {...props} className={styles.consultation} ref={btn} onClick={openModal}>
                 Получить консультацию
             </button>
             <div className={styles.points} ref={parent}>
