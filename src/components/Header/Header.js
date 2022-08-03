@@ -364,7 +364,7 @@ const HeaderDesktop = () => {
                         </div>
                         <div className="contacts">
                             <div className="contact">
-                                <a href="#">+ 7 981 103 65 38</a>
+                                <a href="tel:+79811036538">+ 7 981 103 65 38</a>
                             </div>
                             <div className="contact">
                                 test_mail@gmail.com
@@ -380,7 +380,6 @@ const HeaderDesktop = () => {
 
 
 const HeaderLaptop = ({isMenu}) => {
-    // const [active, setActive] = useState(false)
     const dispatch = useDispatch()
     const [langActive, setLangActive] = useState(false)
     const changeLangActive = () => {
@@ -439,7 +438,7 @@ const HeaderLaptop = ({isMenu}) => {
                             </div>
                         </div>
                         <div className={styles.contact}>
-                            <a href="#" className={styles.contactNumber}>+ 7 981 103 65 38</a>
+                            <a href="tel:+79811036538" className={styles.contactNumber}>+ 7 981 103 65 38</a>
                         </div>
                         <div className={styles.burger} onClick={() => toggleActiveClass()}>
                             <span
@@ -520,7 +519,7 @@ const HeaderMobile = ({isMenu}) => {
                         </Link>
 
                         <div className={styles.contact}>
-                            <a href="#" className={styles.contactNumber}>+ 7 981 103 65 38</a>
+                            <a href="tel:+79811036538" className={styles.contactNumber}>+ 7 981 103 65 38</a>
                         </div>
                         <div className={styles.burger} onClick={() => toggleActiveClass()}>
                             <span
