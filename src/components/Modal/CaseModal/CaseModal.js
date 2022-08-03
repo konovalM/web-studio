@@ -3,8 +3,7 @@ import {ModalTag} from "./Modal.styles";
 import {useDispatch, useSelector} from "react-redux";
 import prevArrow from '../../../images/modal/prev.svg'
 import nextArrow from '../../../images/modal/next.svg'
-import closeBlack from '../../../images/modal/closeBlack.svg'
-import closeWhiteTest from '../../../images/developer.jpg'
+import closeWhite from '../../../images/modal/closeWhite.svg'
 
 export const CaseModal = () => {
     const ref = useRef()
@@ -37,7 +36,7 @@ export const CaseModal = () => {
                         <img src={nextArrow} alt="nextCase"/>
                     </button>
                     <button className="close" onClick={() => dispatch({type: 'CLOSE_CASE'})}>
-                        <img src={closeWhiteTest} alt="close"/>
+                        <img src={closeBlack} alt="close"/>
                     </button>
                 </ModalTag>
             }
