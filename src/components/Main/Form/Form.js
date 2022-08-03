@@ -10,8 +10,8 @@ export const PhoneNumberInput = ({...props}) => {
     return (
         <InputMask
             {...props}
-            mask="+9 (999) 999 99 99"
-            maskChar="_"
+            mask="+9999999999999"
+            maskChar=""
             alwaysShowMask={false}
         />
     );
@@ -20,7 +20,7 @@ export const PhoneNumberInput = ({...props}) => {
 function validateNumber(phoneNumber) {
     let error
 
-    if (phoneNumber.replace("_", "").trim().length !== 18) {
+    if (phoneNumber.replace("_", "").trim().length < 12) {
         error = "Это еще не номер телефона"
     }
     return error;
