@@ -23,7 +23,7 @@ const Layout = ({children}) => {
         if (location.hash){
             scrollToElement(location.hash)
         }
-    }, [location.hash])
+    }, [location.key])
     return (
         <>
             <Header isMenu={isMenu}/>
