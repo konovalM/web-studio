@@ -34,7 +34,6 @@ const Slider = ({typeOfCase, sliderData}) => {
             }
         })
     }
-    // console.log(convertToSlide('desktop', sliderData))
     return (
         <SliderTag>
             <div className="sliderContainer">
@@ -59,16 +58,25 @@ const Slider = ({typeOfCase, sliderData}) => {
                                     return (
                                         <SwiperSlide key={index}>
                                             <div className='slideFlexWrapper'>
-                                                <div className="slideImgWrapper" onClick={() => openModalCase(index * 3)}>
-                                                    <img src={item.case1.img} alt="case" className='caseImg'/>
+                                                <div className="slideImgWrapper"
+                                                     onClick={() => openModalCase(index * 3)}>
+                                                    <div className='bgWrapper'
+                                                         style={{background: `url(${item.case1.img})center center/cover no-repeat`}}>
+                                                    </div>
                                                     <div className="sliderInnerText">{item.case1.title}</div>
                                                 </div>
-                                                <div className="slideImgWrapper" onClick={() => openModalCase(index * 3 + 1)}>
-                                                    <img src={item.case2.img} alt="case" className='caseImg'/>
+                                                <div className="slideImgWrapper"
+                                                     onClick={() => openModalCase(index * 3 + 1)}>
+                                                    <div className='bgWrapper'
+                                                         style={{background: `url(${item.case2.img})center center/cover no-repeat`}}>
+                                                    </div>
                                                     <div className="sliderInnerText">{item.case2.title}</div>
                                                 </div>
-                                                <div className="slideImgWrapper" onClick={() => openModalCase(index * 3 + 2)}>
-                                                    <img src={item.case3.img} alt="case" className='caseImg'/>
+                                                <div className="slideImgWrapper"
+                                                     onClick={() => openModalCase(index * 3 + 2)}>
+                                                    <div className='bgWrapper'
+                                                         style={{background: `url(${item.case3.img})center center/cover no-repeat`}}>
+                                                    </div>
                                                     <div className="sliderInnerText">{item.case3.title}</div>
                                                 </div>
                                             </div>
@@ -83,11 +91,16 @@ const Slider = ({typeOfCase, sliderData}) => {
                                             <div className='slideFlexWrapper'>
                                                 <div className="slideImgWrapper"
                                                      onClick={() => openModalCase(index * 2)}>
-                                                    <img src={item.case1.img} alt="case" className='caseImg'/>
+                                                    <div className='bgWrapper'
+                                                         style={{background: `url(${item.case1.img})center center/cover no-repeat`}}>
+                                                    </div>
                                                     <div className="sliderInnerText">{item.case1.title}</div>
                                                 </div>
-                                                <div className="slideImgWrapper" onClick={() => openModalCase(index * 2 + 1)}>
-                                                    <img src={item.case2.img} alt="case" className='caseImg'/>
+                                                <div className="slideImgWrapper"
+                                                     onClick={() => openModalCase(index * 2 + 1)}>
+                                                    <div className='bgWrapper'
+                                                         style={{background: `url(${item.case2.img})center center/cover no-repeat`}}>
+                                                    </div>
                                                     <div className="sliderInnerText">{item.case2.title}</div>
                                                 </div>
                                             </div>

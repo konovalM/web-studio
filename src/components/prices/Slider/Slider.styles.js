@@ -26,10 +26,11 @@ export const SliderTag = styled.div`
         gap: 10px;
     }
 
-    .caseImg {
+
+    .bgWrapper {
         width: 100%;
-        height: 87%;
-        object-fit: cover;
+        height: 100%;
+        background-color: aliceblue;
     }
 
     .slideImgWrapper:nth-child(even) {
@@ -42,7 +43,7 @@ export const SliderTag = styled.div`
         width: 100%;
         height: 230px;
         max-height: 230px;
-        justify-content: space-between;
+        //justify-content: space-between;
 
     }
 
@@ -102,9 +103,6 @@ export const SliderTag = styled.div`
             padding: 2px 0 3px 4px;
         }
 
-        .caseImg {
-            height: 89%;
-        }
     }
     @media screen and (max-width: 550px) {
         .slideImgWrapper {
