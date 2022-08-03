@@ -6,26 +6,31 @@ export const ModalTag = styled.div`
     left: 0;
     top: 0;
     z-index: 1100000;
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, .6);
-    padding: 40px;
-    overflow-y: auto;
+    overflow: auto;
 
     ::-webkit-scrollbar {
         width: 0;
     }
-
+    .contentWrapper{
+        min-height: 100%;
+        max-width: 90vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
     .content {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 0;
-        height: 100vh;
-
+        //position: absolute;
+        //left: 50%;
+        //transform: translateX(-50%);
+        //top: 0;
+        //height: 100vh;
+        flex-basis: 100%;
         img {
             margin: 0 auto;
-            max-width: 90vw;
+            width: 90vw;
         }
     }
 
@@ -81,9 +86,13 @@ export const ModalTag = styled.div`
 
     }
     @media screen and (max-width: 550px) {
-        .content {
-            img {
-                max-width: 100vw;
+        .contentWrapper{
+            width: 100vw;
+            max-width: none;
+        } 
+        .content{
+            img{
+                width: 100vw;
             }
         }
 

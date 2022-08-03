@@ -24,8 +24,10 @@ export const CaseModal = () => {
             {
                 isModal &&
                 <ModalTag ref={ref} onClick={(e) => e.currentTarget === e.target && dispatch({type: 'CLOSE_CASE'})}>
-                    <div className='content'>
-                        <img src={cases[typeOfCase][activeCase]} alt="case"/>
+                    <div className="contentWrapper">
+                        <div className='content'>
+                            <img src={cases[typeOfCase][activeCase]} alt="case"/>
+                        </div>
                     </div>
                     <button className="prev btn" onClick={() => dispatch({type: 'PREV_CASE'})}>
                         <img src={prevArrow} alt="prevCase"/>

@@ -8,7 +8,7 @@ export const ModalTag = styled.div`
     position: fixed;
     left: 0;
     top: 0;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .6);
     overflow: auto;
     padding: 10px 20px;
     .contentWrapper{
