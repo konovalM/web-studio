@@ -18,6 +18,7 @@ import WhatsAppIcon from "../../images/icons/WhatsAppIcon";
 import MessagesIcon from "../../images/icons/MessagesIcon";
 import LinkTo from "../Navigation/LinkTo";
 import {useDispatch} from "react-redux";
+import {scrollToElement} from "../../utils/scrollToElement";
 
 const HeaderTag = styled.header`
     height: 63px;
@@ -299,8 +300,8 @@ const HeaderDesktop = () => {
                                 </li>
                                 <li className="listItem">
                                     <div className="second">
-                                        <a href="#" className="itemLink">Кейсы и цены</a>
-                                        <a href="#" className="itemLink">Услуги</a>
+                                        <Link to='/#prices' className="itemLink">Кейсы и цены</Link>
+                                        <Link to="/#services" className="itemLink">Услуги</Link>
                                     </div>
                                 </li>
                                 <li className="listItem">
@@ -410,8 +411,8 @@ const HeaderLaptop = ({isMenu}) => {
                             </div>
                             <div className={styles.listItem}>
                                 <div className={styles.second}>
-                                    <a href="#" className={styles.itemLink}>Кейсы и цены</a>
-                                    <a href="#" className={styles.itemLink}>Услуги</a>
+                                    <Link to='/#prices' className={styles.itemLink}>Кейсы и цены</Link>
+                                    <Link to="/#services" className={styles.itemLink}>Услуги</Link>
                                 </div>
                             </div>
                         </div>
@@ -474,8 +475,8 @@ const HeaderLaptop = ({isMenu}) => {
                                     </LinkTo>
                                 </div>
                                 <div className={styles.right}>
-                                    <a href="#" className={styles.linkSites}>Кейсы и цены</a>
-                                    <a href="#" className={styles.linkSites}>Услуги</a>
+                                    <Link to="/#prices" className={styles.linkSites}>Кейсы и цены</Link>
+                                    <Link to="/#services" className={styles.linkSites}>Услуги</Link>
                                 </div>
                             </div>
                             <LinkTo src="/systems" className={styles.link}>Самописные системы</LinkTo>
@@ -555,8 +556,8 @@ const HeaderMobile = ({isMenu}) => {
                                     </LinkTo>
                                 </div>
                                 <div className={styles.right}>
-                                    <a href="#" className={styles.linkSites}>Кейсы и цены</a>
-                                    <a href="#" className={styles.linkSites}>Услуги</a>
+                                    <Link to="/#prices" className={styles.linkSites}>Кейсы и цены</Link>
+                                    <Link to="/#services" className={styles.linkSites}>Услуги</Link>
                                 </div>
                             </div>
                             <LinkTo src="/systems" className={styles.link}>Самописные системы</LinkTo>

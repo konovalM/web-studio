@@ -6,28 +6,30 @@ import {SliderMockData} from "./Slider/Slider.mock";
 
 const Prices = () => {
     return (
-        <PricesTag>
-            <div className="wrapperPrices">
-                <div className="container">
-                    <h2 className="title" data-aos='fade-down'>Кейсы и цены</h2>
-                    <div className="description" data-aos='fade-down'>Создаем магазины, лендинги, корпоративные сайты,
-                        криптосервисы, сайты мероприятий, а также сайты под нестандартные задачи.
+        <PricesTag name='#prices'>
+            <Element >
+                <div className="wrapperPrices">
+                    <div className="container">
+                        <h2 className="title" data-aos='fade-down'>Кейсы и цены</h2>
+                        <div className="description" data-aos='fade-down'>Создаем магазины, лендинги, корпоративные сайты,
+                            криптосервисы, сайты мероприятий, а также сайты под нестандартные задачи.
+                        </div>
                     </div>
+                    <Element name='landings'>
+                        <PricesComponent title='лендинги визитки' price='60 000' content={landing} id={1}
+                                         typeOfCase='landings' sliderData={SliderMockData.landings}/>
+                    </Element>
+                    <Element name='shops'>
+                        <PricesComponent title='online магазины' margin='225px' price='130 000' content={shops} id={2}
+                                         typeOfCase='shops' sliderData={SliderMockData.shops}/>
+                    </Element>
+                    <Element name='sites'>
+                        <PricesComponent title='многостраничные сайты' size={true} margin='225px' price='180 000'
+                                         content={sites} id={3} typeOfCase='multipage'
+                                         sliderData={SliderMockData.multipage}/>
+                    </Element>
                 </div>
-                <Element name='landings'>
-                    <PricesComponent title='лендинги визитки' price='60 000' content={landing} id={1}
-                                     typeOfCase='landings' sliderData={SliderMockData.landings}/>
-                </Element>
-                <Element name='shops'>
-                    <PricesComponent title='online магазины' margin='225px' price='130 000' content={shops} id={2}
-                                     typeOfCase='shops' sliderData={SliderMockData.shops}/>
-                </Element>
-                <Element name='sites'>
-                    <PricesComponent title='многостраничные сайты' size={true} margin='225px' price='180 000'
-                                     content={sites} id={3} typeOfCase='multipage'
-                                     sliderData={SliderMockData.multipage}/>
-                </Element>
-            </div>
+            </Element>
         </PricesTag>
     );
 };

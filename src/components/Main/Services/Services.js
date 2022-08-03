@@ -17,7 +17,7 @@ import {scrollToElement} from "../../../utils/scrollToElement";
 const Services = () => {
     let width = useWindowSize()
     return (
-        <ServicesTag>
+        <ServicesTag name='#services'>
             <div className="container">
                 <Dash color={'#000000'} countBefore={3} countAfter={4} top={'0px'}/>
                 <h2 className="title" data-aos='fade-down'>Услуги <span className='blue'>><span className="black">/...</span>{`<`}</span></h2>

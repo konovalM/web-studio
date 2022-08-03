@@ -108,7 +108,7 @@ const Main = () => {
                     <div className="right">
                         <div className="rightInner">
                             <h3 className="websites rightTitle">
-                                <span className='rightTitleSpan' onClick={() => scrollToElement('landings')}>
+                                <span className='rightTitleSpan' onClick={() => setTimeout(() => scrollToElement('landings'), 1000)}>
                                     websites
                                 </span>
                             </h3>

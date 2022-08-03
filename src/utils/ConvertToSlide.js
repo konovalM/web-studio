@@ -16,7 +16,6 @@ export default function convertToSlide(screen = 'desktop', data){
                     }
                 )
             }
-            console.log(casesArray)
             return (
                 casesArray
             )
