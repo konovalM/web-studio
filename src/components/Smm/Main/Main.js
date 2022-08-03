@@ -34,7 +34,6 @@ const Main = () => {
                     </div>
                     <div className={styles.right}>
                         <SmmAnimation className={styles.image}/>
-                        {/*<img src={image} alt="seo" className={styles.image}/>*/}
                     </div>
                 </div>
             </div>
