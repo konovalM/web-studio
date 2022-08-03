@@ -107,6 +107,10 @@ export const ModalTag = styled.div`
             top: 16px;
             img{
                 width: 16px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
             }
         }   
 
