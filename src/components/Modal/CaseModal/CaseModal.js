@@ -36,7 +36,7 @@ export const CaseModal = () => {
                         <img src={nextArrow} alt="nextCase"/>
                     </button>
                     <button className="close" onClick={() => dispatch({type: 'CLOSE_CASE'})}>
-                        <img src={closeBlack} alt="close"/>
+                        <img src={closeWhite} alt="close"/>
                     </button>
                 </ModalTag>
             }
@@ -44,5 +44,4 @@ export const CaseModal = () => {
     );
 };
 
-// dispatch({type: 'CLOSE_MODAL'})
 export default CaseModal;
