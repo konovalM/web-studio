@@ -105,6 +105,7 @@ export const ModalTag = styled.div`
             height: 29px;
             right: 15px;
             top: 16px;
+            background: transparent;
             svg{
                 width: 15px;
             }
