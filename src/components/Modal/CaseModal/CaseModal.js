@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import prevArrow from '../../../images/modal/prev.svg'
 import nextArrow from '../../../images/modal/next.svg'
 import {CloseSvgIcon} from "../../../icons/components/CloseSvgIcon";
+import {BaseSVGIcon} from "../../../icons/components/BaseSvgIcon";
 
 export const CaseModal = () => {
     const ref = useRef()
@@ -36,7 +37,14 @@ export const CaseModal = () => {
                         <img src={nextArrow} alt="nextCase"/>
                     </button>
                     <button className="close" onClick={() => dispatch({type: 'CLOSE_CASE'})}>
-                        <CloseSvgIcon fill='#FFFFFF' />
+                        <svg
+                            width="38"
+                            height="37"
+                            viewBox="0 0 38 37"
+                        >
+                            <line x1="1.35355" y1="0.646447" x2="37.3536" y2="36.6464" stroke='#FFFFFF'/>
+                            <line y1="-0.5" x2="50.9117" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 37 1)" stroke='#FFFFFF'/>
+                        </svg>
                     </button>
                 </ModalTag>
             }
