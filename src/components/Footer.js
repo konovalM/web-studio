@@ -132,9 +132,7 @@ const Footer = () => {
                     </div>
                     <div className="services services__first">
                         <div className="service">
-                            <a className="serviceLink" onClick={() => {
-                                scrollToElement('landings')
-                            }}>Сайты</a>
+                            <Link to='/#landings' className="serviceLink">Сайты</Link>
                         </div>
                         <div className="service">
                             <Link to='/apps' className="serviceLink">

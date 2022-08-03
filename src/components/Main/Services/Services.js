@@ -23,7 +23,7 @@ const Services = () => {
                 <h2 className="title" data-aos='fade-down'>Услуги <span className='blue'>><span className="black">/...</span>{`<`}</span></h2>
                 <p className="description" data-aos='fade-right'>Предоставим вашему бизнесу комплекс услуг по развитию и продвижению. Создадим техническую часть вашего бизнеса, займемся брендингом и рекламой.</p>
                 <div className="gridWrapper">
-                    <div className="landing" data-aos='fade-left' onClick={() => scrollToElement('landings')}>
+                    <div className="landing" data-aos='fade-left' onClick={() => scrollToElement('#landings')}>
                         <div className="landingInner">
                             <div className="er er18">er-9817</div>
                             <div className="landingText">лендинги</div>

@@ -15,7 +15,7 @@ const Prices = () => {
                             криптосервисы, сайты мероприятий, а также сайты под нестандартные задачи.
                         </div>
                     </div>
-                    <Element name='landings'>
+                    <Element name='#landings'>
                         <PricesComponent title='лендинги визитки' price='60 000' content={landing} id={1}
                                          typeOfCase='landings' sliderData={SliderMockData.landings}/>
                     </Element>
