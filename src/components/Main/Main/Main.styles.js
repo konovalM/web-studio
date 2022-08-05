@@ -413,7 +413,7 @@ export const MainTag = styled.section`
             display: none;
         }
     }
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 550px) {
         padding: 71px 0 140px;
         .title {
             font-size: 30px;

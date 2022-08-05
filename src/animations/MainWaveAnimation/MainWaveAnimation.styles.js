@@ -48,11 +48,13 @@ export const MainWaveAnimationTag = styled.div`
         animation: ${bubbleSize} var(--time, 4s) ease-in infinite var(--delay, 0s), ${bubbleMove} var(--time, 4s) ease-in infinite var(--delay, 0s);
         transform: translate(-50%, 100%);
     }
-    /*@media screen and (min-width: 1920px){
-        .wrapperAnimation{
-            min-height: 60vw;
-        }
-    }*/
+    .tablet{
+        display: none;
+    }
+    .mobile{
+        display: none;
+    }
+
     @media screen and (min-width: 2000px){
         .wrapperAnimation{
             width: 25vw;
@@ -69,7 +71,57 @@ export const MainWaveAnimationTag = styled.div`
         }
     }
     @media screen and (max-width: 991px){
-        
-        display: none;
+        .desktop{
+            display: none;
+        }
+        .tablet{
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            img{
+                height: 690px;
+                display: block;
+                object-fit: cover;
+            }
+        }
+    }
+    @media screen and (max-width: 900px){
+        .tablet{
+            img{
+                transform: translateX(50px);
+            }
+        }
+    }
+    @media screen and (max-width: 650px){
+        .tablet{
+            img{
+                transform: translateX(100px);
+            }
+        }
+    }
+    @media screen and (max-width: 550px){
+        .tablet{
+            display: none;
+        }
+        .mobile{
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            img{
+                transform: translateY(30px);
+                display: block;
+                width: 100vw;
+                object-fit: cover;
+            }
+        }
+    }
+    @media screen and (max-width: 550px){
+        .mobile{
+            img{
+                transform: translateY(3px);
+            }
+        }
     }
 `

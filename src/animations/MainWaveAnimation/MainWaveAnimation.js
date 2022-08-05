@@ -1,7 +1,8 @@
 import {MainWaveAnimationTag} from "./MainWaveAnimation.styles";
 import {useEffect, useRef, useState} from "react";
 import useWindowHeight from "../../hooks/useWindowHeight";
-
+import svgTablet from '../../images/main/bubblesTablet.svg'
+import svgMobile from '../../images/main/bubblesMobile.svg'
 const bubbles = [
     {
         size: `${2 + Math.random() * 4}rem`,
@@ -911,31 +912,39 @@ const MainWaveAnimation = () => {
     }, [height])
     return (
         <MainWaveAnimationTag height={animHeight}>
-            <div ref={ref} className="wrapperAnimation">
-                <div className="bubbles">
-                    {
-                        bubbles.map((bubble, index) => {
-                            return (
-                                <div className='bubble' style={{
-                                    '--size': bubble.size,
-                                    '--distance': bubble.distance,
-                                    '--position': bubble.position,
-                                    '--time': bubble.time,
-                                    '--delay': bubble.delay,
-                                }} />
-                            )}
-                        )
-                    }
+            <div className="desktop">
+                <div ref={ref} className="wrapperAnimation">
+                    <div className="bubbles">
+                        {
+                            bubbles.map((bubble, index) => {
+                                return (
+                                    <div className='bubble' style={{
+                                        '--size': bubble.size,
+                                        '--distance': bubble.distance,
+                                        '--position': bubble.position,
+                                        '--time': bubble.time,
+                                        '--delay': bubble.delay,
+                                    }} />
+                                )}
+                            )
+                        }
+                    </div>
                 </div>
+                <svg style={{position: 'fixed', top: '100vh'}}>
+                    <defs>
+                        <filter id="blob">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="blob"></feColorMatrix>
+                        </filter>
+                    </defs>
+                </svg>
             </div>
-            <svg style={{position: 'fixed', top: '100vh'}}>
-                <defs>
-                    <filter id="blob">
-                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
-                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="blob"></feColorMatrix>
-                    </filter>
-                </defs>
-            </svg>
+            <div className="tablet">
+                <img src={svgTablet} alt="staticAnimation"/>
+            </div>
+            <div className="mobile">
+                <img src={svgMobile} alt="staticAnimation"/>
+            </div>
         </MainWaveAnimationTag>
     );
 };
