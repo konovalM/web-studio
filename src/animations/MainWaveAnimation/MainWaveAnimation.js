@@ -1,4 +1,6 @@
 import {MainWaveAnimationTag} from "./MainWaveAnimation.styles";
+import {useEffect, useRef, useState} from "react";
+import useWindowHeight from "../../hooks/useWindowHeight";
 
 const bubbles = [
     {
@@ -901,10 +903,15 @@ const bubbles = [
 ]
 
 const MainWaveAnimation = () => {
-    console.log(bubbles.length)
+    const ref = useRef()
+    const [animHeight, setAnimHeight] = useState(0)
+    const height = useWindowHeight()
+    useEffect(() => {
+        setAnimHeight(ref.current.offsetHeight)
+    }, [height])
     return (
-        <MainWaveAnimationTag>
-            <div className="wrapperAnimation">
+        <MainWaveAnimationTag height={animHeight}>
+            <div ref={ref} className="wrapperAnimation">
                 <div className="bubbles">
                     {
                         bubbles.map((bubble) => (

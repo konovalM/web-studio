@@ -25,10 +25,10 @@ export const MainWaveAnimationTag = styled.div`
         position: absolute;
         right: 0;
         bottom: 0;
-        min-height: 50vw;
-        width: 100%;
+        height: 100%;
+        width: 12vw;
         background: ${BLUE_MAIN};
-        transform: translateX(50%) rotate(-90deg) ;
+        //transform: translateX(50%) rotate(-90deg) ;
     }
     .bubbles{
         position: absolute;
@@ -36,8 +36,9 @@ export const MainWaveAnimationTag = styled.div`
         left: 0;
         height: 1rem;
         background: ${BLUE_MAIN};
-        width: 100%;
+        width: ${props => `${props.height}px`};
         filter:url("#blob");
+        transform: ${props => `translate(-50%, ${props.height * 0.5}px) rotate(-90deg)`} 
     }
     .bubble {
         position: absolute;
@@ -47,14 +48,24 @@ export const MainWaveAnimationTag = styled.div`
         animation: ${bubbleSize} var(--time, 4s) ease-in infinite var(--delay, 0s), ${bubbleMove} var(--time, 4s) ease-in infinite var(--delay, 0s);
         transform: translate(-50%, 100%);
     }
-    @media screen and (min-width: 1920px){
+    /*@media screen and (min-width: 1920px){
         .wrapperAnimation{
             min-height: 60vw;
+        }
+    }*/
+    @media screen and (min-width: 2000px){
+        .wrapperAnimation{
+            width: 25vw;
+        }
+    }
+    @media screen and (min-width: 1500px){
+        .wrapperAnimation{
+            width: 20vw;
         }
     }
     @media screen and (max-width: 1100px){
         .wrapperAnimation{
-            min-height: 35vw;
+            width: 5vw;
         }
     }
     @media screen and (max-width: 991px){
