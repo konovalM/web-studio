@@ -20,7 +20,7 @@ export const MainTag = styled.section`
     padding: 93px 0 65px;
     z-index: 110;
     position: relative;
-
+    overflow: hidden;
     .wrapper {
         display: flex;
         justify-content: space-between;
@@ -414,7 +414,7 @@ export const MainTag = styled.section`
         }
     }
     @media screen and (max-width: 500px) {
-        padding: 71px 0 116px;
+        padding: 71px 0 140px;
         .title {
             font-size: 30px;
             line-height: 36px;

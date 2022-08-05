@@ -5,6 +5,7 @@ import Typed from "typed.js";
 import {scrollToElement} from "../../../utils/scrollToElement";
 import {Link} from "react-router-dom";
 import {MainTag} from "./Main.styles";
+import MainWaveAnimation from "../../../animations/MainWaveAnimation/MainWaveAnimation";
 
 
 
@@ -38,7 +39,7 @@ const Main = () => {
 
     return (
         <MainTag>
-
+            <MainWaveAnimation />
             <div className="scroll" onClick={() => scrollToElement('main-second')}>
                 <div className="scrollOutside">
                 </div>
