@@ -21,14 +21,14 @@ const bubbleMove = keyframes`
 `
 
 export const MainWaveAnimationTag = styled.div`
-    overflow: hidden;
     .wrapperAnimation{
         position: absolute;
-        left: 0;
+        right: 0;
         bottom: 0;
-        min-height: 50px;
+        min-height: 50vw;
         width: 100%;
         background: ${BLUE_MAIN};
+        transform: translateX(50%) rotate(-90deg) ;
     }
     .bubbles{
         position: absolute;
@@ -46,5 +46,19 @@ export const MainWaveAnimationTag = styled.div`
         border-radius: 100%;
         animation: ${bubbleSize} var(--time, 4s) ease-in infinite var(--delay, 0s), ${bubbleMove} var(--time, 4s) ease-in infinite var(--delay, 0s);
         transform: translate(-50%, 100%);
+    }
+    @media screen and (min-width: 1920px){
+        .wrapperAnimation{
+            min-height: 60vw;
+        }
+    }
+    @media screen and (max-width: 1100px){
+        .wrapperAnimation{
+            min-height: 35vw;
+        }
+    }
+    @media screen and (max-width: 991px){
+        
+        display: none;
     }
 `
