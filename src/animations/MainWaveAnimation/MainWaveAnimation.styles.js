@@ -68,8 +68,8 @@ export const MainWaveAnimationTag = styled.div`
             width: 5vw;
         }
     }
-    //@media screen and (max-width: 991px){
-    //    
-    //    display: none;
-    //}
+    @media screen and (max-width: 991px){
+        
+        display: none;
+    }
 `
