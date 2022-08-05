@@ -914,15 +914,19 @@ const MainWaveAnimation = () => {
             <div ref={ref} className="wrapperAnimation">
                 <div className="bubbles">
                     {
-                        bubbles.map((bubble) => (
-                            <div className='bubble' style={{
-                                '--size': bubble.size,
-                                '--distance': bubble.distance,
-                                '--position': bubble.position,
-                                '--time': bubble.time,
-                                '--delay': bubble.delay,
-                            }} />
-                        ))
+                        bubbles.map((bubble, index) => {
+                            if (index < 20){
+                                return (
+                                    <div className='bubble' style={{
+                                        '--size': bubble.size,
+                                        '--distance': bubble.distance,
+                                        '--position': bubble.position,
+                                        '--time': bubble.time,
+                                        '--delay': bubble.delay,
+                                    }} />
+                                )}
+                            }
+                        )
                     }
                 </div>
             </div>
