@@ -24,7 +24,7 @@ const Dash = ({color, bottom, top, countBefore,countAfter}) => {
         const arr = []
 
         for (let i = 0; i < countBefore; i++){
-            arr.push(<Square color={color}/>)
+            arr.push(<Square color={color} key={countBefore + i}/>)
         }
         return arr
     }
@@ -32,7 +32,7 @@ const Dash = ({color, bottom, top, countBefore,countAfter}) => {
     const countEnd = () => {
         const arr = []
         for (let i = 0; i < countAfter; i++){
-            arr.push(<Square color={color}/>)
+            arr.push(<Square color={color} key={countAfter + i}/>)
         }
         return arr
     }

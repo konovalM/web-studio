@@ -15,7 +15,6 @@ const Layout = ({children}) => {
         document.querySelector('body').style.position = 'static'
         document.querySelector('body').style.width = 'auto'
     }
-    console.log(location)
     useEffect(() => {
         dispatch({type: 'CLOSE_MENU'})
     }, [location])

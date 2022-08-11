@@ -924,7 +924,7 @@ const MainWaveAnimation = () => {
                                         '--position': bubble.position,
                                         '--time': bubble.time,
                                         '--delay': bubble.delay,
-                                    }} />
+                                    }} key={index}/>
                                 )}
                             )
                         }

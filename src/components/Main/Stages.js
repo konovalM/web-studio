@@ -38,8 +38,6 @@ const StagesTag = styled.section`
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     grid-template-rows: auto;
     grid-auto-rows: auto;
-    //grid-template-rows: 170px;
-    //grid-auto-rows: 170px;
     column-gap: 27px;
     row-gap: 46px;
   }
