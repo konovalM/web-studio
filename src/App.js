@@ -1,20 +1,20 @@
 import './App.scss';
-import React, {useEffect, Suspense, lazy} from "react";
+import MainPage from "./pages/MainPage";
+import ContextPage from "./pages/ContextPage";
+import React, {useEffect, Suspense} from "react";
 import {
     Routes,
     Route,
 } from "react-router-dom";
+import SeoPage from "./pages/SeoPage";
+import MarketingPage from "./pages/MarketingPage";
+import SmmPage from "./pages/SmmPage";
+import ApplicationsPage from "./pages/ApplicationsPage";
+import ParserPage from "./pages/ParserPage";
+import SystemsPage from "./pages/SystemsPage";
 import AOS from "aos";
 import Layout from "./pages/Layout";
-const PolicyPage = lazy(() => import("./pages/PolicyPage"))
-const SystemsPage = lazy(() => import("./pages/SystemsPage"))
-const ParserPage = lazy(() => import("./pages/ParserPage"))
-const ApplicationsPage = lazy(() => import("./pages/ApplicationsPage"))
-const SmmPage = lazy(() => import("./pages/SmmPage"))
-const MarketingPage = lazy(() => import("./pages/MarketingPage"))
-const SeoPage = lazy(() => import("./pages/SeoPage"))
-const ContextPage = lazy(() => import("./pages/ContextPage"))
-const MainPage = lazy(() => import("./pages/MainPage"))
+import PolicyPage from "./pages/PolicyPage";
 
 function App() {
     useEffect(() => {
@@ -28,19 +28,17 @@ function App() {
     }, [])
     return (
         <Layout>
-            <Suspense fallback={<div>Loading...</div>}>
-                <Routes>
-                    <Route path='/' element={<MainPage/>}/>
-                    <Route path='context' element={<ContextPage/>}/>
-                    <Route path='seo' element={<SeoPage/>}/>
-                    <Route path='smm' element={<SmmPage/>}/>
-                    <Route path='branding' element={<MarketingPage/>}/>
-                    <Route path='apps' element={<ApplicationsPage/>}/>
-                    <Route path='parser' element={<ParserPage/>}/>
-                    <Route path='systems' element={<SystemsPage/>}/>
-                    <Route path='policy' element={<PolicyPage/>}/>
-                </Routes>
-            </Suspense>
+            <Routes>
+                <Route path='/' element={<MainPage/>}/>
+                <Route path='context' element={<ContextPage/>}/>
+                <Route path='seo' element={<SeoPage/>}/>
+                <Route path='smm' element={<SmmPage/>}/>
+                <Route path='branding' element={<MarketingPage/>}/>
+                <Route path='apps' element={<ApplicationsPage/>}/>
+                <Route path='parser' element={<ParserPage/>}/>
+                <Route path='systems' element={<SystemsPage/>}/>
+                <Route path='policy' element={<PolicyPage/>}/>
+            </Routes>
         </Layout>
     );
 }
