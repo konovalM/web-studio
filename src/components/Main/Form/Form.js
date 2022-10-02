@@ -5,6 +5,8 @@ import {FormTag} from "./Form.styles";
 import InputMask from "react-input-mask";
 import {Field, Formik, Form as FormFormik} from "formik";
 import * as Yup from 'yup'
+import emailjs from '@emailjs/browser'
+import {useDispatch} from "react-redux";
 
 export const PhoneNumberInput = ({...props}) => {
     return (
@@ -27,13 +29,23 @@ function validateNumber(phoneNumber) {
 }
 
 export const FeedbackSchemas = Yup.object().shape({
-    full_name: Yup.string().matches(/[a-zA-Zа-яА-Я]+/,"Введите на русском языке")
+    full_name: Yup.string().matches(/[a-zA-Zа-яА-Я]+/, "Введите на русском языке")
         .min(3, 'Заполните полностью поле')
         .required('Обязательное поле'),
     email: Yup.string().email('Неверный адрес').required('Обязательное поле')
 });
 
 const Form = () => {
+    const dispatch = useDispatch()
+    const sendEmail = (formData) => {
+        emailjs.send('service_y4zd3im', 'template_ieb4rb9', formData, 'TY78bKn3jchmNhc1r')
+            .then((result) => {
+                console.log(result.text);
+                dispatch({type: 'NEXT_MODAL'})
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
     return (
         <FormTag>
             <div className="formOutside">
@@ -47,8 +59,8 @@ const Form = () => {
                         validateOnChange={true}
                         validateOnBlur={true}
                         validationSchema={FeedbackSchemas}
-                        onSubmit={(formData) => console.log(formData)}>
-                        {({ errors, touched }) => (
+                        onSubmit={(formData) => sendEmail(formData)}>
+                        {({errors, touched}) => (
                             <FormFormik className="form">
                                 <div className="inputs flexItem">
                                     <Field
@@ -57,7 +69,11 @@ const Form = () => {
                                         className="input"
                                     />
                                     {errors.full_name && touched.full_name ? (
-                                        <div style={{color: 'red', fontSize: '14px', lineHeight: '20px'}}>{errors.full_name}</div>
+                                        <div style={{
+                                            color: 'red',
+                                            fontSize: '14px',
+                                            lineHeight: '20px'
+                                        }}>{errors.full_name}</div>
                                     ) : null}
                                     <Field
                                         name='phone'
@@ -67,7 +83,11 @@ const Form = () => {
                                         validate={validateNumber}
                                     />
                                     {errors.phone && touched.phone ? (
-                                        <div style={{color: 'red', fontSize: '14px', lineHeight: '20px'}}>{errors.phone}</div>
+                                        <div style={{
+                                            color: 'red',
+                                            fontSize: '14px',
+                                            lineHeight: '20px'
+                                        }}>{errors.phone}</div>
                                     ) : null}
                                     <Field
                                         name='email'
@@ -75,7 +95,11 @@ const Form = () => {
                                         className="input"
                                     />
                                     {errors.email && touched.email ? (
-                                        <div style={{color: 'red', fontSize: '14px', lineHeight: '20px'}}>{errors.email}</div>
+                                        <div style={{
+                                            color: 'red',
+                                            fontSize: '14px',
+                                            lineHeight: '20px'
+                                        }}>{errors.email}</div>
                                     ) : null}
                                 </div>
                                 <div className="other flexItem">
@@ -129,11 +153,12 @@ const Form = () => {
                                         className='special'>обработку персональных данных</span>.
                                     </div>
                                     <div className="btnWrapper">
-                                        <Button type="submit" btnColor='#ffffff' btnStyles={[{background: '#1E4FCD', color: '#fff'}, {
-                                            background: '#fff',
-                                            color: '#1E4FCD',
-                                            border: 'none'
-                                        }]}/>
+                                        <Button type="submit" btnColor='#ffffff'
+                                                btnStyles={[{background: '#1E4FCD', color: '#fff'}, {
+                                                    background: '#fff',
+                                                    color: '#1E4FCD',
+                                                    border: 'none'
+                                                }]}/>
                                     </div>
                                 </div>
                             </FormFormik>

@@ -3,7 +3,6 @@ import caseModal from "./caseModalReducer";
 import contactModal from './contactModalReducer'
 import menu from './menuReducer'
 
-
 const rootReducer = combineReducers({
     caseModal,
     contactModal,

@@ -15,7 +15,7 @@ const ContactModal = () => {
     return (
         <>
             {
-                isModal &&
+                isModal === 1 &&
                 <ModalTag onClick={(e) => e.currentTarget === e.target && dispatch({type: 'CLOSE_MODAL'})}>
                     <div className="contentWrapper">
                         <div className="content">

@@ -6,6 +6,7 @@ import ContactModal from "../components/Modal/ContactModal/ContactModal";
 import {useDispatch, useSelector} from "react-redux";
 import {useLocation} from "react-router-dom";
 import {scrollToElement} from "../utils/scrollToElement";
+import SuccessModal from "../components/Modal/SuccessModal/SuccessModal";
 
 const Layout = ({children}) => {
     const isMenu = useSelector((state) => state.menu.isMenu)
@@ -23,11 +24,13 @@ const Layout = ({children}) => {
             scrollToElement(location.hash)
         }
     }, [location.key])
+
     return (
         <>
             <Header isMenu={isMenu}/>
             <CaseModal />
             <ContactModal />
+            <SuccessModal />
             <div style={{height: '63px'}}></div>
             {children}
             <Footer/>
