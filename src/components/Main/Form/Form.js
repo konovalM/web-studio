@@ -7,6 +7,7 @@ import {Field, Formik, Form as FormFormik} from "formik";
 import * as Yup from 'yup'
 import emailjs from '@emailjs/browser'
 import {useDispatch} from "react-redux";
+import {sendForm} from "../../../api/sendForm";
 
 export const PhoneNumberInput = ({...props}) => {
     return (
@@ -37,10 +38,9 @@ export const FeedbackSchemas = Yup.object().shape({
 
 const Form = () => {
     const dispatch = useDispatch()
-    const sendEmail = (formData) => {
+    const sendEmail = async (formData) => {
         emailjs.send('service_y4zd3im', 'template_ieb4rb9', formData, 'TY78bKn3jchmNhc1r')
             .then((result) => {
-                console.log(result.text);
                 dispatch({type: 'NEXT_MODAL'})
             }, (error) => {
                 console.log(error.text);
