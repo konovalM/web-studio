@@ -40,7 +40,6 @@ const Form = () => {
     const sendEmail = (formData) => {
         emailjs.send('service_y4zd3im', 'template_ieb4rb9', formData, 'TY78bKn3jchmNhc1r')
             .then((result) => {
-                console.log(result.text);
                 dispatch({type: 'NEXT_MODAL'})
             }, (error) => {
                 console.log(error.text);
