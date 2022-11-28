@@ -1,4 +1,4 @@
-import case1 from '../images/cases/case1.jpg'
+import case1 from '../images/cases/landings/case1.jpg'
 import case2 from '../images/cases/case2.jpg'
 import case3 from '../images/cases/case3.jpg'
 import case4 from '../images/cases/case4.jpg'
