@@ -38,14 +38,14 @@ const About = () => {
                                 <div className="flexWrapper">
                                     <div className="name">
                                         <p className="nameText">
-                                            Геннадий Васнецов
+                                            Николай Борисов
                                         </p>
                                     </div>
                                     {design}
                                 </div>
                             </div>
                             <p className="profile" data-aos='fade-left'>
-                                full stack разработчик
+                                учредитель
                             </p>
                         </div>
                         <div className="gridElem">
@@ -53,14 +53,14 @@ const About = () => {
                                 <div className="flexWrapper">
                                     <div className="name">
                                         <p className="nameText">
-                                            Геннадий Васнецов
+                                            Наталия Чурилова
                                         </p>
                                     </div>
                                     {design}
                                 </div>
                             </div>
                             <p className="profile" data-aos='fade-left'>
-                                full stack разработчик
+                                маркетолог
                             </p>
                         </div>
                         <div className="gridElem">
@@ -68,14 +68,14 @@ const About = () => {
                                 <div className="flexWrapper">
                                     <div className="name">
                                         <p className="nameText">
-                                            Геннадий Васнецов
+                                            Даниил Фуштей
                                         </p>
                                     </div>
                                     {design}
                                 </div>
                             </div>
                             <p className="profile" data-aos='fade-left'>
-                                full stack разработчик
+                                макетчик
                             </p>
                         </div>
                         <div className="gridElem">
@@ -83,14 +83,14 @@ const About = () => {
                                 <div className="flexWrapper">
                                     <div className="name">
                                         <p className="nameText">
-                                            Геннадий Васнецов
+                                            Владислав Скибицкий
                                         </p>
                                     </div>
                                     {design}
                                 </div>
                             </div>
                             <p className="profile" data-aos='fade-left'>
-                                full stack разработчик
+                                backend разработчик
                             </p>
                         </div>
                         <div className="gridElem">
@@ -98,14 +98,14 @@ const About = () => {
                                 <div className="flexWrapper">
                                     <div className="name">
                                         <p className="nameText">
-                                            Геннадий Васнецов
+                                            Максим Коваленко
                                         </p>
                                     </div>
                                     {design}
                                 </div>
                             </div>
                             <p className="profile" data-aos='fade-left'>
-                                full stack разработчик
+                                frontend разработчик
                             </p>
                         </div>
                         <div className="gridElem">
@@ -113,14 +113,14 @@ const About = () => {
                                 <div className="flexWrapper">
                                     <div className="name">
                                         <p className="nameText">
-                                            Геннадий Васнецов
+                                            Егор Яцук
                                         </p>
                                     </div>
                                     {design}
                                 </div>
                             </div>
                             <p className="profile" data-aos='fade-left'>
-                                full stack разработчик
+                                frontend разработчик
                             </p>
                         </div>
 

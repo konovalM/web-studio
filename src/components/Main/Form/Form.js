@@ -23,7 +23,7 @@ function validateNumber(phoneNumber) {
     let error
 
     if (phoneNumber.replace("_", "").trim().length < 12) {
-        error = "Это еще не номер телефона"
+        error = "Неверный номер телефона"
     }
     return error;
 }
@@ -171,7 +171,7 @@ const Form = () => {
                 </div>
                 <div className="contacts">
                     <div className="contact">
-                        <a href="tel:+79811036538" className="contactPhone">+7 981 103 65 38</a>
+                        <a href="tel:+98765432100" className="contactPhone">+ 9 876 543 21 00</a>
                     </div>
                     <div className="contact">
                         <div className="mail">

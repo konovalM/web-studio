@@ -18,11 +18,14 @@ const Main = () => {
         const options = {
             strings: [
                 '<span style="color: #1E4FCD">[web.сервисы]</span>',
-                '<span style="color: #1E4FCD">[web.сайты]</span>'
+                '<span style="color: #1E4FCD">[marketing]</span>',
+                '<span style="color: #1E4FCD">[приложения]</span>',
+                '<span style="color: #1E4FCD">[брендинг]</span>',
+                '<span style="color: #1E4FCD">[маркетплейсы]</span>'
 
             ],
-            typeSpeed: 90,
-            backSpeed: 90,
+            typeSpeed: 20,
+            backSpeed: 20,
             onComplete: () => {
                 setTimeout(() => {
                     setInfinityAnim(!infinityAnim)
@@ -53,7 +56,7 @@ const Main = () => {
                 <div className="wrapper">
                     <div className="left">
                         <h1 className="subtitle">
-                            DIGITAL-агентство полного цикла STUDIO NAME
+                            DIGITAL-агентство полного цикла CUBE 80
                         </h1>
                         <h2 className="title">
                             <span className="titleSpan">Сайты под ключ и <br/><span ref={el}></span></span>
