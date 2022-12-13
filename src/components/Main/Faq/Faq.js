@@ -58,40 +58,40 @@ const Faq = () => {
 
 const questions = [
     {
-        question: 'Очень длинное название вопроса',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.'
+        question: 'Как происходит оплата работы?',
+        answer: 'Вы платите за работу поэтапно. Сперва незначительный аванс, после чего мы показываем вам выполненные этапы, за каждый из которых вы вносите следующий платеж.'
     },
     {
-        question: 'Короткий вопрос',
-        answer: 'Эта услуга требует максимальной оперативности, поскольку часто хостинги хранят исходники не дольше нескольких дней. Однако, в некоторых случаях информацию можно восстановить даже после полного удаления сайта с хостинга через специализированные...'
+        question: 'С чего начинается ваша работа?',
+        answer: 'Перед началом создания сайта мы изучаем вашу нишу и конкурентов. На основе этого анализа составляем техническое задание, в котором расписываем наиболее удачную структуру сайта.'
     },
     {
-        question: 'Очередной вопрос очень длинный',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.'
+        question: 'Предоставляете скидки?',
+        answer: 'Мы можем оптимизировать перечень работ и за счет удаления трудозатратных и необязательных этапов снизить общую цену проекта. Также мы можем дать вам рассрочку на оплату.'
     },
     {
-        question: 'Очень очень очень длинный вопрос раз два три',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.'
+        question: 'А если сайт сломается после полной оплаты?',
+        answer: 'В течение месяца мы гарантируем вам бесплатные техническую поддержку и исправление выявленных ошибок. Мы остаемся на связи 7 дней в неделю и никогда не пропадаем.'
     },
     {
-        question: 'Короткий вопрос',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.'
+        question: 'Почему вы берете дороже фриланса?',
+        answer: 'Мы никогда не отговариваем заказчиков от работы с фрилансом, но всегда предупреждаем, что более половины фрилансеров сдают нерабочие сайты, пропадают со связи, а также вы рискуете нарваться на мошенников. С нами вы защищены договором и нашей репутацией.'
     },
     {
-        question: 'Еще один вопрос раздела',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.'
+        question: 'Можете поменять нам систему управления сайтом?',
+        answer: 'Да, но вы должны учитывать, что при смене системы управления может потребоваться доработка сайта под нее. Также некоторые системы управления не предусматривают простого переноса сайта.'
     },
     {
-        question: 'Еще вопрос',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.'
+        question: 'Делаете сайты на шаблонах?',
+        answer: 'Занимаемся этим в исключительно редких случаях. Шаблоны зачастую очень сильно тормозят сайт, либо сделаны с грубыми ошибками, не имеют возможности гибкой смены структуры сайта.'
     },
     {
-        question: 'Еще один вопрос раздела',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.'
+        question: 'Доделаете работу за другим разработчиком?',
+        answer: 'Если код вашего разработчика пригоден для работы и не нашпигован ошибками, то мы готовы этим заняться.'
     },
     {
-        question: 'Очередной вопрос очень длинный',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequatur ea eum iste iure quasi sapiente sequi ut! Amet distinctio.'
+        question: 'Занимаетесь техподдержкой?',
+        answer: 'Да, после сдачи готовы заняться полным продвижением вашего бизнеса, а также технической поддержкой сайта, его доработкой и масштабированием.'
     }
 ]
 

@@ -60,7 +60,7 @@ const About = () => {
                                 </div>
                             </div>
                             <p className="profile" data-aos='fade-left'>
-                                маркетолог
+                                маркетолог-партнер
                             </p>
                         </div>
                         <div className="gridElem">
