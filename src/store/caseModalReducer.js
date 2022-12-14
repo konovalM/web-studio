@@ -31,11 +31,17 @@ const defaultState = {
             case3,
             case2,
             case10,
+            case10,
+            case10,
+            case10,
+            case10,
         ],
         shops: [
             case18,
             case9,
             case8,
+            case4,
+            case4,
             case4,
         ],
         multipage: [
@@ -45,6 +51,11 @@ const defaultState = {
             case6,
             case1,
             case15,
+            case13,
+            case13,
+            case13,
+            case13,
+            case13,
             case13,
         ]
     }

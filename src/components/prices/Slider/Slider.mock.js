@@ -60,6 +60,26 @@ export const SliderMockData = {
             title: 'Биржа торговли Blockchain',
             img: mini10,
         },
+        {
+            id: 9,
+            title: 'Биржа торговли Blockchain',
+            img: mini10,
+        },
+        {
+            id: 10,
+            title: 'Биржа торговли Blockchain',
+            img: mini10,
+        },
+        {
+            id: 11,
+            title: 'Биржа торговли Blockchain',
+            img: mini10,
+        },
+        {
+            id: 12,
+            title: 'Биржа торговли Blockchain',
+            img: mini10,
+        },
     ],
     shops: [
         {
@@ -79,6 +99,16 @@ export const SliderMockData = {
         },
         {
             id: 4,
+            title: 'Бургер-бар',
+            img: mini4,
+        },
+        {
+            id: 5,
+            title: 'Бургер-бар',
+            img: mini4,
+        },
+        {
+            id: 6,
             title: 'Бургер-бар',
             img: mini4,
         },
