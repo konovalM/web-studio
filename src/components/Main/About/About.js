@@ -1,3 +1,5 @@
+
+import egor from '../../../images/egor.jpg';
 import React from 'react';
 import styled from "styled-components";
 import Dash from "../../common/Dash/Dash";
@@ -108,7 +110,7 @@ const About = () => {
                                 frontend разработчик
                             </p>
                         </div>
-                        <div className="gridElem">
+                        <div className="gridElem" style={{background: `url(${egor})center center/cover no-repeat`}}> 
                             <div className="nameWrapper">
                                 <div className="flexWrapper">
                                     <div className="name">

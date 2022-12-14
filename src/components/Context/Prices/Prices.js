@@ -17,7 +17,7 @@ const Prices = () => {
                             Google adwords
                         </h3>
                         <div className={styles.price}>
-                            20 000 руб.
+                            320 $
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
@@ -38,7 +38,7 @@ const Prices = () => {
                             яндекс. директ
                         </h3>
                         <div className={styles.price}>
-                            20 000 руб.
+                            320 $
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>

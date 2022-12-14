@@ -14,7 +14,7 @@ const Prices = () => {
                             landing page
                         </h3>
                         <div className={styles.price}>
-                            от 30 000 руб.
+                            от 480 $
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
@@ -34,7 +34,7 @@ const Prices = () => {
                             online магазин
                         </h3>
                         <div className={styles.price}>
-                            от 70 000 руб.
+                            от 1100 $
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
@@ -54,7 +54,7 @@ const Prices = () => {
                             <span className={styles.small}>корпоративный</span> сайт
                         </h3>
                         <div className={styles.price}>
-                            от 50 000 руб.
+                            от 800 $
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
@@ -74,7 +74,7 @@ const Prices = () => {
                             крупный сервис
                         </h3>
                         <div className={styles.price}>
-                            от 80 000 руб.
+                            от 1300 $
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>

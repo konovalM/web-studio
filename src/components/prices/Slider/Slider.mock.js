@@ -1,3 +1,4 @@
+import egor from '../../../images/egor.jpg';
 import mini1 from '../../../images/mini1.jpg';
 import mini2 from '../../../images/mini2.jpg';
 import mini3 from '../../../images/mini3.jpg';

@@ -43,8 +43,8 @@ const BallAnimation = () => {
         let rotation = 0; // Rotation of the globe
         let dots = []; // Every dots in an array
 
-        const DOTS_AMOUNT = 1000; // Amount of dots on the screen
-        const DOT_RADIUS = 3; // Radius of the dots
+        const DOTS_AMOUNT = 500; // Amount of dots on the screen
+        const DOT_RADIUS = 6; // Radius of the dots
         let GLOBE_RADIUS = width * 0.85; // Radius of the globe
         let GLOBE_CENTER_Z = -GLOBE_RADIUS; // Z value of the globe center
         let PROJECTION_CENTER_X = width / 2; // X center of the canvas HTML

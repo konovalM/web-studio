@@ -14,7 +14,7 @@ const Prices = () => {
                             разработка парсера
                         </h3>
                         <div className={styles.price}>
-                            от 50 000 руб.
+                            от 800 $
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
@@ -32,7 +32,7 @@ const Prices = () => {
                             подключение API
                         </h3>
                         <div className={styles.price}>
-                            от 20 000 руб.
+                            от 320 $
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>

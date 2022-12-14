@@ -35,10 +35,10 @@ export const rotate2 = keyframes`
 export const XYTag = styled.div`
     overflow: hidden;
     .firstMask {
-        animation: ${rotate1} 5s linear infinite;
+        animation: ${rotate1} 8s linear infinite;
     }
 
     .secondMask {
-        animation: ${rotate2} 5s linear infinite;
+        animation: ${rotate2} 8s linear infinite;
     }
 `
