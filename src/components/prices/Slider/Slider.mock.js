@@ -1,4 +1,3 @@
-import egor from '../../../images/egor.jpg';
 import mini1 from '../../../images/mini1.jpg';
 import mini2 from '../../../images/mini2.jpg';
 import mini3 from '../../../images/mini3.jpg';
@@ -17,6 +16,12 @@ import mini15 from '../../../images/mini15.jpg';
 import mini16 from '../../../images/mini16.jpg';
 import mini17 from '../../../images/mini17.jpg';
 import mini18 from '../../../images/mini18.jpg';
+import mini19 from '../../../images/mini19.jpg';
+import mini20 from '../../../images/mini20.jpg';
+import mini21 from '../../../images/mini21.jpg';
+import mini22 from '../../../images/mini22.jpg';
+import mini23 from '../../../images/mini23.jpg';
+import mini24 from '../../../images/mini24.jpg';
 import slideImg from '../../../images/slideImg.jpg'
 
 export const SliderMockData = {
@@ -63,23 +68,23 @@ export const SliderMockData = {
         },
         {
             id: 9,
-            title: 'Биржа торговли Blockchain',
-            img: mini10,
+            title: 'Клининговая компания',
+            img: mini19,
         },
         {
             id: 10,
-            title: 'Биржа торговли Blockchain',
-            img: mini10,
+            title: 'Сервис автоподбора',
+            img: mini20,
         },
         {
             id: 11,
-            title: 'Биржа торговли Blockchain',
-            img: mini10,
+            title: 'Продажа земли на Бали',
+            img: mini22,
         },
         {
             id: 12,
-            title: 'Биржа торговли Blockchain',
-            img: mini10,
+            title: 'Спортивный магазин',
+            img: mini21,
         },
     ],
     shops: [
@@ -105,13 +110,13 @@ export const SliderMockData = {
         },
         {
             id: 5,
-            title: 'Бургер-бар',
-            img: mini4,
+            title: 'Спортивный магазин',
+            img: mini21,
         },
         {
             id: 6,
-            title: 'Бургер-бар',
-            img: mini4,
+            title: 'Вейп-шоп',
+            img: mini23,
         },
     ],
     multipage: [
@@ -152,28 +157,28 @@ export const SliderMockData = {
         },
         {
             id: 8,
-            title: 'Интернет-магазин кухонной мебели',
-            img: slideImg,
+            title: 'Сервис продажи SSL-сертификатов',
+            img: mini24,
         },
         {
             id: 9,
-            title: 'Интернет-магазин кухонной мебели',
-            img: slideImg,
+            title: 'Сервис автоподбора',
+            img: mini20,
         },
         {
             id: 10,
-            title: 'Интернет-магазин кухонной мебели',
-            img: slideImg,
+            title: 'Клининговая компания',
+            img: mini19,
         },
         {
             id: 11,
-            title: 'Интернет-магазин кухонной мебели',
-            img: slideImg,
+            title: 'Сервис автоподбора',
+            img: mini20,
         },
         {
             id: 12,
-            title: 'Интернет-магазин кухонной мебели',
-            img: slideImg,
+            title: 'Биржа найма поваров',
+            img: mini13,
         },
     ]
 }

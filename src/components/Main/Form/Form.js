@@ -104,7 +104,7 @@ const Form = () => {
                                 <div className="other flexItem">
                                     <div className="socials">
                                         <div className="social">
-                                            <a href="web-studio/src/components/Main/Questions#">
+                                            <a href="https://t.me/ozzodesign">
                                                 <svg width="21" height="18" viewBox="0 0 21 18" fill="none"
                                                      xmlns="http://www.w3.org/2000/svg">
                                                     <path
@@ -114,7 +114,7 @@ const Form = () => {
                                             </a>
                                         </div>
                                         <div className="social">
-                                            <a href="web-studio/src/components/Main/Questions#">
+                                            <a href="https://goo.su/68zywvz">
                                                 <svg width="25" height="14" viewBox="0 0 25 14" fill="none"
                                                      xmlns="http://www.w3.org/2000/svg">
                                                     <path
@@ -124,7 +124,7 @@ const Form = () => {
                                             </a>
                                         </div>
                                         <div className="social">
-                                            <a href="web-studio/src/components/Main/Questions#">
+                                            <a href="https://goo.su/fJkCxhc">
                                                 <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
                                                      xmlns="http://www.w3.org/2000/svg">
                                                     <path fillRule="evenodd" clipRule="evenodd"
@@ -134,7 +134,6 @@ const Form = () => {
                                             </a>
                                         </div>
                                         <div className="social">
-                                            <a href="web-studio/src/components/Main/Questions#">
                                                 <svg width="22" height="18" viewBox="0 0 22 18" fill="none"
                                                      xmlns="http://www.w3.org/2000/svg">
                                                     <path
@@ -144,7 +143,6 @@ const Form = () => {
                                                         d="M21.0833 12.075C21.0833 10.2542 19.8375 8.62499 18.0167 7.66665C17.7292 7.57082 17.5375 7.37915 17.25 7.28332C17.1542 7.28332 17.0583 7.18749 17.0583 7.18749C16.7708 7.09165 16.4833 6.99582 16.1958 6.89999C15.9083 6.80415 15.6208 6.80415 15.3333 6.70832C15.2375 6.70832 15.1417 6.70832 15.1417 6.70832C14.8542 6.70832 14.5667 6.61249 14.1833 6.61249C10.35 6.61249 7.1875 9.00832 7.1875 11.9792C7.1875 12.1708 7.1875 12.3625 7.1875 12.5542C7.1875 12.65 7.1875 12.65 7.1875 12.7458C7.1875 12.8417 7.1875 13.0333 7.28333 13.1292C7.28333 13.225 7.28333 13.225 7.37917 13.3208C7.37917 13.4167 7.475 13.5125 7.475 13.6083C7.475 13.7042 7.57083 13.8 7.57083 13.8958C8.52917 16.0042 11.1167 17.4417 14.0875 17.4417C15.1417 17.4417 16.1958 17.25 17.1542 16.8667C17.25 16.8667 17.25 16.8667 17.3458 16.8667C17.4417 16.8667 17.5375 16.8667 17.5375 16.9625L19.2625 17.825L18.6875 16.675C18.5917 16.4833 18.6875 16.1958 18.8792 16.1C20.2208 15.0458 21.0833 13.6083 21.0833 12.075ZM11.6917 11.8833C11.2125 11.8833 10.925 11.5 10.925 11.1167C10.925 10.6375 11.3083 10.35 11.6917 10.35C12.1708 10.35 12.4583 10.7333 12.4583 11.1167C12.4583 11.5 12.1708 11.8833 11.6917 11.8833ZM16.5792 11.8833C16.1 11.8833 15.8125 11.5 15.8125 11.1167C15.8125 10.6375 16.1958 10.35 16.5792 10.35C17.0583 10.35 17.3458 10.7333 17.3458 11.1167C17.4417 11.5 17.0583 11.8833 16.5792 11.8833Z"
                                                         fill="#fff"/>
                                                 </svg>
-                                            </a>
                                         </div>
                                     </div>
                                     <div className="agreement">

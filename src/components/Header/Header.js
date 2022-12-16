@@ -342,17 +342,17 @@ const HeaderDesktop = () => {
                         </div>
                         <div className="socials">
                             <div className="social">
-                                <a href="#">
+                                <a href="https://t.me/ozzodesign">
                                     <img src={telegram} alt="telegram"/>
                                 </a>
                             </div>
                             <div className="social">
-                                <a href="#">
+                                <a href="https://goo.su/68zywvz">
                                     <img src={vk} alt="vk"/>
                                 </a>
                             </div>
                             <div className="social">
-                                <a href="#">
+                                <a href="https://goo.su/fJkCxhc">
                                     <img src={whatsup} alt="whatsup"/>
                                 </a>
                             </div>
@@ -367,7 +367,7 @@ const HeaderDesktop = () => {
                                 <a href="tel:+98765432100">+ 9 876 543 21 00</a>
                             </div>
                             <div className="contact">
-                                test_mail@gmail.com
+                                cube80ag@gmail.com
                             </div>
                         </div>
 

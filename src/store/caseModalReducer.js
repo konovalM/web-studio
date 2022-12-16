@@ -16,7 +16,12 @@ import case15 from '../images/cases/case15.jpg'
 import case16 from '../images/cases/case16.jpg'
 import case17 from '../images/cases/case17.jpg'
 import case18 from '../images/cases/case18.jpg'
-
+import case19 from '../images/cases/case19.jpg'
+import case20 from '../images/cases/case20.jpg'
+import case21 from '../images/cases/case21.jpg'
+import case22 from '../images/cases/case22.jpg'
+import case23 from '../images/cases/case23.jpg'
+import case24 from '../images/cases/case24.jpg'
 const defaultState = {
     isModal: false,
     activeCase: null,
@@ -31,18 +36,18 @@ const defaultState = {
             case3,
             case2,
             case10,
-            case10,
-            case10,
-            case10,
-            case10,
+            case19,
+            case20,
+            case22,
+            case21,
         ],
         shops: [
             case18,
             case9,
             case8,
             case4,
-            case4,
-            case4,
+            case21,
+            case23,
         ],
         multipage: [
             case17,
@@ -52,10 +57,10 @@ const defaultState = {
             case1,
             case15,
             case13,
-            case13,
-            case13,
-            case13,
-            case13,
+            case24,
+            case20,
+            case19,
+            case20,
             case13,
         ]
     }

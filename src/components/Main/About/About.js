@@ -1,4 +1,6 @@
-
+import natalya from '../../../images/natalya.jpg';
+import daniil from '../../../images/daniil.jpg';
+import maxim from '../../../images/maxim.jpg';
 import egor from '../../../images/egor.jpg';
 import React from 'react';
 import styled from "styled-components";
@@ -47,10 +49,10 @@ const About = () => {
                                 </div>
                             </div>
                             <p className="profile" data-aos='fade-left'>
-                                учредитель
+                                менеджер проектов
                             </p>
                         </div>
-                        <div className="gridElem">
+                        <div className="gridElem" style={{background: `url(${natalya})center center/cover no-repeat`}}>
                             <div className="nameWrapper">
                                 <div className="flexWrapper">
                                     <div className="name">
@@ -65,7 +67,7 @@ const About = () => {
                                 маркетолог-партнер
                             </p>
                         </div>
-                        <div className="gridElem">
+                        <div className="gridElem" style={{background: `url(${daniil})center center/cover no-repeat`}}>
                             <div className="nameWrapper">
                                 <div className="flexWrapper">
                                     <div className="name">
@@ -77,7 +79,7 @@ const About = () => {
                                 </div>
                             </div>
                             <p className="profile" data-aos='fade-left'>
-                                макетчик
+                                web-дизайнер
                             </p>
                         </div>
                         <div className="gridElem">
@@ -95,7 +97,7 @@ const About = () => {
                                 backend разработчик
                             </p>
                         </div>
-                        <div className="gridElem">
+                        <div className="gridElem" style={{background: `url(${maxim})center center/cover no-repeat`}}>
                             <div className="nameWrapper">
                                 <div className="flexWrapper">
                                     <div className="name">

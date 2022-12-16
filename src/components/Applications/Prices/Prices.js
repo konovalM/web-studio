@@ -34,7 +34,7 @@ const Prices = () => {
                             IOS приложения
                         </h3>
                         <div className={styles.price}>
-                            от 11000 $
+                            от 9500 $
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
