@@ -102,7 +102,7 @@ const About = () => {
                                 <div className="flexWrapper">
                                     <div className="name">
                                         <p className="nameText">
-                                            Максим Коваленко
+                                            Максим Коноваленко
                                         </p>
                                     </div>
                                     {design}
