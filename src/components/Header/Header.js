@@ -363,9 +363,11 @@ const HeaderDesktop = () => {
                             </div>
                         </div>
                         <div className="contacts">
+                            <script>/*
                             <div className="contact">
                                 <a href="tel:+98765432100">+ 9 876 543 21 00</a>
                             </div>
+                            */</script>
                             <div className="contact">
                                 cube80ag@gmail.com
                             </div>

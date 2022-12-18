@@ -146,8 +146,8 @@ const Form = () => {
                                         </div>
                                     </div>
                                     <div className="agreement">
-                                        Нажимая на кнопку "Связаться с нами", вы даете согласие на <span
-                                        className='special'>обработку персональных данных</span>.
+                                        Нажимая "Получить консультацию", вы даете согласие на 
+                                        <span className='special'>обработку персональных данных</span>.
                                     </div>
                                     <div className="btnWrapper">
                                         <Button type="submit" btnColor='#ffffff'
@@ -168,9 +168,11 @@ const Form = () => {
                     <CrossAnimation/>
                 </div>
                 <div className="contacts">
+                    <script>/*
                     <div className="contact">
                         <a href="tel:+98765432100" className="contactPhone">+ 9 876 543 21 00</a>
                     </div>
+                    */</script>
                     <div className="contact">
                         <div className="mail">
                             studio_test_mail@gmail.com

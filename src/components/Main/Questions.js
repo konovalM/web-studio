@@ -372,7 +372,7 @@ const Questions = ({bg}) => {
                                     </div>
                                 </div>
                                 <div className="agreement">
-                                    Нажимая на кнопку "Связаться с нами", вы даете согласие на <span className='special'>обработку персональных данных</span>.
+                                    Нажимая на кнопку "Получить консультацию", вы даете согласие на <span className='special'>обработку персональных данных</span>.
                                 </div>
                                     <div className="btnWrapper" >
                                         <Button btnColor='#ffffff' btnStyles={[{background: '#1E4FCD', color: '#fff'}, {background: '#fff', color: '#1E4FCD', border: 'none'}]}/>
