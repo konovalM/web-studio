@@ -2,6 +2,8 @@ import natalya from '../../../images/natalya.jpg';
 import daniil from '../../../images/daniil.jpg';
 import maxim from '../../../images/maxim.jpg';
 import egor from '../../../images/egor.jpg';
+import nikolai from '../../../images/nikolai.jpg';
+import developer2 from '../../../images/developer2.jpg';
 import React from 'react';
 import styled from "styled-components";
 import Dash from "../../common/Dash/Dash";
@@ -37,7 +39,7 @@ const About = () => {
                         </p>
                     </div>
                     <div className="gridWrapper" data-aos='fade-right'>
-                        <div className="gridElem">
+                        <div className="gridElem" style={{background: `url(${nikolai})center center/cover no-repeat`}}>
                             <div className="nameWrapper">
                                 <div className="flexWrapper">
                                     <div className="name">
@@ -82,12 +84,12 @@ const About = () => {
                                 web-дизайнер
                             </p>
                         </div>
-                        <div className="gridElem">
+                        <div className="gridElem" style={{background: `url(${developer2})center center/cover no-repeat`}}>
                             <div className="nameWrapper">
                                 <div className="flexWrapper">
                                     <div className="name">
                                         <p className="nameText">
-                                            Владислав Скибицкий
+                                            Наша вакансия
                                         </p>
                                     </div>
                                     {design}
@@ -124,7 +126,7 @@ const About = () => {
                                 </div>
                             </div>
                             <p className="profile" data-aos='fade-left'>
-                                frontend разработчик
+                                backend разработчик
                             </p>
                         </div>
 

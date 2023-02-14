@@ -391,7 +391,7 @@ const Questions = ({bg}) => {
                         </div>
                         <div className="contact">
                             <div className="mail">
-                                studio_test_mail@gmail.com
+                                cube80ag@gmail.com
                             </div>
                         </div>
                         <div className="contacts__socials">

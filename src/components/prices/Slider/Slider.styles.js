@@ -43,6 +43,7 @@ export const SliderTag = styled.div`
         width: 100%;
         height: 230px;
         max-height: 230px;
+        cursor: pointer;
         //justify-content: space-between;
 
     }

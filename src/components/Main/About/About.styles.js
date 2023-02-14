@@ -251,7 +251,7 @@ export const AboutTag = styled.section`
         }
 
         .nameWrapper {
-            background: url(${developerBg}) top center/cover no-repeat;
+            // background: url(${developerBg}) top center/cover no-repeat;
             height: calc(100% - 40px);
             display: flex;
             flex-direction: column;
