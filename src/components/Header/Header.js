@@ -363,11 +363,9 @@ const HeaderDesktop = () => {
                             </div>
                         </div>
                         <div className="contacts">
-                            <script>/*
                             <div className="contact">
-                                <a href="tel:+98765432100">+ 9 876 543 21 00</a>
-                            </div>
-                            */</script>
+                                <a href="tel:+79811036538">+7 981 103 65 38</a>
+                            </div>                          
                             <div className="contact">
                                 cube80ag@gmail.com
                             </div>
@@ -440,7 +438,7 @@ const HeaderLaptop = ({isMenu}) => {
                             </div>
                         </div>
                         <div className={styles.contact}>
-                            <a href="tel:+98765432100" className={styles.contactNumber}>+ 9 876 543 21 00</a>
+                            <a href="tel:+79811036538" className={styles.contactNumber}>+7 981 103 65 38</a>
                         </div>
                         <div className={styles.burger} onClick={() => toggleActiveClass()}>
                             <span
@@ -521,7 +519,7 @@ const HeaderMobile = ({isMenu}) => {
                         </Link>
 
                         <div className={styles.contact}>
-                            <a href="tel:+98765432100" className={styles.contactNumber}>+ 9 876 543 21 00</a>
+                            <a href="tel:+79811036538" className={styles.contactNumber}>+7 981 103 65 38</a>
                         </div>
                         <div className={styles.burger} onClick={() => toggleActiveClass()}>
                             <span
@@ -569,8 +567,8 @@ const HeaderMobile = ({isMenu}) => {
                             <LinkTo src="/smm" className={styles.link}>SMM</LinkTo>
                             <LinkTo src="/branding" className={styles.link}>Брендинг и репутация</LinkTo>
                             <div className={styles.contacts}>
-                                <a href='tel:+98765432100' className={styles.number}>+ 9 876 543 21 00</a>
-                                <div className={styles.mail}>test_ mail@gmail.com</div>
+                                <a href='tel:+79811036538' className={styles.number}>+7 981 103 65 38</a>
+                                <div className={styles.mail}>cube80ag@gmail.com</div>
                             </div>
                             <div className={!isMenu ? styles.socials : styles.socials + ' ' + styles.socialsWhite}>
                                 <div className={styles.social}>

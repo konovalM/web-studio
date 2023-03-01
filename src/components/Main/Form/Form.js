@@ -40,6 +40,8 @@ const Form = () => {
     const sendEmail = (formData) => {
         emailjs.send('service_y4zd3im', 'template_ieb4rb9', formData, 'TY78bKn3jchmNhc1r')
             .then((result) => {
+                        window.ym(92548686,'reachGoal','form');
+                        
                 dispatch({type: 'NEXT_MODAL'})
             }, (error) => {
                 console.log(error.text);
@@ -170,7 +172,7 @@ const Form = () => {
                 <div className="contacts">
                     <script>/*
                     <div className="contact">
-                        <a href="tel:+98765432100" className="contactPhone">+ 9 876 543 21 00</a>
+                        <a href="tel:+79811036538" className="contactPhone">+7 981 103 65 38</a>
                     </div>
                     */</script>
                     <div className="contact">
