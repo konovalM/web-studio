@@ -43,7 +43,7 @@ const PricesComponent = ({title, margin, price, size, content, id, typeOfCase, s
         <div className={margin ? 'pricesComponentWrapper' : ''}>
             <div className="price" style={{top: topForPrice}} data-aos='fade-left'>
                 <div className="priceInner">
-                    <div className="cost">Стоимость от <br/><span className='bold'>{price} $</span></div>
+                    <div className="cost">Стоимость от <br/><span className='bold'>{price} руб.</span></div>
                     <div className="descr">Срок выполнения от 2 недель</div>
                 </div>
             </div>
