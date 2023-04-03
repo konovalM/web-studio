@@ -16,15 +16,15 @@ const Prices = () => {
                         </div>
                     </div>
                     <Element name='#landings'>
-                        <PricesComponent title='лендинги визитки' price='70 тыс.' content={landing} id={1}
+                        <PricesComponent title='лендинги визитки' price='50 тыс.' content={landing} id={1}
                                          typeOfCase='landings' sliderData={SliderMockData.landings}/>
                     </Element>
                     <Element name='shops'>
-                        <PricesComponent title='online магазины' margin='225px' price='150 тыс.' content={shops} id={2}
+                        <PricesComponent title='online магазины' margin='225px' price='70 тыс.' content={shops} id={2}
                                          typeOfCase='shops' sliderData={SliderMockData.shops}/>
                     </Element>
                     <Element name='sites'>
-                        <PricesComponent title='многостраничные сайты' size={true} margin='225px' price='100 тыс.'
+                        <PricesComponent title='многостраничные сайты' size={true} margin='225px' price='60 тыс.'
                                          content={sites} id={3} typeOfCase='multipage'
                                          sliderData={SliderMockData.multipage}/>
                     </Element>
