@@ -14,7 +14,7 @@ const Prices = () => {
                             фирменный стиль
                         </h3>
                         <div className={styles.price}>
-                            от 800 $
+                            от 40 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
@@ -32,7 +32,7 @@ const Prices = () => {
                             исправление репутации
                         </h3>
                         <div className={styles.price}>
-                            от 1100 $
+                            от 60 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
@@ -50,7 +50,7 @@ const Prices = () => {
                             маркетинг под ключ
                         </h3>
                         <div className={styles.price}>
-                            от 1900 $
+                            от 120 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
@@ -68,7 +68,7 @@ const Prices = () => {
                             маркетинг соцсетей
                         </h3>
                         <div className={styles.price}>
-                            от 1300 $
+                            от 40 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>

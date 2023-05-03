@@ -16,7 +16,7 @@ const Prices = () => {
                         </div>
                     </div>
                     <Element name='#landings'>
-                        <PricesComponent title='лендинги визитки' price='50 тыс.' content={landing} id={1}
+                        <PricesComponent title='лендинги визитки' price='30 тыс.' content={landing} id={1}
                                          typeOfCase='landings' sliderData={SliderMockData.landings}/>
                     </Element>
                     <Element name='shops'>
@@ -24,7 +24,7 @@ const Prices = () => {
                                          typeOfCase='shops' sliderData={SliderMockData.shops}/>
                     </Element>
                     <Element name='sites'>
-                        <PricesComponent title='многостраничные сайты' size={true} margin='225px' price='60 тыс.'
+                        <PricesComponent title='многостраничные сайты' size={true} margin='225px' price='50 тыс.'
                                          content={sites} id={3} typeOfCase='multipage'
                                          sliderData={SliderMockData.multipage}/>
                     </Element>

@@ -572,17 +572,17 @@ const HeaderMobile = ({isMenu}) => {
                             </div>
                             <div className={!isMenu ? styles.socials : styles.socials + ' ' + styles.socialsWhite}>
                                 <div className={styles.social}>
-                                    <a href="#">
+                                    <a href="https://t.me/ozzodesign">
                                         <TgIcon/>
                                     </a>
                                 </div>
                                 <div className={styles.social}>
-                                    <a href="#">
+                                    <a href="https://vk.com/ozzo_web_design">
                                         <VkIcon/>
                                     </a>
                                 </div>
                                 <div className={styles.social}>
-                                    <a href="#">
+                                    <a href="https://wa.me/79811036538">
                                         <WhatsAppIcon/>
                                     </a>
                                 </div>

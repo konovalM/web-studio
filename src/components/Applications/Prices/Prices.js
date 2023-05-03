@@ -14,7 +14,7 @@ const Prices = () => {
                             Android приложения
                         </h3>
                         <div className={styles.price}>
-                            от 7900 $
+                            от 400 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
@@ -34,7 +34,7 @@ const Prices = () => {
                             IOS приложения
                         </h3>
                         <div className={styles.price}>
-                            от 9500 $
+                            от 450 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
@@ -54,7 +54,7 @@ const Prices = () => {
                             windows приложения
                         </h3>
                         <div className={styles.price}>
-                            от 9500 $
+                            от 400 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>

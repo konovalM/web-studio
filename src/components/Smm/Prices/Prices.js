@@ -15,7 +15,7 @@ const Prices = () => {
                             facebook
                         </h3>
                         <div className={styles.price}>
-                            от 320 $
+                            от 20 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
@@ -35,7 +35,7 @@ const Prices = () => {
                             VK
                         </h3>
                         <div className={styles.price}>
-                            от 320 $
+                            от 20 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
@@ -55,7 +55,7 @@ const Prices = () => {
                             instagram
                         </h3>
                         <div className={styles.price}>
-                            от 320 $
+                            от 25 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
@@ -75,7 +75,7 @@ const Prices = () => {
                             tik tok
                         </h3>
                         <div className={styles.price}>
-                            от 320 $
+                            от 20 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>

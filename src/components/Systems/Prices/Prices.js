@@ -14,7 +14,7 @@ const Prices = () => {
                             Системы управления
                         </h3>
                         <div className={styles.price}>
-                            от 630 $
+                            от 250 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
@@ -34,7 +34,7 @@ const Prices = () => {
                             крупные сервисы
                         </h3>
                         <div className={styles.price}>
-                            от 1300 $
+                            от 350 000 руб.
                         </div>
                         <div className={styles.flexWrapper}>
                             <div className={styles.leftOptions}>
