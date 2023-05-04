@@ -182,7 +182,7 @@ const Form = () => {
                     </div>
                     <div className="contacts__socials">
                         <div className="social">
-                            <a href="web-studio/src/components/Main/Questions#">
+                            <a href="https://t.me/ozzodesign">
                                 <svg width="21" height="18" viewBox="0 0 21 18" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -192,7 +192,7 @@ const Form = () => {
                             </a>
                         </div>
                         <div className="social">
-                            <a href="web-studio/src/components/Main/Questions#">
+                            <a href="https://goo.su/68zywvz">
                                 <svg width="25" height="14" viewBox="0 0 25 14" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -202,7 +202,7 @@ const Form = () => {
                             </a>
                         </div>
                         <div className="social">
-                            <a href="web-studio/src/components/Main/Questions#">
+                            <a href="https://goo.su/fJkCxhc">
                                 <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path fillRule="evenodd" clipRule="evenodd"
@@ -212,7 +212,7 @@ const Form = () => {
                             </a>
                         </div>
                         <div className="social">
-                            <a href="web-studio/src/components/Main/Questions#">
+                            <a href="https://cube80.com/#">
                                 <svg width="22" height="18" viewBox="0 0 22 18" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
