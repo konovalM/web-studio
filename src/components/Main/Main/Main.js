@@ -18,13 +18,12 @@ const Main = () => {
         const options = {
             strings: [
                 '<span style="color: #1E4FCD">[web.сервисы]</span>',
-                '<span style="color: #1E4FCD">[marketing]</span>',
-                '<span style="color: #1E4FCD">[приложения]</span>',
                 '<span style="color: #1E4FCD">[брендинг]</span>',
+                '<span style="color: #1E4FCD">[приложения]</span>',
                 '<span style="color: #1E4FCD">[маркетплейсы]</span>'
 
             ],
-            typeSpeed: 20,
+            typeSpeed: 2,
             backSpeed: 20,
             onComplete: () => {
                 setTimeout(() => {
@@ -56,10 +55,10 @@ const Main = () => {
                 <div className="wrapper">
                     <div className="left">
                         <h1 className="subtitle">
-                            DIGITAL-агентство полного цикла CUBE 80
+                            Агентство полного цикла CUBE 80
                         </h1>
                         <h2 className="title">
-                            <span className="titleSpan">Сайты под ключ и <br/><span ref={el}></span></span>
+                            <span className="titleSpan">Сайты и маркетинг под ключ <br/><span ref={el}></span></span>
                         </h2>
                         <div className="btnWrapper">
                             <Button btnColor='#000000' btnStyles={[{

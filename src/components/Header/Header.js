@@ -365,10 +365,13 @@ const HeaderDesktop = () => {
                         <div className="contacts">
                             <div className="contact">
                                 <a href="tel:+79811036538">+7 981 103 65 38</a>
-                            </div>                          
-                            <div className="contact">
+                            </div>      
+                            <div>
+                                <a>г. Санкт-Петербург</a>
+                            </div>                       
+                            {/* <div className="contact">
                                 cube80ag@gmail.com
-                            </div>
+                            </div> */}
                         </div>
 
                     </div>
@@ -567,8 +570,9 @@ const HeaderMobile = ({isMenu}) => {
                             <LinkTo src="/smm" className={styles.link}>SMM</LinkTo>
                             <LinkTo src="/branding" className={styles.link}>Брендинг и репутация</LinkTo>
                             <div className={styles.contacts}>
-                                <a href='tel:+79811036538' className={styles.number}>+7 981 103 65 38</a>
+                                {/* <a href='tel:+79811036538' className={styles.number}>+7 981 103 65 38</a> */}
                                 <div className={styles.mail}>cube80ag@gmail.com</div>
+                                <div className={styles.mail}>г. Санкт-Петербург</div>
                             </div>
                             <div className={!isMenu ? styles.socials : styles.socials + ' ' + styles.socialsWhite}>
                                 <div className={styles.social}>
