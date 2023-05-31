@@ -19,8 +19,8 @@ const Main = () => {
             strings: [
                 '<span style="color: #1E4FCD">[web.сервисы]</span>',
                 '<span style="color: #1E4FCD">[брендинг]</span>',
-                '<span style="color: #1E4FCD">[приложения]</span>',
-                '<span style="color: #1E4FCD">[маркетплейсы]</span>'
+                '<span style="color: #1E4FCD">[стратегия]</span>',
+                '<span style="color: #1E4FCD">[фир.стиль]</span>'
 
             ],
             typeSpeed: 2,
@@ -55,14 +55,14 @@ const Main = () => {
                 <div className="wrapper">
                     <div className="left">
                         <h1 className="subtitle">
-                            Агентство полного цикла CUBE 80
+                        Делаем не просто сайты, а изучаем конкурентов и строим стратегию продвижения
                         </h1>
                         <h2 className="title">
                             <span className="titleSpan">Сайты и маркетинг под ключ <br/><span ref={el}></span></span>
                         </h2>
                         <div className="btnWrapper">
                             <Button btnColor='#000000' btnStyles={[{
-                                background: '#1E4FCD',
+                                background: '#1ECD44',
                                 color: '#fff',
                                 border: 'none'
                             }, {background: '#fff', color: '#1a1a1a', border: '1px solid #1a1a1a'}]}

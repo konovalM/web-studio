@@ -96,7 +96,7 @@ const About = () => {
                                 </div>
                             </div>
                             <p className="profile" data-aos='fade-left'>
-                                backend разработчик
+                                Python разработчик
                             </p>
                         </div>
                         <div className="gridElem" style={{background: `url(${maxim})center center/cover no-repeat`}}>

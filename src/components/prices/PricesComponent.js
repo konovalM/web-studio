@@ -82,9 +82,9 @@ const PricesComponent = ({title, margin, price, size, content, id, typeOfCase, s
             <Slider typeOfCase={typeOfCase} sliderData={sliderData}/>
             <div className="container">
                 <div className="btnWrapper" data-aos='fade-right'>
-                    <Button btnColor='#ffffff' btnStyles={[{background: '#1E4FCD', color: '#fff'}, {
+                    <Button btnColor='#ffffff' btnStyles={[{background: '#1ECD44', color: '#fff'}, {
                         background: '#fff',
-                        color: '#1E4FCD',
+                        color: '#1ECD44',
                         border: 'none'
                     }]}/>
                 </div>

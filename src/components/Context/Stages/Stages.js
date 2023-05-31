@@ -9,7 +9,7 @@ const Stages = () => {
                     Этапы работы <span className={styles.blue}>;<span className={styles.black}>-</span>]</span>
                 </h2>
                 <p className={styles.descr}>
-                    Поможем составить техзадание и определиться со структурой сайта. От вас потребуется понимание того как будет работать бизнес. <span className="br">Все остальное возьмем на себя.</span>
+                    Изучим вашу нишу, определим стратегию работы будущего бизнеса и на ее основе соберем продающий сайт. <span className="br">Все остальное возьмем на себя.</span>
                 </p>
                 <div className={styles.gridWrapper}>
                     <div className={styles.gridItem}>

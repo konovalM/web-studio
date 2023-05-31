@@ -233,7 +233,7 @@ const Stages = () => {
                     Этапы работы <span className='blue'>;<span className='black'>-</span>]</span>
                 </h2>
                 <p className="description" data-aos='fade-right'>
-                    Поможем составить техзадание и определиться со структурой сайта. От вас потребуется понимание того как будет работать бизнес. <span className="br">Все остальное возьмем на себя.</span>
+                Изучим вашу нишу, определим стратегию работы будущего бизнеса и на ее основе соберем продающий сайт. <span className="br">Все работы выполняются под ключ.</span>
                 </p>
                 <div className="gridWrapper">
                     <div className="gridItem">

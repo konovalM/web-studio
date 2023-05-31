@@ -153,9 +153,9 @@ const Form = () => {
                                     </div>
                                     <div className="btnWrapper">
                                         <Button type="submit" btnColor='#ffffff'
-                                                btnStyles={[{background: '#1E4FCD', color: '#fff'}, {
+                                                btnStyles={[{background: '#1ECD44', color: '#fff'}, {
                                                     background: '#fff',
-                                                    color: '#1E4FCD',
+                                                    color: '#1ECD44',
                                                     border: 'none'
                                                 }]}/>
                                     </div>
